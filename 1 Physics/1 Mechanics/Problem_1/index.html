@@ -202,22 +202,25 @@
 <p>To understand projectile motion, we derive the governing equations from Newton's second law.</p>
 <h3 id="equations-of-motion">Equations of Motion</h3>
 <p>The motion of a projectile in a vacuum (neglecting air resistance) is governed by:</p>
-<div class="arithmatex">\[ x(t) = v_0 \cos(\theta) t
-y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2 \]</div>
-<p>where:
- $ v_0 $ is the initial velocity,
- $ \theta $ is the launch angle,
- $ g $ is the acceleration due to gravity,
- $ t $ is the time.</p>
-<p>The range <span class="arithmatex">\( R \)</span> (horizontal distance) is obtained by solving for <span class="arithmatex">\( t \)</span> when <span class="arithmatex">\( y = 0 \)</span>:</p>
-<div class="arithmatex">\[ R = \frac{v_0^2 \sin(2\theta)}{g} \]</div>
+<p><span class="arithmatex">\(x(t) = v_0 \cos(\theta) t\)</span><span class="arithmatex">\(y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2\)</span></p>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(v_0\)</span> is the initial velocity,</li>
+<li><span class="arithmatex">\(\theta\)</span> is the launch angle,</li>
+<li><span class="arithmatex">\(g\)</span> is the acceleration due to gravity,</li>
+<li><span class="arithmatex">\(t\)</span> is the time.</li>
+</ul>
+<p>The range <span class="arithmatex">\(R\)</span> (horizontal distance) is obtained by solving for <span class="arithmatex">\(t\)</span> when <span class="arithmatex">\(y = 0\)</span>:</p>
+<p><span class="arithmatex">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</span></p>
 <h3 id="family-of-solutions">Family of Solutions</h3>
-<p>Variations in initial conditions (e.g., different values of <span class="arithmatex">\( v_0 \)</span> or <span class="arithmatex">\( g \)</span>) lead to a family of solutions where the trajectory and range shift accordingly. For example:
-- Higher initial velocity increases the range.
-- Greater gravitational acceleration reduces the range.
-- An optimal launch angle of 45° maximizes the range in the absence of other forces.</p>
+<p>Variations in initial conditions (e.g., different values of <span class="arithmatex">\(v_0\)</span> or <span class="arithmatex">\(g\)</span>) lead to a family of solutions where the trajectory and range shift accordingly. For example:</p>
+<ul>
+<li>Higher initial velocity increases the range.</li>
+<li>Greater gravitational acceleration reduces the range.</li>
+<li>An optimal launch angle of 45° maximizes the range in the absence of other forces.</li>
+</ul>
 <h2 id="analysis-of-the-range">Analysis of the Range</h2>
-<p>To visualize how the range varies with launch angle, we compute <span class="arithmatex">\( R \)</span> for different angles while keeping other parameters constant.</p>
+<p>To visualize how the range varies with launch angle, we compute <span class="arithmatex">\(R\)</span> for different angles while keeping other parameters constant.</p>
 <p>Using Python, we simulate the dependency:</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
@@ -236,15 +239,17 @@ plt.show()
 </code></pre>
 <h3 id="influence-of-parameters">Influence of Parameters</h3>
 <ul>
-<li><strong>Initial Velocity</strong>: Increasing <span class="arithmatex">\( v_0 \)</span> scales the range quadratically.</li>
-<li><strong>Gravitational Acceleration</strong>: A higher <span class="arithmatex">\( g \)</span> reduces range.</li>
+<li><strong>Initial Velocity</strong>: Increasing <span class="arithmatex">\(v_0\)</span> scales the range quadratically.</li>
+<li><strong>Gravitational Acceleration</strong>: A higher <span class="arithmatex">\(g\)</span> reduces range.</li>
 <li><strong>Launch Height</strong>: If the projectile starts above ground level, the range can increase.</li>
 </ul>
 <h2 id="practical-applications">Practical Applications</h2>
-<p>This model is applicable to various real-world scenarios:
-- <strong>Sports</strong>: Determining the optimal kicking or throwing angle.
-- <strong>Engineering</strong>: Designing trajectories for artillery or spacecraft.
-- <strong>Astrophysics</strong>: Estimating motion under varying gravitational fields.</p>
+<p>This model is applicable to various real-world scenarios:</p>
+<ul>
+<li><strong>Sports</strong>: Determining the optimal kicking or throwing angle.</li>
+<li><strong>Engineering</strong>: Designing trajectories for artillery or spacecraft.</li>
+<li><strong>Astrophysics</strong>: Estimating motion under varying gravitational fields.</li>
+</ul>
 <h3 id="extending-the-model">Extending the Model</h3>
 <p>To increase realism, factors such as air resistance and wind should be incorporated. A numerical approach (e.g., Euler’s method) can be used to handle these complexities.</p>
 <h2 id="conclusion">Conclusion</h2>
