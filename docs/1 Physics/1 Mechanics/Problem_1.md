@@ -15,10 +15,10 @@ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $
 
  
 where:
- \( v_0 \) is the initial velocity,
- \( \theta \) is the launch angle,
- \( g \) is the acceleration due to gravity,
- \( t \) is the time.
+ $ v_0 $ is the initial velocity,
+ $ \theta $ is the launch angle,
+ $ g $ is the acceleration due to gravity,
+ $ t $ is the time.
 
 The range \( R \) (horizontal distance) is obtained by solving for \( t \) when \( y = 0 \):
 
