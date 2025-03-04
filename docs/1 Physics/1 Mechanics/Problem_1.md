@@ -16,8 +16,11 @@ $
  
 where:$
 - \( v_0 \) is the initial velocity,
+$
 - \( \theta \) is the launch angle,
+$
 - \( g \) is the acceleration due to gravity,
+$
 - \( t \) is the time.
 
 The range \( R \) (horizontal distance) is obtained by solving for \( t \) when \( y = 0 \):
