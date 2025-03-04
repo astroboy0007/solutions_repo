@@ -1,5 +1,3 @@
-# Problem 1
-
 # Investigating the Range as a Function of the Angle of Projection
 
 ## Motivation
@@ -11,33 +9,28 @@ To understand projectile motion, we derive the governing equations from Newton's
 ### Equations of Motion
 The motion of a projectile in a vacuum (neglecting air resistance) is governed by:
 
-$$
-x(t) = v_0 \cos(\theta) t
-$$
-
-$$
-y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
-$$
+$ x(t) = v_0 \cos(\theta) t
+ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2 $
 
 where:
-- $ v_0 $ is the initial velocity,
-- $ theta $ is the launch angle,
-- $ g $ is the acceleration due to gravity,
-- $ t $ is the time.
+- \( v_0 \) is the initial velocity,
+- \( \theta \) is the launch angle,
+- \( g \) is the acceleration due to gravity,
+- \( t \) is the time.
 
-The range $ R $ (horizontal distance) is obtained by solving for $ t $ when $ y = 0 $:
+The range \( R \) (horizontal distance) is obtained by solving for \( t \) when \( y = 0 \):
 
-$ R = \frac{v_0^2 \sin(2\theta)}{g} $
+\[ R = \frac{v_0^2 \sin(2\theta)}{g} \]
 
 ### Family of Solutions
-Variations in initial conditions (e.g., different values of $ v_0 $ or $ g $) lead to a family of solutions where the trajectory and range shift accordingly. For example:
+Variations in initial conditions (e.g., different values of \( v_0 \) or \( g \)) lead to a family of solutions where the trajectory and range shift accordingly. For example:
 - Higher initial velocity increases the range.
 - Greater gravitational acceleration reduces the range.
 - An optimal launch angle of 45° maximizes the range in the absence of other forces.
 
 ## Analysis of the Range
 
-To visualize how the range varies with launch angle, we compute $ R $ for different angles while keeping other parameters constant.
+To visualize how the range varies with launch angle, we compute \( R \) for different angles while keeping other parameters constant.
 
 Using Python, we simulate the dependency:
 
@@ -59,8 +52,8 @@ plt.show()
 ```
 
 ### Influence of Parameters
-- **Initial Velocity**: Increasing $ v_0 $ scales the range quadratically.
-- **Gravitational Acceleration**: A higher $ g $ reduces range.
+- **Initial Velocity**: Increasing \( v_0 \) scales the range quadratically.
+- **Gravitational Acceleration**: A higher \( g \) reduces range.
 - **Launch Height**: If the projectile starts above ground level, the range can increase.
 
 ## Practical Applications
