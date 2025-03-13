@@ -48,32 +48,6 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#theoretical-foundation">Theoretical Foundation</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#equations-of-motion">Equations of Motion</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#family-of-solutions">Family of Solutions</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#analysis-of-the-range">Analysis of the Range</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#influence-of-parameters">Influence of Parameters</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#practical-applications">Practical Applications</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#extending-the-model">Extending the Model</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -198,12 +172,12 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h2 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h2>
+<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
 <h2 id="motivation">Motivation</h2>
 <p>Projectile motion, while seemingly simple, provides a rich framework for exploring fundamental principles of physics. The goal is to analyze how the range of a projectile depends on its angle of projection. Despite its simplicity, this problem offers deep insights due to its reliance on both linear and quadratic relationships. The numerous parameters involved—such as initial velocity, gravitational acceleration, and launch height—allow for a broad range of applications, from sports to aerospace engineering.</p>
 <h2 id="theoretical-foundation">Theoretical Foundation</h2>
 <p>To understand projectile motion, we derive the governing equations from Newton's second law.</p>
-<h3 id="equations-of-motion">Equations of Motion</h3>
+<h2 id="equations-of-motion">Equations of Motion</h2>
 <p>The motion of a projectile in a vacuum (neglecting air resistance) is governed by:</p>
 <div class="arithmatex">\[
 x(t) = v_0 \cos(\theta) t
@@ -220,7 +194,7 @@ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
 </ul>
 <p>The range <span class="arithmatex">\(R\)</span> (horizontal distance) is obtained by solving for <span class="arithmatex">\(t\)</span> when <span class="arithmatex">\(y = 0\)</span>:</p>
 <p><span class="arithmatex">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</span></p>
-<h3 id="family-of-solutions">Family of Solutions</h3>
+<h2 id="family-of-solutions">Family of Solutions</h2>
 <p>Variations in initial conditions (e.g., different values of <span class="arithmatex">\(v_0\)</span> or <span class="arithmatex">\(g\)</span>) lead to a family of solutions where the trajectory and range shift accordingly. For example:</p>
 <ul>
 <li>Higher initial velocity increases the range.</li>
@@ -246,7 +220,7 @@ plt.grid()
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image.png"/></p>
-<h3 id="influence-of-parameters">Influence of Parameters</h3>
+<h2 id="influence-of-parameters">Influence of Parameters</h2>
 <ul>
 <li><strong>Initial Velocity</strong>: Increasing <span class="arithmatex">\(v_0\)</span> scales the range quadratically.</li>
 <li><strong>Gravitational Acceleration</strong>: A higher <span class="arithmatex">\(g\)</span> reduces range.</li>
@@ -259,7 +233,7 @@ plt.show()
 <li><strong>Engineering</strong>: Designing trajectories for artillery or spacecraft.</li>
 <li><strong>Astrophysics</strong>: Estimating motion under varying gravitational fields.</li>
 </ul>
-<h3 id="extending-the-model">Extending the Model</h3>
+<h2 id="extending-the-model">Extending the Model</h2>
 <p>To increase realism, factors such as air resistance and wind should be incorporated. A numerical approach (e.g., Euler’s method) can be used to handle these complexities.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Projectile motion provides a fundamental yet versatile model for understanding motion dynamics. By analyzing the relationship between range and launch angle, we gain insights applicable to numerous fields, from everyday sports to advanced aerospace technologies. Further refinements incorporating real-world factors make the study even richer and more applicable.</p>
