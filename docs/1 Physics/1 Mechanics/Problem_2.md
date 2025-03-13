@@ -1,4 +1,4 @@
-### 1. **Theoretical Foundation**
+### **Theoretical Foundation**
 
 The motion of a forced damped pendulum is described by the following second-order differential equation:
 
@@ -13,7 +13,7 @@ Where:
 - \(A\) is the driving amplitude,
 - \(\Omega\) is the driving frequency.
 
-#### **Small-Angle Approximation (Linearization)**
+### **Small-Angle Approximation (Linearization)**
 
 For small oscillations, we can make the small-angle approximation, where \(\sin(\theta) \approx \theta\) (assuming \(\theta\) is in radians and small):
 
