@@ -208,14 +208,19 @@
 <li>Visualize the behavior under various damping, driving force, and initial conditions.</li>
 <li>Plot phase diagrams and Poincaré sections to illustrate transitions to chaos.</li>
 </ul>
-<h2 id="deliverables">Deliverables</h2>
-<ul>
-<li>A <strong>Markdown document</strong> with a <strong>Python script</strong> or <strong>Jupyter notebook</strong> implementing the simulations.</li>
-<li>A detailed explanation of the general solutions for the forced damped pendulum.</li>
-<li>Graphical representations of the motion for different damping coefficients, driving amplitudes, and driving frequencies, including resonance and chaotic behavior.</li>
-<li>A discussion on the limitations of the model and potential extensions, such as introducing nonlinear damping or non-periodic driving forces.</li>
-<li>Phase portraits, Poincaré sections, and bifurcation diagrams to analyze transitions to complex dynamics.</li>
-</ul>
+<h2 id="numerical-implementation">Numerical Implementation</h2>
+<p>To explore the dynamics of the forced damped pendulum, we employ numerical methods, specifically the <strong>Runge-Kutta method (RK4)</strong>. The second-order differential equation is rewritten as a system of first-order equations:</p>
+<p>Let:
+- <span class="arithmatex">\( \theta_1 = \theta \)</span> (angular displacement)
+- <span class="arithmatex">\( \theta_2 = \frac{d\theta}{dt} \)</span> (angular velocity)</p>
+<p>Rewriting the equation:</p>
+<div class="arithmatex">\[
+\frac{d\theta_1}{dt} = \theta_2
+\]</div>
+<div class="arithmatex">\[
+\frac{d\theta_2}{dt} = -b \theta_2 - \frac{g}{l} \sin(\theta_1) + A \cos(\omega t)
+\]</div>
+<p>The Runge-Kutta method provides a stable way to integrate these equations numerically, allowing us to explore different parameter regimes and visualize the system's behavior.</p>
 <h2 id="hints-and-resources">Hints and Resources</h2>
 <ul>
 <li>For small angles, approximate <span class="arithmatex">\(\sin(\theta) \approx \theta\)</span> to simplify the differential equation.</li>
