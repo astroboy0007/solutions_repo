@@ -19,7 +19,7 @@ The motion of a projectile in a vacuum (neglecting air resistance) is governed b
 
 where:
 
-- $ v_0 $ is the initial velocity,
+- \(\ v_0 ) is the initial velocity,
 - \(\theta\) is the launch angle,
 - \(g\) is the acceleration due to gravity,
 - \(t\) is the time.
