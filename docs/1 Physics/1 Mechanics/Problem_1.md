@@ -15,12 +15,13 @@ To understand projectile motion, we derive the governing equations from Newton's
 The motion of a projectile in a vacuum (neglecting air resistance) is governed by:
 
 
-\begin{align}
-x(t) &= v_0 \cos(\theta) t \\
-y(t) &= v_0 \sin(\theta) t - \frac{1}{2} g t^2
-\end{align}
+$$
+x(t) = v_0 \cos(\theta) t
+$$
 
-
+$$
+y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
+$$
 
 
 where:
