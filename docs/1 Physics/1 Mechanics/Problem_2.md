@@ -56,3 +56,4 @@ Where:
 - Utilize software tools like **Python (NumPy, SciPy, Matplotlib)** for simulations and visualizations.
 
 This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.
+
