@@ -42,12 +42,24 @@ Where:
 - Visualize the behavior under various damping, driving force, and initial conditions.
 - Plot phase diagrams and Poincaré sections to illustrate transitions to chaos.
 
-## Deliverables
-- A **Markdown document** with a **Python script** or **Jupyter notebook** implementing the simulations.
-- A detailed explanation of the general solutions for the forced damped pendulum.
-- Graphical representations of the motion for different damping coefficients, driving amplitudes, and driving frequencies, including resonance and chaotic behavior.
-- A discussion on the limitations of the model and potential extensions, such as introducing nonlinear damping or non-periodic driving forces.
-- Phase portraits, Poincaré sections, and bifurcation diagrams to analyze transitions to complex dynamics.
+## Numerical Implementation
+To explore the dynamics of the forced damped pendulum, we employ numerical methods, specifically the **Runge-Kutta method (RK4)**. The second-order differential equation is rewritten as a system of first-order equations:
+
+Let:
+- \( \theta_1 = \theta \) (angular displacement)
+- \( \theta_2 = \frac{d\theta}{dt} \) (angular velocity)
+
+Rewriting the equation:
+
+$$
+\frac{d\theta_1}{dt} = \theta_2
+$$
+
+$$
+\frac{d\theta_2}{dt} = -b \theta_2 - \frac{g}{l} \sin(\theta_1) + A \cos(\omega t)
+$$
+
+The Runge-Kutta method provides a stable way to integrate these equations numerically, allowing us to explore different parameter regimes and visualize the system's behavior.
 
 ## Hints and Resources
 - For small angles, approximate \(\sin(\theta) \approx \theta\) to simplify the differential equation.
@@ -56,4 +68,3 @@ Where:
 - Utilize software tools like **Python (NumPy, SciPy, Matplotlib)** for simulations and visualizations.
 
 This task bridges theoretical analysis with computational exploration, fostering a deeper understanding of forced and damped oscillatory phenomena and their implications in both physics and engineering.
-
