@@ -1,6 +1,6 @@
 # Problem 1
 
-## Investigating the Range as a Function of the Angle of Projection
+# Investigating the Range as a Function of the Angle of Projection
 
 ## Motivation
 
@@ -10,7 +10,7 @@ Projectile motion, while seemingly simple, provides a rich framework for explori
 
 To understand projectile motion, we derive the governing equations from Newton's second law.
 
-### Equations of Motion
+## Equations of Motion
 
 The motion of a projectile in a vacuum (neglecting air resistance) is governed by:
 
@@ -35,7 +35,7 @@ The range \(R\) (horizontal distance) is obtained by solving for \(t\) when \(y 
 
 \(R = \frac{v_0^2 \sin(2\theta)}{g}\)
 
-### Family of Solutions
+## Family of Solutions
 
 Variations in initial conditions (e.g., different values of \(v_0\) or \(g\)) lead to a family of solutions where the trajectory and range shift accordingly. For example:
 
@@ -67,7 +67,7 @@ plt.show()
 ```
 ![alt text](image.png)
 
-### Influence of Parameters
+## Influence of Parameters
 
 - **Initial Velocity**: Increasing \(v_0\) scales the range quadratically.
 - **Gravitational Acceleration**: A higher \(g\) reduces range.
@@ -81,7 +81,7 @@ This model is applicable to various real-world scenarios:
 - **Engineering**: Designing trajectories for artillery or spacecraft.
 - **Astrophysics**: Estimating motion under varying gravitational fields.
 
-### Extending the Model
+## Extending the Model
 
 To increase realism, factors such as air resistance and wind should be incorporated. A numerical approach (e.g., Euler’s method) can be used to handle these complexities.
 
