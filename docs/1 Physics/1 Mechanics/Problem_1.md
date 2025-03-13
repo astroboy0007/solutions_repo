@@ -59,6 +59,8 @@ plt.grid()
 plt.show()
 ```
 
+![alt text](image.png)
+
 ### Influence of Parameters
 
 - **Initial Velocity**: Increasing \(v_0\) scales the range quadratically.
