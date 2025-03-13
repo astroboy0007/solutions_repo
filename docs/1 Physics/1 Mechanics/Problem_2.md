@@ -156,3 +156,6 @@ To observe transitions to chaos, varying parameters like \(A\), \(\gamma\), and 
 ### Conclusion
 
 The forced damped pendulum is a rich system that demonstrates complex dynamics such as resonance, chaos, and quasiperiodic behavior, depending on the damping coefficient, driving amplitude, and frequency. These phenomena have broad applications in real-world systems like energy harvesting, structural engineering, and electronics. Through computational modeling, we can better understand how changes in system parameters influence behavior and predict transitions between regular and chaotic motion.
+
+
+
