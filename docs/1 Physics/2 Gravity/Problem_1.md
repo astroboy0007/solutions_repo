@@ -65,10 +65,10 @@ This shows that **\( T^2 \) is proportional to \( r^3 \)**, which is Kepler’s 
     - If we know the orbital radius and period of a satellite, we can estimate the mass of the central body.
 
 2. **Determining Distances in the Solar System:**  
-   - Using known periods, astronomers can determine the semi-major axis of a planet's orbit.
+    - Using known periods, astronomers can determine the semi-major axis of a planet's orbit.
 
 3. **Exoplanet Detection:**  
-   - By measuring the orbital period of an exoplanet (e.g., through transit or radial velocity methods), its orbital radius can be estimated.
+    - By measuring the orbital period of an exoplanet (e.g., through transit or radial velocity methods), its orbital radius can be estimated.
 
 ---
 
