@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 3 - Physics and Mathematics</title>
+<title>Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 3";
+        var mkdocs_page_name = "Problem 3: Trajectories of a Freely Released Payload Near Earth";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -58,8 +58,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task">Task</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-simulation">Python Simulation</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +169,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 3</li>
+<li class="breadcrumb-item active">Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,10 +177,121 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
-<h1 id="trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</h1>
+<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
 <h2 id="motivation">Motivation</h2>
-<p>When an object is released from a moving rocket near Earth, its trajectory depends on initial conditions and gravitational forces. This scenario presents a rich problem, blending principles of orbital mechanics and numerical methods. Understanding the potential trajectories is vital for space missions, such as deploying payloads or returning objects to Earth.</p>
+<p>When an object is released from a moving rocket near Earth, its trajectory depends on its initial conditions as well as Earth’s gravitational force. The payload may follow an elliptical, parabolic, or hyperbolic path. Understanding these trajectories is crucial for:
+- <strong>Orbital insertion:</strong> When satellites or spacecraft are inserted into orbit.
+- <strong>Reentry:</strong> For returning payloads safely to Earth.
+- <strong>Escape scenarios:</strong> For sending spacecraft on interplanetary or interstellar missions.</p>
+<p>This problem blends concepts from orbital mechanics with numerical methods and is vital for modern space mission planning.</p>
+<h2 id="task">Task</h2>
+<ol>
+<li>
+<p><strong>Characterize Trajectories:</strong><br/>
+   Define and explain the physical meaning of elliptical, parabolic, and hyperbolic trajectories for a payload released near Earth.</p>
+</li>
+<li>
+<p><strong>Numerical Analysis:</strong><br/>
+   Compute the path of the payload based on given initial conditions (position, velocity, and altitude) using numerical integration.</p>
+</li>
+<li>
+<p><strong>Discussion:</strong><br/>
+   Discuss how these trajectories relate to orbital insertion, reentry, or escape scenarios.</p>
+</li>
+<li>
+<p><strong>Simulation Tool:</strong><br/>
+   Develop a computational tool (using Python) to simulate and visualize the motion of the payload under Earth's gravity with various initial velocities and directions.</p>
+</li>
+</ol>
+<h2 id="python-simulation">Python Simulation</h2>
+<p>Below is a Python script that:
+- Sets up Earth-related parameters.
+- Defines three cases:
+  - <strong>Elliptical Orbit:</strong> Initial velocity lower than the circular orbital velocity.
+  - <strong>Parabolic Trajectory:</strong> Initial velocity exactly equal to the escape velocity.
+  - <strong>Hyperbolic Trajectory:</strong> Initial velocity higher than the escape velocity.
+- Uses <code>scipy.integrate.solve_ivp</code> to integrate the equations of motion.
+- Plots the trajectories along with an outline of Earth.</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
+
+# Constants
+G = 6.67430e-11       # gravitational constant (m^3 kg^-1 s^-2)
+M_earth = 5.972e24    # mass of Earth (kg)
+mu = G * M_earth      # Earth's gravitational parameter (m^3/s^2)
+R_earth = 6371e3      # Earth's radius (m)
+
+# Initial position: 300 km above Earth's surface
+altitude = 300e3                  
+r0 = R_earth + altitude  # initial distance from Earth's center (m)
+
+# Circular orbital velocity at r0 (for reference)
+v_circular = np.sqrt(mu / r0)
+
+# Escape velocity at r0
+v_escape = np.sqrt(2 * mu / r0)
+
+# Define three cases for payload release:
+cases = {
+    "Elliptical Orbit (v = 0.95*v_circular)": 0.95 * v_circular,
+    "Parabolic Trajectory (v = v_escape)": v_escape,
+    "Hyperbolic Trajectory (v = 1.1*v_escape)": 1.1 * v_escape,
+}
+
+# Differential equations for the two-body problem
+def deriv(t, state):
+    x, y, vx, vy = state
+    r = np.sqrt(x**2 + y**2)
+    ax = -mu * x / r**3
+    ay = -mu * y / r**3
+    return [vx, vy, ax, ay]
+
+# Dictionary to store trajectories of each case
+trajectories = {}
+
+# Integrate equations for each case
+for label, v0 in cases.items():
+    # Initial conditions: positioned at (r0, 0) with velocity vector (0, v0)
+    y0 = [r0, 0, 0, v0]
+
+    # Set integration time span: 
+    # For elliptical orbits, a shorter integration time suffices.
+    # For parabolic and hyperbolic trajectories, we extend the time span.
+    if "Elliptical" in label:
+        t_span = (0, 6000)  # seconds
+    else:
+        t_span = (0, 20000) # seconds
+
+    t_eval = np.linspace(t_span[0], t_span[1], 1000)
+
+    sol = solve_ivp(deriv, t_span, y0, t_eval=t_eval, rtol=1e-8)
+    trajectories[label] = sol
+
+# Plotting
+plt.figure(figsize=(10, 8))
+
+# Plot Earth as a circle
+theta = np.linspace(0, 2 * np.pi, 300)
+earth_x = R_earth * np.cos(theta)
+earth_y = R_earth * np.sin(theta)
+plt.fill(earth_x, earth_y, color="lightblue", label="Earth")
+
+# Define colors for trajectories
+colors = ["r", "g", "b"]
+
+# Plot each trajectory
+for (label, sol), color in zip(trajectories.items(), colors):
+    plt.plot(sol.y[0], sol.y[1], color, label=label)
+
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.title("Trajectories of a Freely Released Payload Near Earth")
+plt.legend(loc="upper right")
+plt.axis("equal")
+plt.grid(True)
+plt.show()
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
