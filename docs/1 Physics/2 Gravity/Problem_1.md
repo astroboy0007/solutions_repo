@@ -179,11 +179,8 @@ This script:
 * Kepler’s Third Law applies to **elliptical orbits** as well, but instead of \( r \), we use the **semi-major axis** \( a \).
 * The law still holds:  
 \[
-T^2 = \frac{4\pi^2 a^3}{G M}
-\]
+T^2 = \frac{4\pi^2 a^3}{G M}  
 
-\[
-T^2 = \frac{4 \pi^2 a^3}{G M}
 \]
 * Example: Halley's Comet, which follows an **elliptical** orbit, still obeys this principle.
 
