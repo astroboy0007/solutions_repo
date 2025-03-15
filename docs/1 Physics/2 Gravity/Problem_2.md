@@ -6,25 +6,6 @@
 
 The concept of escape velocity is crucial for understanding the conditions required to leave a celestial body's gravitational influence. Extending this concept, the first, second, and third cosmic velocities define the thresholds for orbiting, escaping, and leaving a star system. These principles underpin modern space exploration, from launching satellites to interplanetary missions.
 
-# Problem 2: Escape Velocities and Cosmic Velocities
-
-## Motivation
-The concept of escape velocity is crucial for understanding the conditions required to leave a celestial body's gravitational influence. Extending this concept, the first, second, and third cosmic velocities define the thresholds for:
-- Orbiting a celestial body (first cosmic velocity).
-- Escaping a celestial body's gravity (second cosmic velocity).
-- Leaving a star system entirely (third cosmic velocity).
-
-These principles underpin modern space exploration, from launching satellites to interplanetary missions and beyond.
-
-## Task
-1. Define the **first**, **second**, and **third cosmic velocities**, explaining their physical meanings.
-2. Analyze the **mathematical derivations** and parameters that affect these velocities.
-3. Calculate and visualize these velocities for different celestial bodies like **Earth**, **Mars**, and **Jupiter**.
-4. Discuss the **importance of cosmic velocities** in space exploration, including applications such as:
-   - Launching satellites.
-   - Missions to other planets.
-   - Potential interstellar travel.
-
 ---
 
 ## Definitions
