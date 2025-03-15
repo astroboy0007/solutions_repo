@@ -12,55 +12,102 @@ The relationship between the square of the orbital period and the cube of the or
 
 Newton’s form of Kepler’s Third Law comes from equating the centripetal force required to keep a body in circular orbit with the gravitational force.
 
-1. **Gravitational Force** (Newton's Law of Gravitation):  
-\( F = \frac{G M m}{r^2} \)
+## Gravitational Force and Orbital Motion
 
-where:
-$ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon), $ m $ is the mass of the orbiting body and $ r $ is the orbital radius.
+### Gravitational Force (Newton's Law of Gravitation):
 
-2. **Centripetal Force** needed to keep the body in circular motion:
 
-$$F_c = \frac{mv^2}{r}$$
+\[
+F = \frac{G M m}{r^2}
+\]
 
-   where $ v $ is the orbital velocity.
 
-3. Setting gravitational force equal to centripetal force:
+
+Where:
+- \(G\) is the gravitational constant.
+- \(M\) is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon).
+- \(m\) is the mass of the orbiting body.
+- \(r\) is the orbital radius.
+
+### Centripetal Force needed to keep the body in circular motion:
+
+
+\[
+F = \frac{m v^2}{r}
+\]
+
+
+
+Where:
+- \(v\) is the orbital velocity.
+
+### Setting gravitational force equal to centripetal force:
+
+
 \[
 \frac{G M m}{r^2} = \frac{m v^2}{r}
 \]
 
+
+
 Cancel \(m\) from both sides:
+
 
 \[
 \frac{G M}{r^2} = \frac{v^2}{r}
 \]
 
-Rearrange to find the relationship between \(G M\), \(v\), and \(r\):
+
+
+Rearrange:
+
 
 \[
 G M = v^2 r
 \]
 
-4. The orbital velocity $ v $ is related to the orbital period $ T $ by:
-   $
-   v = \frac{2 \pi r}{T}
-   $
-   Substituting into our equation:
-   $
-   G M = \left( \frac{2 \pi r}{T} \right)^2 r
-   $
-
-5. Expanding and solving for $ T^2 $:
-    
-$$
-   GM = \frac{4 \pi^2 r^3}{T^2}
-$$
-$$
-   T^2 = \frac{4 \pi^2}{GM} r^3
-$$
 
 
-This shows that ** $ T^2 $ is proportional to $ r^3 $ **, which is Kepler’s Third Law.
+### Orbital Velocity and Orbital Period:
+The orbital velocity \(v\) is related to the orbital period \(T\) by:
+
+
+\[
+v = \frac{2 \pi r}{T}
+\]
+
+
+
+Substituting into our equation:
+
+
+\[
+G M = \left( \frac{2 \pi r}{T} \right)^2 r
+\]
+
+
+
+Expanding and solving for \(T^2\):
+
+
+\[
+T^2 = \frac{4 \pi^2}{G M} r^3
+\]
+
+
+
+This shows that:
+
+
+\[
+T^2 \propto r^3
+\]
+
+
+
+### Conclusion:
+This proportionality is **Kepler’s Third Law**.
+
 
 ---
 
