@@ -61,9 +61,9 @@ This shows that **\( T^2 \) is proportional to \( r^3 \)**, which is Kepler’s 
 ### **Implications for Astronomy**
 1. **Calculating Planetary Masses:**  
    Rearranging the equation:
-     \( $ M = \frac{4\pi^2 r^3}{G T^2} $\)
-   
-   If we know the orbital radius and period of a satellite, we can estimate the mass of the central body.
+    - \( $ M = \frac{4\pi^2 r^3}{G T^2} $\)
+
+    - If we know the orbital radius and period of a satellite, we can estimate the mass of the central body.
 
 2. **Determining Distances in the Solar System:**  
    - Using known periods, astronomers can determine the semi-major axis of a planet's orbit.
