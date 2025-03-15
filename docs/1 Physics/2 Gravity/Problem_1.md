@@ -127,11 +127,11 @@ This proportionality is **Kepler’s Third Law**.
 
 ### **Real-World Examples**
 1. **Moon's Orbit Around Earth:**  
-   - The Moon has an orbital period of **27.3 days** and a mean orbital radius of **384,400 km**.
-   - Using Kepler’s Third Law, we can verify the Earth’s mass.
+    - The Moon has an orbital period of **27.3 days** and a mean orbital radius of **384,400 km**.
+    - Using Kepler’s Third Law, we can verify the Earth’s mass.
 
 2. **Planets in the Solar System:**  
-   - Applying the law to planets orbiting the Sun reveals a consistent pattern that holds across different planetary orbits.
+    - Applying the law to planets orbiting the Sun reveals a consistent pattern that holds across different planetary orbits.
 
 ---
 
