@@ -19,38 +19,37 @@ where:
 $ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon), $ m $ is the mass of the orbiting body and $ r $ is the orbital radius.
 
 2. **Centripetal Force** needed to keep the body in circular motion:
-   \[
+   $
    F = \frac{m v^2}{r}
-   \]
-   where \( v \) is the orbital velocity.
+   $
+   where $ v $ is the orbital velocity.
 
 3. Setting gravitational force equal to centripetal force:
-   \[
+   $
    \frac{G M m}{r^2} = \frac{m v^2}{r}
-   \]
-   Cancel \( m \) from both sides:
-   \[
+   $
+   Cancel $ m $ from both sides:
+   $
    \frac{G M}{r^2} = \frac{v^2}{r}
-   \]
-   \[
+   $
+   $
    G M = v^2 r
-   \]
+   $
 
-4. The orbital velocity \( v \) is related to the orbital period \( T \) by:
-   \[
+4. The orbital velocity $ v $ is related to the orbital period $ T $ by:
+   $
    v = \frac{2 \pi r}{T}
-   \]
+   $
    Substituting into our equation:
-   \[
+   $
    G M = \left( \frac{2 \pi r}{T} \right)^2 r
-   \]
+   $
 
-5. Expanding and solving for \( T^2 \):
+5. Expanding and solving for $ T^2 $:
     
 $
    GM = \frac{4 \pi^2 r^3}{T^2}
    $
-- 
 $
    T^2 = \frac{4 \pi^2}{GM} r^3
    $
