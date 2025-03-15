@@ -21,7 +21,7 @@ $ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g.
 2. **Centripetal Force** needed to keep the body in circular motion:
 ```
 $$
-   F = \frac{m v^2}{r}
+ F = \frac{m v^2}{r}
 $$
    where $ v $ is the orbital velocity.
 ```
