@@ -54,7 +54,7 @@ $ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g.
    T^2 = \frac{4 \pi^2}{G M} r^3
    \]
 
-This shows that **\( T^2 \) is proportional to \( r^3 \)**, which is Kepler’s Third Law.
+This shows that ** $ T^2 $ is proportional to $ r^3 $ **, which is Kepler’s Third Law.
 
 ---
 
