@@ -19,11 +19,12 @@ where:
 $ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon), $ m $ is the mass of the orbiting body and $ r $ is the orbital radius.
 
 2. **Centripetal Force** needed to keep the body in circular motion:
-   $
+```
+$$
    F = \frac{m v^2}{r}
-   $
+$$
    where $ v $ is the orbital velocity.
-
+```
 3. Setting gravitational force equal to centripetal force:
    $
    \frac{G M m}{r^2} = \frac{m v^2}{r}
