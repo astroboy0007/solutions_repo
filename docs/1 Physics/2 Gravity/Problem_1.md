@@ -9,7 +9,7 @@ The relationship between the square of the orbital period and the cube of the or
 
 
 
-Using Python, we simulate the dependency:
+Using Python, we simulate the relationship:
 
 ```python
 import numpy as np
@@ -38,6 +38,7 @@ plt.legend()
 plt.grid()
 plt.show()
 ```
+![alt text](image.png)
 
 # Discussion:
 Kepler's Third Law states that the square of the orbital period is proportional to the cube of the orbital radius.
