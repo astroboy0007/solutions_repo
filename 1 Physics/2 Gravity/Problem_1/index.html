@@ -177,19 +177,19 @@
 <p>The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.</p>
 <p>import numpy as np
 import matplotlib.pyplot as plt
-from scipy.constants import G</p>
+from scipy.constants import G, pi</p>
 <h1 id="constants">Constants</h1>
 <p>M_sun = 1.989e30  # Mass of the Sun in kg
 AU = 1.496e11  # 1 Astronomical Unit in meters</p>
 <h1 id="keplers-third-law-t2-4-pi2-r3-g-m">Kepler's Third Law: T^2 = (4 * pi^2 * r^3) / (G * M)</h1>
 <p>def orbital_period(radius, mass=M_sun):
-    return 2 * np.pi * np.sqrt(radius**3 / (G * mass))</p>
+    return 2 * pi * np.sqrt(radius**3 / (G * mass))</p>
 <h1 id="generate-data-points-for-different-orbital-radii">Generate data points for different orbital radii</h1>
 <p>radii = np.linspace(0.1, 5, 100) * AU  # From 0.1 AU to 5 AU
 periods = orbital_period(radii) / (60 * 60 * 24)  # Convert to days</p>
 <h1 id="plotting-t2-vs-r3">Plotting T^2 vs R^3</h1>
 <p>plt.figure(figsize=(8,6))
-plt.plot(radii<strong>3, periods</strong>2, label="Kepler's Third Law")
+plt.plot(radii<strong>3, periods</strong>2, label="Kepler's Third Law", color='b')
 plt.xlabel("Orbital Radius Cubed (m^3)")
 plt.ylabel("Orbital Period Squared (days^2)")
 plt.title("Kepler's Third Law: T^2 vs R^3")
@@ -197,9 +197,14 @@ plt.legend()
 plt.grid()
 plt.show()</p>
 <h1 id="discussion">Discussion:</h1>
-<h1 id="this-script-computes-the-orbital-period-for-a-range-of-radii-assuming-circular-orbits">This script computes the orbital period for a range of radii assuming circular orbits.</h1>
-<h1 id="the-resulting-graph-should-show-a-linear-relationship-between-t2-and-r3-confirming-keplers-third-law">The resulting graph should show a linear relationship between T^2 and R^3, confirming Kepler's Third Law.</h1>
-<h1 id="applications-include-estimating-planetary-distances-and-masses-in-exoplanet-studies">Applications include estimating planetary distances and masses in exoplanet studies.</h1>
+<p>Kepler's Third Law states that the square of the orbital period is proportional to the cube of the orbital radius.
+This script computes the orbital period for a range of radii assuming circular orbits.
+The resulting graph should show a linear relationship between T^2 and R^3, confirming Kepler's Third Law.
+Applications include estimating planetary distances and masses in exoplanet studies.</p>
+<h1 id="real-world-examples">Real-world examples:</h1>
+<p>The Moon's orbit around Earth follows Kepler's Law, enabling precise distance measurements.
+The orbits of planets in the Solar System obey this law, allowing for calculations of planetary masses.
+Exoplanet detection methods, such as transit and radial velocity, rely on Kepler's laws to estimate planetary properties.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
