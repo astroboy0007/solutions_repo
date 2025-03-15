@@ -25,16 +25,10 @@ $$F_c = \frac{mv^2}{r}$$
    where $ v $ is the orbital velocity.
 
 3. Setting gravitational force equal to centripetal force:
-   $
-   \frac{G M m}{r^2} = \frac{m v^2}{r}
-   $
+$$\frac{G M m}{r^2} = \frac{m v^2}{r}$$
    Cancel $ m $ from both sides:
-   $
-   \frac{G M}{r^2} = \frac{v^2}{r}
-   $
-   $
-   G M = v^2 r
-   $
+$$\frac{G M}{r^2} = \frac{v^2}{r}$$
+$$G M = v^2 r$$
 
 4. The orbital velocity $ v $ is related to the orbital period $ T $ by:
    $
