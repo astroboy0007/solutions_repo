@@ -160,6 +160,7 @@ plt.tight_layout()
 # Show the plot
 plt.show()
 ```
+![alt text](image-2.png)
 
 ---
 
