@@ -175,22 +175,19 @@
 <h1 id="orbital-period-and-orbital-radius">Orbital Period and Orbital Radius</h1>
 <h2 id="motivation">Motivation</h2>
 <p>The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.</p>
-<p>Let's go step by step through your problem.</p>
 <hr/>
 <h3 id="derivation-of-keplers-third-law-for-circular-orbits"><strong>Derivation of Kepler’s Third Law for Circular Orbits</strong></h3>
 <p>Newton’s form of Kepler’s Third Law comes from equating the centripetal force required to keep a body in circular orbit with the gravitational force.</p>
 <ol>
 <li><strong>Gravitational Force</strong> (Newton's Law of Gravitation):<br/>
-   [
-   F = \frac{G M m}{r^2}
-   ]
-   where:</li>
-<li><span class="arithmatex">\( G \)</span> is the gravitational constant,</li>
-<li><span class="arithmatex">\( M \)</span> is the mass of the central body (e.g., Sun for planets, Earth for Moon),</li>
-<li><span class="arithmatex">\( m \)</span> is the mass of the orbiting body,</li>
-<li>
-<p><span class="arithmatex">\( r \)</span> is the orbital radius.</p>
-</li>
+<span class="arithmatex">\( F = \frac{G M m}{r^2} \)</span></li>
+</ol>
+<p>where:
+   - <span class="arithmatex">\( G \)</span> is the gravitational constant,
+   - <span class="arithmatex">\( M \)</span> is the mass of the central body (e.g., Sun for planets, Earth for Moon),
+   - <span class="arithmatex">\( m \)</span> is the mass of the orbiting body,
+   - <span class="arithmatex">\( r \)</span> is the orbital radius.</p>
+<ol>
 <li>
 <p><strong>Centripetal Force</strong> needed to keep the body in circular motion:
    [
@@ -296,6 +293,7 @@ plt.legend()
 plt.grid()
 plt.show()
 </code></pre>
+<p><img alt="alt text" src="../image-1.png"/></p>
 <p>This script:
 - Simulates various orbital radii.
 - Computes the corresponding orbital periods.
