@@ -191,3 +191,6 @@ T^2 = \frac{4\pi^2 a^3}{G M}
 - Kepler’s Third Law provides a fundamental relationship between orbital period and radius.
 - It is widely used in planetary science, space exploration, and astrophysics.
 - The computational model successfully verifies the law and its real-world applications.
+
+
+
