@@ -92,14 +92,14 @@ v_3 \text{ depends on the Sun's mass, distance from the Sun, and interaction wit
 
 ## Importance in Space Exploration
 1. **Launching Satellites**:
-   - First cosmic velocity defines stable satellite orbits.
-   - Second cosmic velocity ensures satellites can leave Earth for interplanetary destinations.
+    - First cosmic velocity defines stable satellite orbits.
+    - Second cosmic velocity ensures satellites can leave Earth for interplanetary destinations.
 
 2. **Missions to Other Planets**:
-   - Understanding escape velocities helps optimize fuel usage for spacecraft.
+    - Understanding escape velocities helps optimize fuel usage for spacecraft.
 
 3. **Interstellar Travel**:
-   - The third cosmic velocity enables the possibility of leaving the Solar System for interstellar missions.
+    - The third cosmic velocity enables the possibility of leaving the Solar System for interstellar missions.
 
 These concepts are foundational for modern space missions, from launching satellites to planning interplanetary exploration and beyond.
 
