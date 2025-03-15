@@ -16,12 +16,12 @@ Newton’s form of Kepler’s Third Law comes from equating the centripetal forc
 \( F = \frac{G M m}{r^2} \)
 
 where:
-\[
+
 - $ G $ is the gravitational constant,
 - $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon),
 - $ m $ is the mass of the orbiting body,
 - $ r $ is the orbital radius.
-\]
+
 
 2. **Centripetal Force** needed to keep the body in circular motion:
    \[
