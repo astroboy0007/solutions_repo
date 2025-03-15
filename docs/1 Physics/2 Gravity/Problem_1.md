@@ -17,10 +17,10 @@ Newton’s form of Kepler’s Third Law comes from equating the centripetal forc
 
 where:
 \begin{itemize}
-    \item \( G \) is the gravitational constant,
-    \item \( M \) is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon),
-    \item \( m \) is the mass of the orbiting body,
-    \item \( r \) is the orbital radius.
+    \item $ G $ is the gravitational constant,
+    \item $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon),
+    \item $ m $ is the mass of the orbiting body,
+    \item $ r $ is the orbital radius.
 \end{itemize}
 
 
