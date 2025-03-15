@@ -178,53 +178,53 @@
 <hr/>
 <h3 id="derivation-of-keplers-third-law-for-circular-orbits"><strong>Derivation of Kepler’s Third Law for Circular Orbits</strong></h3>
 <p>Newton’s form of Kepler’s Third Law comes from equating the centripetal force required to keep a body in circular orbit with the gravitational force.</p>
-<ol>
-<li><strong>Gravitational Force</strong> (Newton's Law of Gravitation):<br/>
-<span class="arithmatex">\( F = \frac{G M m}{r^2} \)</span></li>
-</ol>
-<p>where:
-$ G $ is the gravitational constant, $ M $ is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon), $ m $ is the mass of the orbiting body and $ r $ is the orbital radius.</p>
-<ol>
-<li><strong>Centripetal Force</strong> needed to keep the body in circular motion:</li>
-</ol>
-<div class="arithmatex">\[F_c = \frac{mv^2}{r}\]</div>
-<p>where $ v $ is the orbital velocity.</p>
-<ol>
-<li>Setting gravitational force equal to centripetal force:
-[
+<h2 id="gravitational-force-and-orbital-motion">Gravitational Force and Orbital Motion</h2>
+<h3 id="gravitational-force-newtons-law-of-gravitation">Gravitational Force (Newton's Law of Gravitation):</h3>
+<div class="arithmatex">\[
+F = \frac{G M m}{r^2}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(G\)</span> is the gravitational constant.
+- <span class="arithmatex">\(M\)</span> is the mass of the central body (e.g., the Sun for planets, the Earth for the Moon).
+- <span class="arithmatex">\(m\)</span> is the mass of the orbiting body.
+- <span class="arithmatex">\(r\)</span> is the orbital radius.</p>
+<h3 id="centripetal-force-needed-to-keep-the-body-in-circular-motion">Centripetal Force needed to keep the body in circular motion:</h3>
+<div class="arithmatex">\[
+F = \frac{m v^2}{r}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(v\)</span> is the orbital velocity.</p>
+<h3 id="setting-gravitational-force-equal-to-centripetal-force">Setting gravitational force equal to centripetal force:</h3>
+<div class="arithmatex">\[
 \frac{G M m}{r^2} = \frac{m v^2}{r}
-]</li>
-</ol>
+\]</div>
 <p>Cancel <span class="arithmatex">\(m\)</span> from both sides:</p>
 <div class="arithmatex">\[
 \frac{G M}{r^2} = \frac{v^2}{r}
 \]</div>
-<p>Rearrange to find the relationship between <span class="arithmatex">\(G M\)</span>, <span class="arithmatex">\(v\)</span>, and <span class="arithmatex">\(r\)</span>:</p>
+<p>Rearrange:</p>
 <div class="arithmatex">\[
 G M = v^2 r
 \]</div>
-<ol>
-<li>
-<p>The orbital velocity $ v $ is related to the orbital period $ T $ by:
-   $
-   v = \frac{2 \pi r}{T}
-   $
-   Substituting into our equation:
-   $
-   G M = \left( \frac{2 \pi r}{T} \right)^2 r
-   $</p>
-</li>
-<li>
-<p>Expanding and solving for $ T^2 $:</p>
-</li>
-</ol>
+<h3 id="orbital-velocity-and-orbital-period">Orbital Velocity and Orbital Period:</h3>
+<p>The orbital velocity <span class="arithmatex">\(v\)</span> is related to the orbital period <span class="arithmatex">\(T\)</span> by:</p>
 <div class="arithmatex">\[
-   GM = \frac{4 \pi^2 r^3}{T^2}
-$$
-$$
-   T^2 = \frac{4 \pi^2}{GM} r^3
+v = \frac{2 \pi r}{T}
 \]</div>
-<p>This shows that ** $ T^2 $ is proportional to $ r^3 $ **, which is Kepler’s Third Law.</p>
+<p>Substituting into our equation:</p>
+<div class="arithmatex">\[
+G M = \left( \frac{2 \pi r}{T} \right)^2 r
+\]</div>
+<p>Expanding and solving for <span class="arithmatex">\(T^2\)</span>:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4 \pi^2}{G M} r^3
+\]</div>
+<p>This shows that:</p>
+<div class="arithmatex">\[
+T^2 \propto r^3
+\]</div>
+<h3 id="conclusion">Conclusion:</h3>
+<p>This proportionality is <strong>Kepler’s Third Law</strong>.</p>
 <hr/>
 <h3 id="implications-for-astronomy"><strong>Implications for Astronomy</strong></h3>
 <ol>
@@ -308,7 +308,7 @@ plt.show()
 <li>Example: Halley's Comet, which follows an <strong>elliptical</strong> orbit, still obeys this principle.</li>
 </ul>
 <hr/>
-<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<h3 id="conclusion_1"><strong>Conclusion</strong></h3>
 <ul>
 <li>Kepler’s Third Law provides a fundamental relationship between orbital period and radius.</li>
 <li>It is widely used in planetary science, space exploration, and astrophysics.</li>
