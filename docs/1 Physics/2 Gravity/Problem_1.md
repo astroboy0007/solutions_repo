@@ -6,9 +6,6 @@
 
 The relationship between the square of the orbital period and the cube of the orbital radius, known as Kepler's Third Law, is a cornerstone of celestial mechanics. This simple yet profound relationship allows for the determination of planetary motions and has implications for understanding gravitational interactions on both local and cosmic scales. By analyzing this relationship, one can connect fundamental principles of gravity with real-world phenomena such as satellite orbits and planetary systems.
 
-
-Let's go step by step through your problem.
-
 ---
 
 ### **Derivation of Kepler’s Third Law for Circular Orbits**  
@@ -16,9 +13,8 @@ Let's go step by step through your problem.
 Newton’s form of Kepler’s Third Law comes from equating the centripetal force required to keep a body in circular orbit with the gravitational force.
 
 1. **Gravitational Force** (Newton's Law of Gravitation):  
-   \[
-   F = \frac{G M m}{r^2}
-   \]
+\( F = \frac{G M m}{r^2} \)
+
    where:
    - \( G \) is the gravitational constant,
    - \( M \) is the mass of the central body (e.g., Sun for planets, Earth for Moon),
@@ -122,6 +118,7 @@ plt.legend()
 plt.grid()
 plt.show()
 ```
+![alt text](image-1.png)
 
 This script:
 - Simulates various orbital radii.
