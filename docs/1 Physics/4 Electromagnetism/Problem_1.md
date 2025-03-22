@@ -4,7 +4,6 @@
 
 The Lorentz force, expressed as **$\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}$**, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.
 
-## Task
 
 ### Exploration of Applications  
 
