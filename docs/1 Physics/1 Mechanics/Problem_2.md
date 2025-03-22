@@ -54,9 +54,9 @@ In summary, resonance causes the system to oscillate with large amplitude at the
 ### Effect of the Damping Coefficient (\(\gamma\))
 
 The damping coefficient determines how quickly the energy in the system is dissipated. In the forced damped pendulum, damping:
-    - **Low damping**: Allows for large amplitude oscillations and may contribute to a sharp resonance peak.
-    - **High damping**: Reduces the amplitude of oscillations, and if sufficiently high, the system may not oscillate at all. This may suppress chaotic behavior and lead to a smooth, decaying response.
-    - **Critical damping**: Occurs when \(\gamma = 2\sqrt{mK}\), where the pendulum returns to equilibrium as quickly as possible without oscillating. 
+- **Low damping**: Allows for large amplitude oscillations and may contribute to a sharp resonance peak.
+- **High damping**: Reduces the amplitude of oscillations, and if sufficiently high, the system may not oscillate at all. This may suppress chaotic behavior and lead to a smooth, decaying response.
+- **Critical damping**: Occurs when \(\gamma = 2\sqrt{mK}\), where the pendulum returns to equilibrium as quickly as possible without oscillating. 
 
 ### Effect of the Driving Amplitude (\(A\))
 
@@ -71,9 +71,9 @@ The driving frequency affects how the system absorbs energy from the driving for
 ### Regular vs. Chaotic Motion
 
 As we vary \(A\), \(\gamma\), and \(\Omega\), the pendulum's motion can transition from periodic to chaotic:
-    - **Periodic motion**: The pendulum oscillates in a stable, repeating manner.
-    - **Quasiperiodic motion**: The system oscillates in a non-repeating but predictable manner.
-    - **Chaotic motion**: Small changes in initial conditions lead to unpredictable motion, and the system exhibits sensitive dependence on initial conditions. Chaos can emerge if the system is driven at certain amplitudes and frequencies, especially when nonlinearity and resonance effects combine.
+- **Periodic motion**: The pendulum oscillates in a stable, repeating manner.
+- **Quasiperiodic motion**: The system oscillates in a non-repeating but predictable manner.
+- **Chaotic motion**: Small changes in initial conditions lead to unpredictable motion, and the system exhibits sensitive dependence on initial conditions. Chaos can emerge if the system is driven at certain amplitudes and frequencies, especially when nonlinearity and resonance effects combine.
 
 ---
 
