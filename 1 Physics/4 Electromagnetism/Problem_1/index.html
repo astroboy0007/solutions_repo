@@ -80,6 +80,8 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#steps-to-simulate-particle-motion">Steps to Simulate Particle Motion</a>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-exploration-implementation">Parameter Exploration Implementation</a>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#sample-python-code">Sample Python Code</a>
 </li>
 </ul>
@@ -258,21 +260,44 @@ $$</li>
 </li>
 </ol>
 <hr/>
+<h3 id="parameter-exploration-implementation">Parameter Exploration Implementation</h3>
+<ol>
+<li>Field Strengths ((E), (B)):<ul>
+<li>Define adjustable electric ((E)) and magnetic ((B)) field strengths</li>
+<li>Explore scenarios such as weak or strong fields to observe circular, helical, or drift motion.</li>
+</ul>
+</li>
+<li>Initial Velocity ((\vec{v}_0)):<ul>
+<li>Experiment with different magnitudes and directions of initial velocity.</li>
+<li>Observe how higher velocities or perpendicular velocity components affect trajectories.</li>
+</ul>
+</li>
+<li>Charge ((q)) and Mass ((m)):<ul>
+<li>Vary particle properties, such as charge-to-mass ratio (q/m), which directly influences the radius of circular motion and the overall dynamics</li>
+</ul>
+</li>
+</ol>
+<hr/>
 <h3 id="sample-python-code"><strong>Sample Python Code</strong></h3>
 <p>Below is a simple example for a particle in a uniform magnetic field:</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants
+# Define adjustable parameters
 q = 1.6e-19  # Charge of the particle (Coulombs)
 m = 9.11e-31  # Mass of the particle (kg)
-B = np.array([0, 0, 1])  # Magnetic field (Tesla)
-E = np.array([0, 0, 0])  # Electric field (V/m)
+B_strength = 1  # Magnetic field strength (Tesla)
+E_strength = 0  # Electric field strength (V/m)
+initial_velocity = np.array([1e6, 0, 0])  # Initial velocity (m/s)
 dt = 1e-11  # Time step (seconds)
+
+# Field vectors
+B = np.array([0, 0, B_strength])  # Magnetic field (Tesla)
+E = np.array([0, 0, E_strength])  # Electric field (V/m)
 
 # Initial conditions
 r = np.array([0.0, 0.0, 0.0])  # Initial position (meters, as floats)
-v = np.array([1e6, 0, 0])  # Initial velocity (m/s)
+v = initial_velocity.copy()  # Initial velocity (m/s)
 
 # Lists to store trajectory
 positions = [r.copy()]
@@ -295,9 +320,10 @@ ax.plot(positions[:, 0], positions[:, 1], positions[:, 2])
 ax.set_xlabel('X Position (m)')
 ax.set_ylabel('Y Position (m)')
 ax.set_zlabel('Z Position (m)')
+ax.set_title(f"Trajectory for q={q}, m={m}, B={B_strength} T, E={E_strength} V/m")
 plt.show()
 </code></pre>
-<h2 id="_1"><img alt="alt text" src="../image.png"/></h2>
+<h2 id="_1"><img alt="alt text" src="../image-1.png"/></h2>
 <p>This code can be adapted for other cases by modifying the fields <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>, as well as the initial velocity. Would you like help expanding this further for other configurations?</p>
 </div>
 </div><footer>
