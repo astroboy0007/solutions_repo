@@ -65,10 +65,13 @@ To simulate the motion of a charged particle under these conditions, you can use
     - Define adjustable electric ($\mathbf{E}$) and magnetic ($\mathbf{B}$) field strengths
     - Explore scenarios such as weak or strong fields to observe circular, helical, or drift motion.
 2. Initial Velocity
-$$
+
+The initial velocity of the particle is represented as:
+
+$
 \vec{v}_0 = \begin{bmatrix} v_{x0} \\ v_{y0} \\ v_{z0} \end{bmatrix}
-$$
-  
+$
+
     - Experiment with different magnitudes and directions of initial velocity.
     - Observe how higher velocities or perpendicular velocity components affect trajectories.
 3. Charge ((q)) and Mass ((m)):
