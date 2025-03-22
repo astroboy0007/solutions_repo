@@ -316,27 +316,27 @@ if __name__ == "__main__":
 <p>This recursive simplification ensures that even deeply nested configurations are reduced correctly.</p>
 <hr/>
 <h2 id="example-configurations">Example Configurations</h2>
-<p>Example 1: Simple Series Connection
-- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>.
-- The graph has nodes A-B-C with edges AB and BC.
-- Series reduction gives:
+<p>Example 1: Simple Series Connection<br/>
+- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>.<br/>
+- The graph has nodes A-B-C with edges AB and BC.<br/>
+- Series reduction gives:<br/>
   [
   R_{\text{eq}} = R_1 + R_2 = 30 \, \Omega
   ]</p>
-<p>Example 2: Parallel Connection
-- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>.
-- The graph has nodes A-B connected by two edges.
-- Parallel reduction gives:
+<p>Example 2: Parallel Connection<br/>
+- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>.<br/>
+- The graph has nodes A-B connected by two edges.<br/>
+- Parallel reduction gives:<br/>
   [
   R_{\text{eq}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 \, \Omega
   ]</p>
-<p>Example 3: Nested Series and Parallel
-- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>, <span class="arithmatex">\(R_3 = 30 \, \Omega\)</span>.
-- <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> are in parallel:
+<p>Example 3: Nested Series and Parallel<br/>
+- Resistors: <span class="arithmatex">\(R_1 = 10 \, \Omega\)</span>, <span class="arithmatex">\(R_2 = 20 \, \Omega\)</span>, <span class="arithmatex">\(R_3 = 30 \, \Omega\)</span>.<br/>
+- <span class="arithmatex">\(R_1\)</span> and <span class="arithmatex">\(R_2\)</span> are in parallel:<br/>
   [
   R_{\text{eq(parallel)}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 \, \Omega
   ]
-- <span class="arithmatex">\(R_{\text{eq(parallel)}}\)</span> and <span class="arithmatex">\(R_3\)</span> are in series:
+- <span class="arithmatex">\(R_{\text{eq(parallel)}}\)</span> and <span class="arithmatex">\(R_3\)</span> are in series:<br/>
   [
   R_{\text{eq}} = R_{\text{eq(parallel)}} + R_3 = 36.67 \, \Omega
   ]</p>
