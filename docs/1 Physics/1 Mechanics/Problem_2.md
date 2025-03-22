@@ -157,8 +157,8 @@ plt.show()
 ![alt text](image-1.png)
 
 
-In the above simulation:
-- We use `solve_ivp` to numerically solve the second-order differential equation.
+In the above simulation:<br>
+- We use `solve_ivp` to numerically solve the second-order differential equation.<br>
 - The results are visualized both in time series and phase space.
   
 To observe transitions to chaos, varying parameters like \(A\), \(\gamma\), and \(\Omega\) will result in different types of motion, which can be analyzed through phase space diagrams and Poincaré sections.
