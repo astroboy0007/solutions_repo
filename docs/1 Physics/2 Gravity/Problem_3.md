@@ -14,19 +14,6 @@ Understanding these trajectories is crucial for:
 - **Reentry:** Safely returning objects to Earth.
 - **Escape Scenarios:** Planning missions that leave Earth’s gravitational field for interplanetary or even interstellar travel.
 
-## Task
-
-1. **Trajectories Analysis:**  
-   - Analyze elliptical, parabolic, and hyperbolic trajectories in the context of a payload released near Earth.
-   
-2. **Numerical Analysis:**  
-   - Compute the path of the payload using numerical integration based on given initial conditions (position, velocity, and altitude).
-   
-3. **Discussion:**  
-   - Relate these trajectories to the scenarios of orbital insertion, reentry, or escape.
-   
-4. **Computational Tool:**  
-   - Develop a Python script to simulate and visualize the motion of the payload under Earth's gravity, taking into account various initial velocities and directions.
 
 ## Theoretical Background
 
@@ -139,22 +126,22 @@ plt.grid(True)
 plt.legend()
 plt.show()
 ```
+![alt text](image-3.png)
 
+## Discussion
+### Trajectory Analysis
+- Elliptical Orbits: With an initial speed less than the circular orbital velocity, the payload enters a bound, elliptical trajectory. Such orbits are common for satellites.
 
-Discussion
-Trajectory Analysis
-Elliptical Orbits: With an initial speed less than the circular orbital velocity, the payload enters a bound, elliptical trajectory. Such orbits are common for satellites.
+- Parabolic Trajectories: A payload released with exactly the escape velocity follows a parabolic path—this is the critical condition between remaining bound and escaping Earth's gravity.
 
-Parabolic Trajectories: A payload released with exactly the escape velocity follows a parabolic path—this is the critical condition between remaining bound and escaping Earth's gravity.
+- Hyperbolic Trajectories: With an initial speed exceeding the escape velocity, the payload follows a hyperbolic trajectory. This extra speed allows the payload to permanently escape Earth’s gravitational influence, which is essential in certain interplanetary or deep-space missions.
 
-Hyperbolic Trajectories: With an initial speed exceeding the escape velocity, the payload follows a hyperbolic trajectory. This extra speed allows the payload to permanently escape Earth’s gravitational influence, which is essential in certain interplanetary or deep-space missions.
+### Applications in Space Missions
+- Orbital Insertion: Precise adjustments of speed and direction are necessary to insert payloads into stable orbits (typically elliptical).
 
-Applications in Space Missions
-Orbital Insertion: Precise adjustments of speed and direction are necessary to insert payloads into stable orbits (typically elliptical).
+- Reentry: Understanding these trajectories helps in planning safe reentry paths for returning spacecraft.
 
-Reentry: Understanding these trajectories helps in planning safe reentry paths for returning spacecraft.
+- Escape Trajectories: Hyperbolic trajectories are crucial for missions targeting journeys beyond Earth’s gravitational well.
 
-Escape Trajectories: Hyperbolic trajectories are crucial for missions targeting journeys beyond Earth’s gravitational well.
-
-Conclusion
+## Conclusion
 By varying the initial velocity and direction of a payload released near Earth, we can observe different trajectories—elliptical, parabolic, or hyperbolic—each corresponding to distinct mission profiles such as satellite insertion, reentry, or escape. The accompanying Python simulation serves as a computational tool for visualizing these scenarios, offering insights vital for space mission planning and execution.
