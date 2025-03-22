@@ -60,6 +60,19 @@ To simulate the motion of a charged particle under these conditions, you can use
     - Add 2D or 3D visualizations to capture the particle's motion.  
 
 ---
+### Parameter Exploration Implementation
+
+1. Field Strengths ((E), (B)):
+    - Define adjustable electric ((E)) and magnetic ((B)) field strengths
+    - Explore scenarios such as weak or strong fields to observe circular, helical, or drift motion.
+2. Initial Velocity ((\vec{v}_0)):
+    - Experiment with different magnitudes and directions of initial velocity.
+    - Observe how higher velocities or perpendicular velocity components affect trajectories.
+3. Charge ((q)) and Mass ((m)):
+    - Vary particle properties, such as charge-to-mass ratio (q/m), which directly influences the radius of circular motion and the overall dynamics
+
+
+---
 
 ### **Sample Python Code**
 Below is a simple example for a particle in a uniform magnetic field:
@@ -68,16 +81,21 @@ Below is a simple example for a particle in a uniform magnetic field:
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants
+# Define adjustable parameters
 q = 1.6e-19  # Charge of the particle (Coulombs)
 m = 9.11e-31  # Mass of the particle (kg)
-B = np.array([0, 0, 1])  # Magnetic field (Tesla)
-E = np.array([0, 0, 0])  # Electric field (V/m)
+B_strength = 1  # Magnetic field strength (Tesla)
+E_strength = 0  # Electric field strength (V/m)
+initial_velocity = np.array([1e6, 0, 0])  # Initial velocity (m/s)
 dt = 1e-11  # Time step (seconds)
+
+# Field vectors
+B = np.array([0, 0, B_strength])  # Magnetic field (Tesla)
+E = np.array([0, 0, E_strength])  # Electric field (V/m)
 
 # Initial conditions
 r = np.array([0.0, 0.0, 0.0])  # Initial position (meters, as floats)
-v = np.array([1e6, 0, 0])  # Initial velocity (m/s)
+v = initial_velocity.copy()  # Initial velocity (m/s)
 
 # Lists to store trajectory
 positions = [r.copy()]
@@ -100,9 +118,10 @@ ax.plot(positions[:, 0], positions[:, 1], positions[:, 2])
 ax.set_xlabel('X Position (m)')
 ax.set_ylabel('Y Position (m)')
 ax.set_zlabel('Z Position (m)')
+ax.set_title(f"Trajectory for q={q}, m={m}, B={B_strength} T, E={E_strength} V/m")
 plt.show()
 ```
-![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 This code can be adapted for other cases by modifying the fields \(\vec{E}\) and \(\vec{B}\), as well as the initial velocity. Would you like help expanding this further for other configurations?
