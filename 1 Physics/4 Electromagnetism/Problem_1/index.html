@@ -206,31 +206,31 @@
 <hr/>
 <h3 id="steps-to-simulate-particle-motion"><strong>Steps to Simulate Particle Motion</strong></h3>
 <ol>
-<li><strong>Define Parameters:</strong></li>
-<li>Charge <span class="arithmatex">\(q\)</span> and mass <span class="arithmatex">\(m\)</span> of the particle.</li>
-<li>Initial position <span class="arithmatex">\(\vec{r}(t_0)\)</span> and velocity <span class="arithmatex">\(\vec{v}(t_0)\)</span>.</li>
+<li><strong>Define Parameters:</strong> </li>
+<li>Charge <span class="arithmatex">\(q\)</span> and mass <span class="arithmatex">\(m\)</span> of the particle.  </li>
+<li>Initial position <span class="arithmatex">\(\vec{r}(t_0)\)</span> and velocity <span class="arithmatex">\(\vec{v}(t_0)\)</span>.  </li>
 <li>
-<p>Electric field <span class="arithmatex">\(\vec{E}\)</span> and magnetic field <span class="arithmatex">\(\vec{B}\)</span> configurations.</p>
+<p>Electric field <span class="arithmatex">\(\vec{E}\)</span> and magnetic field <span class="arithmatex">\(\vec{B}\)</span> configurations.  </p>
 </li>
 <li>
-<p><strong>Set Up Equations of Motion:</strong></p>
+<p><strong>Set Up Equations of Motion:</strong> </p>
 </li>
-<li>Use the Lorentz force equation:
+<li>Use the Lorentz force equation:<br/>
      [
      \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
      ]</li>
 <li>
-<p>This provides acceleration:
+<p>This provides acceleration:<br/>
      [
      \vec{a} = \frac{\vec{F}}{m}
      ]</p>
 </li>
 <li>
-<p><strong>Time-Stepping:</strong></p>
+<p><strong>Time-Stepping:</strong> </p>
 </li>
-<li>Discretize time using a small timestep <span class="arithmatex">\(\Delta t\)</span>.</li>
+<li>Discretize time using a small timestep <span class="arithmatex">\(\Delta t\)</span>.  </li>
 <li>
-<p>Update velocity and position iteratively:
+<p>Update velocity and position iteratively:<br/>
      [
      \vec{v}(t + \Delta t) = \vec{v}(t) + \vec{a} \Delta t
      ]
@@ -239,18 +239,18 @@
      ]</p>
 </li>
 <li>
-<p><strong>Simulation Types:</strong></p>
+<p><strong>Simulation Types:</strong> </p>
 </li>
-<li><strong>Uniform Magnetic Field:</strong> The motion will typically be circular or helical, depending on the initial velocity.</li>
-<li><strong>Combined Electric and Magnetic Fields:</strong> Include the contribution of <span class="arithmatex">\(\vec{E}\)</span> in the force equation.</li>
+<li><strong>Uniform Magnetic Field:</strong> The motion will typically be circular or helical, depending on the initial velocity.  </li>
+<li><strong>Combined Electric and Magnetic Fields:</strong> Include the contribution of <span class="arithmatex">\(\vec{E}\)</span> in the force equation.  </li>
 <li>
-<p><strong>Crossed Fields (<span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>):</strong> Drift velocity appears perpendicular to both <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>.</p>
+<p><strong>Crossed Fields (<span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>):</strong> Drift velocity appears perpendicular to both <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>.  </p>
 </li>
 <li>
 <p><strong>Visualization:</strong></p>
 </li>
-<li>Plot the trajectory using libraries like <code>matplotlib</code>.</li>
-<li>Add 2D or 3D visualizations to capture the particle's motion.</li>
+<li>Plot the trajectory using libraries like <code>matplotlib</code>.  </li>
+<li>Add 2D or 3D visualizations to capture the particle's motion.  </li>
 </ol>
 <hr/>
 <h3 id="sample-python-code"><strong>Sample Python Code</strong></h3>
