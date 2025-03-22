@@ -5,16 +5,16 @@
 The Lorentz force, expressed as **$\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}$**, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.
 
 
-### Exploration of Applications  
+## Exploration of Applications  
 
-#### **Key Systems Where the Lorentz Force Plays a Role:**  
+## **Key Systems Where the Lorentz Force Plays a Role:**  
 1. **Particle Accelerators** – The Lorentz force is crucial in synchrotrons and cyclotrons, where charged particles are steered and accelerated using electric and magnetic fields.  
 2. **Mass Spectrometers** – These devices use the Lorentz force to separate ions based on their mass-to-charge ratio by bending their trajectories in a magnetic field.  
 3. **Plasma Confinement** – In fusion reactors (e.g., tokamaks), magnetic fields confine high-energy charged particles, preventing them from escaping and sustaining plasma conditions for fusion.  
 4. **Cathode Ray Tubes (CRTs)** – Used in old television screens and oscilloscopes, the motion of electrons is controlled via electric and magnetic fields.  
 5. **Hall Effect Sensors** – The Lorentz force influences charge carriers in a conductor placed in a magnetic field, helping measure magnetic field strength.  
 
-#### **Relevance of Electric and Magnetic Fields in Controlling Charged Particles:**  
+## **Relevance of Electric and Magnetic Fields in Controlling Charged Particles:**  
 - **Electric Fields ($\mathbf{E}$):** Control particle velocity by accelerating or decelerating charged particles in a linear direction.  
 - **Magnetic Fields ($\mathbf{B}$):** Deflect charged particles perpendicular to their velocity, leading to circular or helical motion.  
 - **Combined Effects:** Used in electromagnetic traps, spectrometers, and fusion devices to precisely manipulate particle motion for research and industrial applications.  
@@ -23,7 +23,7 @@ To simulate the motion of a charged particle under these conditions, you can use
 
 ---
 
-### **Steps to Simulate Particle Motion**
+## **Steps to Simulate Particle Motion**
 1. **Define Parameters:**  <br>
     - Charge \(q\) and mass \(m\) of the particle.  
     - Initial position \(\vec{r}(t_0)\) and velocity \(\vec{v}(t_0)\).  
@@ -59,7 +59,7 @@ To simulate the motion of a charged particle under these conditions, you can use
     - Add 2D or 3D visualizations to capture the particle's motion.  
 
 ---
-### Parameter Exploration Implementation
+## Parameter Exploration Implementation
 
 1. Field Strengths ($\mathbf{E}$), ($\mathbf{B}$):
     - Define adjustable electric ($\mathbf{E}$) and magnetic ($\mathbf{B}$) field strengths
@@ -84,7 +84,7 @@ v_{z0}
 
 ---
 
-### **Sample Python Code**
+## **Sample Python Code**
 Below is a simple example for a particle in a uniform magnetic field:
 
 ```python
