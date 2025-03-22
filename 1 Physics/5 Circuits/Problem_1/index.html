@@ -181,16 +181,16 @@
 <h2 id="algorithm-description">Algorithm Description</h2>
 <p>The algorithm uses graph theory to model a circuit as a graph:</p>
 <p>Steps:<br/>
-1. Graph Construction:
-    - Build a graph where edges have weights corresponding to resistor values.
-2. Detect Series Connections:
-    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: [ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n ]
-3. Detect Parallel Connections:
-    - Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]
-4. Iterative Reduction:
-    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.
-5. Handle Nested Combinations:
-    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.</p>
+1. Graph Construction:<br/>
+    - Build a graph where edges have weights corresponding to resistor values.<br/>
+2. Detect Series Connections:<br/>
+    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: [ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n ]<br/>
+3. Detect Parallel Connections:<br/>
+    - Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]<br/>
+4. Iterative Reduction:<br/>
+    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.<br/>
+5. Handle Nested Combinations:<br/>
+    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  </p>
 <hr/>
 <h2 id="pseudocode">Pseudocode</h2>
 <pre><code>Algorithm: CalculateEquivalentResistance
