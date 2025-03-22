@@ -73,16 +73,18 @@
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#exploration-of-applications">Exploration of Applications</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#steps-to-simulate-particle-motion">Steps to Simulate Particle Motion</a>
+<li class="toctree-l3"><a class="reference internal" href="#exploration-of-applications">Exploration of Applications</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#parameter-exploration-implementation">Parameter Exploration Implementation</a>
+<li class="toctree-l3"><a class="reference internal" href="#key-systems-where-the-lorentz-force-plays-a-role">Key Systems Where the Lorentz Force Plays a Role:</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#sample-python-code">Sample Python Code</a>
+<li class="toctree-l3"><a class="reference internal" href="#relevance-of-electric-and-magnetic-fields-in-controlling-charged-particles">Relevance of Electric and Magnetic Fields in Controlling Charged Particles:</a>
 </li>
-</ul>
+<li class="toctree-l3"><a class="reference internal" href="#steps-to-simulate-particle-motion">Steps to Simulate Particle Motion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-exploration-implementation">Parameter Exploration Implementation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-python-code">Sample Python Code</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#_1"></a>
 </li>
@@ -188,8 +190,8 @@
 <h1 id="problem-1">Problem 1</h1>
 <h2 id="motivation">Motivation</h2>
 <p>The Lorentz force, expressed as <strong><span class="arithmatex">\(\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}\)</span></strong>, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.</p>
-<h3 id="exploration-of-applications">Exploration of Applications</h3>
-<h4 id="key-systems-where-the-lorentz-force-plays-a-role"><strong>Key Systems Where the Lorentz Force Plays a Role:</strong></h4>
+<h2 id="exploration-of-applications">Exploration of Applications</h2>
+<h2 id="key-systems-where-the-lorentz-force-plays-a-role"><strong>Key Systems Where the Lorentz Force Plays a Role:</strong></h2>
 <ol>
 <li><strong>Particle Accelerators</strong> – The Lorentz force is crucial in synchrotrons and cyclotrons, where charged particles are steered and accelerated using electric and magnetic fields.  </li>
 <li><strong>Mass Spectrometers</strong> – These devices use the Lorentz force to separate ions based on their mass-to-charge ratio by bending their trajectories in a magnetic field.  </li>
@@ -197,7 +199,7 @@
 <li><strong>Cathode Ray Tubes (CRTs)</strong> – Used in old television screens and oscilloscopes, the motion of electrons is controlled via electric and magnetic fields.  </li>
 <li><strong>Hall Effect Sensors</strong> – The Lorentz force influences charge carriers in a conductor placed in a magnetic field, helping measure magnetic field strength.  </li>
 </ol>
-<h4 id="relevance-of-electric-and-magnetic-fields-in-controlling-charged-particles"><strong>Relevance of Electric and Magnetic Fields in Controlling Charged Particles:</strong></h4>
+<h2 id="relevance-of-electric-and-magnetic-fields-in-controlling-charged-particles"><strong>Relevance of Electric and Magnetic Fields in Controlling Charged Particles:</strong></h2>
 <ul>
 <li><strong>Electric Fields (<span class="arithmatex">\(\mathbf{E}\)</span>):</strong> Control particle velocity by accelerating or decelerating charged particles in a linear direction.  </li>
 <li><strong>Magnetic Fields (<span class="arithmatex">\(\mathbf{B}\)</span>):</strong> Deflect charged particles perpendicular to their velocity, leading to circular or helical motion.  </li>
@@ -205,7 +207,7 @@
 </ul>
 <p>To simulate the motion of a charged particle under these conditions, you can use a programming language like Python, which is well-suited for numerical computations and visualization. Below is a breakdown of how to approach this:</p>
 <hr/>
-<h3 id="steps-to-simulate-particle-motion"><strong>Steps to Simulate Particle Motion</strong></h3>
+<h2 id="steps-to-simulate-particle-motion"><strong>Steps to Simulate Particle Motion</strong></h2>
 <ol>
 <li><strong>Define Parameters:</strong> <br/><ul>
 <li>Charge <span class="arithmatex">\(q\)</span> and mass <span class="arithmatex">\(m\)</span> of the particle.  </li>
@@ -257,7 +259,7 @@ $$</li>
 </li>
 </ol>
 <hr/>
-<h3 id="parameter-exploration-implementation">Parameter Exploration Implementation</h3>
+<h2 id="parameter-exploration-implementation">Parameter Exploration Implementation</h2>
 <ol>
 <li>Field Strengths (<span class="arithmatex">\(\mathbf{E}\)</span>), (<span class="arithmatex">\(\mathbf{B}\)</span>):<ul>
 <li>Define adjustable electric (<span class="arithmatex">\(\mathbf{E}\)</span>) and magnetic (<span class="arithmatex">\(\mathbf{B}\)</span>) field strengths</li>
@@ -284,7 +286,7 @@ v_{z0}
 </li>
 </ul>
 <hr/>
-<h3 id="sample-python-code"><strong>Sample Python Code</strong></h3>
+<h2 id="sample-python-code"><strong>Sample Python Code</strong></h2>
 <p>Below is a simple example for a particle in a uniform magnetic field:</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
