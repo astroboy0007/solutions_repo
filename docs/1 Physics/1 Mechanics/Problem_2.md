@@ -154,6 +154,8 @@ plt.title('Phase Diagram')
 plt.tight_layout()
 plt.show()
 ```
+![alt text](image-1.png)
+
 
 In the above simulation:
 - We use `solve_ivp` to numerically solve the second-order differential equation.
