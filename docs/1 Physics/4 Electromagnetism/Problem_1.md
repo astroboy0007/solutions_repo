@@ -25,11 +25,11 @@ To simulate the motion of a charged particle under these conditions, you can use
 ---
 
 ### **Steps to Simulate Particle Motion**
-1. **Define Parameters:**  
+1. **Define Parameters:**  <br>
 - Charge \(q\) and mass \(m\) of the particle.  
 - Initial position \(\vec{r}(t_0)\) and velocity \(\vec{v}(t_0)\).  
 - Electric field \(\vec{E}\) and magnetic field \(\vec{B}\) configurations.  
-
+<br>
 2. **Set Up Equations of Motion:**  
 - Use the Lorentz force equation:  
     $$
