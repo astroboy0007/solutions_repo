@@ -342,10 +342,12 @@ if __name__ == "__main__":
   $$  </p>
 <hr/>
 <h2 id="algorithm-efficiency-and-improvements">Algorithm Efficiency and Improvements</h2>
-<p>Efficiency:<br/>
-- Series Reduction: Runs in (O(n)), where (n) is the number of nodes.
-- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.<br/>
-- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.  </p>
+<p>Efficiency:  </p>
+<ul>
+<li><strong>Series Reduction</strong>: Runs in <span class="arithmatex">\(O(n)\)</span>, where <span class="arithmatex">\(n\)</span> is the number of nodes.</li>
+<li><strong>Parallel Reduction</strong>: Detecting cycles in a graph requires <span class="arithmatex">\(O(E + V)\)</span>, where <span class="arithmatex">\(E\)</span> is the number of edges and <span class="arithmatex">\(V\)</span> is the number of vertices.</li>
+<li><strong>Overall Complexity</strong>: Depends on the graph's structure and the number of iterations needed to simplify it.</li>
+</ul>
 <p>Potential Improvements:<br/>
 - Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.<br/>
 - Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.<br/>
