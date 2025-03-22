@@ -154,20 +154,32 @@ This recursive simplification ensures that even deeply nested configurations are
 ---
 ## Example Configurations
 
-Example 1: Simple Series Connection  
-- Resistors: (R_1 = 10 , \Omega), (R_2 = 20 , \Omega).  
-- The graph has nodes A-B-C with edges AB and BC.  
-- Series reduction gives (R_{\text{eq}} = R_1 + R_2 = 30 , \Omega).  
-  
-Example 2: Parallel Connection
-- Resistors: (R_1 = 10 , \Omega), (R_2 = 20 , \Omega).  
-- The graph has nodes A-B connected by two edges.  
-- Parallel reduction gives: [ R_{\text{eq}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 , \Omega ]
+Example 1: Simple Series Connection
+- Resistors: \(R_1 = 10 \, \Omega\), \(R_2 = 20 \, \Omega\).
+- The graph has nodes A-B-C with edges AB and BC.
+- Series reduction gives:
+  \[
+  R_{\text{eq}} = R_1 + R_2 = 30 \, \Omega
+  \]
 
-Example 3: Nested Series and Parallel  
-- Resistors: (R_1 = 10 , \Omega), (R_2 = 20 , \Omega), (R_3 = 30 , \Omega).  
-- (R_1) and (R_2) are in parallel: [ R_{\text{eq(parallel)}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 , \Omega ]  
-- (R_{\text{eq(parallel)}}) and (R_3) are in series: [ R_{\text{eq}} = R_{\text{eq(parallel)}} + R_3 = 36.67 , \Omega ]  
+Example 2: Parallel Connection
+- Resistors: \(R_1 = 10 \, \Omega\), \(R_2 = 20 \, \Omega\).
+- The graph has nodes A-B connected by two edges.
+- Parallel reduction gives:
+  \[
+  R_{\text{eq}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 \, \Omega
+  \]
+
+Example 3: Nested Series and Parallel
+- Resistors: \(R_1 = 10 \, \Omega\), \(R_2 = 20 \, \Omega\), \(R_3 = 30 \, \Omega\).
+- \(R_1\) and \(R_2\) are in parallel:
+  \[
+  R_{\text{eq(parallel)}} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1} = 6.67 \, \Omega
+  \]
+- \(R_{\text{eq(parallel)}}\) and \(R_3\) are in series:
+  \[
+  R_{\text{eq}} = R_{\text{eq(parallel)}} + R_3 = 36.67 \, \Omega
+  \]
 
 ---
 
