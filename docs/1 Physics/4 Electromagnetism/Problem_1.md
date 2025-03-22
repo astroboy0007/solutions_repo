@@ -76,7 +76,7 @@ E = np.array([0, 0, 0])  # Electric field (V/m)
 dt = 1e-11  # Time step (seconds)
 
 # Initial conditions
-r = np.array([0, 0, 0])  # Initial position (meters)
+r = np.array([0.0, 0.0, 0.0])  # Initial position (meters, as floats)
 v = np.array([1e6, 0, 0])  # Initial velocity (m/s)
 
 # Lists to store trajectory
@@ -102,7 +102,7 @@ ax.set_ylabel('Y Position (m)')
 ax.set_zlabel('Z Position (m)')
 plt.show()
 ```
-
+![alt text](image.png)
 ---
 
 This code can be adapted for other cases by modifying the fields \(\vec{E}\) and \(\vec{B}\), as well as the initial velocity. Would you like help expanding this further for other configurations?
