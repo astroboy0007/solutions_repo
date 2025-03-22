@@ -25,24 +25,24 @@ To simulate the motion of a charged particle under these conditions, you can use
 ---
 
 ### **Steps to Simulate Particle Motion**
-1. **Define Parameters:**
-   - Charge \(q\) and mass \(m\) of the particle.
-   - Initial position \(\vec{r}(t_0)\) and velocity \(\vec{v}(t_0)\).
-   - Electric field \(\vec{E}\) and magnetic field \(\vec{B}\) configurations.
+1. **Define Parameters:**  
+   - Charge \(q\) and mass \(m\) of the particle.  
+   - Initial position \(\vec{r}(t_0)\) and velocity \(\vec{v}(t_0)\).  
+   - Electric field \(\vec{E}\) and magnetic field \(\vec{B}\) configurations.  
 
-2. **Set Up Equations of Motion:**
-   - Use the Lorentz force equation:
+2. **Set Up Equations of Motion:**  
+   - Use the Lorentz force equation:  
      \[
      \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
      \]
-   - This provides acceleration:
+   - This provides acceleration:  
      \[
      \vec{a} = \frac{\vec{F}}{m}
      \]
 
-3. **Time-Stepping:**
-   - Discretize time using a small timestep \(\Delta t\).
-   - Update velocity and position iteratively:
+3. **Time-Stepping:**  
+   - Discretize time using a small timestep \(\Delta t\).  
+   - Update velocity and position iteratively:  
      \[
      \vec{v}(t + \Delta t) = \vec{v}(t) + \vec{a} \Delta t
      \]
@@ -50,14 +50,14 @@ To simulate the motion of a charged particle under these conditions, you can use
      \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t
      \]
 
-4. **Simulation Types:**
-   - **Uniform Magnetic Field:** The motion will typically be circular or helical, depending on the initial velocity.
-   - **Combined Electric and Magnetic Fields:** Include the contribution of \(\vec{E}\) in the force equation.
-   - **Crossed Fields (\(\vec{E} \perp \vec{B}\)):** Drift velocity appears perpendicular to both \(\vec{E}\) and \(\vec{B}\).
+4. **Simulation Types:**  
+   - **Uniform Magnetic Field:** The motion will typically be circular or helical, depending on the initial velocity.  
+   - **Combined Electric and Magnetic Fields:** Include the contribution of \(\vec{E}\) in the force equation.  
+   - **Crossed Fields (\(\vec{E} \perp \vec{B}\)):** Drift velocity appears perpendicular to both \(\vec{E}\) and \(\vec{B}\).  
 
 5. **Visualization:**
-   - Plot the trajectory using libraries like `matplotlib`.
-   - Add 2D or 3D visualizations to capture the particle's motion.
+   - Plot the trajectory using libraries like `matplotlib`.  
+   - Add 2D or 3D visualizations to capture the particle's motion.  
 
 ---
 
