@@ -5,13 +5,13 @@
 ## Motivation
 
 When a payload is released from a moving rocket near Earth, its trajectory depends on its initial conditions (position, velocity, and altitude) as well as Earth's gravitational pull. Depending on the initial speed and direction, the payload can follow one of several possible paths:
-- **Elliptical Orbit:** When the payload's speed is less than the circular orbital speed, it will remain bound to Earth on an elliptical orbit.
-- **Parabolic Trajectory:** When the payload's speed is exactly the escape velocity, it follows a parabolic path, representing the threshold between bound and unbound orbits.
-- **Hyperbolic Trajectory:** If the payload's speed exceeds the escape velocity, it follows a hyperbolic path and escapes Earth’s gravitational pull.
+- **Elliptical Orbit:** When the payload's speed is less than the circular orbital speed, it will remain bound to Earth on an elliptical orbit.  
+- **Parabolic Trajectory:** When the payload's speed is exactly the escape velocity, it follows a parabolic path, representing the threshold between bound and unbound orbits.  
+- **Hyperbolic Trajectory:** If the payload's speed exceeds the escape velocity, it follows a hyperbolic path and escapes Earth’s gravitational pull.  
 
 Understanding these trajectories is crucial for:
-- **Orbital Insertion:** Placing satellites and payloads into stable orbits.
-- **Reentry:** Safely returning objects to Earth.
+- **Orbital Insertion:** Placing satellites and payloads into stable orbits.  
+- **Reentry:** Safely returning objects to Earth.  
 - **Escape Scenarios:** Planning missions that leave Earth’s gravitational field for interplanetary or even interstellar travel.
 
 
