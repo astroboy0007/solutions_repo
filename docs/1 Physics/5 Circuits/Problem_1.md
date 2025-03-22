@@ -186,9 +186,10 @@ Example 3: Nested Series and Parallel
 ## Algorithm Efficiency and Improvements
 
 Efficiency:  
-- Series Reduction: Runs in (O(n)), where (n) is the number of nodes.
-- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.  
-- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.  
+
+- **Series Reduction**: Runs in \(O(n)\), where \(n\) is the number of nodes.
+- **Parallel Reduction**: Detecting cycles in a graph requires \(O(E + V)\), where \(E\) is the number of edges and \(V\) is the number of vertices.
+- **Overall Complexity**: Depends on the graph's structure and the number of iterations needed to simplify it.
   
 Potential Improvements:  
 - Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.  
