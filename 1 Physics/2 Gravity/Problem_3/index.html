@@ -182,29 +182,6 @@
 - <strong>Orbital Insertion:</strong> Placing satellites and payloads into stable orbits.
 - <strong>Reentry:</strong> Safely returning objects to Earth.
 - <strong>Escape Scenarios:</strong> Planning missions that leave Earth’s gravitational field for interplanetary or even interstellar travel.</p>
-<h2 id="task">Task</h2>
-<ol>
-<li><strong>Trajectories Analysis:</strong> </li>
-<li>
-<p>Analyze elliptical, parabolic, and hyperbolic trajectories in the context of a payload released near Earth.</p>
-</li>
-<li>
-<p><strong>Numerical Analysis:</strong> </p>
-</li>
-<li>
-<p>Compute the path of the payload using numerical integration based on given initial conditions (position, velocity, and altitude).</p>
-</li>
-<li>
-<p><strong>Discussion:</strong> </p>
-</li>
-<li>
-<p>Relate these trajectories to the scenarios of orbital insertion, reentry, or escape.</p>
-</li>
-<li>
-<p><strong>Computational Tool:</strong> </p>
-</li>
-<li>Develop a Python script to simulate and visualize the motion of the payload under Earth's gravity, taking into account various initial velocities and directions.</li>
-</ol>
 <h2 id="theoretical-background">Theoretical Background</h2>
 <p>When an object moves under the influence of Earth's gravity, its acceleration is given by Newton's law of universal gravitation:</p>
 <div class="arithmatex">\[
@@ -298,17 +275,34 @@ plt.grid(True)
 plt.legend()
 plt.show()
 </code></pre>
-<p>Discussion
-Trajectory Analysis
-Elliptical Orbits: With an initial speed less than the circular orbital velocity, the payload enters a bound, elliptical trajectory. Such orbits are common for satellites.</p>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<h2 id="discussion">Discussion</h2>
+<h3 id="trajectory-analysis">Trajectory Analysis</h3>
+<ul>
+<li>
+<p>Elliptical Orbits: With an initial speed less than the circular orbital velocity, the payload enters a bound, elliptical trajectory. Such orbits are common for satellites.</p>
+</li>
+<li>
 <p>Parabolic Trajectories: A payload released with exactly the escape velocity follows a parabolic path—this is the critical condition between remaining bound and escaping Earth's gravity.</p>
+</li>
+<li>
 <p>Hyperbolic Trajectories: With an initial speed exceeding the escape velocity, the payload follows a hyperbolic trajectory. This extra speed allows the payload to permanently escape Earth’s gravitational influence, which is essential in certain interplanetary or deep-space missions.</p>
-<p>Applications in Space Missions
-Orbital Insertion: Precise adjustments of speed and direction are necessary to insert payloads into stable orbits (typically elliptical).</p>
+</li>
+</ul>
+<h3 id="applications-in-space-missions">Applications in Space Missions</h3>
+<ul>
+<li>
+<p>Orbital Insertion: Precise adjustments of speed and direction are necessary to insert payloads into stable orbits (typically elliptical).</p>
+</li>
+<li>
 <p>Reentry: Understanding these trajectories helps in planning safe reentry paths for returning spacecraft.</p>
+</li>
+<li>
 <p>Escape Trajectories: Hyperbolic trajectories are crucial for missions targeting journeys beyond Earth’s gravitational well.</p>
-<p>Conclusion
-By varying the initial velocity and direction of a payload released near Earth, we can observe different trajectories—elliptical, parabolic, or hyperbolic—each corresponding to distinct mission profiles such as satellite insertion, reentry, or escape. The accompanying Python simulation serves as a computational tool for visualizing these scenarios, offering insights vital for space mission planning and execution.</p>
+</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>By varying the initial velocity and direction of a payload released near Earth, we can observe different trajectories—elliptical, parabolic, or hyperbolic—each corresponding to distinct mission profiles such as satellite insertion, reentry, or escape. The accompanying Python simulation serves as a computational tool for visualizing these scenarios, offering insights vital for space mission planning and execution.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
