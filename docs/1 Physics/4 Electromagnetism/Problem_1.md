@@ -61,12 +61,16 @@ To simulate the motion of a charged particle under these conditions, you can use
 ---
 ### Parameter Exploration Implementation
 
-1. Field Strengths ((E), (B)):
-    - Define adjustable electric ((E)) and magnetic ((B)) field strengths
+1. Field Strengths ($\mathbf{E}$), ($\mathbf{B}$):
+    - Define adjustable electric ($\mathbf{E}$) and magnetic ($\mathbf{B}$) field strengths
     - Explore scenarios such as weak or strong fields to observe circular, helical, or drift motion.
-2. Initial Velocity ((\vec{v}_0)):
-    - Experiment with different magnitudes and directions of initial velocity.
-    - Observe how higher velocities or perpendicular velocity components affect trajectories.
+2. Initial Velocity
+$$
+\vec{v}_0 = \begin{bmatrix} v_{x0} \\ v_{y0} \\ v_{z0} \end{bmatrix}
+$$
+
+- Experiment with different magnitudes and directions of initial velocity.
+- Observe how higher velocities or perpendicular velocity components affect trajectories.
 3. Charge ((q)) and Mass ((m)):
     - Vary particle properties, such as charge-to-mass ratio (q/m), which directly influences the radius of circular motion and the overall dynamics
 
