@@ -78,10 +78,9 @@ v_{z0}
 \]
 
 - Experiment with different magnitudes and directions of initial velocity.
-- Observe how higher velocities or perpendicular velocity components affect trajectories.
-3. Charge ((q)) and Mass ((m)):
-    - Vary particle properties, such as charge-to-mass ratio (q/m), which directly influences the radius of circular motion and the overall dynamics
-
+- Observe how higher velocities or perpendicular velocity components affect trajectories.  
+3. Charge \(q\) and Mass \(m\):
+    - Vary particle properties, such as charge-to-mass ratio \(\frac{q}{m}\), which directly influences the radius of circular motion and the overall dynamics
 
 ---
 
