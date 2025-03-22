@@ -14,16 +14,16 @@ Studying equivalent resistance through graph theory is valuable not only for its
 The algorithm uses graph theory to model a circuit as a graph:
 
 Steps:  
-1. Graph Construction:
-    - Build a graph where edges have weights corresponding to resistor values.
-2. Detect Series Connections:
-    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: [ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n ]
-3. Detect Parallel Connections:
-    - Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]
-4. Iterative Reduction:
-    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.
-5. Handle Nested Combinations:
-    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.
+1. Graph Construction:  
+    - Build a graph where edges have weights corresponding to resistor values.  
+2. Detect Series Connections:  
+    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: [ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n ]  
+3. Detect Parallel Connections:  
+    - Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]  
+4. Iterative Reduction:  
+    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.  
+5. Handle Nested Combinations:  
+    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  
 
 ---
 ## Pseudocode
