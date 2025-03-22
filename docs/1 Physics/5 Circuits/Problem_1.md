@@ -140,7 +140,7 @@ if __name__ == "__main__":
 
 ```
 Output:  
-- The equivalent resistance between A and C is 30.00 ohms
+``` The equivalent resistance between A and C is 30.00 ohms ```
 
 
 ## Handling Nested Combinations
@@ -187,10 +187,10 @@ Example 3: Nested Series and Parallel
 
 Efficiency:  
 - Series Reduction: Runs in (O(n)), where (n) is the number of nodes.
-- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.
-- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.
+- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.  
+- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.  
   
-Potential Improvements:
-- Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.
-- Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.
+Potential Improvements:  
+- Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.  
+- Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.  
 - Use libraries like NetworkX in Python for better graph manipulation and visualization.
