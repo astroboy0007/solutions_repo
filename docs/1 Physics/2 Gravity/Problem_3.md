@@ -9,7 +9,7 @@ When a payload is released from a moving rocket near Earth, its trajectory depen
 - **Parabolic Trajectory:** When the payload's speed is exactly the escape velocity, it follows a parabolic path, representing the threshold between bound and unbound orbits.  
 - **Hyperbolic Trajectory:** If the payload's speed exceeds the escape velocity, it follows a hyperbolic path and escapes Earth’s gravitational pull.  
 
-Understanding these trajectories is crucial for:
+Understanding these trajectories is crucial for:  
 - **Orbital Insertion:** Placing satellites and payloads into stable orbits.  
 - **Reentry:** Safely returning objects to Earth.  
 - **Escape Scenarios:** Planning missions that leave Earth’s gravitational field for interplanetary or even interstellar travel.
