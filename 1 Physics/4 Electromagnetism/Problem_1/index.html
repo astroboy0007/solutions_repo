@@ -72,6 +72,18 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task">Task</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#exploration-of-applications">Exploration of Applications</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-simulate-particle-motion">Steps to Simulate Particle Motion</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-python-code">Sample Python Code</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +184,116 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The Lorentz force, expressed as <strong><span class="arithmatex">\(\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}\)</span></strong>, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.</p>
+<h2 id="task">Task</h2>
+<h3 id="exploration-of-applications">Exploration of Applications</h3>
+<h4 id="key-systems-where-the-lorentz-force-plays-a-role"><strong>Key Systems Where the Lorentz Force Plays a Role:</strong></h4>
+<ol>
+<li><strong>Particle Accelerators</strong> – The Lorentz force is crucial in synchrotrons and cyclotrons, where charged particles are steered and accelerated using electric and magnetic fields.  </li>
+<li><strong>Mass Spectrometers</strong> – These devices use the Lorentz force to separate ions based on their mass-to-charge ratio by bending their trajectories in a magnetic field.  </li>
+<li><strong>Plasma Confinement</strong> – In fusion reactors (e.g., tokamaks), magnetic fields confine high-energy charged particles, preventing them from escaping and sustaining plasma conditions for fusion.  </li>
+<li><strong>Cathode Ray Tubes (CRTs)</strong> – Used in old television screens and oscilloscopes, the motion of electrons is controlled via electric and magnetic fields.  </li>
+<li><strong>Hall Effect Sensors</strong> – The Lorentz force influences charge carriers in a conductor placed in a magnetic field, helping measure magnetic field strength.  </li>
+</ol>
+<h4 id="relevance-of-electric-and-magnetic-fields-in-controlling-charged-particles"><strong>Relevance of Electric and Magnetic Fields in Controlling Charged Particles:</strong></h4>
+<ul>
+<li><strong>Electric Fields (<span class="arithmatex">\(\mathbf{E}\)</span>):</strong> Control particle velocity by accelerating or decelerating charged particles in a linear direction.  </li>
+<li><strong>Magnetic Fields (<span class="arithmatex">\(\mathbf{B}\)</span>):</strong> Deflect charged particles perpendicular to their velocity, leading to circular or helical motion.  </li>
+<li><strong>Combined Effects:</strong> Used in electromagnetic traps, spectrometers, and fusion devices to precisely manipulate particle motion for research and industrial applications.  </li>
+</ul>
+<p>To simulate the motion of a charged particle under these conditions, you can use a programming language like Python, which is well-suited for numerical computations and visualization. Below is a breakdown of how to approach this:</p>
+<hr/>
+<h3 id="steps-to-simulate-particle-motion"><strong>Steps to Simulate Particle Motion</strong></h3>
+<ol>
+<li><strong>Define Parameters:</strong></li>
+<li>Charge <span class="arithmatex">\(q\)</span> and mass <span class="arithmatex">\(m\)</span> of the particle.</li>
+<li>Initial position <span class="arithmatex">\(\vec{r}(t_0)\)</span> and velocity <span class="arithmatex">\(\vec{v}(t_0)\)</span>.</li>
+<li>
+<p>Electric field <span class="arithmatex">\(\vec{E}\)</span> and magnetic field <span class="arithmatex">\(\vec{B}\)</span> configurations.</p>
+</li>
+<li>
+<p><strong>Set Up Equations of Motion:</strong></p>
+</li>
+<li>Use the Lorentz force equation:
+     [
+     \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+     ]</li>
+<li>
+<p>This provides acceleration:
+     [
+     \vec{a} = \frac{\vec{F}}{m}
+     ]</p>
+</li>
+<li>
+<p><strong>Time-Stepping:</strong></p>
+</li>
+<li>Discretize time using a small timestep <span class="arithmatex">\(\Delta t\)</span>.</li>
+<li>
+<p>Update velocity and position iteratively:
+     [
+     \vec{v}(t + \Delta t) = \vec{v}(t) + \vec{a} \Delta t
+     ]
+     [
+     \vec{r}(t + \Delta t) = \vec{r}(t) + \vec{v}(t) \Delta t
+     ]</p>
+</li>
+<li>
+<p><strong>Simulation Types:</strong></p>
+</li>
+<li><strong>Uniform Magnetic Field:</strong> The motion will typically be circular or helical, depending on the initial velocity.</li>
+<li><strong>Combined Electric and Magnetic Fields:</strong> Include the contribution of <span class="arithmatex">\(\vec{E}\)</span> in the force equation.</li>
+<li>
+<p><strong>Crossed Fields (<span class="arithmatex">\(\vec{E} \perp \vec{B}\)</span>):</strong> Drift velocity appears perpendicular to both <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>.</p>
+</li>
+<li>
+<p><strong>Visualization:</strong></p>
+</li>
+<li>Plot the trajectory using libraries like <code>matplotlib</code>.</li>
+<li>Add 2D or 3D visualizations to capture the particle's motion.</li>
+</ol>
+<hr/>
+<h3 id="sample-python-code"><strong>Sample Python Code</strong></h3>
+<p>Below is a simple example for a particle in a uniform magnetic field:</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+q = 1.6e-19  # Charge of the particle (Coulombs)
+m = 9.11e-31  # Mass of the particle (kg)
+B = np.array([0, 0, 1])  # Magnetic field (Tesla)
+E = np.array([0, 0, 0])  # Electric field (V/m)
+dt = 1e-11  # Time step (seconds)
+
+# Initial conditions
+r = np.array([0, 0, 0])  # Initial position (meters)
+v = np.array([1e6, 0, 0])  # Initial velocity (m/s)
+
+# Lists to store trajectory
+positions = [r.copy()]
+
+# Simulation loop
+for _ in range(1000):
+    F = q * (E + np.cross(v, B))  # Lorentz force
+    a = F / m  # Acceleration
+    v += a * dt  # Update velocity
+    r += v * dt  # Update position
+    positions.append(r.copy())
+
+# Convert trajectory to numpy array
+positions = np.array(positions)
+
+# Plotting
+fig = plt.figure()
+ax = fig.add_subplot(projection='3d')
+ax.plot(positions[:, 0], positions[:, 1], positions[:, 2])
+ax.set_xlabel('X Position (m)')
+ax.set_ylabel('Y Position (m)')
+ax.set_zlabel('Z Position (m)')
+plt.show()
+</code></pre>
+<hr/>
+<p>This code can be adapted for other cases by modifying the fields <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>, as well as the initial velocity. Would you like help expanding this further for other configurations?</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
