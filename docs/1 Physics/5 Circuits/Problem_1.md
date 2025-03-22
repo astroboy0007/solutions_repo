@@ -15,9 +15,9 @@ The algorithm uses graph theory to model a circuit as a graph:
 
 Steps:  
 1. Graph Construction:  
-- Build a graph where edges have weights corresponding to resistor values.  
+    - Build a graph where edges have weights corresponding to resistor values.  
 2. Detect Series Connections:  
-- Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: 
+    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: 
 $$
 R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n
 $$
