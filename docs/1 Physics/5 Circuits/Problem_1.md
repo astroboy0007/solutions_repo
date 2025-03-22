@@ -9,10 +9,11 @@ By representing a circuit as a graph—where nodes correspond to junctions and e
 Studying equivalent resistance through graph theory is valuable not only for its practical applications but also for the deeper insights it provides into the interplay between electrical and mathematical concepts. This approach highlights the versatility of graph theory, demonstrating its relevance across physics, engineering, and computer science.
 
 ---
+
 ## Algorithm Description
 The algorithm uses graph theory to model a circuit as a graph:
 
-Steps:
+Steps:  
 1. Graph Construction:
     - Build a graph where edges have weights corresponding to resistor values.
 2. Detect Series Connections:
@@ -23,9 +24,11 @@ Steps:
     - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.
 5. Handle Nested Combinations:
     - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.
+
 ---
 ## Pseudocode
 
+```
 Algorithm: CalculateEquivalentResistance
 
 Input:
@@ -55,8 +58,10 @@ Step 2: Iterative Reduction
 
 Step 3: Return the equivalent resistance
     Return the weight of the single edge connecting StartNode to EndNode
+```
 
-Python code
+## Python code
+
 ```python
 import networkx as nx
 
