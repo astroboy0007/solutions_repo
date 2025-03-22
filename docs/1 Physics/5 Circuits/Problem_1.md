@@ -17,7 +17,10 @@ Steps:
 1. Graph Construction:  
 - Build a graph where edges have weights corresponding to resistor values.  
 2. Detect Series Connections:  
-- Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: [ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n ]  
+- Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: 
+\[
+R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n
+\]
 3. Detect Parallel Connections:  
 - Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]  
 4. Iterative Reduction:  
