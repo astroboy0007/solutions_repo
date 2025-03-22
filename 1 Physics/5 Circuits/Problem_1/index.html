@@ -185,15 +185,17 @@
 - Build a graph where edges have weights corresponding to resistor values.<br/>
 2. Detect Series Connections:<br/>
 - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: 
-[
+$$
 R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n
-]
-3. Detect Parallel Connections:<br/>
-- Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]<br/>
-4. Iterative Reduction:<br/>
-- Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.<br/>
-5. Handle Nested Combinations:<br/>
-- Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  </p>
+$$</p>
+<ol>
+<li>Detect Parallel Connections:  </li>
+<li>Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]  </li>
+<li>Iterative Reduction:  </li>
+<li>Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.  </li>
+<li>Handle Nested Combinations:  </li>
+<li>Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  </li>
+</ol>
 <hr/>
 <h2 id="pseudocode">Pseudocode</h2>
 <pre><code>Algorithm: CalculateEquivalentResistance
