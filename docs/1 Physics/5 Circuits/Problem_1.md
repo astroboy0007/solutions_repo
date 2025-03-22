@@ -23,11 +23,14 @@ R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n
 $$
   
 3. Detect Parallel Connections:  
-- Find cycles or parallel branches and replace them with a single equivalent resistor: [ \frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n} ]  
+    - Find cycles or parallel branches and replace them with a single equivalent resistor:  
+$$
+\frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
+$$
 4. Iterative Reduction:  
-- Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.  
+    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.  
 5. Handle Nested Combinations:  
-- Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  
+    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  
 
 ---
 ## Pseudocode
