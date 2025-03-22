@@ -308,7 +308,7 @@ if __name__ == "__main__":
 
 </code></pre>
 <p>Output:<br/>
-- The equivalent resistance between A and C is 30.00 ohms</p>
+<code>The equivalent resistance between A and C is 30.00 ohms</code></p>
 <h2 id="handling-nested-combinations">Handling Nested Combinations</h2>
 <p>The algorithm automatically handles nested combinations through iterative graph simplification. For example:<br/>
     - If a series reduction creates a new branch, the parallel reduction step will automatically simplify it.<br/>
@@ -344,11 +344,11 @@ if __name__ == "__main__":
 <h2 id="algorithm-efficiency-and-improvements">Algorithm Efficiency and Improvements</h2>
 <p>Efficiency:<br/>
 - Series Reduction: Runs in (O(n)), where (n) is the number of nodes.
-- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.
-- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.</p>
-<p>Potential Improvements:
-- Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.
-- Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.
+- Parallel Reduction: Detecting cycles in a graph requires (O(E + V)), where (E) is the number of edges and (V) is the number of vertices.<br/>
+- Overall complexity depends on the graph's structure and the number of iterations needed to simplify it.  </p>
+<p>Potential Improvements:<br/>
+- Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.<br/>
+- Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.<br/>
 - Use libraries like NetworkX in Python for better graph manipulation and visualization.</p>
 </div>
 </div><footer>
