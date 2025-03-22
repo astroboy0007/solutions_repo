@@ -180,7 +180,7 @@
 <hr/>
 <h2 id="algorithm-description">Algorithm Description</h2>
 <p>The algorithm uses graph theory to model a circuit as a graph:</p>
-<p>Steps:
+<p>Steps:<br/>
 1. Graph Construction:
     - Build a graph where edges have weights corresponding to resistor values.
 2. Detect Series Connections:
@@ -193,31 +193,37 @@
     - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.</p>
 <hr/>
 <h2 id="pseudocode">Pseudocode</h2>
-<p>Algorithm: CalculateEquivalentResistance</p>
-<p>Input:
+<pre><code>Algorithm: CalculateEquivalentResistance
+
+Input:
     G = Graph representing the circuit
-    StartNode, EndNode = Nodes between which resistance is calculated</p>
-<p>Output:
-    R_eq = Equivalent resistance between StartNode and EndNode</p>
-<p>Step 1: Graph Construction
-    - Represent circuit as a weighted graph G (nodes = junctions, edges = resistors)</p>
-<p>Step 2: Iterative Reduction
+    StartNode, EndNode = Nodes between which resistance is calculated
+
+Output:
+    R_eq = Equivalent resistance between StartNode and EndNode
+
+Step 1: Graph Construction
+    - Represent circuit as a weighted graph G (nodes = junctions, edges = resistors)
+
+Step 2: Iterative Reduction
     While G has more than two nodes:
         1. Detect series connections:
             For each node N in G:
                 If N has exactly 2 edges (A-N and N-B):
                     Replace A-N-B with a single edge A-B
                     Weight of A-B = Sum of weights of A-N and N-B
-                    Remove N from G</p>
-<pre><code>    2. Detect parallel connections:
-        For each cycle (parallel branches) in G:
-            Replace cycle with a single edge
-            Weight of the edge = Reciprocal of sum of reciprocals of weights
-            Remove redundant edges
+                    Remove N from G
+
+        2. Detect parallel connections:
+            For each cycle (parallel branches) in G:
+                Replace cycle with a single edge
+                Weight of the edge = Reciprocal of sum of reciprocals of weights
+                Remove redundant edges
+
+Step 3: Return the equivalent resistance
+    Return the weight of the single edge connecting StartNode to EndNode
 </code></pre>
-<p>Step 3: Return the equivalent resistance
-    Return the weight of the single edge connecting StartNode to EndNode</p>
-<p>Python code</p>
+<h2 id="python-code">Python code</h2>
 <pre><code class="language-python">import networkx as nx
 
 def calculate_equivalent_resistance(G, start_node, end_node):
