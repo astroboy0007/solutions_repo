@@ -134,4 +134,4 @@ plt.show()
 ![alt text](image-1.png)
 ---
 
-This code can be adapted for other cases by modifying the fields \(\vec{E}\) and \(\vec{B}\), as well as the initial velocity. Would you like help expanding this further for other configurations?
+This code can be adapted for other cases by modifying the fields \(\vec{E}\) and \(\vec{B}\), as well as the initial velocity.
