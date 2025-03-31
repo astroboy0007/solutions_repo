@@ -276,47 +276,86 @@ v_{z0}
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
-# Define adjustable parameters
-q = 1.6e-19  # Charge of the particle (Coulombs)
-m = 9.11e-31  # Mass of the particle (kg)
-B_strength = 1  # Magnetic field strength (Tesla)
-E_strength = 0  # Electric field strength (V/m)
-initial_velocity = np.array([1e6, 0, 0])  # Initial velocity (m/s)
-dt = 1e-11  # Time step (seconds)
+def simulate_particle(q, m, E, B, v0, r0, dt, steps):
+    """
+    Simulates the trajectory of a charged particle.
+    Args:
+        q: Charge of the particle (Coulombs).
+        m: Mass of the particle (kg).
+        E: Electric field vector (V/m).
+        B: Magnetic field vector (Tesla).
+        v0: Initial velocity vector (m/s).
+        r0: Initial position vector (m).
+        dt: Time step (seconds).
+        steps: Number of simulation steps.
+    Returns:
+        positions: Array of particle positions.
+    """
+    r = r0.copy()
+    v = v0.copy()
+    positions = [r.copy()]
 
-# Field vectors
-B = np.array([0, 0, B_strength])  # Magnetic field (Tesla)
-E = np.array([0, 0, E_strength])  # Electric field (V/m)
+    for _ in range(steps):
+        F = q * (E + np.cross(v, B))  # Lorentz force
+        a = F / m  # Acceleration
+        v += a * dt  # Update velocity
+        r += v * dt  # Update position
+        positions.append(r.copy())
+
+    return np.array(positions)
+
+# Parameters
+q = 1.6e-19  # Charge (Coulombs)
+m = 9.11e-31  # Mass (kg)
+dt = 1e-11  # Time step (seconds)
+steps = 5000  # Number of steps
+
+# Field configurations
+B_uniform = np.array([0, 0, 1])  # Uniform magnetic field (Tesla)
+E_uniform = np.array([0, 0, 0])  # No electric field (V/m)
+E_crossed = np.array([1e5, 0, 0])  # Electric field for crossed fields (V/m)
 
 # Initial conditions
-r = np.array([0.0, 0.0, 0.0])  # Initial position (meters, as floats)
-v = initial_velocity.copy()  # Initial velocity (m/s)
+v0 = np.array([1e6, 1e6, 0])  # Initial velocity (m/s)
+r0 = np.array([0.0, 0.0, 0.0])  # Initial position (m)
 
-# Lists to store trajectory
-positions = [r.copy()]
+# Simulations
+trajectory_uniform_B = simulate_particle(q, m, E_uniform, B_uniform, v0, r0, dt, steps)
+trajectory_combined = simulate_particle(q, m, E_crossed, B_uniform, v0, r0, dt, steps)
+trajectory_crossed = simulate_particle(q, m, E_crossed, B_uniform, v0, r0, dt, steps)
 
-# Simulation loop
-for _ in range(1000):
-    F = q * (E + np.cross(v, B))  # Lorentz force
-    a = F / m  # Acceleration
-    v += a * dt  # Update velocity
-    r += v * dt  # Update position
-    positions.append(r.copy())
+# Visualization Function
+def plot_trajectory(positions, title):
+    fig = plt.figure()
+    ax = fig.add_subplot(projection='3d')
+    ax.plot(positions[:, 0], positions[:, 1], positions[:, 2], label='Trajectory')
+    ax.set_xlabel('X Position (m)')
+    ax.set_ylabel('Y Position (m)')
+    ax.set_zlabel('Z Position (m)')
+    ax.set_title(title)
+    ax.legend()
+    plt.show()
 
-# Convert trajectory to numpy array
-positions = np.array(positions)
-
-# Plotting
-fig = plt.figure()
-ax = fig.add_subplot(projection='3d')
-ax.plot(positions[:, 0], positions[:, 1], positions[:, 2])
-ax.set_xlabel('X Position (m)')
-ax.set_ylabel('Y Position (m)')
-ax.set_zlabel('Z Position (m)')
-ax.set_title(f"Trajectory for q={q}, m={m}, B={B_strength} T, E={E_strength} V/m")
-plt.show()
+# Plotting results
+plot_trajectory(trajectory_uniform_B, "Particle Trajectory in Uniform Magnetic Field")
+plot_trajectory(trajectory_combined, "Trajectory in Combined Electric and Magnetic Fields")
+plot_trajectory(trajectory_crossed, "Trajectory in Crossed Electric and Magnetic Fields")
 </code></pre>
-<h2 id="_1"><img alt="alt text" src="../image-1.png"/></h2>
+<p><img alt="alt text" src="../image-2.png"/>
+<img alt="alt text" src="../image-3.png"/>
+<img alt="alt text" src="../image-4.png"/></p>
+<pre><code class="language-python">def plot_trajectory_2d(positions, title, axis1, axis2, labels):
+    plt.plot(positions[:, axis1], positions[:, axis2], label='Trajectory')
+    plt.xlabel(labels[0])
+    plt.ylabel(labels[1])
+    plt.title(title)
+    plt.legend()
+    plt.show()
+
+plot_trajectory_2d(trajectory_uniform_B, "2D Trajectory (X-Y Plane)", 0, 1, ['X Position', 'Y Position'])
+</code></pre>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<hr/>
 <p>This code can be adapted for other cases by modifying the fields <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span>, as well as the initial velocity.</p>
 </div>
 </div><footer>
