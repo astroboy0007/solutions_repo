@@ -10,24 +10,21 @@ This is an excellent plan for measuring Earth's gravitational acceleration using
 
 ---
 
-### Markdown Formatting for Your Deliverables
-You can tabulate your data and explanations clearly in markdown. Here's an example:
 
 **1. Tabulated Data:**
 
-```markdown
 | Measurement | Length \(L\) (m) | Time for 10 Oscillations \(T_{10}\) (s) | Mean Time \(T_{\text{mean}}\) (s) | Std. Dev. \(\sigma\) (s) | Uncertainty in Mean \(\Delta T\) (s) |
 |-------------|------------------|---------------------------------------|-----------------------------------|--------------------------|------------------------------------|
 | Trial 1     | 1.00             | 22.3                                 |                                   |                          |                                    |
 | Trial 2     | 1.00             | 22.5                                 |                                   |                          |                                    |
 | ...         |                  |                                       |                                   |                          |                                    |
-```
+
 
 **2. Calculation Results:**
 
 You can add a section to display derived values like:
 
-```markdown
+
 #### Calculations:
 
 1. **Pendulum Period**:
@@ -47,7 +44,7 @@ You can add a section to display derived values like:
    \[
    \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
    \]
-```
+
 
 ---
 
