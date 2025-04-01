@@ -9,10 +9,10 @@ The Central Limit Theorem (CLT) is a cornerstone of probability and statistics, 
 Here are the steps for CLT.
 
 Step 1: Simulating Sampling Distributions
-Start by generating data for three distinct population distributions:
-1. **Uniform distribution**: Use `numpy.random.uniform`.
-2. **Exponential distribution**: Use `numpy.random.exponential`.
-3. **Binomial distribution**: Use `numpy.random.binomial`.
+Start by generating data for three distinct population distributions:  
+1. **Uniform distribution**: Use `numpy.random.uniform`.  
+2. **Exponential distribution**: Use `numpy.random.exponential`.  
+3. **Binomial distribution**: Use `numpy.random.binomial`.  
 
 For example:
 ```python
