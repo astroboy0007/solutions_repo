@@ -91,6 +91,7 @@ Estimated π: 3.1412
      - Randomness quality affects the accuracy; use high-quality pseudorandom number generators.  
      - Parallelization can speed up computations for large \( N \).
 
+---
 ## Task 2: Estimating Buffon's Needle
 
 
@@ -109,8 +110,6 @@ Estimated π: 3.1412
   where:
   - \(n\) = Total number of needle drops
   - \(h\) = Number of times the needle crosses a line.
-
----
 
 ### 2. Simulation
 **Steps**:
@@ -152,7 +151,6 @@ print(f"Estimated π: {pi_estimate}")
 Output:
 Estimated π: 3.119151590767311
 ```
----
 
 ### 3. Visualization
 **Plot the Simulation**:
@@ -182,7 +180,6 @@ visualize_simulation(needle_length=1.0, line_spacing=2.0, num_needles=100)
 ```
 ![alt text](image-2.png)
 
----
 
 ### 4. Analysis
 **Convergence of π**:
