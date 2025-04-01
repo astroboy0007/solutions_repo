@@ -177,37 +177,71 @@
 <p>The acceleration <span class="arithmatex">\(g = 9.8 \, \mathrm{m/s^2}\)</span> due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring <span class="arithmatex">\(g \, \mathrm{}\)</span> accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining <span class="arithmatex">\(g \, \mathrm{}\)</span>  is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.</p>
 <p>This is an excellent plan for measuring Earth's gravitational acceleration using a pendulum while emphasizing the importance of uncertainties in experimental physics! Here's how you can format and implement the markdown elements, calculations, and deliverables you've outlined:</p>
 <hr/>
-<h3 id="markdown-formatting-for-your-deliverables">Markdown Formatting for Your Deliverables</h3>
-<p>You can tabulate your data and explanations clearly in markdown. Here's an example:</p>
 <p><strong>1. Tabulated Data:</strong></p>
-<pre><code class="language-markdown">| Measurement | Length \(L\) (m) | Time for 10 Oscillations \(T_{10}\) (s) | Mean Time \(T_{\text{mean}}\) (s) | Std. Dev. \(\sigma\) (s) | Uncertainty in Mean \(\Delta T\) (s) |
-|-------------|------------------|---------------------------------------|-----------------------------------|--------------------------|------------------------------------|
-| Trial 1     | 1.00             | 22.3                                 |                                   |                          |                                    |
-| Trial 2     | 1.00             | 22.5                                 |                                   |                          |                                    |
-| ...         |                  |                                       |                                   |                          |                                    |
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>Measurement</th>
+<th>Length <span class="arithmatex">\(L\)</span> (m)</th>
+<th>Time for 10 Oscillations <span class="arithmatex">\(T_{10}\)</span> (s)</th>
+<th>Mean Time <span class="arithmatex">\(T_{\text{mean}}\)</span> (s)</th>
+<th>Std. Dev. <span class="arithmatex">\(\sigma\)</span> (s)</th>
+<th>Uncertainty in Mean <span class="arithmatex">\(\Delta T\)</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trial 1</td>
+<td>1.00</td>
+<td>22.3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 2</td>
+<td>1.00</td>
+<td>22.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><strong>2. Calculation Results:</strong></p>
 <p>You can add a section to display derived values like:</p>
-<pre><code class="language-markdown">#### Calculations:
-
-1. **Pendulum Period**:
-   The period \(T\) is calculated as:
-   \[
+<h4 id="calculations">Calculations:</h4>
+<ol>
+<li>
+<p><strong>Pendulum Period</strong>:
+   The period <span class="arithmatex">\(T\)</span> is calculated as:
+   [
    T = \frac{T_{10}}{10}
-   \]
-
-2. **Acceleration due to Gravity**:
+   ]</p>
+</li>
+<li>
+<p><strong>Acceleration due to Gravity</strong>:
    Using the formula:
-   \[
+   [
    g = \frac{4\pi^2L}{T^2}
-   \]
-
-3. **Propagation of Uncertainties**:
-   Total uncertainty in \(g\) is calculated as:
-   \[
+   ]</p>
+</li>
+<li>
+<p><strong>Propagation of Uncertainties</strong>:
+   Total uncertainty in <span class="arithmatex">\(g\)</span> is calculated as:
+   [
    \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
-   \]
-</code></pre>
+   ]</p>
+</li>
+</ol>
 <hr/>
 <h3 id="python-code-snippets">Python Code Snippets</h3>
 <p>Here’s an example for analyzing uncertainties and calculating <span class="arithmatex">\(g\)</span>:</p>
