@@ -103,15 +103,15 @@ Estimated π: 3.1412
 
 - The probability \(P\) that the needle crosses a line is given by:  
 
-  \[
+  $$
   P = \frac{2L}{\pi D}
-  \]  
+  $$  
 
 - Rearranging, π can be estimated as:  
 
-  \[
+  $$
   \pi \approx \frac{2L \cdot n}{D \cdot h}
-  \]  
+  $$  
 
   where:
   - \(n\) = Total number of needle drops
