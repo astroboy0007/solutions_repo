@@ -84,7 +84,8 @@ Estimated π: 3.1412
 
 ### **Analysis**
 1. **Accuracy Improvement:**  
-  - The accuracy of the π estimate increases with more points due to the law of large numbers.
+     - The accuracy of the π estimate increases with more points due to the law of large numbers.
+
 2. **Convergence Rate:**  
   - Convergence is proportional to \( \frac{1}{\sqrt{N}} \), where \( N \) is the number of points.  
   - For higher precision, use a larger \( N \), but note that computational time also increases.
