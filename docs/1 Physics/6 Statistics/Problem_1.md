@@ -77,6 +77,7 @@ Analyze how different population shapes and variances affect the rate of converg
 
 Step 4: Reflecting on Real-World Applications
 Discuss how the CLT applies in practical contexts. For instance:  
+
 - **Estimating population parameters**: The CLT allows confidence intervals and hypothesis tests to be applied even if the population distribution is unknown.  
 
 - **Quality control**: Understanding the distribution of sample means helps   ensure manufacturing processes stay within control limits.  
