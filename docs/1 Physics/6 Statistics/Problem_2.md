@@ -207,4 +207,4 @@ def analyze_convergence(needle_length, line_spacing, max_trials):
 
 analyze_convergence(needle_length=1.0, line_spacing=2.0, max_trials=10000)
 ```
-
+![alt text](image-3.png)
