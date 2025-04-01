@@ -97,26 +97,37 @@ Estimated π: 3.1412
 
 
 ### 1. Theoretical Foundation
-**Buffon's Needle Problem**:
-- The problem involves dropping a needle of length \(L\) onto a plane with parallel lines spaced \(D\) units apart (\(D \geq L\)).
-- The probability \(P\) that the needle crosses a line is given by:
+**Buffon's Needle Problem**:  
+
+- The problem involves dropping a needle of length \(L\) onto a plane with parallel lines spaced \(D\) units apart (\(D \geq L\)).  
+
+- The probability \(P\) that the needle crosses a line is given by:  
+
   \[
   P = \frac{2L}{\pi D}
-  \]
-- Rearranging, π can be estimated as:
+  \]  
+
+- Rearranging, π can be estimated as:  
+
   \[
   \pi \approx \frac{2L \cdot n}{D \cdot h}
-  \]
+  \]  
+
   where:
   - \(n\) = Total number of needle drops
   - \(h\) = Number of times the needle crosses a line.
 
 ### 2. Simulation
-**Steps**:
-1. Randomly generate the position and orientation of the needle.
-2. Calculate whether the needle crosses a line based on its center position and angle.
-3. Repeat for a large number of drops (\(n\)).
-4. Use the formula to estimate π.
+**Steps**:  
+
+1. Randomly generate the position and orientation of the needle.  
+
+2. Calculate whether the needle crosses a line based on its center position and angle.  
+
+3. Repeat for a large number of drops (\(n\)).  
+
+4. Use the formula to estimate π.  
+
 
 **Python Implementation**:
 Here's an example snippet for the Buffon's Needle simulation:
