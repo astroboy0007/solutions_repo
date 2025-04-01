@@ -273,6 +273,7 @@ plt.show()
 </ul>
 </li>
 </ol>
+<hr/>
 <h2 id="task-2-estimating-buffons-needle">Task 2: Estimating Buffon's Needle</h2>
 <h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
 <p><strong>Buffon's Needle Problem</strong>:
@@ -288,7 +289,6 @@ plt.show()
   where:
   - <span class="arithmatex">\(n\)</span> = Total number of needle drops
   - <span class="arithmatex">\(h\)</span> = Number of times the needle crosses a line.</p>
-<hr/>
 <h3 id="2-simulation">2. Simulation</h3>
 <p><strong>Steps</strong>:
 1. Randomly generate the position and orientation of the needle.
@@ -325,7 +325,6 @@ print(f"Estimated π: {pi_estimate}")
 <pre><code>Output:
 Estimated π: 3.119151590767311
 </code></pre>
-<hr/>
 <h3 id="3-visualization">3. Visualization</h3>
 <p><strong>Plot the Simulation</strong>:
 You can create a graphical representation using Matplotlib, showing the needle positions relative to the lines.</p>
@@ -351,7 +350,6 @@ def visualize_simulation(needle_length, line_spacing, num_needles):
 visualize_simulation(needle_length=1.0, line_spacing=2.0, num_needles=100)
 </code></pre>
 <p><img alt="alt text" src="../image-2.png"/></p>
-<hr/>
 <h3 id="4-analysis">4. Analysis</h3>
 <p><strong>Convergence of π</strong>:
 Run simulations with increasing numbers of needle drops. Record the estimates and plot the convergence.</p>
