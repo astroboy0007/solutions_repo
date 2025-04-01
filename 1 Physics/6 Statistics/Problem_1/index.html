@@ -177,11 +177,9 @@
 <p>The Central Limit Theorem (CLT) is a cornerstone of probability and statistics, stating that the sampling distribution of the sample mean approaches a normal distribution as the sample size increases, regardless of the population’s original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.</p>
 <p>Here are the steps for CLT.</p>
 <p>Step 1: Simulating Sampling Distributions
-Start by generating data for three distinct population distributions:  </p>
+Start by generating data for three distinct population distributions:<br/>
+1. <strong>Uniform distribution</strong>: Use <code>numpy.random.uniform</code>.  </p>
 <ol>
-<li>
-<p><strong>Uniform distribution</strong>: Use <code>numpy.random.uniform</code>.  </p>
-</li>
 <li>
 <p><strong>Exponential distribution</strong>: Use <code>numpy.random.exponential</code>.  </p>
 </li>
@@ -241,9 +239,15 @@ Analyze how different population shapes and variances affect the rate of converg
 - The number of trials and probability in the binomial distribution.</p>
 <p>Step 4: Reflecting on Real-World Applications
 Discuss how the CLT applies in practical contexts. For instance:<br/>
-- <strong>Estimating population parameters</strong>: The CLT allows confidence intervals and hypothesis tests to be applied even if the population distribution is unknown.<br/>
-- <strong>Quality control</strong>: Understanding the distribution of sample means helps   ensure manufacturing processes stay within control limits.
-- <strong>Financial models</strong>: Aggregating returns over time benefits from CLT, assuming independence and identical distributions.  </p>
+- <strong>Estimating population parameters</strong>: The CLT allows confidence intervals and hypothesis tests to be applied even if the population distribution is unknown.  </p>
+<ul>
+<li>
+<p><strong>Quality control</strong>: Understanding the distribution of sample means helps   ensure manufacturing processes stay within control limits.  </p>
+</li>
+<li>
+<p><strong>Financial models</strong>: Aggregating returns over time benefits from CLT, assuming independence and identical distributions.  </p>
+</li>
+</ul>
 <p>The Central Limit Theorem (CLT) is an elegant demonstration of how sample means tend to form a normal distribution as the sample size increases, regardless of the population's initial distribution. Through this exploration, we observed the following key insights:</p>
 <ol>
 <li>
