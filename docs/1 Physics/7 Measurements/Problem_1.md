@@ -82,15 +82,21 @@ print(f"Acceleration due to gravity: {g:.2f} m/s^2 ± {delta_g:.2f} m/s^2")
 ---
 
 ### Discussion Points
-1. **Impact of Measurement Resolution**:
-     - Higher resolution tools reduce uncertainties, leading to more precise values of \(g\).
+1. **Impact of Measurement Resolution**:  
+
+     - Higher resolution tools reduce uncertainties, leading to more precise values of \(g\).  
+
      - Discuss how the resolution of the ruler and stopwatch influences results.
 
-2. **Effect of Timing Variability**:
-     - Variability in repeated measurements contributes to standard deviation.
+2. **Effect of Timing Variability**:  
+
+     - Variability in repeated measurements contributes to standard deviation.  
+
      - Highlight the importance of consistent measurement practices.
 
-3. **Experimental Limitations**:
-     - Assumptions: Neglecting air resistance, ensuring small displacement (<15°).
+3. **Experimental Limitations**:  
+
+     - Assumptions: Neglecting air resistance, ensuring small displacement (<15°).  
+     
      - Limitations: Human reaction time affecting stopwatch readings.
 
