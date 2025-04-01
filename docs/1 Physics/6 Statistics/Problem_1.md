@@ -71,9 +71,12 @@ sampling_distribution(uniform_population, sample_sizes)
 ![alt text](image.png)
 
 Step 3: Parameter Exploration
-Analyze how different population shapes and variances affect the rate of convergence to normality. Experiment with changing:
-- The range of the uniform distribution.
-- The scale parameter of the exponential distribution.
+Analyze how different population shapes and variances affect the rate of convergence to normality. Experiment with changing:  
+
+- The range of the uniform distribution.  
+
+- The scale parameter of the exponential distribution.  
+
 - The number of trials and probability in the binomial distribution.
 
 Step 4: Reflecting on Real-World Applications
