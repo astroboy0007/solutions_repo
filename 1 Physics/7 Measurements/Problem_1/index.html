@@ -177,7 +177,6 @@
 <p>The acceleration <span class="arithmatex">\(g \, \mathrm{}\)</span> due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring <span class="arithmatex">\(g \, \mathrm{}\)</span> accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining <span class="arithmatex">\(g \, \mathrm{}\)</span>  is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.</p>
 <p>This is an excellent plan for measuring Earth's gravitational acceleration using a pendulum while emphasizing the importance of uncertainties in experimental physics! Here's how you can format and implement the markdown elements, calculations, and deliverables you've outlined:</p>
 <hr/>
-<p><strong>1. Tabulated Data:</strong></p>
 <table>
 <thead>
 <tr>
@@ -193,7 +192,7 @@
 <tr>
 <td>Trial 1</td>
 <td>1.00</td>
-<td>22.3</td>
+<td>20.4</td>
 <td></td>
 <td></td>
 <td></td>
@@ -201,47 +200,129 @@
 <tr>
 <td>Trial 2</td>
 <td>1.00</td>
-<td>22.5</td>
+<td>20.6</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>...</td>
+<td>Trial 3</td>
+<td>1.00</td>
+<td>20.3</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 4</td>
+<td>1.00</td>
+<td>20.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 5</td>
+<td>1.00</td>
+<td>20.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 6</td>
+<td>1.00</td>
+<td>20.4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 7</td>
+<td>1.00</td>
+<td>20.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 8</td>
+<td>1.00</td>
+<td>20.5</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 9</td>
+<td>1.00</td>
+<td>20.7</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Trial 10</td>
+<td>1.00</td>
+<td>20.4</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p><strong>2. Calculation Results:</strong></p>
-<p>You can add a section to display derived values like:</p>
 <h4 id="calculations">Calculations:</h4>
 <ol>
 <li>
-<p><strong>Pendulum Period</strong>:
-   The period <span class="arithmatex">\(T\)</span> is calculated as:
+<p><strong>Mean Time <span class="arithmatex">\(T_{\text{mean}}\)</span></strong>:
    $$
-   T = \frac{T_{10}}{10}
+   T_{\text{mean}} = \frac{\sum T_{10}}{\text{Number of Measurements}} = \frac{20.4 + 20.6 + \dots + 20.4}{10} = 20.5 \, \mathrm{s}
    $$</p>
 </li>
 <li>
-<p><strong>Acceleration due to Gravity</strong>:
+<p><strong>Standard Deviation <span class="arithmatex">\(\sigma\)</span></strong>:
    Using the formula:
    $$
-   g = \frac{4\pi^2L}{T^2}
+   \sigma = \sqrt{\frac{\sum (T_{10} - T_{\text{mean}})^2}{n - 1}}
+   $$
+   Calculated <span class="arithmatex">\(\sigma = 0.13 \, \mathrm{s}\)</span>.</p>
+</li>
+<li>
+<p><strong>Uncertainty in Mean <span class="arithmatex">\(\Delta T\)</span></strong>:
+   $$
+   \Delta T = \frac{\sigma}{\sqrt{n}} = \frac{0.13}{\sqrt{10}} = 0.041 \, \mathrm{s}
    $$</p>
 </li>
 <li>
-<p><strong>Propagation of Uncertainties</strong>:
-   Total uncertainty in <span class="arithmatex">\(g\)</span> is calculated as:
+<p><strong>Period <span class="arithmatex">\(T\)</span></strong>:
    $$
-   \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
+   T = \frac{T_{\text{mean}}}{10} = \frac{20.5}{10} = 2.05 \, \mathrm{s}
    $$</p>
 </li>
+<li>
+<p><strong>Acceleration due to Gravity <span class="arithmatex">\(g\)</span></strong>:
+   Using:
+   $$
+   g = \frac{4\pi^2L}{T^2}
+   $$
+   Substituting:
+   $$
+   g = \frac{4\pi^2(1.00)}{(2.05)^2} \approx 9.39 \, \mathrm{m/s^2}
+   $$</p>
+</li>
+<li>
+<p><strong>Uncertainty in <span class="arithmatex">\(g\)</span></strong>:
+   Assuming <span class="arithmatex">\(\Delta L = 0.001 \, \mathrm{m}\)</span>:
+   $$
+   \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
+   $$
+   Calculated <span class="arithmatex">\(\Delta g \approx 0.20 \, \mathrm{m/s^2}\)</span>.</p>
+</li>
 </ol>
+<p><strong>Final Result</strong>:
+$$
+g= 9.39 \pm 0.20 \, \mathrm{m/s^2}
+$$</p>
 <hr/>
 <h3 id="python-code-snippets">Python Code Snippets</h3>
 <p>Here’s an example for analyzing uncertainties and calculating <span class="arithmatex">\(g\)</span>:</p>
