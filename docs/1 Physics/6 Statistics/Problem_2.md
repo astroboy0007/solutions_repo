@@ -113,8 +113,10 @@ Estimated π: 3.1412
   \pi \approx \frac{2L \cdot n}{D \cdot h}
   $$  
 
-  where:
-  - \(n\) = Total number of needle drops
+  where:  
+
+  - \(n\) = Total number of needle drops  
+  
   - \(h\) = Number of times the needle crosses a line.
 
 ### 2. Simulation
