@@ -42,9 +42,12 @@ Binomial Distribution - Mean: 10.0012 Variance: 4.98579856
 ```
 
 Step 2: Sampling and Visualization
-Create a function to:
-- Draw random samples of different sizes.
-- Compute the sample mean multiple times.
+Create a function to:  
+
+- Draw random samples of different sizes.  
+
+- Compute the sample mean multiple times.  
+
 - Plot histograms of sample means.
 
 ```python
