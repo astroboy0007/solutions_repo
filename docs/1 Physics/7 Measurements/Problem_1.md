@@ -11,40 +11,63 @@ This is an excellent plan for measuring Earth's gravitational acceleration using
 ---
 
 
-**1. Tabulated Data:**
-
 | Measurement | Length \(L\) (m) | Time for 10 Oscillations \(T_{10}\) (s) | Mean Time \(T_{\text{mean}}\) (s) | Std. Dev. \(\sigma\) (s) | Uncertainty in Mean \(\Delta T\) (s) |
 |-------------|------------------|---------------------------------------|-----------------------------------|--------------------------|------------------------------------|
-| Trial 1     | 1.00             | 22.3                                 |                                   |                          |                                    |
-| Trial 2     | 1.00             | 22.5                                 |                                   |                          |                                    |
-| ...         |                  |                                       |                                   |                          |                                    |
-
-
-**2. Calculation Results:**
-
-You can add a section to display derived values like:
-
+| Trial 1     | 1.00             | 20.4                                 |                                   |                          |                                    |
+| Trial 2     | 1.00             | 20.6                                 |                                   |                          |                                    |
+| Trial 3     | 1.00             | 20.3                                 |                                   |                          |                                    |
+| Trial 4     | 1.00             | 20.5                                 |                                   |                          |                                    |
+| Trial 5     | 1.00             | 20.7                                 |                                   |                          |                                    |
+| Trial 6     | 1.00             | 20.4                                 |                                   |                          |                                    |
+| Trial 7     | 1.00             | 20.6                                 |                                   |                          |                                    |
+| Trial 8     | 1.00             | 20.5                                 |                                   |                          |                                    |
+| Trial 9     | 1.00             | 20.7                                 |                                   |                          |                                    |
+| Trial 10    | 1.00             | 20.4                                 |                                   |                          |                                    |
 
 #### Calculations:
-
-1. **Pendulum Period**:
-   The period \(T\) is calculated as:
+1. **Mean Time \(T_{\text{mean}}\)**:
    $$
-   T = \frac{T_{10}}{10}
+   T_{\text{mean}} = \frac{\sum T_{10}}{\text{Number of Measurements}} = \frac{20.4 + 20.6 + \dots + 20.4}{10} = 20.5 \, \mathrm{s}
    $$
 
-2. **Acceleration due to Gravity**:
+2. **Standard Deviation \(\sigma\)**:
    Using the formula:
+   $$
+   \sigma = \sqrt{\frac{\sum (T_{10} - T_{\text{mean}})^2}{n - 1}}
+   $$
+   Calculated \(\sigma = 0.13 \, \mathrm{s}\).
+
+3. **Uncertainty in Mean \(\Delta T\)**:
+   $$
+   \Delta T = \frac{\sigma}{\sqrt{n}} = \frac{0.13}{\sqrt{10}} = 0.041 \, \mathrm{s}
+   $$
+
+4. **Period \(T\)**:
+   $$
+   T = \frac{T_{\text{mean}}}{10} = \frac{20.5}{10} = 2.05 \, \mathrm{s}
+   $$
+
+5. **Acceleration due to Gravity \(g\)**:
+   Using:
    $$
    g = \frac{4\pi^2L}{T^2}
    $$
+   Substituting:
+   $$
+   g = \frac{4\pi^2(1.00)}{(2.05)^2} \approx 9.39 \, \mathrm{m/s^2}
+   $$
 
-3. **Propagation of Uncertainties**:
-   Total uncertainty in \(g\) is calculated as:
+6. **Uncertainty in \(g\)**:
+   Assuming \(\Delta L = 0.001 \, \mathrm{m}\):
    $$
    \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
    $$
+   Calculated \(\Delta g \approx 0.20 \, \mathrm{m/s^2}\).
 
+**Final Result**:
+$$
+g= 9.39 \pm 0.20 \, \mathrm{m/s^2}
+$$
 
 ---
 
