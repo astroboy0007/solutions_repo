@@ -33,15 +33,23 @@ The technique leverages the geometric probability of points in a square and circ
 
 
 ### **Simulation**
-Here's a step-by-step guide:
+Here's a step-by-step guide:  
+
 1. **Random Point Generation:**
-   - Generate random (x, y) coordinates within the square \( [-1, 1] \times [-1, 1] \).
-   - Ensure randomness by using functions like `random.uniform(-1, 1)` in Python.
-2. **Circle Membership Check:**
-   - Use the equation \( x^2 + y^2 \leq 1 \) to determine if a point lies inside the circle.
-   - Count the number of points satisfying this condition.
-3. **π Estimation:**
-   - Apply the formula \( \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}} \).
+   - Generate random (x, y) coordinates within the square \( [-1, 1] \times [-1, 1] \).  
+
+   - Ensure randomness by using functions like `random.uniform(-1, 1)` in Python.  
+
+2. **Circle Membership Check:**  
+
+   - Use the equation \( x^2 + y^2 \leq 1 \) to determine if a point lies inside the circle.  
+
+   - Count the number of points satisfying this condition.  
+
+3. **π Estimation:**  
+
+   - Apply the formula \( \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}} \).  
+   
 
 Example Python snippet:
 ```python
