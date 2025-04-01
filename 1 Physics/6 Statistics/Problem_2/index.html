@@ -203,24 +203,26 @@
 <h3 id="simulation"><strong>Simulation</strong></h3>
 <p>Here's a step-by-step guide:  </p>
 <ol>
-<li><strong>Random Point Generation:</strong></li>
-<li>
-<p>Generate random (x, y) coordinates within the square <span class="arithmatex">\( [-1, 1] \times [-1, 1] \)</span>.  </p>
+<li><strong>Random Point Generation:</strong><ul>
+<li>Generate random (x, y) coordinates within the square <span class="arithmatex">\( [-1, 1] \times [-1, 1] \)</span>.  </li>
+</ul>
 </li>
-<li>
+</ol>
 <p>Ensure randomness by using functions like <code>random.uniform(-1, 1)</code> in Python.  </p>
-</li>
+<ol>
 <li>
 <p><strong>Circle Membership Check:</strong> </p>
-</li>
+<ul>
 <li>Use the equation <span class="arithmatex">\( x^2 + y^2 \leq 1 \)</span> to determine if a point lies inside the circle.  </li>
-<li>
-<p>Count the number of points satisfying this condition.  </p>
+<li>Count the number of points satisfying this condition.  </li>
+</ul>
 </li>
 <li>
 <p><strong>π Estimation:</strong> </p>
-</li>
+<ul>
 <li>Apply the formula <span class="arithmatex">\( \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}} \)</span>.  </li>
+</ul>
+</li>
 </ol>
 <p>Example Python snippet:</p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
