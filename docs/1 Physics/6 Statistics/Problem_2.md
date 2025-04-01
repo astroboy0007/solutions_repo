@@ -83,12 +83,12 @@ Estimated π: 3.1412
 ![alt text](image-1.png)
 
 ### **Analysis**
-1. **Accuracy Improvement:**   
-  + The accuracy of the π estimate increases with more points due to the law of large numbers.
+1. **Accuracy Improvement:**  
+  - The accuracy of the π estimate increases with more points due to the law of large numbers.
 2. **Convergence Rate:**  
-  + Convergence is proportional to \( \frac{1}{\sqrt{N}} \), where \( N \) is the number of points.  
-  + For higher precision, use a larger \( N \), but note that computational time also increases.
+  - Convergence is proportional to \( \frac{1}{\sqrt{N}} \), where \( N \) is the number of points.  
+  - For higher precision, use a larger \( N \), but note that computational time also increases.
 3. **Considerations:**  
-  + Randomness quality affects the accuracy; use high-quality pseudorandom number generators.  
-  + Parallelization can speed up computations for large \( N \).
+  - Randomness quality affects the accuracy; use high-quality pseudorandom number generators.  
+  - Parallelization can speed up computations for large \( N \).
 
