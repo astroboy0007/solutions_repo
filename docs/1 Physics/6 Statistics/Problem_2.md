@@ -37,8 +37,7 @@ Here's a step-by-step guide:
 
 1. **Random Point Generation:**
      - Generate random (x, y) coordinates within the square \( [-1, 1] \times [-1, 1] \).  
-
-Ensure randomness by using functions like `random.uniform(-1, 1)` in Python.  
+     - Ensure randomness by using functions like `random.uniform(-1, 1)` in Python.  
 
 2. **Circle Membership Check:**  
      - Use the equation \( x^2 + y^2 \leq 1 \) to determine if a point lies inside the circle.  
