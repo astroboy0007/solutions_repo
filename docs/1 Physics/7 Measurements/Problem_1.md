@@ -78,6 +78,12 @@ print(f"Mean time for 10 oscillations: {mean_time:.2f} s")
 print(f"Period: {period:.2f} s")
 print(f"Acceleration due to gravity: {g:.2f} m/s^2 ± {delta_g:.2f} m/s^2")
 ```
+```
+Output:
+Mean time for 10 oscillations: 22.46 s
+Period: 2.25 s
+Acceleration due to gravity: 7.83 m/s^2 ± 0.03 m/s^2
+```
 
 ---
 
@@ -97,6 +103,6 @@ print(f"Acceleration due to gravity: {g:.2f} m/s^2 ± {delta_g:.2f} m/s^2")
 3. **Experimental Limitations**:  
 
      - Assumptions: Neglecting air resistance, ensuring small displacement (<15°).  
-     
+
      - Limitations: Human reaction time affecting stopwatch readings.
 
