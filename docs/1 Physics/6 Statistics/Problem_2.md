@@ -43,11 +43,6 @@ Here's a step-by-step guide:
 3. **π Estimation:**
    - Apply the formula \( \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}} \).
 
-### **Visualization**
-1. Plot the square and unit circle for reference.
-2. Mark points inside the circle with one color (e.g., green) and points outside with another (e.g., red).
-3. Tools like `matplotlib` in Python work great for this purpose.
-
 Example Python snippet:
 ```python
 import matplotlib.pyplot as plt
@@ -79,6 +74,8 @@ plt.gca().set_aspect("equal", adjustable="box")
 plt.title(f"Monte Carlo π Estimation (N={N})")
 plt.show()
 ```
+Estimated π: 3.1412
+![alt text](image-1.png)
 
 ### **Analysis**
 1. **Accuracy Improvement:** 
