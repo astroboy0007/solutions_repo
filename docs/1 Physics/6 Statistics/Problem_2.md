@@ -21,16 +21,16 @@ The technique leverages the geometric probability of points in a square and circ
 
 3. If we randomly distribute points within the square, the proportion of points falling inside the circle compared to the total points in the square approximates the ratio of the areas:  
 
-   \[
+   $$
    \text{Ratio} = \frac{\text{Points inside the circle}}{\text{Total points in the square}} \approx \frac{\text{Area of the circle}}{\text{Area of the square}} = \frac{\pi}{4}
-   \]  
+   $$
 
 4. Therefore, we can estimate \( \pi \) as:  
 
-   \[
+   $$
    \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}}
-   \]  
-   
+   $$  
+
 
 ### **Simulation**
 Here's a step-by-step guide:
