@@ -73,10 +73,10 @@ Analyze how different population shapes and variances affect the rate of converg
 - The number of trials and probability in the binomial distribution.
 
 Step 4: Reflecting on Real-World Applications
-Discuss how the CLT applies in practical contexts. For instance:
-- **Estimating population parameters**: The CLT allows confidence intervals and hypothesis tests to be applied even if the population distribution is unknown.
-- **Quality control**: Understanding the distribution of sample means helps ensure manufacturing processes stay within control limits.
-- **Financial models**: Aggregating returns over time benefits from CLT, assuming independence and identical distributions.
+Discuss how the CLT applies in practical contexts. For instance:  
+- **Estimating population parameters**: The CLT allows confidence intervals and hypothesis tests to be applied even if the population distribution is unknown.  
+- **Quality control**: Understanding the distribution of sample means helps   ensure manufacturing processes stay within control limits.
+- **Financial models**: Aggregating returns over time benefits from CLT, assuming independence and identical distributions.  
 
 
 The Central Limit Theorem (CLT) is an elegant demonstration of how sample means tend to form a normal distribution as the sample size increases, regardless of the population's initial distribution. Through this exploration, we observed the following key insights:
