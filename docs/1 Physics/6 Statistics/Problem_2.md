@@ -13,17 +13,24 @@ The Monte Carlo method to estimate π is indeed fascinating! Here's an overview 
 ## Task 1
 
 ### **Theoretical Foundation**
-The technique leverages the geometric probability of points in a square and circle:
-1. Consider a unit circle with radius \( r = 1 \) inscribed in a square of side length \( 2r = 2 \).
-2. The area of the circle is \( \pi r^2 = \pi \), and the area of the square is \( 4r^2 = 4 \).
-3. If we randomly distribute points within the square, the proportion of points falling inside the circle compared to the total points in the square approximates the ratio of the areas:
+The technique leverages the geometric probability of points in a square and circle:  
+
+1. Consider a unit circle with radius \( r = 1 \) inscribed in a square of side length \( 2r = 2 \).  
+
+2. The area of the circle is \( \pi r^2 = \pi \), and the area of the square is \( 4r^2 = 4 \).  
+
+3. If we randomly distribute points within the square, the proportion of points falling inside the circle compared to the total points in the square approximates the ratio of the areas:  
+
    \[
    \text{Ratio} = \frac{\text{Points inside the circle}}{\text{Total points in the square}} \approx \frac{\text{Area of the circle}}{\text{Area of the square}} = \frac{\pi}{4}
-   \]
-4. Therefore, we can estimate \( \pi \) as:
+   \]  
+
+4. Therefore, we can estimate \( \pi \) as:  
+
    \[
    \pi \approx 4 \times \frac{\text{Points inside the circle}}{\text{Total points}}
-   \]
+   \]  
+   
 
 ### **Simulation**
 Here's a step-by-step guide:
