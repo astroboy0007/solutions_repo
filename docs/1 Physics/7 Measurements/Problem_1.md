@@ -4,7 +4,7 @@
 
 ## Motivation  
 
-The acceleration $g = 9.8 \, \mathrm{m/s^2}$ due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring $g \, \mathrm{}$ accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining $g \, \mathrm{}$  is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.
+The acceleration $g \, \mathrm{}$ due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring $g \, \mathrm{}$ accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining $g \, \mathrm{}$  is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.
 
 This is an excellent plan for measuring Earth's gravitational acceleration using a pendulum while emphasizing the importance of uncertainties in experimental physics! Here's how you can format and implement the markdown elements, calculations, and deliverables you've outlined:
 
@@ -29,21 +29,21 @@ You can add a section to display derived values like:
 
 1. **Pendulum Period**:
    The period \(T\) is calculated as:
-   \[
+   $$
    T = \frac{T_{10}}{10}
-   \]
+   $$
 
 2. **Acceleration due to Gravity**:
    Using the formula:
-   \[
+   $$
    g = \frac{4\pi^2L}{T^2}
-   \]
+   $$
 
 3. **Propagation of Uncertainties**:
    Total uncertainty in \(g\) is calculated as:
-   \[
+   $$
    \Delta g = g \cdot \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
-   \]
+   $$
 
 
 ---
