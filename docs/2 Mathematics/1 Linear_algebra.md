@@ -80,7 +80,7 @@ $$
 
 #### **3.1) \( A \cdot B \):**
 
-\[
+$$
 A \cdot B = 
 \begin{pmatrix} 
 1 & 2 \\ 
@@ -91,7 +91,7 @@ A \cdot B =
 5 & 6 \\ 
 7 & 8 
 \end{pmatrix}
-\]
+$$
 
 \[
 = 
