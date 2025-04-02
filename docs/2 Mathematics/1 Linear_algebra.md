@@ -685,6 +685,15 @@ B =
 \end{pmatrix}
 $$
 
+$$
+B =
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
 #### Step 3: Determinant Calculation
 Since the last row is all zeros, the determinant is:
 $$
