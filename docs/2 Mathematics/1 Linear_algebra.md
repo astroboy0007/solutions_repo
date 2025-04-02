@@ -170,8 +170,9 @@ The determinant of a 2x2 matrix is calculated as:
 
 $$
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
-$$
-### **2. Matrix \(B\):**
+$$  
+
+### **2. Matrix \(B\):**  
 $$
 B = 
 \begin{pmatrix} 
@@ -184,8 +185,9 @@ The determinant of matrix \(B\) is calculated as:
 
 $$
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
-$$
-### **3. Matrix \(C\):**
+$$  
+
+### **3. Matrix \(C\):**  
 $$
 C = 
 \begin{pmatrix} 
