@@ -1,5 +1,6 @@
 # Linear Algebra
 
+## 1. Basic Operations on Matrices
 
 ## Given Matrices:
 1. **Matrix \(A\):**
@@ -155,3 +156,4 @@ D \cdot E =
 
 ---
 
+## 2. Determinants 2x2 and 3x3
