@@ -879,7 +879,7 @@ $$
 0 & \frac{15}{2} & -\frac{9}{2}
 \end{pmatrix}
 $$  
-
+  
  2. Use the second row to eliminate the second element in row 3:
      - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
 
@@ -893,7 +893,7 @@ $$
 \end{pmatrix}
 $$
 
-update
+
 #### Step 2: Count Non-Zero Rows
 The matrix has 3 non-zero rows, so the rank of \( B \) is:
 $$
