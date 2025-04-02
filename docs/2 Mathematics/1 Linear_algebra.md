@@ -741,13 +741,17 @@ $$
 Since \( \text{det}(A) \neq 0 \), the matrix is invertible.
 
 #### Step 2: Compute the inverse of \( A \)
+
 The formula for the inverse of a 3x3 matrix is:
+
 $$
 A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
 $$
+
 where \( \text{adj}(A) \) is the adjugate matrix.
 
 Compute the adjugate matrix:
+
 1. Cofactor matrix:
 $$
 \text{Cofactor}(A) =
@@ -800,6 +804,7 @@ A^{-1} =
 1 & 2 & -2
 \end{pmatrix}
 $$
+
 
 #### Verification:
 Compute \( A \cdot A^{-1} \):
