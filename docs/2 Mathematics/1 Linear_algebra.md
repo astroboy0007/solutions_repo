@@ -7,7 +7,7 @@
 ![alt text](image.png)
 ---
 
-## **1. Calculations:**
+## **1. Calculations:**  
 
 
 1.1) \(A + B\)
