@@ -905,14 +905,16 @@ $$
 
 ### Final Results:
 1. **Inverse of \( A \):**
-   $$
-   A^{-1} =
-   \begin{pmatrix}
-   0 & 0 & 2 \\
-   -1 & 1 & 0 \\
-   1 & 2 & -2
-   \end{pmatrix}
-   $$
+
+
+$$
+A^{-1} =
+\begin{pmatrix}
+0 & 0 & 2 \\
+-1 & 1 & 0 \\
+1 & 2 & -2
+\end{pmatrix}
+$$
 
 2. **Rank of \( B \):**
    $$
