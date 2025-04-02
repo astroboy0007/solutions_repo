@@ -854,6 +854,7 @@ Since \( A \cdot A^{-1} = I \), the result is verified.
 ### **2. Determine the rank of \( B \):**
 
 The given matrix is:
+
 $$
 B =
 \begin{pmatrix}
@@ -862,6 +863,7 @@ B =
 2 & 9 & 1
 \end{pmatrix}
 $$
+
 
 #### Step 1: Row Reduce \( B \) to Row Echelon Form
 1. Use the first row to eliminate the first element in rows 2 and 3:
