@@ -179,10 +179,10 @@ B =
 7 & 8 
 \end{pmatrix}
 $$  
-
 $$
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
-$$
+$$  
+
 UPDATEEEE
 ### **3. Matrix \(C\):**
 $$
