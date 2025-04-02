@@ -56,9 +56,9 @@ where \( v_{\text{circular}} = \sqrt{\mu / r_0} \)
 ## Numerical Simulation and Visualization
 
 The following Python script uses a numerical integrator to solve the two-dimensional equations of motion for a payload released near Earth. It simulates three cases:  
- **Elliptical Orbit:** \( v_0 = 0.95 \times v_{\text{circular}} \)  
- **Parabolic Trajectory:** \( v_0 = v_{\text{escape}} \)  
- **Hyperbolic Trajectory:** \( v_0 = 1.1 \times v_{\text{escape}} \)  
+- **Elliptical Orbit:** \( v_0 = 0.95 \times v_{\text{circular}} \)  
+- **Parabolic Trajectory:** \( v_0 = v_{\text{escape}} \)  
+- **Hyperbolic Trajectory:** \( v_0 = 1.1 \times v_{\text{escape}} \)  
 
 ```python
 import numpy as np
