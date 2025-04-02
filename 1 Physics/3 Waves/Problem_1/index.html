@@ -254,16 +254,16 @@ plt.show()
 <h4 id="1-understanding-wave-superposition"><strong>1. Understanding Wave Superposition</strong></h4>
 <p>When multiple wave sources emit waves simultaneously, the resulting wave pattern is determined by the <strong>principle of superposition</strong>. This principle states that the total displacement at any point on the water surface is the sum of the displacements caused by each individual wave.  </p>
 <p>Mathematically, the total displacement <span class="arithmatex">\(\eta_{\text{total}}(x, y, t)\)</span> is given by:<br/>
-[
+$$
 \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \frac{A}{\sqrt{r_i}} \cos (k r_i - \omega t + \phi)
-]
+$$
 where:<br/>
-- <span class="arithmatex">\( N \)</span> is the number of sources (equal to the number of polygon vertices),<br/>
-- <span class="arithmatex">\( A \)</span> is the amplitude of the waves,<br/>
-- <span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span> is the wave number,<br/>
-- <span class="arithmatex">\( \omega = 2\pi f \)</span> is the angular frequency,<br/>
-- <span class="arithmatex">\( r_i \)</span> is the distance from the <span class="arithmatex">\( i \)</span>-th source to the observation point <span class="arithmatex">\( (x, y) \)</span>,<br/>
-- <span class="arithmatex">\( \phi \)</span> is the initial phase.  </p>
+<span class="arithmatex">\( N \)</span> is the number of sources (equal to the number of polygon vertices),<br/>
+<span class="arithmatex">\( A \)</span> is the amplitude of the waves,<br/>
+<span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span> is the wave number,<br/>
+<span class="arithmatex">\( \omega = 2\pi f \)</span> is the angular frequency,<br/>
+<span class="arithmatex">\( r_i \)</span> is the distance from the <span class="arithmatex">\( i \)</span>-th source to the observation point <span class="arithmatex">\( (x, y) \)</span>,<br/>
+<span class="arithmatex">\( \phi \)</span> is the initial phase.  </p>
 <hr/>
 <h4 id="2-how-polygon-shape-affects-interference"><strong>2. How Polygon Shape Affects Interference</strong></h4>
 <p>The specific <strong>arrangement of wave sources</strong> affects the interference pattern:<br/>
@@ -274,24 +274,28 @@ where:<br/>
 <hr/>
 <h4 id="3-key-observations-in-the-interference-pattern"><strong>3. Key Observations in the Interference Pattern</strong></h4>
 <ol>
-<li><strong>Constructive Interference (Bright Regions in the Plot)</strong> </li>
-<li>Occurs when waves from multiple sources <strong>add up in phase</strong> (peaks coincide).  </li>
 <li>
-<p>Forms regions of <strong>high amplitude</strong>, appearing as bright red zones in the plot.  </p>
+<p><strong>Constructive Interference (Bright Regions in the Plot)</strong> </p>
+<ul>
+<li>Occurs when waves from multiple sources <strong>add up in phase</strong> (peaks coincide).  </li>
+<li>Forms regions of <strong>high amplitude</strong>, appearing as bright red zones in the plot.  </li>
+</ul>
 </li>
 <li>
 <p><strong>Destructive Interference (Dark Regions in the Plot)</strong> </p>
-</li>
+<ul>
 <li>Occurs when waves from multiple sources <strong>cancel out</strong> (peak of one wave meets the trough of another).  </li>
-<li>
-<p>Results in <strong>low-amplitude regions</strong>, appearing as dark blue zones in the plot.  </p>
+<li>Results in <strong>low-amplitude regions</strong>, appearing as dark blue zones in the plot.  </li>
+</ul>
 </li>
 <li>
 <p><strong>Symmetry and Wavefront Formation</strong> </p>
-</li>
+<ul>
 <li>The regular polygon's symmetry ensures a <strong>highly structured interference pattern</strong>.  </li>
 <li>The <strong>distance between sources</strong> and the <strong>wavelength</strong> determines the spacing of the interference fringes.  </li>
 <li>At certain points, <strong>wave energy converges</strong>, reinforcing the wave amplitude significantly.  </li>
+</ul>
+</li>
 </ol>
 <hr/>
 <h4 id="4-visualizing-the-interference-pattern"><strong>4. Visualizing the Interference Pattern</strong></h4>
