@@ -676,14 +676,7 @@ R_3 = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}
 $$
 
 The final matrix \( B \) is:
-$$
-B =
-\begin{pmatrix}
-1 & 2 & 3 \\
-0 & -3 & -6 \\
-0 & 0 & 0
-\end{pmatrix}
-$$
+
 
 $$
 B =
