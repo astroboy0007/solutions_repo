@@ -95,16 +95,16 @@ plt.show()
 When multiple wave sources emit waves simultaneously, the resulting wave pattern is determined by the **principle of superposition**. This principle states that the total displacement at any point on the water surface is the sum of the displacements caused by each individual wave.  
 
 Mathematically, the total displacement \(\eta_{\text{total}}(x, y, t)\) is given by:  
-\[
+$$
 \eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \frac{A}{\sqrt{r_i}} \cos (k r_i - \omega t + \phi)
-\]
+$$
 where:  
-- \( N \) is the number of sources (equal to the number of polygon vertices),  
-- \( A \) is the amplitude of the waves,  
-- \( k = \frac{2\pi}{\lambda} \) is the wave number,  
-- \( \omega = 2\pi f \) is the angular frequency,  
-- \( r_i \) is the distance from the \( i \)-th source to the observation point \( (x, y) \),  
-- \( \phi \) is the initial phase.  
+ \( N \) is the number of sources (equal to the number of polygon vertices),  
+ \( A \) is the amplitude of the waves,  
+ \( k = \frac{2\pi}{\lambda} \) is the wave number,  
+ \( \omega = 2\pi f \) is the angular frequency,  
+ \( r_i \) is the distance from the \( i \)-th source to the observation point \( (x, y) \),  
+ \( \phi \) is the initial phase.  
 
 ---
 
