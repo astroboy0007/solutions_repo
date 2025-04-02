@@ -38,8 +38,8 @@ F = \frac{m v^2}{r}
 
 
 
-Where:
-- \(v\) is the orbital velocity.
+Where:  
+ \(v\) is the orbital velocity.
 
 ### Setting gravitational force equal to centripetal force:
 
