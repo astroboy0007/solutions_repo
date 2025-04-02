@@ -146,7 +146,8 @@ plt.show()
 
 ```
 ![alt text](image-6.png)
-![Dynamic Ripple Animation](ripple_animation.gif)
+
+![alt text](image-7.png)
 
 
 ### Explanation of Interference Patterns for a Regular Polygon Wave Source  
