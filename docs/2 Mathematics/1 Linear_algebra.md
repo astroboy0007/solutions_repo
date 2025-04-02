@@ -177,14 +177,8 @@ D \cdot E =
 
 ---
 
-### Final Results:
+## Final Results:
 
-
----
-
-Thank you for bringing this up! I'll ensure the mathematical equations appear precisely formatted without unnecessary spacing. Below is the updated LaTeX structure for all matrix equations.
-
----
 
 ### Matrix Addition
 
