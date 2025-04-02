@@ -56,16 +56,19 @@ v_3 \text{ depends on the Sun's mass, distance from the Sun, and interaction wit
 ## Example Calculations
 
 ### For Earth
-- **First Cosmic Velocity**: \(v_1 \approx 7.9 \, \text{km/s}\)
-- **Second Cosmic Velocity**: \(v_2 \approx 11.2 \, \text{km/s}\)
+- **First Cosmic Velocity**: \(v_1 \approx 7.91 \, \text{km/s}\)
+- **Second Cosmic Velocity**: \(v_2 \approx 11.19 \, \text{km/s}\)
+- **Third Cosmic Velocity**: \(v_3 \approx 51.60 \, \text{km/s}\)
 
 ### For Mars
-- **First Cosmic Velocity**: \(v_1 \approx 3.5 \, \text{km/s}\)
+- **First Cosmic Velocity**: \(v_1 \approx 3.55 \, \text{km/s}\)
 - **Second Cosmic Velocity**: \(v_2 \approx 5.0 \, \text{km/s}\)
+- **Third Cosmic Velocity**: \(v_3 \approx 41.80 \, \text{km/s}\)
 
 ### For Jupiter
-- **First Cosmic Velocity**: \(v_1 \approx 42.1 \, \text{km/s}\)
-- **Second Cosmic Velocity**: \(v_2 \approx 59.5 \, \text{km/s}\)
+- **First Cosmic Velocity**: \(v_1 \approx 42.57 \, \text{km/s}\)
+- **Second Cosmic Velocity**: \(v_2 \approx 60.20 \, \text{km/s}\)
+- **Third Cosmic Velocity**: \(v_3 \approx 22.62 \, \text{km/s}\)
 
 *Note*: Calculations vary based on celestial parameters such as radius and mass.
 
@@ -96,44 +99,68 @@ import numpy as np
 
 # Define constants
 G = 6.67430e-11  # Gravitational constant, m^3 kg^-1 s^-2
+M_sun = 1.989e30  # Mass of the Sun, kg
 
-# Celestial body parameters: (name, mass in kg, radius in meters)
+# Celestial body parameters: (name, mass in kg, radius in meters, distance from Sun in meters)
 celestial_bodies = [
-    ("Earth", 5.972e24, 6.371e6),
-    ("Mars", 6.417e23, 3.3895e6),
-    ("Jupiter", 1.898e27, 6.9911e7),
+    ("Earth", 5.972e24, 6.371e6, 1.496e11),
+    ("Mars", 6.417e23, 3.3895e6, 2.279e11),
+    ("Jupiter", 1.898e27, 6.9911e7, 7.785e11),
 ]
 
-# Function to calculate first and second cosmic velocities
-def calculate_velocities(mass, radius):
-    v1 = np.sqrt(G * mass / radius)      # First cosmic velocity
-    v2 = np.sqrt(2 * G * mass / radius)  # Second cosmic velocity
-    return v1, v2
+# Function to calculate first, second, and third cosmic velocities
+def calculate_velocities(mass, radius, distance_from_sun):
+    # First Cosmic Velocity
+    v1 = np.sqrt(G * mass / radius)
+    
+    # Second Cosmic Velocity
+    v2 = np.sqrt(2 * G * mass / radius)
+    
+    # Escape velocity from the Sun
+    v_esc_sun = np.sqrt(2 * G * M_sun / distance_from_sun)
+    
+    # Orbital velocity of the celestial body around the Sun
+    v_orb = np.sqrt(G * M_sun / distance_from_sun)
+    
+    # Third Cosmic Velocity
+    v3 = np.sqrt(v_esc_sun**2 + v_orb**2)
+    
+    return v1, v2, v3
 
 # Prepare data for plotting
-labels = []
-v1_values = []
-v2_values = []
+labels = []  # Planet names
+v1_values = []  # First Cosmic Velocity (km/s)
+v2_values = []  # Second Cosmic Velocity (km/s)
+v3_values = []  # Third Cosmic Velocity (km/s)
 
 for body in celestial_bodies:
-    name, mass, radius = body
-    v1, v2 = calculate_velocities(mass, radius)
+    name, mass, radius, distance = body
+    v1, v2, v3 = calculate_velocities(mass, radius, distance)
     labels.append(name)
-    v1_values.append(v1 / 1000)  # Convert to km/s
-    v2_values.append(v2 / 1000)  # Convert to km/s
+    v1_values.append(v1 / 1000)  # Convert m/s to km/s
+    v2_values.append(v2 / 1000)  # Convert m/s to km/s
+    v3_values.append(v3 / 1000)  # Convert m/s to km/s
+
+# Print calculated velocities for clarity
+for label, v1, v2, v3 in zip(labels, v1_values, v2_values, v3_values):
+    print(f"{label}:")
+    print(f"  First Cosmic Velocity: {v1:.2f} km/s")
+    print(f"  Second Cosmic Velocity: {v2:.2f} km/s")
+    print(f"  Third Cosmic Velocity: {v3:.2f} km/s\n")
 
 # Plot the velocities
 x = np.arange(len(labels))  # X-axis positions
 
-plt.figure(figsize=(10, 6))
-plt.bar(x - 0.2, v1_values, width=0.4, label="First Cosmic Velocity (km/s)", color="blue")
-plt.bar(x + 0.2, v2_values, width=0.4, label="Second Cosmic Velocity (km/s)", color="orange")
+plt.figure(figsize=(12, 6))
+plt.bar(x - 0.3, v1_values, width=0.3, label="First Cosmic Velocity (km/s)", color="blue")
+plt.bar(x, v2_values, width=0.3, label="Second Cosmic Velocity (km/s)", color="orange")
+plt.bar(x + 0.3, v3_values, width=0.3, label="Third Cosmic Velocity (km/s)", color="green")
 
-# Add labels and title
-plt.xticks(x, labels)
+# Add labels, title, and grid
+plt.xticks(x, labels)  # Label x-axis positions with planet names
 plt.xlabel("Celestial Bodies")
 plt.ylabel("Velocity (km/s)")
-plt.title("First and Second Cosmic Velocities for Celestial Bodies")
+plt.title("First, Second, and Third Cosmic Velocities for Celestial Bodies")
 plt.legend()
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.tight_layout()
@@ -141,7 +168,7 @@ plt.tight_layout()
 # Show the plot
 plt.show()
 ```
-![alt text](image-2.png)
+![alt text](image-4.png)
 
 ---
 
