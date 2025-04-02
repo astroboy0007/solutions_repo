@@ -885,6 +885,7 @@ $$
      - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
 
 The updated matrix is:
+
 $$
 \begin{pmatrix}
 4 & -3 & 7 \\
@@ -892,6 +893,7 @@ $$
 0 & 0 & -\frac{36}{7}
 \end{pmatrix}
 $$
+
 
 #### Step 2: Count Non-Zero Rows
 The matrix has 3 non-zero rows, so the rank of \( B \) is:
