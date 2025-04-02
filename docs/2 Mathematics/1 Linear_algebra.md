@@ -766,6 +766,32 @@ $$
 
 
 2. Transpose the cofactor matrix to get \( \text{adj}(A) \):
+
+### Formula for the Inverse of a 3x3 Matrix:
+
+$$
+A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
+$$
+
+where \( \text{adj}(A) \) is the adjugate matrix.
+
+---
+
+### Cofactor Matrix of \( A \):
+
+$$
+\text{Cofactor}(A) =
+\begin{pmatrix}
+0 & 1 & -1 \\
+0 & -1 & -2 \\
+-2 & 0 & 2
+\end{pmatrix}
+$$
+
+---
+
+### Adjugate Matrix of \( A \):
+
 $$
 \text{adj}(A) =
 \begin{pmatrix}
@@ -775,24 +801,10 @@ $$
 \end{pmatrix}
 $$
 
-Compute \( A^{-1} \):
-$$
-A^{-1} = \frac{1}{-1} \cdot \text{adj}(A) =
--1 \cdot
-\begin{pmatrix}
-0 & 0 & -2 \\
-1 & -1 & 0 \\
--1 & -2 & 2
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 & 0 & 2 \\
--1 & 1 & 0 \\
-1 & 2 & -2
-\end{pmatrix}
-$$
+---
 
-The inverse of \( A \) is:
+### Inverse Matrix \( A^{-1} \):
+
 $$
 A^{-1} =
 \begin{pmatrix}
@@ -801,6 +813,7 @@ A^{-1} =
 1 & 2 & -2
 \end{pmatrix}
 $$
+
 
 
 #### Verification:
