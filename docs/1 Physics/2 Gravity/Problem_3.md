@@ -42,9 +42,9 @@ r_0 = R_{\text{earth}} + h
 
 
 
-Depending on the payload's speed \( v_0 \):
-- For **elliptical orbits**: \( v_0 < v_{\text{circular}} \) where \( v_{\text{circular}} = \sqrt{\mu / r_0} \)
-- For a **parabolic trajectory**: \( v_0 = v_{\text{escape}} = \sqrt{2\mu / r_0} \)
+Depending on the payload's speed \( v_0 \):  
+- For **elliptical orbits**: \( v_0 < v_{\text{circular}} \) where \( v_{\text{circular}} = \sqrt{\mu / r_0} \)  
+- For a **parabolic trajectory**: \( v_0 = v_{\text{escape}} = \sqrt{2\mu / r_0} \)  
 - For **hyperbolic trajectories**: \( v_0 > v_{\text{escape}} \)
 
 ## Numerical Simulation and Visualization
