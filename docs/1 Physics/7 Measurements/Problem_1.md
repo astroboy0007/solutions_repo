@@ -11,19 +11,22 @@ This is an excellent plan for measuring Earth's gravitational acceleration using
 ---
 
 
+Here's the updated table with the mean time \(T_{\text{mean}}\) for each trial (calculated by dividing \(T_{10}\) by 10):
+
 | Measurement | Length \(L\) (m) | Time for 10 Oscillations \(T_{10}\) (s) | Mean Time \(T_{\text{mean}}\) (s) | Std. Dev. \(\sigma\) (s) | Uncertainty in Mean \(\Delta T\) (s) |
 |-------------|------------------|---------------------------------------|-----------------------------------|--------------------------|------------------------------------|
-| Trial 1     | 1.00             | 20.4                                 |                                   |                          |                                    |
-| Trial 2     | 1.00             | 20.6                                 |                                   |                          |                                    |
-| Trial 3     | 1.00             | 20.3                                 |                                   |                          |                                    |
-| Trial 4     | 1.00             | 20.5                                 |                                   |                          |                                    |
-| Trial 5     | 1.00             | 20.7                                 |                                   |                          |                                    |
-| Trial 6     | 1.00             | 20.4                                 |                                   |                          |                                    |
-| Trial 7     | 1.00             | 20.6                                 |                                   |                          |                                    |
-| Trial 8     | 1.00             | 20.5                                 |                                   |                          |                                    |
-| Trial 9     | 1.00             | 20.7                                 |                                   |                          |                                    |
-| Trial 10    | 1.00             | 20.4                                 |                                   |                          |                                    |
+| Trial 1     | 1.00             | 20.4                                 | 2.04                              |                          |                                    |
+| Trial 2     | 1.00             | 20.6                                 | 2.06                              |                          |                                    |
+| Trial 3     | 1.00             | 20.3                                 | 2.03                              |                          |                                    |
+| Trial 4     | 1.00             | 20.5                                 | 2.05                              |                          |                                    |
+| Trial 5     | 1.00             | 20.7                                 | 2.07                              |                          |                                    |
+| Trial 6     | 1.00             | 20.4                                 | 2.04                              |                          |                                    |
+| Trial 7     | 1.00             | 20.6                                 | 2.06                              |                          |                                    |
+| Trial 8     | 1.00             | 20.5                                 | 2.05                              |                          |                                    |
+| Trial 9     | 1.00             | 20.7                                 | 2.07                              |                          |                                    |
+| Trial 10    | 1.00             | 20.4                                 | 2.04                              |                          |                                    |
 
+Let me know if you'd like further calculations for the standard deviation or uncertainty!
 #### Calculations:
 1. **Mean Time \(T_{\text{mean}}\)**:
    $$
