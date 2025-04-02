@@ -157,13 +157,7 @@ D \cdot E =
 
 ## 2. Determinants 2x2 and 3x3
 
-Here's the detailed computation for determinants using markdown format:
-
----
-
-### Determinants of 2x2 Matrices:
-
-#### **1. Matrix \(A\):**
+### **1. Matrix \(A\):**
 \[
 A = 
 \begin{pmatrix} 
@@ -176,7 +170,7 @@ The determinant of a 2x2 matrix is calculated as:
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
 \]
 
-#### **2. Matrix \(B\):**
+### **2. Matrix \(B\):**
 \[
 B = 
 \begin{pmatrix} 
@@ -188,7 +182,7 @@ B =
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
 \]
 
-#### **3. Matrix \(C\):**
+### **3. Matrix \(C\):**
 \[
 C = 
 \begin{pmatrix} 
@@ -202,9 +196,9 @@ C =
 
 ---
 
-### Determinants of 3x3 Matrices:
+## Determinants of 3x3 Matrices:
 
-#### **4. Matrix \(D\):**
+### **4. Matrix \(D\):**
 \[
 D = 
 \begin{pmatrix} 
@@ -238,7 +232,7 @@ The determinant of a 3x3 matrix is calculated using cofactor expansion:
 \text{det}(D) = 1 \cdot (-6 - 4) + 2 \cdot (-4 - 6) = -10 + 2 \cdot -10 = -10 - 20 = -30
 \]
 
-#### **5. Matrix \(E\):**
+### **5. Matrix \(E\):**
 \[
 E = 
 \begin{pmatrix} 
@@ -274,7 +268,7 @@ E =
 \text{det}(E) = 3 \cdot -8 - 20 - 10 = -24 - 20 - 10 = -54
 \]
 
-#### **6. Matrix \(F\):**
+### **6. Matrix \(F\):**
 \[
 F = 
 \begin{pmatrix} 
