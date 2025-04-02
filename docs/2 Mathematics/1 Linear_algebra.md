@@ -188,7 +188,7 @@ D \cdot E =
 ### Matrix Addition:
 
 1. **\(A + B\)**:
-\[
+$$
 A + B = 
 \begin{pmatrix} 
 1 & 2 \\ 
@@ -204,10 +204,10 @@ A + B =
 6 & 8 \\ 
 10 & 12 
 \end{pmatrix}
-\]
+$$
 
 2. **\(B - A\)**:
-\[
+$$
 B - A = 
 \begin{pmatrix} 
 5 & 6 \\ 
@@ -223,10 +223,10 @@ B - A =
 4 & 4 \\ 
 4 & 4 
 \end{pmatrix}
-\]
+$$
 
 3. **\(A + C\)**:
-\[
+$$
 A + C = 
 \begin{pmatrix} 
 1 & 2 \\ 
@@ -242,7 +242,7 @@ A + C =
 0 & 4 \\ 
 6 & 4 
 \end{pmatrix}
-\]
+$$
 
 4. **\(D + E\)**:
 - **Not Defined** (Matrix addition requires matrices of equal dimensions; \(D\) is \(2 \times 3\) and \(E\) is \(3 \times 2\)).
@@ -252,7 +252,7 @@ A + C =
 ### Scalar Multiplication:
 
 1. **\(\frac{1}{2}A\)**:
-\[
+$$
 \frac{1}{2}A = 
 \frac{1}{2}
 \begin{pmatrix} 
@@ -264,10 +264,10 @@ A + C =
 0.5 & 1 \\ 
 1.5 & 2 
 \end{pmatrix}
-\]
+$$
 
 2. **\(2B\)**:
-\[
+$$
 2B = 
 2
 \begin{pmatrix} 
@@ -279,10 +279,10 @@ A + C =
 10 & 12 \\ 
 14 & 16 
 \end{pmatrix}
-\]
+$$
 
 3. **\(-3C\)**:
-\[
+$$
 -3C = 
 -3
 \begin{pmatrix} 
@@ -294,10 +294,10 @@ A + C =
 3 & -6 \\ 
 -9 & 0 
 \end{pmatrix}
-\]
+$$
 
 4. **\(4D\)**:
-\[
+$$
 4D = 
 4
 \begin{pmatrix} 
@@ -309,14 +309,14 @@ A + C =
 -4 & 8 & 12 \\ 
 16 & 0 & 24 
 \end{pmatrix}
-\]
+$$
 
 ---
 
 ### Matrix Multiplication:
 
 1. **\(A \cdot B\)**:
-\[
+$$
 A \cdot B = 
 \begin{pmatrix} 
 1 & 2 \\ 
@@ -337,10 +337,10 @@ A \cdot B =
 19 & 22 \\ 
 43 & 50 
 \end{pmatrix}
-\]
+$$
 
 2. **\(B \cdot A\)**:
-\[
+$$
 B \cdot A = 
 \begin{pmatrix} 
 5 & 6 \\ 
@@ -361,13 +361,13 @@ B \cdot A =
 23 & 34 \\ 
 31 & 46 
 \end{pmatrix}
-\]
+$$
 
 3. **\(A \cdot D\)**:
 - **Not Defined** (Matrix multiplication requires the number of columns in \(A\) to match the number of rows in \(D\)).
 
 4. **\(D \cdot E\)**:
-\[
+$$
 D \cdot E = 
 \begin{pmatrix} 
 -1 & 2 & 3 \\ 
@@ -389,5 +389,5 @@ D \cdot E =
 34 & 40 \\ 
 46 & 56 
 \end{pmatrix}
-\]
+$$
 
