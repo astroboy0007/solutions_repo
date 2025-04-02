@@ -145,7 +145,6 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, 20, 0.2), interval=100)
 plt.show()
 
 ```
-![alt text](image-6.png)
 
 ![Ripple Animation](ripple_animation.gif)
 
