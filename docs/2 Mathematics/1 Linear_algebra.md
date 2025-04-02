@@ -361,3 +361,6 @@ $$
    - \(\text{det}(D) = -30\)  
    - \(\text{det}(E) = -54\)  
    - \(\text{det}(F) = 60\)  
+
+
+## 3. Determinants using Laplace's Expansion
