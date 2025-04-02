@@ -404,34 +404,36 @@ C =
 <h3 id="4-matrix-d"><strong>4. Matrix <span class="arithmatex">\(D\)</span>:</strong></h3>
 <div class="arithmatex">\[
 D = 
-\begin{pmatrix} 
-1 &amp; 0 &amp; 2 \\ 
--1 &amp; 3 &amp; 1 \\ 
-2 &amp; 4 &amp; -2 
+\begin{pmatrix}
+1 &amp; 0 &amp; 2 \\
+-1 &amp; 3 &amp; 1 \\
+2 &amp; 4 &amp; -2
 \end{pmatrix}
-$$
-The determinant of a 3x3 matrix is calculated using cofactor expansion:
-$$
+\]</div>
+<p>The determinant of a 3x3 matrix is calculated using cofactor expansion:</p>
+<div class="arithmatex">\[
 \text{det}(D) = 1 \cdot 
-\begin{vmatrix} 
-3 &amp; 1 \\ 
-4 &amp; -2 
+\begin{vmatrix}
+3 &amp; 1 \\
+4 &amp; -2
 \end{vmatrix}
 - 0 \cdot 
-\begin{vmatrix} 
--1 &amp; 1 \\ 
-2 &amp; -2 
+\begin{vmatrix}
+-1 &amp; 1 \\
+2 &amp; -2
 \end{vmatrix}
 + 2 \cdot 
-\begin{vmatrix} 
--1 &amp; 3 \\ 
-2 &amp; 4 
+\begin{vmatrix}
+-1 &amp; 3 \\
+2 &amp; 4
 \end{vmatrix}
-$$
-$$
+\]</div>
+<p>Next, calculate the determinant of the submatrices:</p>
+<div class="arithmatex">\[
 \text{det}(D) = 1 \cdot ((3 \cdot -2) - (1 \cdot 4)) + 2 \cdot ((-1 \cdot 4) - (3 \cdot 2))
-$$
-$$
+\]</div>
+<p>Simplify the calculation:</p>
+<div class="arithmatex">\[
 \text{det}(D) = 1 \cdot (-6 - 4) + 2 \cdot (-4 - 6) = -10 + 2 \cdot -10 = -10 - 20 = -30
 \]</div>
 <h3 id="5-matrix-e"><strong>5. Matrix <span class="arithmatex">\(E\)</span>:</strong></h3>
