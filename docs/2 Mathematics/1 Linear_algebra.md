@@ -164,13 +164,13 @@ A =
 2 & 3 \\
 1 & 4
 \end{pmatrix}
-$$  
+$$
 
 The determinant of a 2x2 matrix is calculated as:
+
 $$
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
-$$  
-
+$$
 ### **2. Matrix \(B\):**
 $$
 B = 
@@ -179,6 +179,7 @@ B =
 7 & 8 
 \end{pmatrix}
 $$  
+
 $$
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
 $$  
