@@ -120,7 +120,6 @@ Estimated π: 3.1412
 
 ### 2. Simulation
 **Steps**:  
-
 1. Randomly generate the position and orientation of the needle.  
 
 2. Calculate whether the needle crosses a line based on its center position and angle.  
