@@ -114,10 +114,9 @@ Estimated π: 3.1412
   $$  
 
   where:  
-
-  - \(n\) = Total number of needle drops  
+   \(n\) = Total number of needle drops  
   
-  - \(h\) = Number of times the needle crosses a line.
+   \(h\) = Number of times the needle crosses a line.
 
 ### 2. Simulation
 **Steps**:  
