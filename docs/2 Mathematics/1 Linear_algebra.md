@@ -657,6 +657,15 @@ B =
 \end{pmatrix}
 $$
 
+$$
+B =
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+0 & -6 & -12
+\end{pmatrix}
+$$
+
 #### Step 2: Eliminate \( R_3(2) \)
 Next, eliminate the element at position \( (3, 2) \) (\(-6\)) by performing:
 \[
