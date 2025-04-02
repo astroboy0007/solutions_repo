@@ -595,10 +595,10 @@ A =
 $$
 
 #### Step 2: Determinant Calculation
-The determinant of an upper triangular matrix is the product of its diagonal elements:
-\[
+The determinant of an upper triangular matrix is the product of its diagonal elements:  
+$$
 \text{det}(A) = 12 \cdot (-8.5) = -102
-\]
+$$
 
 ---
 
