@@ -28,9 +28,9 @@ When an object moves under the influence of Earth's gravity, its acceleration is
 
 
 Where:  
-- \( G \) is the gravitational constant.  
-- \( M_{\text{earth}} \) is Earth's mass.  
-- \( r \) is the distance from Earth's center.  
+ \( G \) is the gravitational constant.  
+ \( M_{\text{earth}} \) is Earth's mass.  
+ \( r \) is the distance from Earth's center.  
 
 If the payload is released at an altitude \( h \) above Earth's surface, the initial distance is:
 
