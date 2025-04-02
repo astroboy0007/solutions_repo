@@ -616,36 +616,36 @@ $$
 #### Step 1: Row Operations to Form an Upper Triangular Matrix
 First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) and \( R_3(1) = 7 \)):
 1. Multiply \( R_1 \) by \( -4 \) and add it to \( R_2 \):
-   \[
+   $$
    R_2 \to R_2 - 4 \cdot R_1
-   \]
+   $$
 
    Performing the operation:
-   \[
+   $$
    R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} - 4 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
-   \]
-   \[
+   $$
+   $$
    R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} - \begin{pmatrix} 4 & 8 & 12 \end{pmatrix}
-   \]
-   \[
+   $$
+   $$
    R_2 = \begin{pmatrix} 0 & -3 & -6 \end{pmatrix}
-   \]
+   $$
 
 2. Multiply \( R_1 \) by \( -7 \) and add it to \( R_3 \):
-   \[
+   $$
    R_3 \to R_3 - 7 \cdot R_1
-   \]
+   $$
 
    Performing the operation:
-   \[
+   $$
    R_3 = \begin{pmatrix} 7 & 8 & 9 \end{pmatrix} - 7 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
-   \]
-   \[
+   $$
+   $$
    R_3 = \begin{pmatrix} 7 & 8 & 9 \end{pmatrix} - \begin{pmatrix} 7 & 14 & 21 \end{pmatrix}
-   \]
-   \[
+   $$
+   $$
    R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix}
-   \]
+   $$
 
 The updated matrix \( B \) is:
 $$
