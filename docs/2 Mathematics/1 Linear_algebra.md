@@ -699,3 +699,193 @@ $$
 1. \(\text{det}(A) = -102\)
 2. \(\text{det}(B) = 0\)
 
+## 5. Inverse of a Matrix from the formula
+
+Here’s the solution to the two problems, formatted in markdown:
+
+---
+
+### **1. Find the inverse matrix for \( A \):**
+
+The given matrix is:
+$$
+A =
+\begin{pmatrix}
+2 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 2 & 0
+\end{pmatrix}
+$$
+
+#### Step 1: Check if the determinant of \( A \) is non-zero
+The determinant of \( A \) is computed as:
+$$
+\text{det}(A) =
+\begin{vmatrix}
+2 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 2 & 0
+\end{vmatrix}
+= 2 \cdot (1 \cdot 0 - 0 \cdot 2) - 0 \cdot (0 \cdot 0 - 1 \cdot 1) + 1 \cdot (0 \cdot 2 - 1 \cdot 1)
+$$
+$$
+\text{det}(A) = 2 \cdot 0 - 0 \cdot (-1) + 1 \cdot (-1) = -1
+$$
+
+Since \( \text{det}(A) \neq 0 \), the matrix is invertible.
+
+#### Step 2: Compute the inverse of \( A \)
+The formula for the inverse of a 3x3 matrix is:
+$$
+A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
+$$
+where \( \text{adj}(A) \) is the adjugate matrix.
+
+Compute the adjugate matrix:
+1. Cofactor matrix:
+$$
+\text{Cofactor}(A) =
+\begin{pmatrix}
+(1 \cdot 0 - 0 \cdot 2) & -(0 \cdot 0 - 1 \cdot 1) & (0 \cdot 2 - 1 \cdot 1) \\
+-(1 \cdot 0 - 0 \cdot 1) & (2 \cdot 0 - 1 \cdot 1) & -(2 \cdot 1 - 0 \cdot 1) \\
+(0 \cdot 0 - 1 \cdot 2) & -(2 \cdot 0 - 0 \cdot 1) & (2 \cdot 1 - 0 \cdot 0)
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 & -1 \\
+0 & -1 & -2 \\
+-2 & 0 & 2
+\end{pmatrix}
+$$
+
+2. Transpose the cofactor matrix to get \( \text{adj}(A) \):
+$$
+\text{adj}(A) =
+\begin{pmatrix}
+0 & 0 & -2 \\
+1 & -1 & 0 \\
+-1 & -2 & 2
+\end{pmatrix}
+$$
+
+Compute \( A^{-1} \):
+$$
+A^{-1} = \frac{1}{-1} \cdot \text{adj}(A) =
+-1 \cdot
+\begin{pmatrix}
+0 & 0 & -2 \\
+1 & -1 & 0 \\
+-1 & -2 & 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 & 2 \\
+-1 & 1 & 0 \\
+1 & 2 & -2
+\end{pmatrix}
+$$
+
+The inverse of \( A \) is:
+$$
+A^{-1} =
+\begin{pmatrix}
+0 & 0 & 2 \\
+-1 & 1 & 0 \\
+1 & 2 & -2
+\end{pmatrix}
+$$
+
+#### Verification:
+Compute \( A \cdot A^{-1} \):
+$$
+A \cdot A^{-1} =
+\begin{pmatrix}
+2 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 2 & 0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+0 & 0 & 2 \\
+-1 & 1 & 0 \\
+1 & 2 & -2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 + 0 + 2 & 0 + 0 + 2 & 4 + 0 - 2 \\
+0 - 1 + 0 & 0 + 1 + 0 & 0 + 0 + 0 \\
+0 - 2 + 2 & 0 + 2 + 4 & 2 + 0 - 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+
+Since \( A \cdot A^{-1} = I \), the result is verified.
+
+---
+
+### **2. Determine the rank of \( B \):**
+
+The given matrix is:
+$$
+B =
+\begin{pmatrix}
+4 & -3 & 7 \\
+-1 & 6 & 3 \\
+2 & 9 & 1
+\end{pmatrix}
+$$
+
+#### Step 1: Row Reduce \( B \) to Row Echelon Form
+1. Use the first row to eliminate the first element in rows 2 and 3:
+   - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
+   - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
+
+The updated matrix is:
+$$
+\begin{pmatrix}
+4 & -3 & 7 \\
+0 & \frac{21}{4} & \frac{31}{4} \\
+0 & \frac{15}{2} & -\frac{9}{2}
+\end{pmatrix}
+$$
+
+2. Use the second row to eliminate the second element in row 3:
+   - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
+
+The updated matrix is:
+$$
+\begin{pmatrix}
+4 & -3 & 7 \\
+0 & \frac{21}{4} & \frac{31}{4} \\
+0 & 0 & -\frac{36}{7}
+\end{pmatrix}
+$$
+
+#### Step 2: Count Non-Zero Rows
+The matrix has 3 non-zero rows, so the rank of \( B \) is:
+$$
+\text{Rank}(B) = 3
+$$
+
+---
+
+### Final Results:
+1. **Inverse of \( A \):**
+   $$
+   A^{-1} =
+   \begin{pmatrix}
+   0 & 0 & 2 \\
+   -1 & 1 & 0 \\
+   1 & 2 & -2
+   \end{pmatrix}
+   $$
+
+2. **Rank of \( B \):**
+   $$
+   \text{Rank}(B) = 3
+   $$
