@@ -196,13 +196,15 @@
 r_0 = R_{\text{earth}} + h
 \]</div>
 <p>Depending on the payload's speed <span class="arithmatex">\( v_0 \)</span>:<br/>
-     - For <strong>elliptical orbits</strong>:<br/>
+      For <strong>elliptical orbits</strong>:<br/>
 <span class="arithmatex">\( v_0 &lt; v_{\text{circular}} \)</span><br/>
-where <span class="arithmatex">\( v_{\text{circular}} = \sqrt{\mu / r_0} \)</span><br/>
-     - For a <strong>parabolic trajectory</strong>:<br/>
-<span class="arithmatex">\( v_0 = v_{\text{escape}} = \sqrt{2\mu / r_0} \)</span><br/>
-     - For <strong>hyperbolic trajectories</strong>:<br/>
-<span class="arithmatex">\( v_0 &gt; v_{\text{escape}} \)</span></p>
+where <span class="arithmatex">\( v_{\text{circular}} = \sqrt{\mu / r_0} \)</span> </p>
+<pre><code>  For a **parabolic trajectory**:
+</code></pre>
+<p><span class="arithmatex">\( v_0 = v_{\text{escape}} = \sqrt{2\mu / r_0} \)</span> </p>
+<pre><code>  For **hyperbolic trajectories**:
+</code></pre>
+<p><span class="arithmatex">\( v_0 &gt; v_{\text{escape}} \)</span></p>
 <h2 id="numerical-simulation-and-visualization">Numerical Simulation and Visualization</h2>
 <p>The following Python script uses a numerical integrator to solve the two-dimensional equations of motion for a payload released near Earth. It simulates three cases:<br/>
 - <strong>Elliptical Orbit:</strong> <span class="arithmatex">\( v_0 = 0.95 \times v_{\text{circular}} \)</span><br/>
