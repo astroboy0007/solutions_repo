@@ -189,18 +189,19 @@ $$
 
 ### **3. Matrix \(C\):**  
 $$
-C = 
-\begin{pmatrix} 
--1 & 2 \\ 
-3 & 0 
+C =
+\begin{pmatrix}
+-1 & 2 \\
+3 & 0
 \end{pmatrix}
 $$
+
+The determinant of matrix \(C\) is calculated as:
+
 $$
 \text{det}(C) = (-1 \cdot 0) - (2 \cdot 3) = 0 - 6 = -6
 $$
 
-
-UPDATE
 ---
 
 ## Determinants of 3x3 Matrices:
