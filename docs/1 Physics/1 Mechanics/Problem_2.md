@@ -16,11 +16,16 @@ The motion of a forced damped pendulum is described by the following second-orde
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = A \cos(\Omega t)
 \]
 
-Where:
-- \(\theta(t)\) is the angular displacement of the pendulum,
-- \(\gamma\) is the damping coefficient,
-- \(\omega_0\) is the natural frequency of the undamped pendulum,
-- \(A\) is the driving amplitude,
+Where:  
+
+- \(\theta(t)\) is the angular displacement of the pendulum,  
+
+- \(\gamma\) is the damping coefficient,  
+
+- \(\omega_0\) is the natural frequency of the undamped pendulum,  
+
+- \(A\) is the driving amplitude,  
+
 - \(\Omega\) is the driving frequency.
 
 ## Small-Angle Approximation (Linearization)
