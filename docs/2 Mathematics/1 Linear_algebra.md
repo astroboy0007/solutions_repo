@@ -181,7 +181,7 @@ D \cdot E =
 ---
 
 ### Final Results:
-Certainly! Below is the solution presented in **LaTeX** for clear mathematical formatting.
+
 
 ---
 
@@ -193,11 +193,13 @@ A + B =
 \begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} +
+\end{pmatrix}
++
 \begin{pmatrix} 
 5 & 6 \\ 
 7 & 8 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 6 & 8 \\ 
 10 & 12 
@@ -210,11 +212,13 @@ B - A =
 \begin{pmatrix} 
 5 & 6 \\ 
 7 & 8 
-\end{pmatrix} -
+\end{pmatrix}
+-
 \begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 4 & 4 \\ 
 4 & 4 
@@ -227,19 +231,21 @@ A + C =
 \begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} +
+\end{pmatrix}
++
 \begin{pmatrix} 
 -1 & 2 \\ 
 3 & 0 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 0 & 4 \\ 
 6 & 4 
 \end{pmatrix}
 \]
 
-4. **\(D + E\)**:  
-**Not Defined** (Matrix addition requires matrices of equal dimensions; \(D\) is \(2 \times 3\) and \(E\) is \(3 \times 2\)).
+4. **\(D + E\)**:
+- **Not Defined** (Matrix addition requires matrices of equal dimensions; \(D\) is \(2 \times 3\) and \(E\) is \(3 \times 2\)).
 
 ---
 
@@ -247,11 +253,13 @@ A + C =
 
 1. **\(\frac{1}{2}A\)**:
 \[
-\frac{1}{2} A = 
-\frac{1}{2} \begin{pmatrix} 
+\frac{1}{2}A = 
+\frac{1}{2}
+\begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 0.5 & 1 \\ 
 1.5 & 2 
@@ -261,10 +269,12 @@ A + C =
 2. **\(2B\)**:
 \[
 2B = 
-2 \begin{pmatrix} 
+2
+\begin{pmatrix} 
 5 & 6 \\ 
 7 & 8 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 10 & 12 \\ 
 14 & 16 
@@ -274,10 +284,12 @@ A + C =
 3. **\(-3C\)**:
 \[
 -3C = 
--3 \begin{pmatrix} 
+-3
+\begin{pmatrix} 
 -1 & 2 \\ 
 3 & 0 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 3 & -6 \\ 
 -9 & 0 
@@ -287,10 +299,12 @@ A + C =
 4. **\(4D\)**:
 \[
 4D = 
-4 \begin{pmatrix} 
+4
+\begin{pmatrix} 
 -1 & 2 & 3 \\ 
 4 & 0 & 6 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 -4 & 8 & 12 \\ 
 16 & 0 & 24 
@@ -307,15 +321,18 @@ A \cdot B =
 \begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} \cdot 
+\end{pmatrix}
+\cdot 
 \begin{pmatrix} 
 5 & 6 \\ 
 7 & 8 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 (1 \cdot 5 + 2 \cdot 7) & (1 \cdot 6 + 2 \cdot 8) \\ 
 (3 \cdot 5 + 4 \cdot 7) & (3 \cdot 6 + 4 \cdot 8) 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 19 & 22 \\ 
 43 & 50 
@@ -328,23 +345,26 @@ B \cdot A =
 \begin{pmatrix} 
 5 & 6 \\ 
 7 & 8 
-\end{pmatrix} \cdot 
+\end{pmatrix}
+\cdot 
 \begin{pmatrix} 
 1 & 2 \\ 
 3 & 4 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 (5 \cdot 1 + 6 \cdot 3) & (5 \cdot 2 + 6 \cdot 4) \\ 
 (7 \cdot 1 + 8 \cdot 3) & (7 \cdot 2 + 8 \cdot 4) 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 23 & 34 \\ 
 31 & 46 
 \end{pmatrix}
 \]
 
-3. **\(A \cdot D\)**:  
-**Not Defined** (Matrix multiplication requires the number of columns in \(A\) to match the number of rows in \(D\)).
+3. **\(A \cdot D\)**:
+- **Not Defined** (Matrix multiplication requires the number of columns in \(A\) to match the number of rows in \(D\)).
 
 4. **\(D \cdot E\)**:
 \[
@@ -352,16 +372,19 @@ D \cdot E =
 \begin{pmatrix} 
 -1 & 2 & 3 \\ 
 4 & 0 & 6 
-\end{pmatrix} \cdot 
+\end{pmatrix}
+\cdot 
 \begin{pmatrix} 
 1 & 2 \\ 
 4 & 5 \\ 
 7 & 8 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 (-1 \cdot 1 + 2 \cdot 4 + 3 \cdot 7) & (-1 \cdot 2 + 2 \cdot 5 + 3 \cdot 8) \\ 
 (4 \cdot 1 + 0 \cdot 4 + 6 \cdot 7) & (4 \cdot 2 + 0 \cdot 5 + 6 \cdot 8) 
-\end{pmatrix} =
+\end{pmatrix}
+=
 \begin{pmatrix} 
 34 & 40 \\ 
 46 & 56 
