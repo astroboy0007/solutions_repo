@@ -586,13 +586,6 @@ R_2 = \begin{pmatrix} 0 & -8.5 \end{pmatrix}
 $$
 
 The updated matrix \( A \) is:  
-$$
-A =
-\begin{pmatrix}
-12 & 3 \\
-0 & -8.5
-\end{pmatrix}
-$$  
 
 $$
 A =
