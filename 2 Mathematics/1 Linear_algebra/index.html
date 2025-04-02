@@ -177,6 +177,30 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#4-determinants-from-the-gauss-method-and-triangular-matrices">4. Determinants from the Gauss Method and Triangular Matrices</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#matrix-a_1">Matrix \( A \):</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-row-operations-to-form-an-upper-triangular-matrix">Step 1: Row Operations to Form an Upper Triangular Matrix</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-determinant-calculation">Step 2: Determinant Calculation</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#matrix-b_1">Matrix \( B \):</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-row-operations-to-form-an-upper-triangular-matrix_1">Step 1: Row Operations to Form an Upper Triangular Matrix</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-eliminate-r_32">Step 2: Eliminate \( R_3(2) \)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-determinant-calculation">Step 3: Determinant Calculation</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#final-results_1">Final Results:</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../2%20Analytic_geometry/">Analytic geometry</a>
@@ -708,6 +732,131 @@ print(f"Determinant of D: {det_D}")
 <li><span class="arithmatex">\(\text{det}(C) = -75\)</span></li>
 <li><span class="arithmatex">\(\text{det}(D) = 231\)</span></li>
 </ul>
+<h2 id="4-determinants-from-the-gauss-method-and-triangular-matrices">4. Determinants from the Gauss Method and Triangular Matrices</h2>
+<p>Let's solve the determinants of the given matrices <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> by reducing them to upper triangular form and then taking the product of their diagonal elements.</p>
+<hr/>
+<h3 id="matrix-a_1"><strong>Matrix <span class="arithmatex">\( A \)</span>:</strong></h3>
+<div class="arithmatex">\[
+A =
+\begin{pmatrix}
+12 &amp; 3 \\
+-18 &amp; -4
+\end{pmatrix}
+\]</div>
+<h4 id="step-1-row-operations-to-form-an-upper-triangular-matrix">Step 1: Row Operations to Form an Upper Triangular Matrix</h4>
+<p>We can eliminate the element at position <span class="arithmatex">\((2, 1)\)</span> (<span class="arithmatex">\(-18\)</span>) by applying a row operation. Multiply <span class="arithmatex">\( R_1 \)</span> (row 1) by <span class="arithmatex">\(\frac{-18}{12} = -\frac{3}{2}\)</span> and add it to <span class="arithmatex">\( R_2 \)</span>:</p>
+<div class="arithmatex">\[
+R_2 \to R_2 + \left(-\frac{3}{2} \cdot R_1\right)
+\]</div>
+<p>Performing the operation:
+[
+R_2 = \begin{pmatrix} -18 &amp; -4 \end{pmatrix} + \left(-\frac{3}{2} \cdot \begin{pmatrix} 12 &amp; 3 \end{pmatrix}\right)
+]
+[
+R_2 = \begin{pmatrix} -18 &amp; -4 \end{pmatrix} + \begin{pmatrix} -18 &amp; -4.5 \end{pmatrix}
+]
+[
+R_2 = \begin{pmatrix} 0 &amp; -8.5 \end{pmatrix}
+]</p>
+<p>The updated matrix <span class="arithmatex">\( A \)</span> is:
+$$
+A =
+\begin{pmatrix}
+12 &amp; 3 \
+0 &amp; -8.5
+\end{pmatrix}
+$$</p>
+<h4 id="step-2-determinant-calculation">Step 2: Determinant Calculation</h4>
+<p>The determinant of an upper triangular matrix is the product of its diagonal elements:
+[
+\text{det}(A) = 12 \cdot (-8.5) = -102
+]</p>
+<hr/>
+<h3 id="matrix-b_1"><strong>Matrix <span class="arithmatex">\( B \)</span>:</strong></h3>
+<div class="arithmatex">\[
+B =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{pmatrix}
+\]</div>
+<h4 id="step-1-row-operations-to-form-an-upper-triangular-matrix_1">Step 1: Row Operations to Form an Upper Triangular Matrix</h4>
+<p>First, eliminate the elements below the diagonal in column 1 (<span class="arithmatex">\( R_2(1) = 4 \)</span> and <span class="arithmatex">\( R_3(1) = 7 \)</span>):
+1. Multiply <span class="arithmatex">\( R_1 \)</span> by <span class="arithmatex">\( -4 \)</span> and add it to <span class="arithmatex">\( R_2 \)</span>:
+   [
+   R_2 \to R_2 - 4 \cdot R_1
+   ]</p>
+<p>Performing the operation:
+   [
+   R_2 = \begin{pmatrix} 4 &amp; 5 &amp; 6 \end{pmatrix} - 4 \cdot \begin{pmatrix} 1 &amp; 2 &amp; 3 \end{pmatrix}
+   ]
+   [
+   R_2 = \begin{pmatrix} 4 &amp; 5 &amp; 6 \end{pmatrix} - \begin{pmatrix} 4 &amp; 8 &amp; 12 \end{pmatrix}
+   ]
+   [
+   R_2 = \begin{pmatrix} 0 &amp; -3 &amp; -6 \end{pmatrix}
+   ]</p>
+<ol>
+<li>Multiply <span class="arithmatex">\( R_1 \)</span> by <span class="arithmatex">\( -7 \)</span> and add it to <span class="arithmatex">\( R_3 \)</span>:
+   [
+   R_3 \to R_3 - 7 \cdot R_1
+   ]</li>
+</ol>
+<p>Performing the operation:
+   [
+   R_3 = \begin{pmatrix} 7 &amp; 8 &amp; 9 \end{pmatrix} - 7 \cdot \begin{pmatrix} 1 &amp; 2 &amp; 3 \end{pmatrix}
+   ]
+   [
+   R_3 = \begin{pmatrix} 7 &amp; 8 &amp; 9 \end{pmatrix} - \begin{pmatrix} 7 &amp; 14 &amp; 21 \end{pmatrix}
+   ]
+   [
+   R_3 = \begin{pmatrix} 0 &amp; -6 &amp; -12 \end{pmatrix}
+   ]</p>
+<p>The updated matrix <span class="arithmatex">\( B \)</span> is:
+$$
+B =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \
+0 &amp; -3 &amp; -6 \
+0 &amp; -6 &amp; -12
+\end{pmatrix}
+$$</p>
+<h4 id="step-2-eliminate-r_32">Step 2: Eliminate <span class="arithmatex">\( R_3(2) \)</span></h4>
+<p>Next, eliminate the element at position <span class="arithmatex">\( (3, 2) \)</span> (<span class="arithmatex">\(-6\)</span>) by performing:
+[
+R_3 \to R_3 - 2 \cdot R_2
+]</p>
+<p>Performing the operation:
+[
+R_3 = \begin{pmatrix} 0 &amp; -6 &amp; -12 \end{pmatrix} - 2 \cdot \begin{pmatrix} 0 &amp; -3 &amp; -6 \end{pmatrix}
+]
+[
+R_3 = \begin{pmatrix} 0 &amp; -6 &amp; -12 \end{pmatrix} - \begin{pmatrix} 0 &amp; -6 &amp; -12 \end{pmatrix}
+]
+[
+R_3 = \begin{pmatrix} 0 &amp; 0 &amp; 0 \end{pmatrix}
+]</p>
+<p>The final matrix <span class="arithmatex">\( B \)</span> is:
+$$
+B =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 \
+0 &amp; -3 &amp; -6 \
+0 &amp; 0 &amp; 0
+\end{pmatrix}
+$$</p>
+<h4 id="step-3-determinant-calculation">Step 3: Determinant Calculation</h4>
+<p>Since the last row is all zeros, the determinant is:
+[
+\text{det}(B) = 0
+]</p>
+<hr/>
+<h3 id="final-results_1">Final Results:</h3>
+<ol>
+<li><span class="arithmatex">\(\text{det}(A) = -102\)</span></li>
+<li><span class="arithmatex">\(\text{det}(B) = 0\)</span></li>
+</ol>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
