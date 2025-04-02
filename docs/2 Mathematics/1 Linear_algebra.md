@@ -687,9 +687,9 @@ $$
 
 #### Step 3: Determinant Calculation
 Since the last row is all zeros, the determinant is:
-\[
+$$
 \text{det}(B) = 0
-\]
+$$
 
 ---
 
