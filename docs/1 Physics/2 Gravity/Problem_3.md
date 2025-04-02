@@ -57,76 +57,83 @@ The following Python script uses a numerical integrator to solve the two-dimensi
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import solve_ivp
+from matplotlib.animation import FuncAnimation, PillowWriter
 
 # Constants
-G = 6.67430e-11           # Gravitational constant (m^3 kg^-1 s^-2)
-M_earth = 5.972e24        # Mass of Earth (kg)
-mu = G * M_earth          # Earth's gravitational parameter (m^3/s^2)
-R_earth = 6371e3          # Earth's radius (m)
+G = 6.67430e-11  # Gravitational constant, m^3 kg^-1 s^-2
+M = 5.972e24     # Mass of Earth, kg
+R = 6.371e6      # Radius of Earth, m
 
-# Initial Conditions
-altitude = 300e3          # Altitude above Earth's surface (m)
-r0 = R_earth + altitude   # Initial distance from Earth's center (m)
-v_circular = np.sqrt(mu / r0)        # Circular orbital velocity (m/s)
-v_escape = np.sqrt(2 * mu / r0)        # Escape velocity (m/s)
-
-# Define different cases with corresponding initial tangential speeds
-cases = {
-    "Elliptical Orbit (v0 = 0.95 * v_circular)": 0.95 * v_circular,
-    "Parabolic Trajectory (v0 = v_escape)": v_escape,
-    "Hyperbolic Trajectory (v0 = 1.1 * v_escape)": 1.1 * v_escape,
+# Initial conditions for the three cases
+initial_conditions = {
+    "Elliptical Orbit": 0.95 * np.sqrt(G * M / R),  # v0 < v_circular
+    "Parabolic Trajectory": np.sqrt(2 * G * M / R), # v0 = v_escape
+    "Hyperbolic Trajectory": 1.1 * np.sqrt(2 * G * M / R) # v0 > v_escape
 }
 
-# Differential equations for 2D motion under gravity
-def equations(t, state):
-    x, y, vx, vy = state
-    r = np.sqrt(x**2 + y**2)
-    ax = -mu * x / r**3
-    ay = -mu * y / r**3
-    return [vx, vy, ax, ay]
+# Simulation parameters
+time_step = 0.1  # Time step in seconds
+total_time = 300  # Total simulation time in seconds
+times = np.arange(0, total_time, time_step)
 
-# Store trajectories for each scenario
+# Simulate trajectory
+def simulate_trajectory(v0, G, M, R):
+    x, y = R, 0  # Initial position
+    vx, vy = 0, v0  # Initial velocity
+    trajectory = []  # List to store trajectory points
+    for t in times:
+        r = np.sqrt(x**2 + y**2)
+        force_mag = G * M / r**2
+        fx = -force_mag * x / r
+        fy = -force_mag * y / r
+        vx += fx * time_step
+        vy += fy * time_step
+        x += vx * time_step
+        y += vy * time_step
+        trajectory.append((x, y))
+        if r > 10 * R:
+            break
+    return trajectory
+
+# Generate trajectories for all cases
 trajectories = {}
+max_length = 0
+for case, v0 in initial_conditions.items():
+    trajectory = simulate_trajectory(v0, G, M, R)
+    trajectories[case] = trajectory
+    max_length = max(max_length, len(trajectory))
 
-# Perform the numerical integration for each case
-for description, v0 in cases.items():
-    # Initial state: payload at (r0, 0) with velocity perpendicular to the radius (0, v0)
-    state0 = [r0, 0, 0, v0]
-    
-    # Time span: shorter for elliptical orbits, longer for escaping trajectories
-    if "Elliptical" in description:
-        t_span = (0, 6000)  # seconds
-    else:
-        t_span = (0, 20000) # seconds
-    
-    t_eval = np.linspace(t_span[0], t_span[1], 1000)
-    sol = solve_ivp(equations, t_span, state0, t_eval=t_eval, rtol=1e-8)
-    trajectories[description] = sol
+# Create animated plot
+fig, ax = plt.subplots(figsize=(8, 8))
+ax.set_xlim(-15 * R, 15 * R)
+ax.set_ylim(-15 * R, 15 * R)
+ax.set_title("Trajectories Under Newton's Law of Universal Gravitation", fontsize=14)
+ax.set_xlabel("X Position (m)", fontsize=12)
+ax.set_ylabel("Y Position (m)", fontsize=12)
+earth = plt.Circle((0, 0), R, color='#1E90FF', alpha=0.6, label="Earth")
+ax.add_artist(earth)
+lines = {case: ax.plot([], [], label=case, linewidth=2.0)[0] for case in trajectories}
+ax.legend(loc="upper right")
+ax.grid()
 
-# Plot the results
-plt.figure(figsize=(10, 8))
+# Animation function
+def update(frame):
+    for case, trajectory in trajectories.items():
+        if frame < len(trajectory):
+            x_vals, y_vals = zip(*trajectory[:frame+1])
+            lines[case].set_data(x_vals, y_vals)
+    return lines.values()
 
-# Draw Earth as a circle
-theta = np.linspace(0, 2 * np.pi, 300)
-earth_x = R_earth * np.cos(theta)
-earth_y = R_earth * np.sin(theta)
-plt.fill(earth_x, earth_y, color='lightblue', label='Earth')
+# Create animation
+ani = FuncAnimation(fig, update, frames=max_length, interval=30, blit=True)
 
-# Colors for different trajectories
-colors = ['r', 'g', 'b']
-for (desc, sol), color in zip(trajectories.items(), colors):
-    plt.plot(sol.y[0], sol.y[1], color, label=desc)
+# Save as GIF
+ani.save("gravitational_trajectories.gif", writer=PillowWriter(fps=20))
 
-plt.xlabel('x (m)')
-plt.ylabel('y (m)')
-plt.title('Trajectories of a Freely Released Payload Near Earth')
-plt.axis('equal')
-plt.grid(True)
-plt.legend()
-plt.show()
+# Display success message
+print("GIF saved as 'gravitational_trajectories.gif'")
 ```
-![alt text](image-3.png)
+![gravitational trajectories](gravitational_trajectories.gif)
 
 ## Discussion
 ### Trajectory Analysis
