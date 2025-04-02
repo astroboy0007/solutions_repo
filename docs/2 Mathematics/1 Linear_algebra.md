@@ -648,14 +648,6 @@ First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) a
    $$
 
 The updated matrix \( B \) is:
-$$
-B =
-\begin{pmatrix}
-1 & 2 & 3 \\
-0 & -3 & -6 \\
-0 & -6 & -12
-\end{pmatrix}
-$$
 
 $$
 B =
