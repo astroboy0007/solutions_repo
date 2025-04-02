@@ -1,6 +1,6 @@
 # Linear Algebra
 
-Certainly! I'll solve the problem step-by-step and format the calculations in **markdown** for clear presentation. Here's the solution:
+
 
 ---
 
