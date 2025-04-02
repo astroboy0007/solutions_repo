@@ -1,9 +1,6 @@
 # Linear Algebra
 
 
-
----
-
 ## Given Matrices:
 1. **Matrix \(A\):**
    $$
@@ -190,20 +187,11 @@ D \cdot E =
 1. **\(A + B\)**:
 $$
 A + B = 
-\begin{pmatrix} 
-1 & 2 \\ 
-3 & 4 
-\end{pmatrix}
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
 +
-\begin{pmatrix} 
-5 & 6 \\ 
-7 & 8 
-\end{pmatrix}
+\begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
 =
-\begin{pmatrix} 
-6 & 8 \\ 
-10 & 12 
-\end{pmatrix}
+\begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix}
 $$
 
 2. **\(B - A\)**:
