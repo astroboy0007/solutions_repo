@@ -165,9 +165,7 @@ A =
 1 & 4 
 \end{pmatrix}
 $$  
-
 The determinant of a 2x2 matrix is calculated as:  
-
 $$
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
 $$
