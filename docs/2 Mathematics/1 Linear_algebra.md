@@ -882,7 +882,7 @@ $$
 
 
 2. Use the second row to eliminate the second element in row 3:
-   - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
+     - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
 
 The updated matrix is:
 $$
