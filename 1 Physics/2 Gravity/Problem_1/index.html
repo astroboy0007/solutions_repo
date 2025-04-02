@@ -271,31 +271,87 @@ T^2 \propto r^3
 <p>This Python script numerically simulates circular orbits and verifies Kepler’s Third Law.</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.animation import FuncAnimation, PillowWriter
 
 # Constants
 G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
 M_sun = 1.989e30  # Mass of the Sun (kg)
 
-# Define orbital radii (in meters)
-radii = np.linspace(0.1e11, 5e11, 100)  # from 0.1 AU to 5 AU (1 AU ≈ 1.5e11 m)
+# Actual planetary data (Orbital radii in meters and periods in seconds)
+planet_data = {
+    "Mercury": {"radius": 5.79e10, "period": 7.6e6, "color": "gold", "size": 300},
+    "Venus": {"radius": 1.08e11, "period": 1.94e7, "color": "orange", "size": 600},
+    "Earth": {"radius": 1.50e11, "period": 3.15e7, "color": "blue", "size": 800},
+    "Mars": {"radius": 2.28e11, "period": 5.94e7, "color": "red", "size": 400},
+    "Jupiter": {"radius": 7.78e11, "period": 3.73e8, "color": "brown", "size": 2000},
+    "Saturn": {"radius": 1.43e12, "period": 9.29e8, "color": "yellow", "size": 1700},
+    "Uranus": {"radius": 2.87e12, "period": 2.65e9, "color": "cyan", "size": 1500},
+    "Neptune": {"radius": 4.50e12, "period": 5.2e9, "color": "purple", "size": 1400},
+}
 
-# Compute orbital periods using Kepler's Third Law
-periods = np.sqrt((4 * np.pi**2 * radii**3) / (G * M_sun))
+# Extract data into arrays
+radii = np.array([data["radius"] for data in planet_data.values()])
+periods = np.array([data["period"] for data in planet_data.values()])
+planet_colors = [data["color"] for data in planet_data.values()]
+planet_sizes = [data["size"] for data in planet_data.values()]
+planet_names = list(planet_data.keys())
 
-# Convert periods to years
-periods_years = periods / (60 * 60 * 24 * 365.25)
+# Normalize radii and periods for better scaling
+radii_cubed = radii**3 / 1e36  # Scale to make numbers manageable
+periods_squared = periods**2 / 1e16
 
-# Plot T^2 vs. r^3
-plt.figure(figsize=(8,6))
-plt.plot(radii**3, periods**2, 'bo', label="Simulated Data")
-plt.xlabel("Orbital Radius Cubed (r³) [m³]")
-plt.ylabel("Orbital Period Squared (T²) [s²]")
-plt.title("Verification of Kepler's Third Law")
-plt.legend()
-plt.grid()
-plt.show()
+# Create the figure and 3D axis
+fig = plt.figure(figsize=(12, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot planets as styled circles
+planet_plots = []
+for i, (radius, period, color, size) in enumerate(zip(radii_cubed, periods_squared, planet_colors, planet_sizes)):
+    p = ax.scatter(
+        radius, 
+        period, 
+        zs=0, 
+        s=size, 
+        color=color, 
+        edgecolors='black', 
+        label=planet_names[i]
+    )
+    planet_plots.append(p)
+
+# Annotate planets
+for i, (planet, radius, period) in enumerate(zip(planet_names, radii_cubed, periods_squared)):
+    ax.text(
+        radius,
+        period,
+        0,
+        planet,
+        fontsize=10,
+        color='black',
+        bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.3')
+    )
+
+# Axis labels and title
+ax.set_xlabel("Orbital Radius Cubed (r³) [10³⁶ m³]", fontsize=12)
+ax.set_ylabel("Orbital Period Squared (T²) [10¹⁶ s²]", fontsize=12)
+ax.set_zlabel("Z-axis (Fixed at 0)", fontsize=12)
+ax.set_title("3D Visualization of Kepler's Third Law", fontsize=14, fontweight='bold')
+
+# Animation function
+def update(frame):
+    ax.view_init(elev=30, azim=frame)  # Rotate the plot by changing the azimuthal angle
+    return planet_plots
+
+# Create the animation
+ani = FuncAnimation(fig, update, frames=np.arange(0, 360, 2), interval=50, blit=False)
+
+# Save as GIF
+ani.save("kepler_3d_animation.gif", writer=PillowWriter(fps=20))
+
+# Display success message
+print("GIF saved as 'kepler_3d_animation.gif'")
 </code></pre>
-<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="kepler 3d animation" src="../kepler_3d_animation.gif"/></p>
 <p>This script:  </p>
 <ul>
 <li>
