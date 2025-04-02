@@ -352,12 +352,12 @@ $$
 
 ### Final Results:
 
-1. **2x2 Matrices:**
-   - \(\text{det}(A) = 5\)
-   - \(\text{det}(B) = -2\)
-   - \(\text{det}(C) = -6\)
+1. **2x2 Matrices:**  
+   - \(\text{det}(A) = 5\)  
+   - \(\text{det}(B) = -2\)  
+   - \(\text{det}(C) = -6\)  
 
-2. **3x3 Matrices:**
-   - \(\text{det}(D) = -30\)
-   - \(\text{det}(E) = -54\)
-   - \(\text{det}(F) = 60\)
+2. **3x3 Matrices:**  
+   - \(\text{det}(D) = -30\)  
+   - \(\text{det}(E) = -54\)  
+   - \(\text{det}(F) = 60\)  
