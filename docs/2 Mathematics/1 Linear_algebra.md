@@ -719,7 +719,9 @@ A =
 $$
 
 #### Step 1: Check if the determinant of \( A \) is non-zero
+
 The determinant of \( A \) is computed as:
+
 $$
 \text{det}(A) =
 \begin{vmatrix}
@@ -729,6 +731,9 @@ $$
 \end{vmatrix}
 = 2 \cdot (1 \cdot 0 - 0 \cdot 2) - 0 \cdot (0 \cdot 0 - 1 \cdot 1) + 1 \cdot (0 \cdot 2 - 1 \cdot 1)
 $$
+
+Simplify the determinant:
+
 $$
 \text{det}(A) = 2 \cdot 0 - 0 \cdot (-1) + 1 \cdot (-1) = -1
 $$
