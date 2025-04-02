@@ -207,38 +207,48 @@ $$
 ## Determinants of 3x3 Matrices:
 
 ### **4. Matrix \(D\):**
+
 $$
 D = 
-\begin{pmatrix} 
-1 & 0 & 2 \\ 
--1 & 3 & 1 \\ 
-2 & 4 & -2 
+\begin{pmatrix}
+1 & 0 & 2 \\
+-1 & 3 & 1 \\
+2 & 4 & -2
 \end{pmatrix}
 $$
+
 The determinant of a 3x3 matrix is calculated using cofactor expansion:
+
 $$
 \text{det}(D) = 1 \cdot 
-\begin{vmatrix} 
-3 & 1 \\ 
-4 & -2 
+\begin{vmatrix}
+3 & 1 \\
+4 & -2
 \end{vmatrix}
 - 0 \cdot 
-\begin{vmatrix} 
--1 & 1 \\ 
-2 & -2 
+\begin{vmatrix}
+-1 & 1 \\
+2 & -2
 \end{vmatrix}
 + 2 \cdot 
-\begin{vmatrix} 
--1 & 3 \\ 
-2 & 4 
+\begin{vmatrix}
+-1 & 3 \\
+2 & 4
 \end{vmatrix}
 $$
+
+Next, calculate the determinant of the submatrices:
+
 $$
 \text{det}(D) = 1 \cdot ((3 \cdot -2) - (1 \cdot 4)) + 2 \cdot ((-1 \cdot 4) - (3 \cdot 2))
 $$
+
+Simplify the calculation:
+
 $$
 \text{det}(D) = 1 \cdot (-6 - 4) + 2 \cdot (-4 - 6) = -10 + 2 \cdot -10 = -10 - 20 = -30
 $$
+
 
 ### **5. Matrix \(E\):**
 $$
