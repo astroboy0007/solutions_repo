@@ -114,6 +114,61 @@ plt.show()
 ```
 ![alt text](image-5.png)
 
+
+## With more sources
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Wave parameters
+A = 1  # Amplitude
+k = 2 * np.pi / 1  # Wave number
+omega = 2 * np.pi * 1  # Angular frequency
+
+def circular_wave(x, y, sources, t):
+    """Compute circular wave pattern."""
+    z = np.zeros_like(x)
+    for sx, sy in sources:
+        r = np.sqrt((x - sx)**2 + (y - sy)**2)
+        z += A * np.cos(k * r - omega * t)
+    return z
+
+# Define grid
+x_vals = np.linspace(-10, 10, 400)
+y_vals = np.linspace(-10, 10, 400)
+x, y = np.meshgrid(x_vals, y_vals)
+
+# Sources - Expanded for more interference
+sources = np.array([[0, 0], [5, 5], [-5, -5], [5, -5], [-5, 5], [0, 5], [0, -5], [5, 0], [-5, 0]])
+
+# Static pattern
+z = circular_wave(x, y, sources, t=0)
+
+# Plot 2D heatmap
+plt.figure(figsize=(8, 6))
+plt.contourf(x, y, z, levels=50, cmap='plasma')
+plt.colorbar(label='Wave Amplitude')
+plt.scatter(sources[:, 0], sources[:, 1], color='black', label='Sources')
+plt.legend()
+plt.title('Circular Wave Interference Pattern (with More Sources)')
+plt.xlabel('X position')
+plt.ylabel('Y position')
+plt.show()
+
+# Plot 3D surface
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, z, cmap='plasma', edgecolor='k', alpha=0.8)
+ax.set_title('3D Surface Plot of Circular Wave Interference (with More Sources)')
+ax.set_xlabel('X position')
+ax.set_ylabel('Y position')
+ax.set_zlabel('Amplitude')
+plt.show()
+```
+![alt text](image-8.png)
+![alt text](image-9.png)
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
