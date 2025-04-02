@@ -209,6 +209,16 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-compute-the-inverse-of-a">Step 2: Compute the inverse of \( A \)</a>
 </li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#formula-for-the-inverse-of-a-3x3-matrix">Formula for the Inverse of a 3x3 Matrix:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cofactor-matrix-of-a">Cofactor Matrix of \( A \):</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#adjugate-matrix-of-a">Adjugate Matrix of \( A \):</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#inverse-matrix-a-1">Inverse Matrix \( A^{-1} \):</a>
+<ul>
 <li class="toctree-l4"><a class="reference internal" href="#verification">Verification:</a>
 </li>
 </ul>
@@ -929,41 +939,43 @@ A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
 \end{pmatrix}
 \]</div>
 <ol>
-<li>Transpose the cofactor matrix to get <span class="arithmatex">\( \text{adj}(A) \)</span>:
-$$
+<li>Transpose the cofactor matrix to get <span class="arithmatex">\( \text{adj}(A) \)</span>:</li>
+</ol>
+<h3 id="formula-for-the-inverse-of-a-3x3-matrix">Formula for the Inverse of a 3x3 Matrix:</h3>
+<div class="arithmatex">\[
+A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
+\]</div>
+<p>where <span class="arithmatex">\( \text{adj}(A) \)</span> is the adjugate matrix.</p>
+<hr/>
+<h3 id="cofactor-matrix-of-a">Cofactor Matrix of <span class="arithmatex">\( A \)</span>:</h3>
+<div class="arithmatex">\[
+\text{Cofactor}(A) =
+\begin{pmatrix}
+0 &amp; 1 &amp; -1 \\
+0 &amp; -1 &amp; -2 \\
+-2 &amp; 0 &amp; 2
+\end{pmatrix}
+\]</div>
+<hr/>
+<h3 id="adjugate-matrix-of-a">Adjugate Matrix of <span class="arithmatex">\( A \)</span>:</h3>
+<div class="arithmatex">\[
 \text{adj}(A) =
 \begin{pmatrix}
-0 &amp; 0 &amp; -2 \
-1 &amp; -1 &amp; 0 \
+0 &amp; 0 &amp; -2 \\
+1 &amp; -1 &amp; 0 \\
 -1 &amp; -2 &amp; 2
 \end{pmatrix}
-$$</li>
-</ol>
-<p>Compute <span class="arithmatex">\( A^{-1} \)</span>:
-$$
-A^{-1} = \frac{1}{-1} \cdot \text{adj}(A) =
--1 \cdot
-\begin{pmatrix}
-0 &amp; 0 &amp; -2 \
-1 &amp; -1 &amp; 0 \
--1 &amp; -2 &amp; 2
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 &amp; 0 &amp; 2 \
--1 &amp; 1 &amp; 0 \
-1 &amp; 2 &amp; -2
-\end{pmatrix}
-$$</p>
-<p>The inverse of <span class="arithmatex">\( A \)</span> is:
-$$
+\]</div>
+<hr/>
+<h3 id="inverse-matrix-a-1">Inverse Matrix <span class="arithmatex">\( A^{-1} \)</span>:</h3>
+<div class="arithmatex">\[
 A^{-1} =
 \begin{pmatrix}
-0 &amp; 0 &amp; 2 \
--1 &amp; 1 &amp; 0 \
+0 &amp; 0 &amp; 2 \\
+-1 &amp; 1 &amp; 0 \\
 1 &amp; 2 &amp; -2
 \end{pmatrix}
-$$</p>
+\]</div>
 <h4 id="verification">Verification:</h4>
 <p>Compute <span class="arithmatex">\( A \cdot A^{-1} \)</span>:
 $$
