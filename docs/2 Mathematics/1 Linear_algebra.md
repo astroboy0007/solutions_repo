@@ -871,6 +871,7 @@ $$
      - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
 
 The updated matrix is:
+
 $$
 \begin{pmatrix}
 4 & -3 & 7 \\
@@ -878,6 +879,7 @@ $$
 0 & \frac{15}{2} & -\frac{9}{2}
 \end{pmatrix}
 $$
+
 
 2. Use the second row to eliminate the second element in row 3:
    - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
