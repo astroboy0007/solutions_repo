@@ -27,6 +27,7 @@ $$
 E = \begin{pmatrix} 1 & 2 \\ 4 & 5 \\ 7 & 8 \end{pmatrix}
 $$
 
+![alt text](image.png)
 ---
 
 ## **1. Calculations:**
