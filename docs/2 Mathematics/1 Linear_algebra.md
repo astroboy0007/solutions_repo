@@ -3,7 +3,6 @@
 ## 1. Basic Operations on Matrices
 
 ## Given Matrices:
-1. **Matrix \(A\):**
 
 ![alt text](image.png)
 ---
