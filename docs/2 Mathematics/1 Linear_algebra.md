@@ -585,14 +585,14 @@ $$
 R_2 = \begin{pmatrix} 0 & -8.5 \end{pmatrix}
 $$
 
-The updated matrix \( A \) is:
+The updated matrix \( A \) is:  
 $$
 A =
 \begin{pmatrix}
 12 & 3 \\
 0 & -8.5
 \end{pmatrix}
-$$
+$$  
 
 #### Step 2: Determinant Calculation
 The determinant of an upper triangular matrix is the product of its diagonal elements:  
