@@ -660,20 +660,20 @@ $$
 
 #### Step 2: Eliminate \( R_3(2) \)
 Next, eliminate the element at position \( (3, 2) \) (\(-6\)) by performing:
-\[
+$$
 R_3 \to R_3 - 2 \cdot R_2
-\]
+$$
 
 Performing the operation:
-\[
+$$
 R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix} - 2 \cdot \begin{pmatrix} 0 & -3 & -6 \end{pmatrix}
-\]
-\[
+$$  
+$$
 R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix} - \begin{pmatrix} 0 & -6 & -12 \end{pmatrix}
-\]
-\[
+$$  
+$$
 R_3 = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}
-\]
+$$
 
 The final matrix \( B \) is:
 $$
