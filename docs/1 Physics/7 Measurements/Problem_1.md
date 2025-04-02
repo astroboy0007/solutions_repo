@@ -79,7 +79,7 @@ import numpy as np
 
 # Parameters
 length = 1.0  # Pendulum length (meters)
-time_measurements = [22.3, 22.5, 22.4, 22.6, 22.3, 22.5, 22.4, 22.7, 22.3, 22.6]  # Time for 10 oscillations
+time_measurements = [20.4, 20.6, 20.3, 20.5, 20.7, 20.4, 20.6, 20.5, 20.7, 20.4]  # Time for 10 oscillations
 
 # Calculate mean and standard deviation
 mean_time = np.mean(time_measurements)
@@ -103,9 +103,9 @@ print(f"Acceleration due to gravity: {g:.2f} m/s^2 ± {delta_g:.2f} m/s^2")
 ```
 
 Output:  
-- **Mean time for 10 oscillations:** 22.46 s  
-- **Period:** 2.25 s  
-- **Acceleration due to gravity:** \( 7.83 \, \text{m/s}^2 \, \pm \, 0.03 \, \text{m/s}^2 \)
+- **Mean time for 10 oscillations:** 20.51 s  
+- **Period:** 2.05 s  
+- **Acceleration due to gravity:** \( 9.38 \, \text{m/s}^2 \, \pm \, 0.04 \, \text{m/s}^2 \)
 
 
 ---
