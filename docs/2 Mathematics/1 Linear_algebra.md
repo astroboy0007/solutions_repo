@@ -425,6 +425,7 @@ $$
 ---
 
 ### Matrix \( B \):
+
 $$
 B =
 \begin{pmatrix}
@@ -435,7 +436,8 @@ B =
 $$
 
 To calculate the determinant:
-\[
+
+$$
 \text{det}(B) = 
 2 \cdot 
 \begin{vmatrix}
@@ -452,27 +454,28 @@ To calculate the determinant:
 1 & 4 \\
 3 & 2
 \end{vmatrix}
-\]
+$$
 
 Expanding the submatrices:
-\[
+
+$$
 \text{det}(B) = 
 2 \cdot ((4 \cdot 0) - (0 \cdot 2)) 
 - 3 \cdot ((1 \cdot 0) - (0 \cdot 3)) 
 + 1 \cdot ((1 \cdot 2) - (4 \cdot 3))
-\]
+$$
 
-\[
+$$
 \text{det}(B) = 
 2 \cdot 0 
 - 3 \cdot 0 
 + 1 \cdot (-10)
-\]
+$$
 
-\[
+$$
 \text{det}(B) = 
 -10
-\]
+$$
 
 ---
 
