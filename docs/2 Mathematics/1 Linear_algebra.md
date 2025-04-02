@@ -867,21 +867,21 @@ $$
 
 #### Step 1: Row Reduce \( B \) to Row Echelon Form
 1. Use the first row to eliminate the first element in rows 2 and 3:
-     - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
-     - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
+   - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
+   - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
 
-The updated matrix is:
+   The updated matrix is:
 
-$$
-\begin{pmatrix}
-4 & -3 & 7 \\
-0 & \frac{21}{4} & \frac{31}{4} \\
-0 & \frac{15}{2} & -\frac{9}{2}
-\end{pmatrix}
-$$  
-  
- 2. Use the second row to eliminate the second element in row 3:
-     - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
+   $$
+   \begin{pmatrix}
+   4 & -3 & 7 \\
+   0 & \frac{21}{4} & \frac{31}{4} \\
+   0 & \frac{15}{2} & -\frac{9}{2}
+   \end{pmatrix}
+   $$
+
+2. Use the second row to eliminate the second element in row 3:
+   - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
 
 The updated matrix is:
 
