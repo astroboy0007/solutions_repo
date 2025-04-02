@@ -300,37 +300,50 @@ $$
 $$
 
 ### **6. Matrix \(F\):**
+
 $$
-F = 
-\begin{pmatrix} 
-2 & -3 & 1 \\ 
-1 & 4 & -2 \\ 
-1 & 5 & 3 
+F =
+\begin{pmatrix}
+2 & -3 & 1 \\
+1 & 4 & -2 \\
+1 & 5 & 3
 \end{pmatrix}
 $$
+
+The determinant of matrix \(F\) is calculated using cofactor expansion:
+
 $$
 \text{det}(F) = 2 \cdot 
-\begin{vmatrix} 
-4 & -2 \\ 
-5 & 3 
+\begin{vmatrix}
+4 & -2 \\
+5 & 3
 \end{vmatrix}
 - (-3) \cdot 
-\begin{vmatrix} 
-1 & -2 \\ 
-1 & 3 
+\begin{vmatrix}
+1 & -2 \\
+1 & 3
 \end{vmatrix}
 + 1 \cdot 
-\begin{vmatrix} 
-1 & 4 \\ 
-1 & 5 
+\begin{vmatrix}
+1 & 4 \\
+1 & 5
 \end{vmatrix}
 $$
+
+Expanding each submatrix determinant:
+
 $$
 \text{det}(F) = 2 \cdot ((4 \cdot 3) - (-2 \cdot 5)) + 3 \cdot ((1 \cdot 3) - (-2 \cdot 1)) + 1 \cdot ((1 \cdot 5) - (4 \cdot 1))
 $$
+
+Simplifying further:
+
 $$
 \text{det}(F) = 2 \cdot (12 + 10) + 3 \cdot (3 + 2) + 1 \cdot (5 - 4)
 $$
+
+Final calculation:
+
 $$
 \text{det}(F) = 2 \cdot 22 + 3 \cdot 5 + 1 \cdot 1 = 44 + 15 + 1 = 60
 $$
