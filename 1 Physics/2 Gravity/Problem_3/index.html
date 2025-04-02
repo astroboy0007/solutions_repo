@@ -210,7 +210,6 @@ where <span class="arithmatex">\( v_{\text{circular}} = \sqrt{\mu / r_0} \)</spa
 - <strong>Hyperbolic Trajectory:</strong> <span class="arithmatex">\( v_0 = 1.1 \times v_{\text{escape}} \)</span> </p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation, PillowWriter
 
 # Constants
 G = 6.67430e-11  # Gravitational constant, m^3 kg^-1 s^-2
@@ -229,64 +228,61 @@ time_step = 0.1  # Time step in seconds
 total_time = 300  # Total simulation time in seconds
 times = np.arange(0, total_time, time_step)
 
-# Simulate trajectory
 def simulate_trajectory(v0, G, M, R):
+    # Initialize position and velocity
     x, y = R, 0  # Initial position
     vx, vy = 0, v0  # Initial velocity
-    trajectory = []  # List to store trajectory points
+
+    # Lists to store trajectory points
+    x_vals, y_vals = [x], [y]
+
     for t in times:
+        # Compute gravitational force
         r = np.sqrt(x**2 + y**2)
         force_mag = G * M / r**2
         fx = -force_mag * x / r
         fy = -force_mag * y / r
+
+        # Update velocity using acceleration
         vx += fx * time_step
         vy += fy * time_step
+
+        # Update position using velocity
         x += vx * time_step
         y += vy * time_step
-        trajectory.append((x, y))
+
+        # Store updated position
+        x_vals.append(x)
+        y_vals.append(y)
+
+        # Stop if object escapes gravity influence (r &gt; 10*R)
         if r &gt; 10 * R:
             break
-    return trajectory
 
-# Generate trajectories for all cases
-trajectories = {}
-max_length = 0
+    return x_vals, y_vals
+
+# Plot trajectories for the three cases
+plt.figure(figsize=(10, 8))
 for case, v0 in initial_conditions.items():
-    trajectory = simulate_trajectory(v0, G, M, R)
-    trajectories[case] = trajectory
-    max_length = max(max_length, len(trajectory))
+    x_vals, y_vals = simulate_trajectory(v0, G, M, R)
+    plt.plot(x_vals, y_vals, label=case)
 
-# Create animated plot
-fig, ax = plt.subplots(figsize=(8, 8))
-ax.set_xlim(-15 * R, 15 * R)
-ax.set_ylim(-15 * R, 15 * R)
-ax.set_title("Trajectories Under Newton's Law of Universal Gravitation", fontsize=14)
-ax.set_xlabel("X Position (m)", fontsize=12)
-ax.set_ylabel("Y Position (m)", fontsize=12)
-earth = plt.Circle((0, 0), R, color='#1E90FF', alpha=0.6, label="Earth")
-ax.add_artist(earth)
-lines = {case: ax.plot([], [], label=case, linewidth=2.0)[0] for case in trajectories}
-ax.legend(loc="upper right")
-ax.grid()
+# Plot Earth
+earth = plt.Circle((0, 0), R, color='blue', alpha=0.3, label="Earth")
+plt.gca().add_artist(earth)
 
-# Animation function
-def update(frame):
-    for case, trajectory in trajectories.items():
-        if frame &lt; len(trajectory):
-            x_vals, y_vals = zip(*trajectory[:frame+1])
-            lines[case].set_data(x_vals, y_vals)
-    return lines.values()
+# Labels and legend
+plt.title("Trajectories Under Newton's Law of Universal Gravitation", fontsize=14)
+plt.xlabel("X Position (m)", fontsize=12)
+plt.ylabel("Y Position (m)", fontsize=12)
+plt.legend()
+plt.grid()
+plt.axis("equal")
 
-# Create animation
-ani = FuncAnimation(fig, update, frames=max_length, interval=30, blit=True)
-
-# Save as GIF
-ani.save("gravitational_trajectories.gif", writer=PillowWriter(fps=20))
-
-# Display success message
-print("GIF saved as 'gravitational_trajectories.gif'")
+# Display plot
+plt.show()
 </code></pre>
-<p><img alt="gravitational trajectories" src="../gravitational_trajectories.gif"/></p>
+<p><img alt="alt text" src="../image-5.png"/></p>
 <h2 id="discussion">Discussion</h2>
 <h3 id="trajectory-analysis">Trajectory Analysis</h3>
 <ul>
