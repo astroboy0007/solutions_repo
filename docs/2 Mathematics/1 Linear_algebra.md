@@ -178,13 +178,13 @@ B =
 5 & 6 \\ 
 7 & 8 
 \end{pmatrix}
-$$  
+$$
+
+The determinant of matrix \(B\) is calculated as:
 
 $$
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
-$$  
-
-UPDATEEEE
+$$
 ### **3. Matrix \(C\):**
 $$
 C = 
