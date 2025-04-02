@@ -867,8 +867,8 @@ $$
 
 #### Step 1: Row Reduce \( B \) to Row Echelon Form
 First, use the first row to eliminate the first element in rows 2 and 3:
-     - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
-     - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
+   - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
+   - \( R_3 \to R_3 - \frac{1}{2}R_1 \)
 
    The updated matrix is:
 
@@ -882,7 +882,7 @@ $$
 
 
 Then, use the second row to eliminate the second element in row 3:
-     - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
+   - \( R_3 \to R_3 - \frac{10}{7}R_2 \)
 
 The updated matrix is:
 
