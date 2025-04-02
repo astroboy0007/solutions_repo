@@ -68,8 +68,10 @@ The damping coefficient determines how quickly the energy in the system is dissi
 
 ### Effect of the Driving Amplitude (\(A\))
 
-The driving amplitude influences how much energy is being transferred to the pendulum. As \(A\) increases:
-- At low \(A\), the system may undergo regular oscillations.
+The driving amplitude influences how much energy is being transferred to the pendulum. As \(A\) increases:  
+
+- At low \(A\), the system may undergo regular oscillations.  
+
 - As \(A\) increases, periodic motion may switch to quasiperiodic or even chaotic motion. This transition happens due to nonlinear interactions between the driving force and the pendulum's motion.
 
 ### Effect of the Driving Frequency (\(\Omega\))
