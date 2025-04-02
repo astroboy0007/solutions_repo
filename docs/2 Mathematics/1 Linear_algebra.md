@@ -503,12 +503,46 @@ $$
 
 Similarly, for a 5x5 matrix, the determinant can be computed using cofactor expansion. This computation is very detailed and typically performed using a symbolic mathematics library like SymPy.
 
+```python
+from sympy import Matrix
 
+# Define the matrices
+A = Matrix([[2, 3, 1],
+            [1, 4, 0],
+            [3, 2, 1]])
+
+B = Matrix([[2, 3, 1],
+            [1, 4, 0],
+            [3, 2, 0]])
+
+C = Matrix([[2, 3, 1, 4],
+            [1, 0, 0, 6],
+            [3, 2, 1, 5],
+            [2, 1, 4, 0]])
+
+D = Matrix([[2, 3, 1, 4, 5],
+            [1, 4, 0, 0, 7],
+            [3, 0, 0, 0, 0],
+            [2, 1, 4, 3, 2],
+            [1, 2, 3, 4, 5]])
+
+# Calculate the determinants
+det_A = A.det()
+det_B = B.det()
+det_C = C.det()
+det_D = D.det()
+
+# Print the results
+print(f"Determinant of A: {det_A}")
+print(f"Determinant of B: {det_B}")
+print(f"Determinant of C: {det_C}")
+print(f"Determinant of D: {det_D}")
+```
 
 ---
 
 ### Summary:
 - \(\text{det}(A) = -5\)
 - \(\text{det}(B) = -10\)
-
-For matrices \(C\) and \(D\), their determinants involve more advanced recursive expansion steps. If you'd like, I can provide Python code to compute these using libraries like NumPy or SymPy! 😊 Let me know.
+- \(\text{det}(C) = -75\)
+- \(\text{det}(D) = 231\)
