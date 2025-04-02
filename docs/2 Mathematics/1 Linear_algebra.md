@@ -1,59 +1,59 @@
 # Linear Algebra
 
-## 1. Basic Operations on Matrices
+# 1. Basic Operations on Matrices
 
-## Given Matrices:
+### Given Matrices:
 
 ![alt text](image.png)
 ---
 
 ## **1. Calculations:**
-### 1.1) \(A + B\)
+1.1) \(A + B\)
 $$
 A + B = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix} = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix}
 $$
 
-### 1.2) \(B - A\)
+1.2) \(B - A\)
 $$
 B - A = \begin{pmatrix} 5 - 1 & 6 - 2 \\ 7 - 3 & 8 - 4 \end{pmatrix} = \begin{pmatrix} 4 & 4 \\ 4 & 4 \end{pmatrix}
 $$
 
-### 1.3) \(A + C\)
+1.3) \(A + C\)
 $$
 A + C = \begin{pmatrix} 1 + (-1) & 2 + 2 \\ 3 + 3 & 4 + 0 \end{pmatrix} = \begin{pmatrix} 0 & 4 \\ 6 & 4 \end{pmatrix}
 $$
 
-### 1.4) \(D + E\) (not possible)
+1.4) \(D + E\) (not possible)
 - **Matrix addition requires equal dimensions.** Since \(D\) is \(2 \times 3\) and \(E\) is \(3 \times 2\), matrix addition is **not defined**.
 
 ---
 
-## **2. Scalar Multiplications:**
-### 2.1) \(\frac{1}{2} A\)
+##* **2. Scalar Multiplications:**
+2.1) \(\frac{1}{2} A\)
 $$
 \frac{1}{2} A = \frac{1}{2} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 0.5 & 1 \\ 1.5 & 2 \end{pmatrix}
 $$
 
-### 2.2) \(2 B\)
+2.2) \(2 B\)
 $$
 2 B = 2 \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 10 & 12 \\ 14 & 16 \end{pmatrix}
 $$
 
-### 2.3) \(-3 C\)
+2.3) \(-3 C\)
 $$
 -3 C = -3 \begin{pmatrix} -1 & 2 \\ 3 & 0 \end{pmatrix} = \begin{pmatrix} 3 & -6 \\ -9 & 0 \end{pmatrix}
 $$
 
-### 2.4) \(4 D\)
+2.4) \(4 D\)
 $$
 4 D = 4 \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix} = \begin{pmatrix} -4 & 8 & 12 \\ 16 & 0 & 24 \end{pmatrix}
 $$
 
 ---
 
-## **3. Matrix Multiplications:**
+### **3. Matrix Multiplications:**
 
-### **3.1) \( A \cdot B \):**
+**3.1) \( A \cdot B \):**
 
 $$
 A \cdot B = 
@@ -83,7 +83,7 @@ $$
 
 ---
 
-### **3.2) \( B \cdot A \):**
+**3.2) \( B \cdot A \):**
 
 \[
 B \cdot A = 
@@ -113,14 +113,14 @@ B \cdot A =
 
 ---
 
-### **3.3) \( A \cdot D \):**
+**3.3) \( A \cdot D \):**
 
 - Matrix multiplication requires the number of columns in \( A \) to equal the number of rows in \( D \).
 - Since \( A \) is \( 2 \times 2 \) and \( D \) is \( 2 \times 3 \), **matrix multiplication is not defined**.
 
 ---
 
-### **3.4) \( D \cdot E \):**
+**3.4) \( D \cdot E \):**
 
 \[
 D \cdot E = 
@@ -155,9 +155,9 @@ D \cdot E =
 
 ---
 
-## 2. Determinants 2x2 and 3x3
+### 2. Determinants 2x2 and 3x3
 
-### **1. Matrix \(A\):**
+**1. Matrix \(A\):**
 $$
 A =
 \begin{pmatrix}
@@ -172,7 +172,7 @@ $$
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
 $$  
 
-### **2. Matrix \(B\):**  
+**2. Matrix \(B\):**  
 $$
 B = 
 \begin{pmatrix} 
@@ -187,7 +187,7 @@ $$
 \text{det}(B) = (5 \cdot 8) - (6 \cdot 7) = 40 - 42 = -2
 $$  
 
-### **3. Matrix \(C\):**  
+**3. Matrix \(C\):**  
 $$
 C =
 \begin{pmatrix}
@@ -204,9 +204,9 @@ $$
 
 ---
 
-## Determinants of 3x3 Matrices:
+### Determinants of 3x3 Matrices:
 
-### **4. Matrix \(D\):**
+**4. Matrix \(D\):**
 
 $$
 D = 
@@ -250,7 +250,7 @@ $$
 $$
 
 
-### **5. Matrix \(E\):**
+**5. Matrix \(E\):**
 
 $$
 E =
@@ -299,7 +299,7 @@ $$
 \text{det}(E) = 3 \cdot -8 - 20 - 10 = -24 - 20 - 10 = -54
 $$
 
-### **6. Matrix \(F\):**
+**6. Matrix \(F\):**
 
 $$
 F =
@@ -350,7 +350,7 @@ $$
 
 ---
 
-### Final Results:
+Final Results:
 
 1. **2x2 Matrices:**  
      - \(\text{det}(A) = 5\)  
@@ -370,7 +370,7 @@ $$
 
 ---
 
-### Matrix \( A \):
+Matrix \( A \):
 $$
 A =
 \begin{pmatrix}
@@ -424,7 +424,7 @@ $$
 
 ---
 
-### Matrix \( B \):
+Matrix \( B \):
 
 $$
 B =
@@ -479,7 +479,7 @@ $$
 
 ---
 
-### Matrix \( C \):
+Matrix \( C \):
 $$
 C =
 \begin{pmatrix}
@@ -494,7 +494,7 @@ For a 4x4 matrix, the determinant can be expanded recursively using cofactor exp
 
 ---
 
-### Matrix \( D \):
+Matrix \( D \):
 $$
 D =
 \begin{pmatrix}
@@ -546,19 +546,19 @@ print(f"Determinant of D: {det_D}")
 
 ---
 
-### Summary:
+Summary:
 - \(\text{det}(A) = -5\)
 - \(\text{det}(B) = -10\)
 - \(\text{det}(C) = -75\)
 - \(\text{det}(D) = 231\)
 
-## 4. Determinants from the Gauss Method and Triangular Matrices
+### 4. Determinants from the Gauss Method and Triangular Matrices
 
 Let's solve the determinants of the given matrices \( A \) and \( B \) by reducing them to upper triangular form and then taking the product of their diagonal elements.
 
 ---
 
-### **Matrix \( A \):**
+**Matrix \( A \):**
 $$
 A =
 \begin{pmatrix}
@@ -567,7 +567,7 @@ A =
 \end{pmatrix}
 $$
 
-#### Step 1: Row Operations to Form an Upper Triangular Matrix
+Step 1: Row Operations to Form an Upper Triangular Matrix
 We can eliminate the element at position \((2, 1)\) (\(-18\)) by applying a row operation. Multiply \( R_1 \) (row 1) by \(\frac{-18}{12} = -\frac{3}{2}\) and add it to \( R_2 \):
 
 \[
@@ -595,7 +595,7 @@ A =
 \end{pmatrix}
 $$
 
-#### Step 2: Determinant Calculation
+Step 2: Determinant Calculation
 The determinant of an upper triangular matrix is the product of its diagonal elements:  
 $$
 \text{det}(A) = 12 \cdot (-8.5) = -102
@@ -603,7 +603,7 @@ $$
 
 ---
 
-### **Matrix \( B \):**
+**Matrix \( B \):**
 $$
 B =
 \begin{pmatrix}
@@ -613,7 +613,7 @@ B =
 \end{pmatrix}
 $$
 
-#### Step 1: Row Operations to Form an Upper Triangular Matrix
+Step 1: Row Operations to Form an Upper Triangular Matrix
 First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) and \( R_3(1) = 7 \)):
 1. Multiply \( R_1 \) by \( -4 \) and add it to \( R_2 \):
    $$
@@ -658,7 +658,7 @@ B =
 \end{pmatrix}
 $$
 
-#### Step 2: Eliminate \( R_3(2) \)
+Step 2: Eliminate \( R_3(2) \)
 Next, eliminate the element at position \( (3, 2) \) (\(-6\)) by performing:
 $$
 R_3 \to R_3 - 2 \cdot R_2
@@ -687,7 +687,7 @@ B =
 \end{pmatrix}
 $$
 
-#### Step 3: Determinant Calculation
+Step 3: Determinant Calculation
 Since the last row is all zeros, the determinant is:
 $$
 \text{det}(B) = 0
@@ -695,17 +695,19 @@ $$
 
 ---
 
-### Final Results:
+Final Results:
 1. \(\text{det}(A) = -102\)
 2. \(\text{det}(B) = 0\)
 
-## 5. Inverse of a Matrix from the formula
+---
+
+### 5. Inverse of a Matrix from the formula
 
 Here’s the solution to the two problems, formatted in markdown:
 
 ---
 
-### **1. Find the inverse matrix for \( A \):**
+**1. Find the inverse matrix for \( A \):**
 
 The given matrix is:
 
@@ -718,7 +720,7 @@ A =
 \end{pmatrix}
 $$
 
-#### Step 1: Check if the determinant of \( A \) is non-zero
+Step 1: Check if the determinant of \( A \) is non-zero
 
 The determinant of \( A \) is computed as:
 
@@ -740,7 +742,7 @@ $$
 
 Since \( \text{det}(A) \neq 0 \), the matrix is invertible.
 
-#### Step 2: Compute the inverse of \( A \)
+Step 2: Compute the inverse of \( A \)
 
 The formula for the inverse of a 3x3 matrix is:
 
@@ -803,7 +805,7 @@ $$
 
 ---
 
-### Inverse Matrix \( A^{-1} \):
+Inverse Matrix \( A^{-1} \):
 
 $$
 A^{-1} =
@@ -816,7 +818,7 @@ $$
 
 
 
-#### Verification:
+Verification:
 
 Compute \( A \cdot A^{-1} \):
 
@@ -851,7 +853,7 @@ Since \( A \cdot A^{-1} = I \), the result is verified.
 
 ---
 
-### **2. Determine the rank of \( B \):**
+**2. Determine the rank of \( B \):**
 
 The given matrix is:
 
@@ -865,7 +867,7 @@ B =
 $$
 
 
-#### Step 1: Row Reduce \( B \) to Row Echelon Form
+Step 1: Row Reduce \( B \) to Row Echelon Form
 First, use the first row to eliminate the first element in rows 2 and 3:  
 
    - \( R_2 \to R_2 + \frac{1}{4}R_1 \)
@@ -897,7 +899,7 @@ $$
 $$
 
 
-#### Step 2: Count Non-Zero Rows
+Step 2: Count Non-Zero Rows
 The matrix has 3 non-zero rows, so the rank of \( B \) is:
 $$
 \text{Rank}(B) = 3
@@ -905,7 +907,7 @@ $$
 
 ---
 
-### Final Results:
+Final Results:
 - **Inverse of \( A \):**
 
 
