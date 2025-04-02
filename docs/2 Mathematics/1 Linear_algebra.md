@@ -575,15 +575,15 @@ R_2 \to R_2 + \left(-\frac{3}{2} \cdot R_1\right)
 \]
 
 Performing the operation:
-\[
+$$
 R_2 = \begin{pmatrix} -18 & -4 \end{pmatrix} + \left(-\frac{3}{2} \cdot \begin{pmatrix} 12 & 3 \end{pmatrix}\right)
-\]
-\[
+$$  
+$$
 R_2 = \begin{pmatrix} -18 & -4 \end{pmatrix} + \begin{pmatrix} -18 & -4.5 \end{pmatrix}
-\]
-\[
+$$  
+$$
 R_2 = \begin{pmatrix} 0 & -8.5 \end{pmatrix}
-\]
+$$
 
 The updated matrix \( A \) is:
 $$
