@@ -119,17 +119,17 @@ The specific **arrangement of wave sources** affects the interference pattern:
 
 #### **3. Key Observations in the Interference Pattern**  
 1. **Constructive Interference (Bright Regions in the Plot)**  
-   - Occurs when waves from multiple sources **add up in phase** (peaks coincide).  
-   - Forms regions of **high amplitude**, appearing as bright red zones in the plot.  
+     - Occurs when waves from multiple sources **add up in phase** (peaks coincide).  
+     - Forms regions of **high amplitude**, appearing as bright red zones in the plot.  
    
 2. **Destructive Interference (Dark Regions in the Plot)**  
-   - Occurs when waves from multiple sources **cancel out** (peak of one wave meets the trough of another).  
-   - Results in **low-amplitude regions**, appearing as dark blue zones in the plot.  
+     - Occurs when waves from multiple sources **cancel out** (peak of one wave meets the trough of another).  
+     - Results in **low-amplitude regions**, appearing as dark blue zones in the plot.  
 
 3. **Symmetry and Wavefront Formation**  
-   - The regular polygon's symmetry ensures a **highly structured interference pattern**.  
-   - The **distance between sources** and the **wavelength** determines the spacing of the interference fringes.  
-   - At certain points, **wave energy converges**, reinforcing the wave amplitude significantly.  
+     - The regular polygon's symmetry ensures a **highly structured interference pattern**.  
+     - The **distance between sources** and the **wavelength** determines the spacing of the interference fringes.  
+     - At certain points, **wave energy converges**, reinforcing the wave amplitude significantly.  
 
 ---
 
