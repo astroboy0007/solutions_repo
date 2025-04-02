@@ -817,7 +817,9 @@ $$
 
 
 #### Verification:
+
 Compute \( A \cdot A^{-1} \):
+
 $$
 A \cdot A^{-1} =
 \begin{pmatrix}
