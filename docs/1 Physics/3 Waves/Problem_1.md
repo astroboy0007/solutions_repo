@@ -169,6 +169,9 @@ plt.show()
 ![alt text](image-8.png)
 ![alt text](image-9.png)
 
+
+## 3. Dynamic Ripple Animation
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
