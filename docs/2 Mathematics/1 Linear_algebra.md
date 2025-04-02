@@ -381,7 +381,8 @@ A =
 $$
 
 To calculate the determinant:
-\[
+
+$$
 \text{det}(A) = 
 2 \cdot 
 \begin{vmatrix}
@@ -398,27 +399,28 @@ To calculate the determinant:
 1 & 4 \\
 3 & 2
 \end{vmatrix}
-\]
+$$
 
 Expanding the submatrices:
-\[
+
+$$
 \text{det}(A) = 
 2 \cdot ((4 \cdot 1) - (0 \cdot 2)) 
 - 3 \cdot ((1 \cdot 1) - (0 \cdot 3)) 
 + 1 \cdot ((1 \cdot 2) - (4 \cdot 3))
-\]
+$$
 
-\[
+$$
 \text{det}(A) = 
 2 \cdot 4 
 - 3 \cdot 1 
 + 1 \cdot (-10)
-\]
+$$
 
-\[
+$$
 \text{det}(A) = 
 8 - 3 - 10 = -5
-\]
+$$
 
 ---
 
