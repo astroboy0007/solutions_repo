@@ -25,69 +25,127 @@ where:
 - \(\phi\) is the initial phase.  
 
 
+## 1. Sinusoidal Surface Plot
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define grid
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+x, y = np.meshgrid(x, y)
+
+# Define sinusoidal surface
+z = np.sin(np.sqrt(x**2 + y**2))
+
+# Plot 2D heatmap
+plt.figure(figsize=(8, 6))
+plt.contourf(x, y, z, levels=50, cmap='viridis')
+plt.colorbar(label='Amplitude')
+plt.title('2D Heatmap of Sinusoidal Wave')
+plt.xlabel('X position')
+plt.ylabel('Y position')
+plt.show()
+
+# Plot 3D surface
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(x, y, z, cmap='viridis', edgecolor='k', alpha=0.8)
+ax.set_title('3D Surface Plot of Sinusoidal Wave')
+ax.set_xlabel('X position')
+ax.set_ylabel('Y position')
+ax.set_zlabel('Amplitude')
+plt.show()
+```
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+## 2. Circular Wave Interference
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Define wave parameters
+# Wave parameters
 A = 1  # Amplitude
-wavelength = 1  # Wavelength
-k = 2 * np.pi / wavelength  # Wave number
-f = 1  # Frequency
-omega = 2 * np.pi * f  # Angular frequency
-phi_0 = 0  # Initial phase
+k = 2 * np.pi / 1  # Wave number
+omega = 2 * np.pi * 1  # Angular frequency
 
-def polygon_vertices(n, radius=5):
-    """Generate coordinates for a regular n-sided polygon centered at the origin."""
-    angles = np.linspace(0, 2 * np.pi, n, endpoint=False)
-    return np.array([(radius * np.cos(a), radius * np.sin(a)) for a in angles])
-
-def wave_displacement(x, y, sources, t):
-    """Compute the wave displacement at (x, y) by summing contributions from all sources."""
-    displacement = np.zeros_like(x)
+def circular_wave(x, y, sources, t):
+    """Compute circular wave pattern."""
+    z = np.zeros_like(x)
     for sx, sy in sources:
         r = np.sqrt((x - sx)**2 + (y - sy)**2)
-        displacement += A / np.sqrt(r + 1e-6) * np.cos(k * r - omega * t + phi_0)  # Avoid division by zero
-    return displacement
+        z += A * np.cos(k * r - omega * t)
+    return z
 
 # Define grid
 x_vals = np.linspace(-10, 10, 400)
 y_vals = np.linspace(-10, 10, 400)
 x, y = np.meshgrid(x_vals, y_vals)
 
-# Choose polygon (e.g., equilateral triangle, square, pentagon)
-n_sides = 5  # Change this for different polygons
-sources = polygon_vertices(n_sides)
+# Sources
+sources = np.array([[0, 0], [5, 5], [-5, -5]])
 
-time = 0  # Fix time for a static pattern
-z = wave_displacement(x, y, sources, time)
+# Static pattern
+z = circular_wave(x, y, sources, t=0)
 
-# Plot the interference pattern as a 2D heatmap
+# Plot 2D heatmap
 plt.figure(figsize=(8, 6))
-plt.contourf(x, y, z, levels=50, cmap='RdBu')
-plt.colorbar(label='Wave displacement')
-plt.scatter(sources[:, 0], sources[:, 1], color='black', marker='o', label='Wave Sources')
+plt.contourf(x, y, z, levels=50, cmap='plasma')
+plt.colorbar(label='Wave Amplitude')
+plt.scatter(sources[:, 0], sources[:, 1], color='black', label='Sources')
 plt.legend()
-plt.title(f'Interference Pattern for {n_sides}-sided Polygon Wave Sources')
+plt.title('Circular Wave Interference Pattern')
 plt.xlabel('X position')
 plt.ylabel('Y position')
 plt.show()
 
-# 3D Surface Plot for Better Visualization
+# Plot 3D surface
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(x, y, z, cmap='RdBu', edgecolor='k', alpha=0.8)
-ax.set_title(f'3D Surface Plot of Interference Pattern for {n_sides}-sided Polygon')
+ax.plot_surface(x, y, z, cmap='plasma', edgecolor='k', alpha=0.8)
+ax.set_title('3D Surface Plot of Circular Wave Interference')
 ax.set_xlabel('X position')
 ax.set_ylabel('Y position')
-ax.set_zlabel('Wave displacement')
+ax.set_zlabel('Amplitude')
 plt.show()
-```
-![alt text](image-1.png)
-![alt text](image-2.png)
 
+```
+![alt text](image-5.png)
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+# Parameters
+A = 1  # Amplitude
+k = 2 * np.pi / 1  # Wave number
+omega = 2 * np.pi * 0.5  # Angular frequency
+
+# Define grid
+x_vals = np.linspace(-10, 10, 200)
+y_vals = np.linspace(-10, 10, 200)
+x, y = np.meshgrid(x_vals, y_vals)
+
+# Update function for animation
+def update(t):
+    z = A * np.cos(k * np.sqrt(x**2 + y**2) - omega * t)
+    plt.clf()
+    plt.contourf(x, y, z, levels=50, cmap='coolwarm')
+    plt.colorbar(label='Amplitude')
+    plt.title(f'Ripple Pattern at t = {t:.2f}')
+    plt.xlabel('X position')
+    plt.ylabel('Y position')
+
+# Animate
+fig = plt.figure(figsize=(8, 6))
+ani = FuncAnimation(fig, update, frames=np.arange(0, 20, 0.2), interval=100)
+plt.show()
+
+```
+<Figure size 800x600 with 0 Axes>
 
 ### Explanation of Interference Patterns for a Regular Polygon Wave Source  
 
