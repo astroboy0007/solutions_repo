@@ -145,7 +145,9 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, 20, 0.2), interval=100)
 plt.show()
 
 ```
-<Figure size 800x600 with 0 Axes>
+![alt text](image-6.png)
+![Dynamic Ripple Animation](ripple_animation.gif)
+
 
 ### Explanation of Interference Patterns for a Regular Polygon Wave Source  
 
