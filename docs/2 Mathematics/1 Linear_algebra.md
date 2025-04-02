@@ -77,41 +77,106 @@ $$
 ---
 
 ## **3. Matrix Multiplications:**
-#### 3.1) \(A \cdot B\)
-$$
-A \cdot B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \cdot \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} (1 \cdot 5 + 2 \cdot 7) & (1 \cdot 6 + 2 \cdot 8) \\ (3 \cdot 5 + 4 \cdot 7) & (3 \cdot 6 + 4 \cdot 8) \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}
-$$
 
-#### 3.2) \(B \cdot A\)
-$$
-B \cdot A = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} \cdot \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} (5 \cdot 1 + 6 \cdot 3) & (5 \cdot 2 + 6 \cdot 4) \\ (7 \cdot 1 + 8 \cdot 3) & (7 \cdot 2 + 8 \cdot 4) \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} 23 & 34 \\ 31 & 46 \end{pmatrix}
-$$
+#### **3.1) \( A \cdot B \):**
 
-#### 3.3) \(A \cdot D\) (not possible)
-- **Matrix multiplication requires the number of columns in \(A\) to equal the number of rows in \(D\).** Since \(A\) is \(2 \times 2\) and \(D\) is \(2 \times 3\), matrix multiplication is **not defined**.
+\[
+A \cdot B = 
+\begin{pmatrix} 
+1 & 2 \\ 
+3 & 4 
+\end{pmatrix}
+\cdot 
+\begin{pmatrix} 
+5 & 6 \\ 
+7 & 8 
+\end{pmatrix}
+\]
 
-#### 3.4) \(D \cdot E\)
-$$
-D \cdot E = \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix} \cdot \begin{pmatrix} 1 & 2 \\ 4 & 5 \\ 7 & 8 \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} (-1 \cdot 1 + 2 \cdot 4 + 3 \cdot 7) & (-1 \cdot 2 + 2 \cdot 5 + 3 \cdot 8) \\ (4 \cdot 1 + 0 \cdot 4 + 6 \cdot 7) & (4 \cdot 2 + 0 \cdot 5 + 6 \cdot 8) \end{pmatrix}
-$$
-$$
-= \begin{pmatrix} 34 & 40 \\ 46 & 56 \end{pmatrix}
-$$
+\[
+= 
+\begin{pmatrix} 
+(1 \cdot 5 + 2 \cdot 7) & (1 \cdot 6 + 2 \cdot 8) \\ 
+(3 \cdot 5 + 4 \cdot 7) & (3 \cdot 6 + 4 \cdot 8) 
+\end{pmatrix}
+= 
+\begin{pmatrix} 
+19 & 22 \\ 
+43 & 50 
+\end{pmatrix}
+\]
+
+---
+
+#### **3.2) \( B \cdot A \):**
+
+\[
+B \cdot A = 
+\begin{pmatrix} 
+5 & 6 \\ 
+7 & 8 
+\end{pmatrix}
+\cdot 
+\begin{pmatrix} 
+1 & 2 \\ 
+3 & 4 
+\end{pmatrix}
+\]
+
+\[
+= 
+\begin{pmatrix} 
+(5 \cdot 1 + 6 \cdot 3) & (5 \cdot 2 + 6 \cdot 4) \\ 
+(7 \cdot 1 + 8 \cdot 3) & (7 \cdot 2 + 8 \cdot 4) 
+\end{pmatrix}
+= 
+\begin{pmatrix} 
+23 & 34 \\ 
+31 & 46 
+\end{pmatrix}
+\]
+
+---
+
+#### **3.3) \( A \cdot D \):**
+
+- Matrix multiplication requires the number of columns in \( A \) to equal the number of rows in \( D \).
+- Since \( A \) is \( 2 \times 2 \) and \( D \) is \( 2 \times 3 \), **matrix multiplication is not defined**.
+
+---
+
+#### **3.4) \( D \cdot E \):**
+
+\[
+D \cdot E = 
+\begin{pmatrix} 
+-1 & 2 & 3 \\ 
+4 & 0 & 6 
+\end{pmatrix}
+\cdot 
+\begin{pmatrix} 
+1 & 2 \\ 
+4 & 5 \\ 
+7 & 8 
+\end{pmatrix}
+\]
+
+\[
+= 
+\begin{pmatrix} 
+(-1 \cdot 1 + 2 \cdot 4 + 3 \cdot 7) & (-1 \cdot 2 + 2 \cdot 5 + 3 \cdot 8) \\ 
+(4 \cdot 1 + 0 \cdot 4 + 6 \cdot 7) & (4 \cdot 2 + 0 \cdot 5 + 6 \cdot 8) 
+\end{pmatrix}
+\]
+
+\[
+= 
+\begin{pmatrix} 
+34 & 40 \\ 
+46 & 56 
+\end{pmatrix}
+\]
+
 
 ---
 
