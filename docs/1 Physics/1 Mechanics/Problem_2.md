@@ -78,9 +78,12 @@ The driving frequency affects how the system absorbs energy from the driving for
 
 ### Regular vs. Chaotic Motion
 
-As we vary \(A\), \(\gamma\), and \(\Omega\), the pendulum's motion can transition from periodic to chaotic:
-- **Periodic motion**: The pendulum oscillates in a stable, repeating manner.
-- **Quasiperiodic motion**: The system oscillates in a non-repeating but predictable manner.
+As we vary \(A\), \(\gamma\), and \(\Omega\), the pendulum's motion can transition from periodic to chaotic:  
+
+- **Periodic motion**: The pendulum oscillates in a stable, repeating manner.  
+
+- **Quasiperiodic motion**: The system oscillates in a non-repeating but predictable manner.  
+
 - **Chaotic motion**: Small changes in initial conditions lead to unpredictable motion, and the system exhibits sensitive dependence on initial conditions. Chaos can emerge if the system is driven at certain amplitudes and frequencies, especially when nonlinearity and resonance effects combine.
 
 ---
