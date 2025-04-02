@@ -551,3 +551,147 @@ print(f"Determinant of D: {det_D}")
 - \(\text{det}(B) = -10\)
 - \(\text{det}(C) = -75\)
 - \(\text{det}(D) = 231\)
+
+## 4. Determinants from the Gauss Method and Triangular Matrices
+
+Let's solve the determinants of the given matrices \( A \) and \( B \) by reducing them to upper triangular form and then taking the product of their diagonal elements.
+
+---
+
+### **Matrix \( A \):**
+$$
+A =
+\begin{pmatrix}
+12 & 3 \\
+-18 & -4
+\end{pmatrix}
+$$
+
+#### Step 1: Row Operations to Form an Upper Triangular Matrix
+We can eliminate the element at position \((2, 1)\) (\(-18\)) by applying a row operation. Multiply \( R_1 \) (row 1) by \(\frac{-18}{12} = -\frac{3}{2}\) and add it to \( R_2 \):
+
+\[
+R_2 \to R_2 + \left(-\frac{3}{2} \cdot R_1\right)
+\]
+
+Performing the operation:
+\[
+R_2 = \begin{pmatrix} -18 & -4 \end{pmatrix} + \left(-\frac{3}{2} \cdot \begin{pmatrix} 12 & 3 \end{pmatrix}\right)
+\]
+\[
+R_2 = \begin{pmatrix} -18 & -4 \end{pmatrix} + \begin{pmatrix} -18 & -4.5 \end{pmatrix}
+\]
+\[
+R_2 = \begin{pmatrix} 0 & -8.5 \end{pmatrix}
+\]
+
+The updated matrix \( A \) is:
+$$
+A =
+\begin{pmatrix}
+12 & 3 \\
+0 & -8.5
+\end{pmatrix}
+$$
+
+#### Step 2: Determinant Calculation
+The determinant of an upper triangular matrix is the product of its diagonal elements:
+\[
+\text{det}(A) = 12 \cdot (-8.5) = -102
+\]
+
+---
+
+### **Matrix \( B \):**
+$$
+B =
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{pmatrix}
+$$
+
+#### Step 1: Row Operations to Form an Upper Triangular Matrix
+First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) and \( R_3(1) = 7 \)):
+1. Multiply \( R_1 \) by \( -4 \) and add it to \( R_2 \):
+   \[
+   R_2 \to R_2 - 4 \cdot R_1
+   \]
+
+   Performing the operation:
+   \[
+   R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} - 4 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
+   \]
+   \[
+   R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} - \begin{pmatrix} 4 & 8 & 12 \end{pmatrix}
+   \]
+   \[
+   R_2 = \begin{pmatrix} 0 & -3 & -6 \end{pmatrix}
+   \]
+
+2. Multiply \( R_1 \) by \( -7 \) and add it to \( R_3 \):
+   \[
+   R_3 \to R_3 - 7 \cdot R_1
+   \]
+
+   Performing the operation:
+   \[
+   R_3 = \begin{pmatrix} 7 & 8 & 9 \end{pmatrix} - 7 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
+   \]
+   \[
+   R_3 = \begin{pmatrix} 7 & 8 & 9 \end{pmatrix} - \begin{pmatrix} 7 & 14 & 21 \end{pmatrix}
+   \]
+   \[
+   R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix}
+   \]
+
+The updated matrix \( B \) is:
+$$
+B =
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+0 & -6 & -12
+\end{pmatrix}
+$$
+
+#### Step 2: Eliminate \( R_3(2) \)
+Next, eliminate the element at position \( (3, 2) \) (\(-6\)) by performing:
+\[
+R_3 \to R_3 - 2 \cdot R_2
+\]
+
+Performing the operation:
+\[
+R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix} - 2 \cdot \begin{pmatrix} 0 & -3 & -6 \end{pmatrix}
+\]
+\[
+R_3 = \begin{pmatrix} 0 & -6 & -12 \end{pmatrix} - \begin{pmatrix} 0 & -6 & -12 \end{pmatrix}
+\]
+\[
+R_3 = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}
+\]
+
+The final matrix \( B \) is:
+$$
+B =
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
+#### Step 3: Determinant Calculation
+Since the last row is all zeros, the determinant is:
+\[
+\text{det}(B) = 0
+\]
+
+---
+
+### Final Results:
+1. \(\text{det}(A) = -102\)
+2. \(\text{det}(B) = 0\)
+
