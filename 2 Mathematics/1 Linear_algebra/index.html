@@ -911,13 +911,15 @@ A =
 \]</div>
 <p>Since <span class="arithmatex">\( \text{det}(A) \neq 0 \)</span>, the matrix is invertible.</p>
 <h4 id="step-2-compute-the-inverse-of-a">Step 2: Compute the inverse of <span class="arithmatex">\( A \)</span></h4>
-<p>The formula for the inverse of a 3x3 matrix is:
-$$
+<p>The formula for the inverse of a 3x3 matrix is:</p>
+<div class="arithmatex">\[
 A^{-1} = \frac{1}{\text{det}(A)} \cdot \text{adj}(A)
-$$
-where <span class="arithmatex">\( \text{adj}(A) \)</span> is the adjugate matrix.</p>
-<p>Compute the adjugate matrix:
-1. Cofactor matrix:
+\]</div>
+<p>where <span class="arithmatex">\( \text{adj}(A) \)</span> is the adjugate matrix.</p>
+<p>Compute the adjugate matrix:</p>
+<ol>
+<li>
+<p>Cofactor matrix:
 $$
 \text{Cofactor}(A) =
 \begin{pmatrix}
@@ -932,8 +934,9 @@ $$
 -2 &amp; 0 &amp; 2
 \end{pmatrix}
 $$</p>
-<ol>
-<li>Transpose the cofactor matrix to get <span class="arithmatex">\( \text{adj}(A) \)</span>:
+</li>
+<li>
+<p>Transpose the cofactor matrix to get <span class="arithmatex">\( \text{adj}(A) \)</span>:
 $$
 \text{adj}(A) =
 \begin{pmatrix}
@@ -941,7 +944,8 @@ $$
 1 &amp; -1 &amp; 0 \
 -1 &amp; -2 &amp; 2
 \end{pmatrix}
-$$</li>
+$$</p>
+</li>
 </ol>
 <p>Compute <span class="arithmatex">\( A^{-1} \)</span>:
 $$
