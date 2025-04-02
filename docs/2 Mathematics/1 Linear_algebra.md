@@ -893,7 +893,7 @@ $$
 \end{pmatrix}
 $$
 
-
+update
 #### Step 2: Count Non-Zero Rows
 The matrix has 3 non-zero rows, so the rank of \( B \) is:
 $$
