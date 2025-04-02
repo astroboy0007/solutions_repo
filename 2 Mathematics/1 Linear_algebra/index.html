@@ -135,9 +135,9 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#34-d-cdot-e">3.4) \(D \cdot E\)</a>
 </li>
-</ul>
+<li class="toctree-l3"><a class="reference internal" href="#final-results">Final Results:</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#final-results">Final Results:</a>
+</ul>
 </li>
 </ul>
 </li>
@@ -212,41 +212,41 @@
 <div class="section" itemprop="articleBody">
 <h1 id="linear-algebra">Linear Algebra</h1>
 <hr/>
-<h3 id="given-matrices">Given Matrices:</h3>
+<h2 id="given-matrices">Given Matrices:</h2>
 <ol>
 <li>
 <p><strong>Matrix <span class="arithmatex">\(A\)</span>:</strong>
-   [
+   $$
    A = \begin{pmatrix} 1 &amp; 2 \ 3 &amp; 4 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Matrix <span class="arithmatex">\(B\)</span>:</strong>
-   [
+   $$
    B = \begin{pmatrix} 5 &amp; 6 \ 7 &amp; 8 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Matrix <span class="arithmatex">\(C\)</span>:</strong>
-   [
+   $$
    C = \begin{pmatrix} -1 &amp; 2 \ 3 &amp; 0 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Matrix <span class="arithmatex">\(D\)</span>:</strong>
-   [
+   $$
    D = \begin{pmatrix} -1 &amp; 2 &amp; 3 \ 4 &amp; 0 &amp; 6 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Matrix <span class="arithmatex">\(E\)</span>:</strong>
-   [
+   $$
    E = \begin{pmatrix} 1 &amp; 2 \ 4 &amp; 5 \ 7 &amp; 8 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 </ol>
 <hr/>
-<h3 id="1-calculations"><strong>1. Calculations:</strong></h3>
+<h2 id="1-calculations"><strong>1. Calculations:</strong></h2>
 <h4 id="11-a-b">1.1) <span class="arithmatex">\(A + B\)</span></h4>
 <div class="arithmatex">\[
 A + B = \begin{pmatrix} 1 + 5 &amp; 2 + 6 \\ 3 + 7 &amp; 4 + 8 \end{pmatrix} = \begin{pmatrix} 6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix}
@@ -264,7 +264,7 @@ A + C = \begin{pmatrix} 1 + (-1) &amp; 2 + 2 \\ 3 + 3 &amp; 4 + 0 \end{pmatrix} 
 <li><strong>Matrix addition requires equal dimensions.</strong> Since <span class="arithmatex">\(D\)</span> is <span class="arithmatex">\(2 \times 3\)</span> and <span class="arithmatex">\(E\)</span> is <span class="arithmatex">\(3 \times 2\)</span>, matrix addition is <strong>not defined</strong>.</li>
 </ul>
 <hr/>
-<h3 id="2-scalar-multiplications"><strong>2. Scalar Multiplications:</strong></h3>
+<h2 id="2-scalar-multiplications"><strong>2. Scalar Multiplications:</strong></h2>
 <h4 id="21-frac12-a">2.1) <span class="arithmatex">\(\frac{1}{2} A\)</span></h4>
 <div class="arithmatex">\[
 \frac{1}{2} A = \frac{1}{2} \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix} 0.5 &amp; 1 \\ 1.5 &amp; 2 \end{pmatrix}
@@ -282,66 +282,65 @@ A + C = \begin{pmatrix} 1 + (-1) &amp; 2 + 2 \\ 3 + 3 &amp; 4 + 0 \end{pmatrix} 
 4 D = 4 \begin{pmatrix} -1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 6 \end{pmatrix} = \begin{pmatrix} -4 &amp; 8 &amp; 12 \\ 16 &amp; 0 &amp; 24 \end{pmatrix}
 \]</div>
 <hr/>
-<h3 id="3-matrix-multiplications"><strong>3. Matrix Multiplications:</strong></h3>
+<h2 id="3-matrix-multiplications"><strong>3. Matrix Multiplications:</strong></h2>
 <h4 id="31-a-cdot-b">3.1) <span class="arithmatex">\(A \cdot B\)</span></h4>
-<p>[
-A \cdot B = \begin{pmatrix} 1 &amp; 2 \ 3 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 5 &amp; 6 \ 7 &amp; 8 \end{pmatrix}
-]
-[
-= \begin{pmatrix} (1 \cdot 5 + 2 \cdot 7) &amp; (1 \cdot 6 + 2 \cdot 8) \ (3 \cdot 5 + 4 \cdot 7) &amp; (3 \cdot 6 + 4 \cdot 8) \end{pmatrix}
-]
-[
-= \begin{pmatrix} 19 &amp; 22 \ 43 &amp; 50 \end{pmatrix}
-]</p>
+<div class="arithmatex">\[
+A \cdot B = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} (1 \cdot 5 + 2 \cdot 7) &amp; (1 \cdot 6 + 2 \cdot 8) \\ (3 \cdot 5 + 4 \cdot 7) &amp; (3 \cdot 6 + 4 \cdot 8) \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}
+\]</div>
 <h4 id="32-b-cdot-a">3.2) <span class="arithmatex">\(B \cdot A\)</span></h4>
-<p>[
-B \cdot A = \begin{pmatrix} 5 &amp; 6 \ 7 &amp; 8 \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; 2 \ 3 &amp; 4 \end{pmatrix}
-]
-[
-= \begin{pmatrix} (5 \cdot 1 + 6 \cdot 3) &amp; (5 \cdot 2 + 6 \cdot 4) \ (7 \cdot 1 + 8 \cdot 3) &amp; (7 \cdot 2 + 8 \cdot 4) \end{pmatrix}
-]
-[
-= \begin{pmatrix} 23 &amp; 34 \ 31 &amp; 46 \end{pmatrix}
-]</p>
+<div class="arithmatex">\[
+B \cdot A = \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} (5 \cdot 1 + 6 \cdot 3) &amp; (5 \cdot 2 + 6 \cdot 4) \\ (7 \cdot 1 + 8 \cdot 3) &amp; (7 \cdot 2 + 8 \cdot 4) \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} 23 &amp; 34 \\ 31 &amp; 46 \end{pmatrix}
+\]</div>
 <h4 id="33-a-cdot-d-not-possible">3.3) <span class="arithmatex">\(A \cdot D\)</span> (not possible)</h4>
 <ul>
 <li><strong>Matrix multiplication requires the number of columns in <span class="arithmatex">\(A\)</span> to equal the number of rows in <span class="arithmatex">\(D\)</span>.</strong> Since <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(2 \times 2\)</span> and <span class="arithmatex">\(D\)</span> is <span class="arithmatex">\(2 \times 3\)</span>, matrix multiplication is <strong>not defined</strong>.</li>
 </ul>
 <h4 id="34-d-cdot-e">3.4) <span class="arithmatex">\(D \cdot E\)</span></h4>
-<p>[
-D \cdot E = \begin{pmatrix} -1 &amp; 2 &amp; 3 \ 4 &amp; 0 &amp; 6 \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; 2 \ 4 &amp; 5 \ 7 &amp; 8 \end{pmatrix}
-]
-[
-= \begin{pmatrix} (-1 \cdot 1 + 2 \cdot 4 + 3 \cdot 7) &amp; (-1 \cdot 2 + 2 \cdot 5 + 3 \cdot 8) \ (4 \cdot 1 + 0 \cdot 4 + 6 \cdot 7) &amp; (4 \cdot 2 + 0 \cdot 5 + 6 \cdot 8) \end{pmatrix}
-]
-[
-= \begin{pmatrix} 34 &amp; 40 \ 46 &amp; 56 \end{pmatrix}
-]</p>
+<div class="arithmatex">\[
+D \cdot E = \begin{pmatrix} -1 &amp; 2 &amp; 3 \\ 4 &amp; 0 &amp; 6 \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; 5 \\ 7 &amp; 8 \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} (-1 \cdot 1 + 2 \cdot 4 + 3 \cdot 7) &amp; (-1 \cdot 2 + 2 \cdot 5 + 3 \cdot 8) \\ (4 \cdot 1 + 0 \cdot 4 + 6 \cdot 7) &amp; (4 \cdot 2 + 0 \cdot 5 + 6 \cdot 8) \end{pmatrix}
+$$
+$$
+= \begin{pmatrix} 34 &amp; 40 \\ 46 &amp; 56 \end{pmatrix}
+\]</div>
 <hr/>
 <h3 id="final-results">Final Results:</h3>
 <ol>
 <li><strong>Matrix Addition</strong>:
-   [
+   $$
    A + B = \begin{pmatrix} 6 &amp; 8 \ 10 &amp; 12 \end{pmatrix}, \quad B - A = \begin{pmatrix} 4 &amp; 4 \ 4 &amp; 4 \end{pmatrix}, \quad A + C = \begin{pmatrix} 0 &amp; 4 \ 6 &amp; 4 \end{pmatrix}
-   ]</li>
+   $$</li>
 <li>
 <p><strong><span class="arithmatex">\(D + E\)</span>: Not Defined</strong></p>
 </li>
 <li>
 <p><strong>Scalar Multiplications</strong>:
-   [
+   $$
    \frac{1}{2}A = \begin{pmatrix} 0.5 &amp; 1 \ 1.5 &amp; 2 \end{pmatrix}, \quad 2B = \begin{pmatrix} 10 &amp; 12 \ 14 &amp; 16 \end{pmatrix}, \quad -3C = \begin{pmatrix} 3 &amp; -6 \ -9 &amp; 0 \end{pmatrix}, \quad 4D = \begin{pmatrix} -4 &amp; 8 &amp; 12 \ 16 &amp; 0 &amp; 24 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li>
 <p><strong>Matrix Multiplication</strong>:
-   [
+   $$
    A \cdot B = \begin{pmatrix} 19 &amp; 22 \ 43 &amp; 50 \end{pmatrix}, \quad B \cdot A = \begin{pmatrix} 23 &amp; 34 \ 31 &amp; 46 \end{pmatrix}, \quad D \cdot E = \begin{pmatrix} 34 &amp; 40 \ 46 &amp; 56 \end{pmatrix}
-   ]</p>
+   $$</p>
 </li>
 <li><strong><span class="arithmatex">\(A \cdot D\)</span>: Not Defined</strong></li>
 </ol>
-<p>Let me know if you'd like further clarifications or additional help! 😊</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
