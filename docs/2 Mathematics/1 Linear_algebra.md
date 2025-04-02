@@ -3,29 +3,29 @@
 
 ## Given Matrices:
 1. **Matrix \(A\):**
-   $$
-   A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-   $$
+$$
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+$$
 
 2. **Matrix \(B\):**
-   $$
-   B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
-   $$
+$$
+B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
+$$
 
 3. **Matrix \(C\):**
-   $$
-   C = \begin{pmatrix} -1 & 2 \\ 3 & 0 \end{pmatrix}
-   $$
+$$
+C = \begin{pmatrix} -1 & 2 \\ 3 & 0 \end{pmatrix}
+$$
 
 4. **Matrix \(D\):**
-   $$
-   D = \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix}
-   $$
+$$
+D = \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix}
+$$
 
 5. **Matrix \(E\):**
-   $$
-   E = \begin{pmatrix} 1 & 2 \\ 4 & 5 \\ 7 & 8 \end{pmatrix}
-   $$
+$$
+E = \begin{pmatrix} 1 & 2 \\ 4 & 5 \\ 7 & 8 \end{pmatrix}
+$$
 
 ---
 
