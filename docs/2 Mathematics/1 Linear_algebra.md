@@ -353,27 +353,20 @@ $$
 ### Final Results:
 
 1. **2x2 Matrices:**  
-
-   - \(\text{det}(A) = 5\)  
-
-   - \(\text{det}(B) = -2\)  
-
-   - \(\text{det}(C) = -6\)  
+- \(\text{det}(A) = 5\)  
+- \(\text{det}(B) = -2\)  
+- \(\text{det}(C) = -6\)  
 
 
 2. **3x3 Matrices:**  
-
-   - \(\text{det}(D) = -30\)  
-
-   - \(\text{det}(E) = -54\)  
-
-   - \(\text{det}(F) = 60\)  
+- \(\text{det}(D) = -30\)  
+- \(\text{det}(E) = -54\)  
+- \(\text{det}(F) = 60\)  
 
 
 
 ## 3. Determinants using Laplace's Expansion
 
-Let's compute the determinants step-by-step for the given matrices. I'll format the solutions in markdown with LaTeX syntax.
 
 ---
 
