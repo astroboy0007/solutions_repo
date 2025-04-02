@@ -903,7 +903,7 @@ $$
 ---
 
 ### Final Results:
-1. **Inverse of \( A \):**
+     - **Inverse of \( A \):**
 
 
 $$
@@ -915,7 +915,7 @@ A^{-1} =
 \end{pmatrix}
 $$  
 
-*2. **Rank of \( B \):**
+     - **Rank of \( B \):**
    $$
    \text{Rank}(B) = 3
    $$
