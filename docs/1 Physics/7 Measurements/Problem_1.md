@@ -30,7 +30,7 @@ This is an excellent plan for measuring Earth's gravitational acceleration using
    T_{\text{mean}} = \frac{\sum T_{10}}{\text{Number of Measurements}} = \frac{20.4 + 20.6 + \dots + 20.4}{10} = 20.5 \, \mathrm{s}
    $$
 
-2. **Standard Deviation \(\sigma\)**:
+2. **Standard Deviation \(\sigma\)**:  
    Using the formula:
    $$
    \sigma = \sqrt{\frac{\sum (T_{10} - T_{\text{mean}})^2}{n - 1}}
