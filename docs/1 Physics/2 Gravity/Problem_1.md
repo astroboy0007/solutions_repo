@@ -168,9 +168,12 @@ plt.show()
 ```
 ![alt text](image-1.png)
 
-This script:
-* Simulates various orbital radii. 
-* Computes the corresponding orbital periods.
+This script:  
+
+* Simulates various orbital radii.  
+
+* Computes the corresponding orbital periods.  
+
 * Plots \( T^2 \) vs. \( r^3 \), which should yield a straight line, confirming Kepler's Third Law.
 
 ---
