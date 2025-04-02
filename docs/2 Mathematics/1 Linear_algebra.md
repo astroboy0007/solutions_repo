@@ -199,6 +199,8 @@ $$
 \text{det}(C) = (-1 \cdot 0) - (2 \cdot 3) = 0 - 6 = -6
 $$
 
+
+UPDATE
 ---
 
 ## Determinants of 3x3 Matrices:
