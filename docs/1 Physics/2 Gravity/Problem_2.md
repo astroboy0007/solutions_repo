@@ -19,10 +19,10 @@ v_1 = \sqrt{\frac{G M}{r}}
 \]
 
 
-Where:
-- \(G\): Gravitational constant.
-- \(M\): Mass of the celestial object.
-- \(r\): Radius of the orbit (distance from the center of the celestial body).
+Where:  
+ \(G\): Gravitational constant.  
+ \(M\): Mass of the celestial object.  
+ \(r\): Radius of the orbit (distance from the center of the celestial body).  
 
 ### 2. Second Cosmic Velocity (Escape Velocity)
 The second cosmic velocity is the **minimum velocity** required to escape a celestial body's gravitational influence entirely:
