@@ -183,7 +183,7 @@ D \cdot E =
 ### Matrix Addition
 
 1. **\(A + B\):**
-\[
+$$
 A + B =
 \begin{pmatrix}
 1 & 2 \\
@@ -199,7 +199,7 @@ A + B =
 6 & 8 \\
 10 & 12
 \end{pmatrix}
-\]
+$$
 
 2. **\(B - A\):**
 \[
