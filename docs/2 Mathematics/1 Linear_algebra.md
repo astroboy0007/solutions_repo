@@ -251,37 +251,50 @@ $$
 
 
 ### **5. Matrix \(E\):**
+
 $$
-E = 
-\begin{pmatrix} 
-3 & 1 & -1 \\ 
-0 & 2 & 4 \\ 
-5 & 3 & 2 
+E =
+\begin{pmatrix}
+3 & 1 & -1 \\
+0 & 2 & 4 \\
+5 & 3 & 2
 \end{pmatrix}
 $$
+
+The determinant of matrix \(E\) is calculated using cofactor expansion:
+
 $$
 \text{det}(E) = 3 \cdot 
-\begin{vmatrix} 
-2 & 4 \\ 
-3 & 2 
+\begin{vmatrix}
+2 & 4 \\
+3 & 2
 \end{vmatrix}
 - 1 \cdot 
-\begin{vmatrix} 
-0 & 4 \\ 
-5 & 2 
+\begin{vmatrix}
+0 & 4 \\
+5 & 2
 \end{vmatrix}
 + (-1) \cdot 
-\begin{vmatrix} 
-0 & 2 \\ 
-5 & 3 
+\begin{vmatrix}
+0 & 2 \\
+5 & 3
 \end{vmatrix}
 $$
+
+Expanding each submatrix determinant:
+
 $$
 \text{det}(E) = 3 \cdot ((2 \cdot 2) - (4 \cdot 3)) - 1 \cdot ((0 \cdot 2) - (4 \cdot 5)) - 1 \cdot ((0 \cdot 3) - (2 \cdot 5))
 $$
+
+Simplifying further:
+
 $$
 \text{det}(E) = 3 \cdot (4 - 12) - (0 - 20) - (0 - 10)
 $$
+
+Final calculation:
+
 $$
 \text{det}(E) = 3 \cdot -8 - 20 - 10 = -24 - 20 - 10 = -54
 $$
