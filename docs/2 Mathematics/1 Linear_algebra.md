@@ -708,6 +708,7 @@ Here’s the solution to the two problems, formatted in markdown:
 ### **1. Find the inverse matrix for \( A \):**
 
 The given matrix is:
+
 $$
 A =
 \begin{pmatrix}
