@@ -60,11 +60,11 @@ In summary, resonance causes the system to oscillate with large amplitude at the
 
 The damping coefficient determines how quickly the energy in the system is dissipated. In the forced damped pendulum, damping:  
 
-     - **Low damping**: Allows for large amplitude oscillations and may contribute to a sharp resonance peak.  
+- **Low damping**: Allows for large amplitude oscillations and may contribute to a sharp resonance peak.  
 
-     - **High damping**: Reduces the amplitude of oscillations, and if sufficiently high, the system may not oscillate at all. This may suppress chaotic behavior and lead to a smooth, decaying response.  
+- **High damping**: Reduces the amplitude of oscillations, and if sufficiently high, the system may not oscillate at all. This may suppress chaotic behavior and lead to a smooth, decaying response.  
 
-     - **Critical damping**: Occurs when \(\gamma = 2\sqrt{mK}\), where the pendulum returns to equilibrium as quickly as possible without oscillating. 
+- **Critical damping**: Occurs when \(\gamma = 2\sqrt{mK}\), where the pendulum returns to equilibrium as quickly as possible without oscillating. 
 
 ### Effect of the Driving Amplitude (\(A\))
 
