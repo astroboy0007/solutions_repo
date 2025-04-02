@@ -753,20 +753,17 @@ where \( \text{adj}(A) \) is the adjugate matrix.
 Compute the adjugate matrix:
 
 1. Cofactor matrix:
+
 $$
 \text{Cofactor}(A) =
-\begin{pmatrix}
-(1 \cdot 0 - 0 \cdot 2) & -(0 \cdot 0 - 1 \cdot 1) & (0 \cdot 2 - 1 \cdot 1) \\
--(1 \cdot 0 - 0 \cdot 1) & (2 \cdot 0 - 1 \cdot 1) & -(2 \cdot 1 - 0 \cdot 1) \\
-(0 \cdot 0 - 1 \cdot 2) & -(2 \cdot 0 - 0 \cdot 1) & (2 \cdot 1 - 0 \cdot 0)
-\end{pmatrix}
-=
 \begin{pmatrix}
 0 & 1 & -1 \\
 0 & -1 & -2 \\
 -2 & 0 & 2
 \end{pmatrix}
 $$
+
+
 
 2. Transpose the cofactor matrix to get \( \text{adj}(A) \):
 $$
