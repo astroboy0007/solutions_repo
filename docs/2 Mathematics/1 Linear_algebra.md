@@ -159,17 +159,17 @@ D \cdot E =
 
 ### **1. Matrix \(A\):**
 $$
-A = 
-\begin{pmatrix} 
-2 & 3 \\ 
-1 & 4 
+A =
+\begin{pmatrix}
+2 & 3 \\
+1 & 4
 \end{pmatrix}
 $$  
-The determinant of a 2x2 matrix is calculated as:  
+
+The determinant of a 2x2 matrix is calculated as:  UPDATE
 $$
 \text{det}(A) = (2 \cdot 4) - (3 \cdot 1) = 8 - 3 = 5
 $$  
-update
 
 ### **2. Matrix \(B\):**
 $$
