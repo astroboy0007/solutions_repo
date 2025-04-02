@@ -30,43 +30,43 @@
 ---
 
 ## **1. Calculations:**
-#### 1.1) \(A + B\)
+### 1.1) \(A + B\)
 $$
 A + B = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix} = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix}
 $$
 
-#### 1.2) \(B - A\)
+### 1.2) \(B - A\)
 $$
 B - A = \begin{pmatrix} 5 - 1 & 6 - 2 \\ 7 - 3 & 8 - 4 \end{pmatrix} = \begin{pmatrix} 4 & 4 \\ 4 & 4 \end{pmatrix}
 $$
 
-#### 1.3) \(A + C\)
+### 1.3) \(A + C\)
 $$
 A + C = \begin{pmatrix} 1 + (-1) & 2 + 2 \\ 3 + 3 & 4 + 0 \end{pmatrix} = \begin{pmatrix} 0 & 4 \\ 6 & 4 \end{pmatrix}
 $$
 
-#### 1.4) \(D + E\) (not possible)
+### 1.4) \(D + E\) (not possible)
 - **Matrix addition requires equal dimensions.** Since \(D\) is \(2 \times 3\) and \(E\) is \(3 \times 2\), matrix addition is **not defined**.
 
 ---
 
 ## **2. Scalar Multiplications:**
-#### 2.1) \(\frac{1}{2} A\)
+### 2.1) \(\frac{1}{2} A\)
 $$
 \frac{1}{2} A = \frac{1}{2} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 0.5 & 1 \\ 1.5 & 2 \end{pmatrix}
 $$
 
-#### 2.2) \(2 B\)
+### 2.2) \(2 B\)
 $$
 2 B = 2 \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 10 & 12 \\ 14 & 16 \end{pmatrix}
 $$
 
-#### 2.3) \(-3 C\)
+### 2.3) \(-3 C\)
 $$
 -3 C = -3 \begin{pmatrix} -1 & 2 \\ 3 & 0 \end{pmatrix} = \begin{pmatrix} 3 & -6 \\ -9 & 0 \end{pmatrix}
 $$
 
-#### 2.4) \(4 D\)
+### 2.4) \(4 D\)
 $$
 4 D = 4 \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix} = \begin{pmatrix} -4 & 8 & 12 \\ 16 & 0 & 24 \end{pmatrix}
 $$
@@ -75,7 +75,7 @@ $$
 
 ## **3. Matrix Multiplications:**
 
-#### **3.1) \( A \cdot B \):**
+### **3.1) \( A \cdot B \):**
 
 $$
 A \cdot B = 
@@ -105,7 +105,7 @@ $$
 
 ---
 
-#### **3.2) \( B \cdot A \):**
+### **3.2) \( B \cdot A \):**
 
 \[
 B \cdot A = 
@@ -135,14 +135,14 @@ B \cdot A =
 
 ---
 
-#### **3.3) \( A \cdot D \):**
+### **3.3) \( A \cdot D \):**
 
 - Matrix multiplication requires the number of columns in \( A \) to equal the number of rows in \( D \).
 - Since \( A \) is \( 2 \times 2 \) and \( D \) is \( 2 \times 3 \), **matrix multiplication is not defined**.
 
 ---
 
-#### **3.4) \( D \cdot E \):**
+### **3.4) \( D \cdot E \):**
 
 \[
 D \cdot E = 
