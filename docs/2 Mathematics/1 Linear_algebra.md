@@ -155,7 +155,7 @@ D \cdot E =
 
 ---
 
-### 2. Determinants 2x2 and 3x3
+# 2. Determinants 2x2 and 3x3
 
 **1. Matrix \(A\):**
 $$
@@ -204,7 +204,7 @@ $$
 
 ---
 
-### Determinants of 3x3 Matrices:
+Determinants of 3x3 Matrices:
 
 **4. Matrix \(D\):**
 
@@ -364,11 +364,10 @@ Final Results:
      - \(\text{det}(F) = 60\)  
 
 
-
-## 3. Determinants using Laplace's Expansion
-
-
 ---
+
+# 3. Determinants using Laplace's Expansion
+
 
 Matrix \( A \):
 $$
@@ -552,7 +551,7 @@ Summary:
 - \(\text{det}(C) = -75\)
 - \(\text{det}(D) = 231\)
 
-### 4. Determinants from the Gauss Method and Triangular Matrices
+# 4. Determinants from the Gauss Method and Triangular Matrices
 
 Let's solve the determinants of the given matrices \( A \) and \( B \) by reducing them to upper triangular form and then taking the product of their diagonal elements.
 
@@ -701,7 +700,7 @@ Final Results:
 
 ---
 
-### 5. Inverse of a Matrix from the formula
+# 5. Inverse of a Matrix from the formula
 
 Here’s the solution to the two problems, formatted in markdown:
 
