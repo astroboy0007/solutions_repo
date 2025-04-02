@@ -186,8 +186,7 @@ D \cdot E =
 
 1. **\(A + B\)**:
 $$
-A + B = 
-\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+A + B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
 +
 \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
 =
