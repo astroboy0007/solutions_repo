@@ -222,6 +222,8 @@ plt.ylabel("Y-axis")
 plt.show()
 ```
 
+![alt text](image-2.png)
+
 ---
 
 ### Problem 2: **Calculate the area of the triangle spanned by vectors**
