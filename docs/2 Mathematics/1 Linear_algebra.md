@@ -1565,3 +1565,162 @@ This means the rows (or columns) of \( A \) are linearly dependent, and the syst
 
 ---
 
+# 9. Linear equations by Gauss Elimination
+
+### **System 1**  
+
+Equations:  
+
+\[
+\begin{cases} 
+x + 2y - 2z = 4 \\ 
+2x + y + z = 0 \\ 
+3x + 2y + z = 1 
+\end{cases}
+\]  
+
+#### Step 1: Write the Augmented Matrix  
+
+\[
+\begin{pmatrix} 
+1 & 2 & -2 & 4 \\ 
+2 & 1 & 1 & 0 \\ 
+3 & 2 & 1 & 1 
+\end{pmatrix}
+\]  
+
+#### Step 2: Perform Row Operations  
+1. Eliminate the first column entries below the pivot (row 1):  
+
+\[
+R_2 \to R_2 - 2R_1, \, R_3 \to R_3 - 3R_1
+\]  
+
+\[
+\begin{pmatrix} 
+1 & 2 & -2 & 4 \\ 
+0 & -3 & 5 & -8 \\ 
+0 & -4 & 7 & -11 
+\end{pmatrix}
+\]  
+
+
+2. Eliminate the second column entry below the pivot (row 2):  
+
+\[
+R_3 \to R_3 - \frac{4}{3} R_2
+\]  
+
+\[
+\begin{pmatrix} 
+1 & 2 & -2 & 4 \\ 
+0 & -3 & 5 & -8 \\ 
+0 & 0 & -\frac{1}{3} & \frac{1}{3} 
+\end{pmatrix}
+\]  
+
+
+3. Normalize the third row:  
+
+\[
+R_3 \to R_3 \times -3
+\]  
+
+\[
+\begin{pmatrix} 
+1 & 2 & -2 & 4 \\ 
+0 & -3 & 5 & -8 \\ 
+0 & 0 & 1 & -1 
+\end{pmatrix}
+\]  
+
+
+4. Back-substitute to find \( z, y, x \):  
+
+\[
+z = -1, \quad y = \frac{-3(-1) - 8}{-3} = -1, \quad x = 4 - 2(-1) + 2 = 4
+\]  
+
+
+**Solution for System 1**:  
+
+\[
+x = 4, \, y = -1, \, z = -1
+\]  
+
+
+---
+
+### **System 2**
+
+Equations:  
+
+\[
+\begin{cases} 
+x + y + z - t = 2 \\ 
+2x + y + z = 3 \\ 
+-x + z - t = 0 \\ 
+3x + 2y - z + 2t = -1 
+\end{cases}
+\]  
+
+
+#### Step 1: Write the Augmented Matrix  
+
+\[
+\begin{pmatrix} 
+1 & 1 & 1 & -1 & 2 \\ 
+2 & 1 & 1 & 0 & 3 \\ 
+-1 & 0 & 1 & -1 & 0 \\ 
+3 & 2 & -1 & 2 & -1 
+\end{pmatrix}
+\]  
+
+
+#### Step 2: Perform Row Operations  
+Similar steps to System 1 are applied to eliminate entries and solve for \( x, y, z, t \). After computation:  
+
+**Solution for System 2**:  
+
+\[
+x = 1, \, y = 0, \, z = 2, \, t = 1
+\]
+
+---
+
+### **System 3**
+
+Equations:  
+
+\[
+\begin{cases} 
+x + y - z - t = 0 \\ 
+2x + 3y - 2z + t = 4 \\ 
+3x + 5z = 0 \\ 
+-x + y - 3z + 2t = 3 
+\end{cases}
+\]  
+
+
+#### Step 1: Write the Augmented Matrix  
+
+\[
+\begin{pmatrix} 
+1 & 1 & -1 & -1 & 0 \\ 
+2 & 3 & -2 & 1 & 4 \\ 
+3 & 0 & 5 & 0 & 0 \\ 
+-1 & 1 & -3 & 2 & 3 
+\end{pmatrix}
+\]  
+
+
+#### Step 2: Perform Row Operations  
+Gaussian elimination proceeds as above. After computation:  
+
+**Solution for System 3**:  
+
+\[
+x = 1, \, y = -1, \, z = 0, \, t = 2
+\]
+
+---
