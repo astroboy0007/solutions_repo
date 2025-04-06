@@ -161,7 +161,8 @@ D \cdot E =
 
 # 2. Determinants 2x2 and 3x3
 
-**1. Matrix \(A\):**
+**1. Matrix \(A\):**  
+
 $$
 A =
 \begin{pmatrix}
@@ -177,6 +178,7 @@ $$
 $$  
 
 **2. Matrix \(B\):**  
+
 $$
 B = 
 \begin{pmatrix} 
