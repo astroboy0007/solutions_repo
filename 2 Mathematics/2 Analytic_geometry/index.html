@@ -181,6 +181,34 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#equations-of-lines-on-a-plane">Equations of lines on a plane</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-find-the-equation-of-the-line-passing-through-points-a12-and-b34">Problem 1: Find the equation of the line passing through points \( A(1,2) \) and \( B(3,4) \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_7">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2-find-the-equation-of-the-line-passing-through-a12-and-parallel-to-y-2x-3">Problem 2: Find the equation of the line passing through \( A(1,2) \) and parallel to \( y = 2x + 3 \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_8">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-3-find-the-equation-of-the-line-passing-through-a12-and-perpendicular-to-y-2x-3">Problem 3: Find the equation of the line passing through \( A(1,2) \) and perpendicular to \( y = 2x + 3 \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_9">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-4-find-the-intersection-point-of-y-2x-3-and-y-3x-2-and-calculate-the-angle-between-them">Problem 4: Find the intersection point of \( y = 2x + 3 \) and \( y = 3x + 2 \), and calculate the angle between them.</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_10">Solution:</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../3%20Calculus/">Calculus</a>
@@ -664,6 +692,101 @@ plt.ylim(-1, 3.5)
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image-4.png"/></p>
+<hr/>
+<h2 id="equations-of-lines-on-a-plane">Equations of lines on a plane</h2>
+<h3 id="problem-1-find-the-equation-of-the-line-passing-through-points-a12-and-b34">Problem 1: <strong>Find the equation of the line passing through points <span class="arithmatex">\( A(1,2) \)</span> and <span class="arithmatex">\( B(3,4) \)</span></strong>.</h3>
+<h4 id="solution_7">Solution:</h4>
+<p>The equation of a line passing through two points <span class="arithmatex">\( (x_1, y_1) \)</span> and <span class="arithmatex">\( (x_2, y_2) \)</span> is given by:  </p>
+<div class="arithmatex">\[
+y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1)
+\]</div>
+<p>Here:<br/>
+- <span class="arithmatex">\( A(1, 2) \)</span>, <span class="arithmatex">\( B(3, 4) \)</span>
+- <span class="arithmatex">\( m = \frac{4 - 2}{3 - 1} = \frac{2}{2} = 1 \)</span></p>
+<p>The equation becomes:  </p>
+<div class="arithmatex">\[
+y - 2 = 1(x - 1)
+\]</div>
+<div class="arithmatex">\[
+y - 2 = x - 1
+\]</div>
+<div class="arithmatex">\[
+y = x + 1
+\]</div>
+<p><strong>Answer:</strong> The equation of the line is <span class="arithmatex">\( y = x + 1 \)</span>.</p>
+<hr/>
+<h3 id="problem-2-find-the-equation-of-the-line-passing-through-a12-and-parallel-to-y-2x-3">Problem 2: <strong>Find the equation of the line passing through <span class="arithmatex">\( A(1,2) \)</span> and parallel to <span class="arithmatex">\( y = 2x + 3 \)</span></strong>.</h3>
+<h4 id="solution_8">Solution:</h4>
+<p>The slope of the line parallel to <span class="arithmatex">\( y = 2x + 3 \)</span> is <span class="arithmatex">\( m = 2 \)</span>.</p>
+<p>Using the point-slope form:  </p>
+<div class="arithmatex">\[
+y - y_1 = m(x - x_1)
+\]</div>
+<div class="arithmatex">\[
+y - 2 = 2(x - 1)
+\]</div>
+<div class="arithmatex">\[
+y - 2 = 2x - 2
+\]</div>
+<div class="arithmatex">\[
+y = 2x
+\]</div>
+<p><strong>Answer:</strong> The equation of the line is <span class="arithmatex">\( y = 2x \)</span>.  </p>
+<hr/>
+<h3 id="problem-3-find-the-equation-of-the-line-passing-through-a12-and-perpendicular-to-y-2x-3">Problem 3: <strong>Find the equation of the line passing through <span class="arithmatex">\( A(1,2) \)</span> and perpendicular to <span class="arithmatex">\( y = 2x + 3 \)</span></strong>.</h3>
+<h4 id="solution_9">Solution:</h4>
+<p>The slope of a line perpendicular to <span class="arithmatex">\( y = 2x + 3 \)</span> is the negative reciprocal of <span class="arithmatex">\( m = 2 \)</span>, which is <span class="arithmatex">\( m = -\frac{1}{2} \)</span>.</p>
+<p>Using the point-slope form:  </p>
+<div class="arithmatex">\[
+y - y_1 = m(x - x_1)
+\]</div>
+<div class="arithmatex">\[
+y - 2 = -\frac{1}{2}(x - 1)
+\]</div>
+<div class="arithmatex">\[
+y - 2 = -\frac{1}{2}x + \frac{1}{2}
+\]</div>
+<div class="arithmatex">\[
+y = -\frac{1}{2}x + \frac{5}{2}
+\]</div>
+<p><strong>Answer:</strong> The equation of the line is <span class="arithmatex">\( y = -\frac{1}{2}x + \frac{5}{2} \)</span>.</p>
+<hr/>
+<h3 id="problem-4-find-the-intersection-point-of-y-2x-3-and-y-3x-2-and-calculate-the-angle-between-them">Problem 4: <strong>Find the intersection point of <span class="arithmatex">\( y = 2x + 3 \)</span> and <span class="arithmatex">\( y = 3x + 2 \)</span>, and calculate the angle between them.</strong></h3>
+<h4 id="solution_10">Solution:</h4>
+<ol>
+<li><strong>Intersection Point</strong>:<br/>
+   Set the two equations equal to each other:  </li>
+</ol>
+<div class="arithmatex">\[
+2x + 3 = 3x + 2
+\]</div>
+<div class="arithmatex">\[
+x = 1
+\]</div>
+<p>Substitute <span class="arithmatex">\( x = 1 \)</span> into <span class="arithmatex">\( y = 2x + 3 \)</span>:  </p>
+<div class="arithmatex">\[
+y = 2(1) + 3 = 5
+\]</div>
+<p><strong>Intersection Point</strong>: <span class="arithmatex">\( (1, 5) \)</span>.</p>
+<ol>
+<li><strong>Angle Between the Lines</strong>:<br/>
+   The formula for the angle <span class="arithmatex">\( \theta \)</span> between two lines with slopes <span class="arithmatex">\( m_1 \)</span> and <span class="arithmatex">\( m_2 \)</span> is:  </li>
+</ol>
+<div class="arithmatex">\[
+\tan \theta = \left| \frac{m_1 - m_2}{1 + m_1m_2} \right|
+\]</div>
+<p>Here:  </p>
+<ul>
+<li><span class="arithmatex">\( m_1 = 2 \)</span>, <span class="arithmatex">\( m_2 = 3 \)</span> </li>
+</ul>
+<div class="arithmatex">\[
+\tan \theta = \left| \frac{2 - 3}{1 + (2)(3)} \right| = \left| \frac{-1}{7} \right| = \frac{1}{7}
+\]</div>
+<p>The angle <span class="arithmatex">\( \theta \)</span> is:  </p>
+<div class="arithmatex">\[
+\theta = \tan^{-1}\left(\frac{1}{7}\right)
+\]</div>
+<p><strong>Answer:</strong> Intersection Point: <span class="arithmatex">\( (1, 5) \)</span>, Angle: <span class="arithmatex">\( \tan^{-1}\left(\frac{1}{7}\right) \)</span>.</p>
 <hr/>
 </div>
 </div><footer>
