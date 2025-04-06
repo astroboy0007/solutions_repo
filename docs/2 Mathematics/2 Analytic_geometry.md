@@ -475,5 +475,42 @@ Use the same projection formula as Problem 3.
 #### Python Code:
 Similar to Problem 3, modify the vectors to reflect \( a \) and \( b \).
 
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define vectors
+a = np.array([2, 3])  # Vector a
+b = np.array([1, 1])  # Vector b
+
+# Calculate the projection of b onto a
+a_norm_squared = np.dot(a, a)
+projection = (np.dot(b, a) / a_norm_squared) * a
+
+# Create the plot
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+
+# Plot the vectors
+plt.quiver(0, 0, a[0], a[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector a')
+plt.quiver(0, 0, b[0], b[1], angles='xy', scale_units='xy', scale=1, color='green', label='Vector b')
+plt.quiver(0, 0, projection[0], projection[1], angles='xy', scale_units='xy', scale=1, color='red', label='Projection of b onto a')
+
+# Add labels, grid, legend, and title
+plt.legend()
+plt.grid()
+plt.title('Projection of b onto a')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.xlim(-1, 3.5)
+plt.ylim(-1, 3.5)
+
+# Show the plot
+plt.show()
+```
+
+![alt text](image-4.png)
+
 ---
 
