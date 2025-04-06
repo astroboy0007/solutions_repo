@@ -101,6 +101,20 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current" href="#">Analytic geometry</a>
 <ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1">Problem 1</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2">Problem 2</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-3">Problem 3</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-4">Problem 4</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-5">Problem 5</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../3%20Calculus/">Calculus</a>
@@ -171,6 +185,100 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="analytic-geometry">Analytic geometry</h1>
+<h2 id="vectors">Vectors</h2>
+<h3 id="problem-1">Problem 1</h3>
+<p><strong>Question:</strong> By what number should vector <strong>a</strong> = [3, 4] be multiplied so that its length is equal to 1?</p>
+<p><strong>Solution:</strong><br/>
+1. The length of a vector <strong>v</strong> = [x, y] is calculated as:  </p>
+<div class="arithmatex">\[
+\|v\| = \sqrt{x^2 + y^2}
+\]</div>
+<p>For vector <strong>a</strong> = [3, 4]:  </p>
+<div class="arithmatex">\[
+\|a\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5
+\]</div>
+<ol>
+<li>To make the length of the vector equal to 1, divide each component of the vector by its length:  </li>
+</ol>
+<div class="arithmatex">\[
+\text{Multiplier} = \frac{1}{\|a\|} = \frac{1}{5}
+\]</div>
+<p><strong>Answer:</strong> Vector <strong>a</strong> should be multiplied by  <span class="arithmatex">\( \frac{1}{5} \)</span>.</p>
+<hr/>
+<h3 id="problem-2">Problem 2</h3>
+<p><strong>Question:</strong> Calculate the length of vector <strong>b</strong> = [1, 1] and find the unit vector of this vector.</p>
+<p><strong>Solution:</strong>
+1. The length of vector <strong>b</strong> is:  </p>
+<div class="arithmatex">\[
+\|b\| = \sqrt{1^2 + 1^2} = \sqrt{1 + 1} = \sqrt{2}
+\]</div>
+<ol>
+<li>The unit vector of <strong>b</strong> is obtained by dividing each component of the vector by its length:  </li>
+</ol>
+<div class="arithmatex">\[
+\text{Unit vector of } \mathbf{b} = \frac{\mathbf{b}}{\|b\|} = \frac{1}{\sqrt{2}}[1, 1] = \left[\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right]
+\]</div>
+<p><strong>Answer:</strong> Length of <strong>b</strong> = <span class="arithmatex">\( \sqrt{2} \)</span>, Unit vector of <strong>b</strong> = <span class="arithmatex">\([ \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} ]\)</span>.</p>
+<hr/>
+<h3 id="problem-3">Problem 3</h3>
+<p><strong>Question:</strong> Plot the vector and the unit vector from the previous exercise.</p>
+<p><strong>Solution:</strong> 
+To visualize, plot the vector <strong>b</strong> = [1, 1] and its unit vector <span class="arithmatex">\([ \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} ]\)</span> on a Cartesian plane. The unit vector will have the same direction as <strong>b</strong>, but its length will be 1.</p>
+<p><em>(Note: Actual plotting requires graphical software, which I cannot do directly. However, instructions can guide plotting with tools like Desmos or Python Matplotlib.)</em></p>
+<hr/>
+<h3 id="problem-4">Problem 4</h3>
+<p><strong>Question:</strong> Calculate the length of vector <strong>c</strong> = [1, 2, 3] and find the unit vector of this vector.</p>
+<p><strong>Solution:</strong>
+1. The length of vector <strong>c</strong> is:  </p>
+<div class="arithmatex">\[
+\|c\| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1 + 4 + 9} = \sqrt{14}
+\]</div>
+<ol>
+<li>The unit vector of <strong>c</strong> is:  </li>
+</ol>
+<div class="arithmatex">\[
+\text{Unit vector of } \mathbf{c} = \frac{\mathbf{c}}{\|c\|} = \frac{1}{\sqrt{14}}[1, 2, 3] = \left[\frac{1}{\sqrt{14}}, \frac{2}{\sqrt{14}}, \frac{3}{\sqrt{14}}\right]
+\]</div>
+<p><strong>Answer:</strong> Length of <strong>c</strong> = <span class="arithmatex">\( \sqrt{14} \)</span>, Unit vector of <strong>c</strong> = <span class="arithmatex">\([ \frac{1}{\sqrt{14}}, \frac{2}{\sqrt{14}}, \frac{3}{\sqrt{14}} ]\)</span>.</p>
+<hr/>
+<h3 id="problem-5">Problem 5</h3>
+<p><strong>Question:</strong> Find the Cartesian coordinates of vector <strong>v</strong> = [2, 3, 4] in the basis:  </p>
+<div class="arithmatex">\[
+\{\mathbf{b_1} = [1, 0, 1], \mathbf{b_2} = [0, 1, 0], \mathbf{b_3} = [1, 0, -1]\}.
+\]</div>
+<p><strong>Solution:</strong>
+Let vector <strong>v</strong> = [2, 3, 4] be represented in the given basis as:  </p>
+<div class="arithmatex">\[
+\mathbf{v} = c_1 \mathbf{b_1} + c_2 \mathbf{b_2} + c_3 \mathbf{b_3},
+\]</div>
+<p>where <span class="arithmatex">\( \mathbf{b_1} = [1, 0, 1] \)</span>, <span class="arithmatex">\( \mathbf{b_2} = [0, 1, 0] \)</span>, and <span class="arithmatex">\( \mathbf{b_3} = [1, 0, -1] \)</span>.</p>
+<p>Set up the system of equations:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+c_1(1) + c_2(0) + c_3(1) = 2, \\
+c_1(0) + c_2(1) + c_3(0) = 3, \\
+c_1(1) + c_2(0) - c_3(1) = 4.
+\end{cases}
+\]</div>
+<p>Simplify:<br/>
+1. From the first equation: <span class="arithmatex">\( c_1 + c_3 = 2 \)</span>.
+2. From the second equation: <span class="arithmatex">\( c_2 = 3 \)</span>.
+3. From the third equation: <span class="arithmatex">\( c_1 - c_3 = 4 \)</span>.</p>
+<p>Solve for <span class="arithmatex">\( c_1 \)</span> and <span class="arithmatex">\( c_3 \)</span>:  </p>
+<ol>
+<li>Add <span class="arithmatex">\( c_1 + c_3 = 2 \)</span> and <span class="arithmatex">\( c_1 - c_3 = 4 \)</span>:  </li>
+</ol>
+<div class="arithmatex">\[
+2c_1 = 6 \quad \Rightarrow \quad c_1 = 3.
+\]</div>
+<ol>
+<li>Substitute <span class="arithmatex">\( c_1 = 3 \)</span> into <span class="arithmatex">\( c_1 + c_3 = 2 \)</span>:  </li>
+</ol>
+<div class="arithmatex">\[
+3 + c_3 = 2 \quad \Rightarrow \quad c_3 = -1.
+\]</div>
+<p><strong>Answer:</strong> Cartesian coordinates in the given basis: <span class="arithmatex">\( c_1 = 3, c_2 = 3, c_3 = -1 \)</span>.</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
