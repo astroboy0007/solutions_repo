@@ -224,7 +224,39 @@
 <p><strong>Question:</strong> Plot the vector and the unit vector from the previous exercise.</p>
 <p><strong>Solution:</strong> 
 To visualize, plot the vector <strong>b</strong> = [1, 1] and its unit vector <span class="arithmatex">\([ \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} ]\)</span> on a Cartesian plane. The unit vector will have the same direction as <strong>b</strong>, but its length will be 1.</p>
-<p><em>(Note: Actual plotting requires graphical software, which I cannot do directly. However, instructions can guide plotting with tools like Desmos or Python Matplotlib.)</em></p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the vector and its unit vector
+vector_b = np.array([1, 1])
+unit_vector_b = vector_b / np.linalg.norm(vector_b)
+
+# Create a figure and axis
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+
+# Plot the vector b
+plt.quiver(0, 0, vector_b[0], vector_b[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector b')
+
+# Plot the unit vector of b
+plt.quiver(0, 0, unit_vector_b[0], unit_vector_b[1], angles='xy', scale_units='xy', scale=1, color='green', label='Unit Vector of b')
+
+# Set plot limits
+plt.xlim(-1.5, 1.5)
+plt.ylim(-1.5, 1.5)
+
+# Add labels, legend, and title
+plt.legend()
+plt.grid()
+plt.title("Vector and Unit Vector")
+plt.xlabel("X")
+plt.ylabel("Y")
+
+# Show the plot
+plt.show()
+</code></pre>
+<p><img alt="alt text" src="../image-1.png"/></p>
 <hr/>
 <h3 id="problem-4">Problem 4</h3>
 <p><strong>Question:</strong> Calculate the length of vector <strong>c</strong> = [1, 2, 3] and find the unit vector of this vector.</p>
