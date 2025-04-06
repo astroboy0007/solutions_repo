@@ -931,7 +931,7 @@ $$
 
 ---
 
-Final Results:
+Final Results:  
 - **Inverse of \( A \):**
 
 
