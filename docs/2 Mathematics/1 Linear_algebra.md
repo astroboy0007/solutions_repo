@@ -36,22 +36,26 @@ $$
 ---
 
 ## **2. Scalar Multiplications:**
-2.1) \(\frac{1}{2} A\)
+2.1) \(\frac{1}{2} A\)  
+
 $$
 \frac{1}{2} A = \frac{1}{2} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 0.5 & 1 \\ 1.5 & 2 \end{pmatrix}
 $$
 
-2.2) \(2 B\)
+2.2) \(2 B\)  
+
 $$
 2 B = 2 \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 10 & 12 \\ 14 & 16 \end{pmatrix}
 $$
 
-2.3) \(-3 C\)
+2.3) \(-3 C\)  
+
 $$
 -3 C = -3 \begin{pmatrix} -1 & 2 \\ 3 & 0 \end{pmatrix} = \begin{pmatrix} 3 & -6 \\ -9 & 0 \end{pmatrix}
 $$
 
-2.4) \(4 D\)
+2.4) \(4 D\)  
+
 $$
 4 D = 4 \begin{pmatrix} -1 & 2 & 3 \\ 4 & 0 & 6 \end{pmatrix} = \begin{pmatrix} -4 & 8 & 12 \\ 16 & 0 & 24 \end{pmatrix}
 $$
@@ -491,7 +495,8 @@ $$
 
 ---
 
-Matrix \( C \):
+Matrix \( C \):  
+
 $$
 C =
 \begin{pmatrix}
@@ -506,7 +511,8 @@ For a 4x4 matrix, the determinant can be expanded recursively using cofactor exp
 
 ---
 
-Matrix \( D \):
+Matrix \( D \):  
+
 $$
 D =
 \begin{pmatrix}
