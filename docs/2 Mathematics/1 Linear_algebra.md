@@ -1745,9 +1745,9 @@ Rewrite the system to fit a matrix format. The second and third equations can be
 
 - Add \( 0x \) to the second and third equations:  
 
-  \[
+$$
   0x + 2y + 3z = 4 \quad \text{and} \quad 0x + 0y + 3z = 3.
-  \]  
+$$  
 
 Thus, the coefficient matrix \( A \), variable matrix \( \mathbf{X} \), and constant matrix \( \mathbf{B} \) are:  
 
