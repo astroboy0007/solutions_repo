@@ -1213,10 +1213,12 @@ Simplify:
 
 \[
 2(10 + 3y) + 5y = 20
-\]
+\]  
+
 \[
 20 + 6y + 5y = 20
 \]  
+
 Combine terms:  
 
 \[
@@ -1264,11 +1266,13 @@ Substitute into \( 3x - y + 2z = 11 \):
 \[
 3x - (4 - 3x) + 2z = 11
 \]  
+
 Simplify:  
 
 \[
 3x - 4 + 3x + 2z = 11
-\]
+\]  
+
 \[
 6x + 2z = 15 \quad \Rightarrow \quad z = \frac{15 - 6x}{2}
 \]
