@@ -57,7 +57,42 @@ For vector **a** = [3, 4]:
 **Solution:** 
 To visualize, plot the vector **b** = [1, 1] and its unit vector \([ \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} ]\) on a Cartesian plane. The unit vector will have the same direction as **b**, but its length will be 1.
 
-*(Note: Actual plotting requires graphical software, which I cannot do directly. However, instructions can guide plotting with tools like Desmos or Python Matplotlib.)*
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the vector and its unit vector
+vector_b = np.array([1, 1])
+unit_vector_b = vector_b / np.linalg.norm(vector_b)
+
+# Create a figure and axis
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+
+# Plot the vector b
+plt.quiver(0, 0, vector_b[0], vector_b[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector b')
+
+# Plot the unit vector of b
+plt.quiver(0, 0, unit_vector_b[0], unit_vector_b[1], angles='xy', scale_units='xy', scale=1, color='green', label='Unit Vector of b')
+
+# Set plot limits
+plt.xlim(-1.5, 1.5)
+plt.ylim(-1.5, 1.5)
+
+# Add labels, legend, and title
+plt.legend()
+plt.grid()
+plt.title("Vector and Unit Vector")
+plt.xlabel("X")
+plt.ylabel("Y")
+
+# Show the plot
+plt.show()
+```
+
+![alt text](image-1.png)
 
 ---
 
