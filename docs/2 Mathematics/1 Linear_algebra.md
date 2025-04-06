@@ -1400,3 +1400,168 @@ z = \frac{225 + 208 - 455}{65} = \frac{-22}{65}
 x = \frac{9}{13}, \, y = \frac{8}{5}, \, z = \frac{-22}{65}
 \]
 
+
+---
+
+# 8. Linear equations by Cramer's Rule
+
+### **System 1**  
+Given:  
+
+\[
+\begin{cases} 
+2x_1 - 3x_2 = 7 \\ 
+3x_1 + 5x_2 = 2 
+\end{cases}
+\]  
+
+
+#### Step 1: Write in Matrix Form  
+Let:  
+
+\[
+A = \begin{pmatrix} 2 & -3 \\ 3 & 5 \end{pmatrix}, \quad \mathbf{X} = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}, \quad \mathbf{B} = \begin{pmatrix} 7 \\ 2 \end{pmatrix}
+\]  
+
+So:  
+
+\[
+A \mathbf{X} = \mathbf{B}
+\]  
+
+#### Step 2: Find the Determinant of \( A \)  
+
+\[
+\text{det}(A) = (2)(5) - (-3)(3) = 10 + 9 = 19
+\]  
+
+#### Step 3: Compute \( x_1 \) and \( x_2 \) Using Cramer's Rule  
+For \( x_1 \):  
+
+\[
+A_1 = \begin{pmatrix} 7 & -3 \\ 2 & 5 \end{pmatrix}, \quad \text{det}(A_1) = (7)(5) - (-3)(2) = 35 + 6 = 41
+\]  
+
+\[
+x_1 = \frac{\text{det}(A_1)}{\text{det}(A)} = \frac{41}{19}
+\]  
+
+
+For \( x_2 \):  
+
+\[
+A_2 = \begin{pmatrix} 2 & 7 \\ 3 & 2 \end{pmatrix}, \quad \text{det}(A_2) = (2)(2) - (7)(3) = 4 - 21 = -17
+\]  
+
+\[
+x_2 = \frac{\text{det}(A_2)}{\text{det}(A)} = \frac{-17}{19}
+\]  
+
+
+**Solution for System 1**:  
+
+\[
+x_1 = \frac{41}{19}, \, x_2 = \frac{-17}{19}
+\]
+
+---
+
+### **System 2**
+Given:  
+
+\[
+\begin{cases} 
+2x + y - z = 1 \\ 
+x - y + 2z = 4 \\ 
+3x - 2z = -1 
+\end{cases}
+\]  
+
+
+#### Step 1: Write in Matrix Form
+Let:  
+
+\[
+A = \begin{pmatrix} 2 & 1 & -1 \\ 1 & -1 & 2 \\ 3 & 0 & -2 \end{pmatrix}, \quad \mathbf{X} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}, \quad \mathbf{B} = \begin{pmatrix} 1 \\ 4 \\ -1 \end{pmatrix}
+\]  
+
+
+#### Step 2: Find the Determinant of \( A \)  
+
+\[
+\text{det}(A) = 2\begin{vmatrix} -1 & 2 \\ 0 & -2 \end{vmatrix} - 1\begin{vmatrix} 1 & 2 \\ 3 & -2 \end{vmatrix} + (-1)\begin{vmatrix} 1 & -1 \\ 3 & 0 \end{vmatrix}
+\]  
+
+\[
+= 2((-1)(-2) - (2)(0)) - 1((1)(-2) - (3)(2)) + (-1)((1)(0) - (3)(-1))
+\]  
+
+\[
+= 2(2 - 0) - 1(-2 - 6) - 1(0 + 3)
+\]  
+
+\[
+= 4 - (-8) - 3 = 4 + 8 - 3 = 9
+\]  
+
+
+#### Step 3: Compute \( x, y, z \) Using Cramer's Rule  
+The determinants of matrices \( A_x \), \( A_y \), and \( A_z \) can be calculated similarly to System 1. Plugging them into Cramer's Rule, the solution is:  
+
+\[
+x = \frac{\text{det}(A_x)}{\text{det}(A)}, \, y = \frac{\text{det}(A_y)}{\text{det}(A)}, \, z = \frac{\text{det}(A_z)}{\text{det}(A)}
+\]
+
+---
+
+### **System 3**  
+Given:  
+
+\[
+\begin{cases} 
+x + y + z - t = 2 \\ 
+x - z + 2t = 6 \\ 
+2x - 3y + t = 4 \\ 
+3x + y + 3z - 4t = -2 
+\end{cases}
+\]  
+
+
+For a system of four equations, we compute similarly. The solution involves:  
+
+1. Writing the coefficient matrix \( A \), variable matrix \( \mathbf{X} \), and constant matrix \( \mathbf{B} \).  
+2. Determining \( \text{det}(A) \).  
+3. Solving for \( x, y, z, t \).  
+
+---
+
+### **System 4**  
+Given:  
+
+\[
+\begin{cases} 
+x_1 + 2x_2 + 3x_3 = 3 \\ 
+4x_1 + 5x_2 + 6x_3 = 2 \\ 
+7x_1 + 8x_2 + 9x_3 = 1 
+\end{cases}
+\]  
+
+
+#### Why Can't Cramer's Rule Be Applied?  
+
+For Cramer's Rule to apply, the determinant of the coefficient matrix \( A \) must be non-zero. Here:  
+
+\[
+A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}
+\]  
+
+The determinant is:  
+
+\[
+\text{det}(A) = 0
+\]  
+
+This means the rows (or columns) of \( A \) are linearly dependent, and the system either has no solution or infinitely many solutions. Thus, Cramer's Rule cannot be used.
+
+---
+
