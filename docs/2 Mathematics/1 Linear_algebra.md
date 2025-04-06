@@ -379,16 +379,6 @@ Final Results:
 # 3. Determinants using Laplace's Expansion
 
 
-Matrix \( A \):
-$$
-A =
-\begin{pmatrix}
-2 & 3 & 1 \\
-1 & 4 & 0 \\
-3 & 2 & 1
-\end{pmatrix}
-$$
-
 
 Matrix \( A \):
 
