@@ -1133,7 +1133,166 @@ $$
 
 ---
 
+# 7. Linear Equations old school
 
+---
 
+### **System 1**
+Equations:  
+1. \( 3x - 2y = 5 \)
+2. \( 2x + 3y = 7 \)
 
+#### Step 1: Solve Equation 1 for \( x \)
+From \( 3x - 2y = 5 \), solve for \( x \):  
+
+$$
+x = \frac{5 + 2y}{3}
+$$
+
+#### Step 2: Substitute \( x \) into Equation 2  
+Substitute \( x = \frac{5 + 2y}{3} \) into \( 2x + 3y = 7 \):  
+
+\[
+2 \left( \frac{5 + 2y}{3} \right) + 3y = 7
+\]  
+
+Simplify:  
+
+\[
+\frac{10 + 4y}{3} + 3y = 7
+\]
+Multiply through by 3 to eliminate the fraction:
+\[
+10 + 4y + 9y = 21
+\]
+Combine terms:
+\[
+13y = 11 \quad \Rightarrow \quad y = \frac{11}{13}
+\]
+
+#### Step 3: Solve for \( x \)
+Substitute \( y = \frac{11}{13} \) into \( x = \frac{5 + 2y}{3} \):  
+
+\[
+x = \frac{5 + 2 \cdot \frac{11}{13}}{3} = \frac{5 + \frac{22}{13}}{3} = \frac{\frac{65}{13} + \frac{22}{13}}{3} = \frac{\frac{87}{13}}{3} = \frac{87}{39} = \frac{29}{13}
+\]
+
+**Solution for System 1**:  
+
+\[
+x = \frac{29}{13}, \, y = \frac{11}{13}
+\]
+
+---
+
+### **System 2**  
+Equations:  
+
+1. \( 2x - 3y = 10 \)
+2. \( 4x + 5y = 20 \)
+
+#### Step 1: Solve Equation 1 for \( x \)  
+From \( 2x - 3y = 10 \), solve for \( x \):  
+
+\[
+x = \frac{10 + 3y}{2}
+\]
+
+#### Step 2: Substitute \( x \) into Equation 2  
+Substitute \( x = \frac{10 + 3y}{2} \) into \( 4x + 5y = 20 \):  
+
+\[
+4 \left( \frac{10 + 3y}{2} \right) + 5y = 20
+\]  
+
+Simplify:  
+
+\[
+2(10 + 3y) + 5y = 20
+\]
+\[
+20 + 6y + 5y = 20
+\]  
+Combine terms:  
+
+\[
+11y = 0 \quad \Rightarrow \quad y = 0
+\]
+
+#### Step 3: Solve for \( x \)  
+Substitute \( y = 0 \) into \( x = \frac{10 + 3y}{2} \):  
+
+\[
+x = \frac{10 + 3(0)}{2} = \frac{10}{2} = 5
+\]
+
+**Solution for System 2**:  
+
+\[
+x = 5, \, y = 0
+\]
+
+---
+
+### **System 3**
+Equations:  
+
+1. \( 2x - y + z = 3 \)
+2. \( x + 2y - z = 1 \)
+3. \( 3x - y + 2z = 11 \)
+
+#### Step 1: Eliminate \( z \) using Equations 1 and 2  
+Add Equations 1 and 2:  
+
+\[
+(2x - y + z) + (x + 2y - z) = 3 + 1
+\]  
+
+Simplify:  
+
+\[
+3x + y = 4 \quad \Rightarrow \quad y = 4 - 3x
+\]
+
+#### Step 2: Substitute \( y = 4 - 3x \) into Equation 3  
+Substitute into \( 3x - y + 2z = 11 \):  
+
+\[
+3x - (4 - 3x) + 2z = 11
+\]  
+Simplify:  
+
+\[
+3x - 4 + 3x + 2z = 11
+\]
+\[
+6x + 2z = 15 \quad \Rightarrow \quad z = \frac{15 - 6x}{2}
+\]
+
+#### Step 3: Solve for \( x \)  
+Substitute \( y = 4 - 3x \) and \( z = \frac{15 - 6x}{2} \) into Equation 1:  
+
+\[
+2x - (4 - 3x) + \frac{15 - 6x}{2} = 3
+\]  
+
+Multiply through by 2 to eliminate the fraction:  
+
+\[
+4x - 8 + 6x + 15 - 6x = 6
+\]  
+
+Simplify:  
+
+\[
+4x + 7 = 6 \quad \Rightarrow \quad x = -\frac{1}{4}
+\]
+
+**Solution for System 3**:  
+
+\( x, y, z \) can be determined as:  
+
+\[
+x = -\frac{1}{4}, \, y = 4 - 3(-\frac{1}{4}), \, z = \frac{15 - 6(-\frac{1}{4})}{2}
+\]
 
