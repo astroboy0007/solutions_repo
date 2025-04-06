@@ -885,3 +885,119 @@ a^2 = 1 \quad \Rightarrow \quad a = 1
 
 ---
 
+## Equations of planes in space
+
+
+### **Problem 1**: Find the equation of the plane passing through points \( A(1, 2, 3) \), \( B(3, 4, 5) \), and \( C(2, 1, 4) \).
+
+#### Solution:  
+To find the equation of a plane passing through three points, we use the vector equation:  
+
+\[
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0
+\]  
+
+Where:  
+- \( \mathbf{n} \) is the normal vector to the plane,
+- \( \mathbf{r}_0 \) is a point on the plane (e.g., \( A(1, 2, 3) \)),
+- \( \mathbf{r} \) is a general point \( (x, y, z) \).
+
+#### Step 1: Compute two vectors in the plane
+Use points \( A, B, \) and \( C \) to form vectors:  
+
+\[
+\mathbf{AB} = \mathbf{B} - \mathbf{A} = (3 - 1, 4 - 2, 5 - 3) = (2, 2, 2)
+\]  
+
+\[
+\mathbf{AC} = \mathbf{C} - \mathbf{A} = (2 - 1, 1 - 2, 4 - 3) = (1, -1, 1)
+\]  
+
+
+#### Step 2: Compute the normal vector \( \mathbf{n} \) using the cross product  
+
+\[
+\mathbf{n} = \mathbf{AB} \times \mathbf{AC} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+2 & 2 & 2 \\
+1 & -1 & 1
+\end{vmatrix}
+\]  
+
+\[
+\mathbf{n} = \mathbf{i}((2)(1) - (2)(-1)) - \mathbf{j}((2)(1) - (2)(1)) + \mathbf{k}((2)(-1) - (2)(1))
+\]  
+
+\[
+\mathbf{n} = \mathbf{i}(2 + 2) - \mathbf{j}(2 - 2) + \mathbf{k}(-2 - 2)
+\]  
+
+\[
+\mathbf{n} = 4\mathbf{i} + 0\mathbf{j} - 4\mathbf{k}
+\]  
+
+\[
+\mathbf{n} = (4, 0, -4)
+\]  
+
+
+#### Step 3: Write the equation of the plane  
+
+\[
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0
+\]  
+
+Substitute \( \mathbf{n} = (4, 0, -4) \) and \( \mathbf{r}_0 = (1, 2, 3) \):  
+
+\[
+4(x - 1) + 0(y - 2) - 4(z - 3) = 0
+\]  
+
+\[
+4x - 4 - 4z + 12 = 0
+\]  
+
+\[
+4x - 4z + 8 = 0
+\]  
+
+
+**Answer:** The equation of the plane is:  
+
+\[
+4x - 4z + 8 = 0
+\]  
+
+
+---
+
+### **Problem 2**: Find the equation of the plane passing through \( A(1, 2, 3) \) and parallel to the plane \( 2x + 3y + 4z = 5 \).
+
+#### Solution:  
+For a plane parallel to another plane, the normal vector remains the same. So, the normal vector of the plane is \( \mathbf{n} = [2, 3, 4] \).
+
+Substitute \( \mathbf{r}_0 = (1, 2, 3) \) into the general equation:  
+
+\[
+2(x - 1) + 3(y - 2) + 4(z - 3) = 0
+\]  
+
+Simplify:  
+
+\[
+2x - 2 + 3y - 6 + 4z - 12 = 0
+\]  
+
+\[
+2x + 3y + 4z - 20 = 0
+\]  
+
+
+**Answer:** The equation of the plane is:  
+
+\[
+2x + 3y + 4z - 20 = 0
+\]
+
+---
+
