@@ -514,3 +514,141 @@ plt.show()
 
 ---
 
+## Equations of lines on a plane
+
+### Problem 1: **Find the equation of the line passing through points \( A(1,2) \) and \( B(3,4) \)**.
+
+#### Solution:  
+The equation of a line passing through two points \( (x_1, y_1) \) and \( (x_2, y_2) \) is given by:  
+
+\[
+y - y_1 = \frac{y_2 - y_1}{x_2 - x_1}(x - x_1)
+\]  
+
+
+Here:  
+- \( A(1, 2) \), \( B(3, 4) \)
+- \( m = \frac{4 - 2}{3 - 1} = \frac{2}{2} = 1 \)
+
+The equation becomes:  
+
+\[
+y - 2 = 1(x - 1)
+\]  
+
+\[
+y - 2 = x - 1
+\]  
+
+\[
+y = x + 1
+\]  
+
+
+**Answer:** The equation of the line is \( y = x + 1 \).
+
+---
+
+### Problem 2: **Find the equation of the line passing through \( A(1,2) \) and parallel to \( y = 2x + 3 \)**.
+
+#### Solution:  
+The slope of the line parallel to \( y = 2x + 3 \) is \( m = 2 \).
+
+Using the point-slope form:  
+
+\[
+y - y_1 = m(x - x_1)
+\]  
+
+\[
+y - 2 = 2(x - 1)
+\]  
+
+\[
+y - 2 = 2x - 2
+\]  
+
+\[
+y = 2x
+\]  
+
+
+**Answer:** The equation of the line is \( y = 2x \).  
+
+---
+
+### Problem 3: **Find the equation of the line passing through \( A(1,2) \) and perpendicular to \( y = 2x + 3 \)**.
+
+#### Solution:  
+The slope of a line perpendicular to \( y = 2x + 3 \) is the negative reciprocal of \( m = 2 \), which is \( m = -\frac{1}{2} \).
+
+Using the point-slope form:  
+
+\[
+y - y_1 = m(x - x_1)
+\]  
+
+\[
+y - 2 = -\frac{1}{2}(x - 1)
+\]  
+
+\[
+y - 2 = -\frac{1}{2}x + \frac{1}{2}
+\]  
+
+\[
+y = -\frac{1}{2}x + \frac{5}{2}
+\]  
+
+
+**Answer:** The equation of the line is \( y = -\frac{1}{2}x + \frac{5}{2} \).
+
+---
+
+### Problem 4: **Find the intersection point of \( y = 2x + 3 \) and \( y = 3x + 2 \), and calculate the angle between them.**
+
+#### Solution:  
+1. **Intersection Point**:  
+   Set the two equations equal to each other:  
+
+\[
+2x + 3 = 3x + 2
+\]  
+
+\[
+x = 1
+\]  
+
+Substitute \( x = 1 \) into \( y = 2x + 3 \):  
+
+\[
+y = 2(1) + 3 = 5
+\]  
+
+   **Intersection Point**: \( (1, 5) \).
+
+2. **Angle Between the Lines**:  
+   The formula for the angle \( \theta \) between two lines with slopes \( m_1 \) and \( m_2 \) is:  
+
+\[
+\tan \theta = \left| \frac{m_1 - m_2}{1 + m_1m_2} \right|
+\]  
+
+   Here:  
+
+   - \( m_1 = 2 \), \( m_2 = 3 \)  
+
+\[
+\tan \theta = \left| \frac{2 - 3}{1 + (2)(3)} \right| = \left| \frac{-1}{7} \right| = \frac{1}{7}
+\]  
+
+   The angle \( \theta \) is:  
+
+\[
+\theta = \tan^{-1}\left(\frac{1}{7}\right)
+\]
+
+**Answer:** Intersection Point: \( (1, 5) \), Angle: \( \tan^{-1}\left(\frac{1}{7}\right) \).
+
+---
+
