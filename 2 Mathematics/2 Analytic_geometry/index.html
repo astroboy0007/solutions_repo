@@ -271,6 +271,34 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#equations-of-second-order-surfaces">Equations of second-order surfaces</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-write-the-equation-of-a-sphere-with-center-at-point-p-1-2-3-and-radius-r-3">Problem 1: Write the equation of a sphere with center at point \( P = (1, 2, 3) \) and radius \( r = 3 \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_19">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2-do-the-spheres-with-equations-x2-y2-z2-1-and-x2-y2-z2-2-have-any-common-points">Problem 2: Do the spheres with equations \( x^2 + y^2 + z^2 = 1 \) and \( x^2 + y^2 + z^2 = 2 \) have any common points?</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_20">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-3-what-curve-in-space-is-formed-by-the-intersection-of-the-sphere-x2-y2-z2-1-with-the-sphere-x-12-y2-z2-1-find-the-equation-of-this-curve">Problem 3: What curve in space is formed by the intersection of the sphere \( x^2 + y^2 + z^2 = 1 \) with the sphere \( (x - 1)^2 + y^2 + z^2 = 1 \)? Find the equation of this curve.</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_21">Solution:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-4-write-the-equation-of-the-tangent-plane-to-the-paraboloid-z-x-12-y2-1-at-point-p1-0-1">Problem 4: Write the equation of the tangent plane to the paraboloid \( z = (x - 1)^2 + y^2 + 1 \) at point \( P(1, 0, 1) \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_22">Solution:</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../3%20Calculus/">Calculus</a>
@@ -1078,6 +1106,103 @@ a^2 = 1 \quad \Rightarrow \quad a = 1
 <p><strong>Answer:</strong> The equation of the plane is:  </p>
 <div class="arithmatex">\[
 2x + 3y + 4z - 20 = 0
+\]</div>
+<hr/>
+<h2 id="equations-of-second-order-surfaces">Equations of second-order surfaces</h2>
+<h3 id="problem-1-write-the-equation-of-a-sphere-with-center-at-point-p-1-2-3-and-radius-r-3"><strong>Problem 1</strong>: Write the equation of a sphere with center at point <span class="arithmatex">\( P = (1, 2, 3) \)</span> and radius <span class="arithmatex">\( r = 3 \)</span>.</h3>
+<h4 id="solution_19">Solution:</h4>
+<p>The general equation of a sphere is given by:  </p>
+<div class="arithmatex">\[
+(x - h)^2 + (y - k)^2 + (z - l)^2 = r^2
+\]</div>
+<p>Substitute the center coordinates <span class="arithmatex">\( h = 1, k = 2, l = 3 \)</span> and the radius <span class="arithmatex">\( r = 3 \)</span>:  </p>
+<div class="arithmatex">\[
+(x - 1)^2 + (y - 2)^2 + (z - 3)^2 = 9
+\]</div>
+<p><strong>Answer:</strong> The equation of the sphere is:  </p>
+<div class="arithmatex">\[
+(x - 1)^2 + (y - 2)^2 + (z - 3)^2 = 9
+\]</div>
+<hr/>
+<h3 id="problem-2-do-the-spheres-with-equations-x2-y2-z2-1-and-x2-y2-z2-2-have-any-common-points"><strong>Problem 2</strong>: Do the spheres with equations <span class="arithmatex">\( x^2 + y^2 + z^2 = 1 \)</span> and <span class="arithmatex">\( x^2 + y^2 + z^2 = 2 \)</span> have any common points?</h3>
+<h4 id="solution_20">Solution:</h4>
+<p>The spheres <span class="arithmatex">\( x^2 + y^2 + z^2 = 1 \)</span> and <span class="arithmatex">\( x^2 + y^2 + z^2 = 2 \)</span> are concentric, as they both have the same center at <span class="arithmatex">\( (0, 0, 0) \)</span> but different radii:
+- The first sphere has radius <span class="arithmatex">\( r_1 = 1 \)</span>,
+- The second sphere has radius <span class="arithmatex">\( r_2 = \sqrt{2} \)</span>.</p>
+<p>Since the radii are different, the spheres do not intersect and have <strong>no common points</strong>.</p>
+<p><strong>Answer:</strong> No, the spheres do not have any common points.</p>
+<hr/>
+<h3 id="problem-3-what-curve-in-space-is-formed-by-the-intersection-of-the-sphere-x2-y2-z2-1-with-the-sphere-x-12-y2-z2-1-find-the-equation-of-this-curve"><strong>Problem 3</strong>: What curve in space is formed by the intersection of the sphere <span class="arithmatex">\( x^2 + y^2 + z^2 = 1 \)</span> with the sphere <span class="arithmatex">\( (x - 1)^2 + y^2 + z^2 = 1 \)</span>? Find the equation of this curve.</h3>
+<h4 id="solution_21">Solution:</h4>
+<p>To find the intersection curve:<br/>
+1. Write both sphere equations:<br/>
+   - Sphere 1: <span class="arithmatex">\( x^2 + y^2 + z^2 = 1 \)</span>,
+   - Sphere 2: <span class="arithmatex">\( (x - 1)^2 + y^2 + z^2 = 1 \)</span>.</p>
+<ol>
+<li>Expand Sphere 2:  </li>
+</ol>
+<div class="arithmatex">\[
+(x - 1)^2 + y^2 + z^2 = x^2 - 2x + 1 + y^2 + z^2 = 1
+\]</div>
+<p>Simplify:  </p>
+<div class="arithmatex">\[
+x^2 - 2x + 1 + y^2 + z^2 = 1 \quad \Rightarrow \quad x^2 + y^2 + z^2 - 2x = 0
+\]</div>
+<ol>
+<li>Substitute <span class="arithmatex">\( x^2 + y^2 + z^2 = 1 \)</span> (from Sphere 1) into Sphere 2:  </li>
+</ol>
+<div class="arithmatex">\[
+1 - 2x = 0 \quad \Rightarrow \quad x = \frac{1}{2}
+\]</div>
+<ol>
+<li>The intersection curve is a circle in the plane <span class="arithmatex">\( x = \frac{1}{2} \)</span> with radius:</li>
+<li>Substitute <span class="arithmatex">\( x = \frac{1}{2} \)</span> into Sphere 1:  </li>
+</ol>
+<div class="arithmatex">\[
+\left(\frac{1}{2}\right)^2 + y^2 + z^2 = 1 \quad \Rightarrow \quad \frac{1}{4} + y^2 + z^2 = 1
+\]</div>
+<p>Simplify:  </p>
+<div class="arithmatex">\[
+y^2 + z^2 = \frac{3}{4}
+\]</div>
+<p><strong>Answer:</strong> The intersection curve is a circle in the plane <span class="arithmatex">\( x = \frac{1}{2} \)</span> with the equation:  </p>
+<div class="arithmatex">\[
+y^2 + z^2 = \frac{3}{4}
+\]</div>
+<hr/>
+<h3 id="problem-4-write-the-equation-of-the-tangent-plane-to-the-paraboloid-z-x-12-y2-1-at-point-p1-0-1"><strong>Problem 4</strong>: Write the equation of the tangent plane to the paraboloid <span class="arithmatex">\( z = (x - 1)^2 + y^2 + 1 \)</span> at point <span class="arithmatex">\( P(1, 0, 1) \)</span>.</h3>
+<h4 id="solution_22">Solution:</h4>
+<p>The equation of the tangent plane to a surface <span class="arithmatex">\( z = f(x, y) \)</span> at point <span class="arithmatex">\( P(x_0, y_0, z_0) \)</span> is:  </p>
+<div class="arithmatex">\[
+z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+\]</div>
+<p>Where <span class="arithmatex">\( f_x \)</span> and <span class="arithmatex">\( f_y \)</span> are partial derivatives of <span class="arithmatex">\( f(x, y) \)</span>.</p>
+<ol>
+<li>Given <span class="arithmatex">\( f(x, y) = (x - 1)^2 + y^2 + 1 \)</span>, calculate partial derivatives:  </li>
+<li><span class="arithmatex">\( f_x = 2(x - 1) \)</span>,</li>
+<li>
+<p><span class="arithmatex">\( f_y = 2y \)</span>.</p>
+</li>
+<li>
+<p>Evaluate at <span class="arithmatex">\( P(1, 0, 1) \)</span>:  </p>
+</li>
+<li><span class="arithmatex">\( f_x(1, 0) = 2(1 - 1) = 0 \)</span>,</li>
+<li>
+<p><span class="arithmatex">\( f_y(1, 0) = 2(0) = 0 \)</span>.</p>
+</li>
+<li>
+<p>Write the tangent plane equation:  </p>
+</li>
+</ol>
+<div class="arithmatex">\[
+z - z_0 = 0(x - 1) + 0(y - 0)
+\]</div>
+<div class="arithmatex">\[
+z - 1 = 0 \quad \Rightarrow \quad z = 1
+\]</div>
+<p><strong>Answer:</strong> The equation of the tangent plane is:  </p>
+<div class="arithmatex">\[
+z = 1
 \]</div>
 <hr/>
 </div>
