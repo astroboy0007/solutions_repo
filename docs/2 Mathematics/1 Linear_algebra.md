@@ -570,13 +570,16 @@ Summary:
 - \(\text{det}(C) = -75\)  
 - \(\text{det}(D) = 231\)  
 
+---
+
 # 4. Determinants from the Gauss Method and Triangular Matrices
 
 Let's solve the determinants of the given matrices \( A \) and \( B \) by reducing them to upper triangular form and then taking the product of their diagonal elements.
 
 ---
 
-**Matrix \( A \):**
+**Matrix \( A \):**  
+
 $$
 A =
 \begin{pmatrix}
