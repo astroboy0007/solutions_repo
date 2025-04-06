@@ -1,6 +1,6 @@
 # Analytic geometry
 
-## Vectors
+## Vectors I
 
 
 ### Problem 1
@@ -165,6 +165,157 @@ Solve for \( c_1 \) and \( c_3 \):
 
 
 **Answer:** Cartesian coordinates in the given basis: \( c_1 = 3, c_2 = 3, c_3 = -1 \).
+
+---
+
+## Vectors II
+
+
+### Problem 1: **Perform vector addition and plot both vectors along with their sum**
+
+#### Given:
+- **Vector 1**: [2, 1]
+- **Vector 2**: [-1, 1]
+
+#### Solution:
+1. Add the vectors component-wise:  
+
+\[
+[2, 1] + [-1, 1] = [2 + (-1), 1 + 1] = [1, 2]
+\]  
+
+
+2. **Answer**:  
+   The sum of the vectors is \([1, 2]\).
+
+#### Python Code for Plotting:  
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the vectors
+vector_1 = np.array([2, 1])
+vector_2 = np.array([-1, 1])
+vector_sum = vector_1 + vector_2
+
+# Create a figure and axis
+plt.figure(figsize=(8, 8))
+
+# Plot vectors
+plt.quiver(0, 0, vector_1[0], vector_1[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector 1: [2, 1]')
+plt.quiver(0, 0, vector_2[0], vector_2[1], angles='xy', scale_units='xy', scale=1, color='green', label='Vector 2: [-1, 1]')
+plt.quiver(0, 0, vector_sum[0], vector_sum[1], angles='xy', scale_units='xy', scale=1, color='red', label='Sum: [1, 2]')
+
+# Add labels, grid, legend, and title
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.grid()
+plt.legend()
+plt.xlim(-2, 3)
+plt.ylim(-2, 3)
+plt.title("Vector Addition")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+# Show the plot
+plt.show()
+```
+
+---
+
+### Problem 2: **Calculate the area of the triangle spanned by vectors**
+
+#### Given:  
+- Vectors: **u** = [2, 1, 2], **v** = [-1, 1, 1]
+
+#### Solution:  
+1. Compute the cross product \( \mathbf{u} \times \mathbf{v} \):  
+
+\[
+\mathbf{u} \times \mathbf{v} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+2 & 1 & 2 \\
+-1 & 1 & 1
+\end{vmatrix}
+= \mathbf{i}(1 \cdot 1 - 2 \cdot 1) - \mathbf{j}(2 \cdot 1 - (-1) \cdot 2) + \mathbf{k}(2 \cdot 1 - (-1) \cdot 1)
+\]  
+
+\[
+= \mathbf{i}(1 - 2) - \mathbf{j}(2 + 2) + \mathbf{k}(2 + 1)
+\]  
+
+\[
+= -\mathbf{i} - 4\mathbf{j} + 3\mathbf{k}
+\]  
+
+   Cross product result: \([-1, -4, 3]\).
+
+2. Compute the magnitude of the cross product:  
+
+\[
+\|\mathbf{u} \times \mathbf{v}\| = \sqrt{(-1)^2 + (-4)^2 + 3^2} = \sqrt{1 + 16 + 9} = \sqrt{26}
+\]  
+
+
+3. The area of the triangle is half the magnitude:  
+
+\[
+\text{Area} = \frac{1}{2} \|\mathbf{u} \times \mathbf{v}\| = \frac{1}{2} \sqrt{26}
+\]  
+
+
+#### **Answer**:  
+
+The area of the triangle is \( \frac{\sqrt{26}}{2} \).
+
+---
+
+### Problem 3: **Calculate the volume of the parallelepiped spanned by vectors**
+
+#### Given:  
+- Vectors: **a** = [2, 1, -1], **b** = [-1, 1, 0], **c** = [1, 2, 1]
+
+#### Solution:  
+1. Compute the scalar triple product \( \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) \).
+
+2. Compute \( \mathbf{b} \times \mathbf{c} \):  
+
+\[
+\mathbf{b} \times \mathbf{c} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-1 & 1 & 0 \\
+1 & 2 & 1
+\end{vmatrix}
+= \mathbf{i}(1 \cdot 1 - 0 \cdot 2) - \mathbf{j}((-1) \cdot 1 - 0 \cdot 1) + \mathbf{k}((-1) \cdot 2 - 1 \cdot 1)
+\]  
+
+\[
+= \mathbf{i}(1) - \mathbf{j}(-1) + \mathbf{k}(-2 - 1)
+\]  
+
+\[
+= \mathbf{i}(1) + \mathbf{j}(1) + \mathbf{k}(-3)
+\]  
+
+   Result: \( [1, 1, -3] \).
+
+3. Compute \( \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) \):  
+
+\[
+\mathbf{a} \cdot [1, 1, -3] = (2)(1) + (1)(1) + (-1)(-3) = 2 + 1 + 3 = 6
+\]  
+
+
+4. The volume of the parallelepiped is the absolute value of the scalar triple product:  
+
+\[
+\text{Volume} = |6| = 6
+\]  
+
+
+#### **Answer**:  
+The volume of the parallelepiped is \( 6 \).
 
 ---
 
