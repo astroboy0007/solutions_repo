@@ -249,6 +249,28 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#equations-of-planes-in-space">Equations of planes in space</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-find-the-equation-of-the-plane-passing-through-points-a1-2-3-b3-4-5-and-c2-1-4">Problem 1: Find the equation of the plane passing through points \( A(1, 2, 3) \), \( B(3, 4, 5) \), and \( C(2, 1, 4) \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_17">Solution:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-compute-two-vectors-in-the-plane">Step 1: Compute two vectors in the plane</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-compute-the-normal-vector-mathbfn-using-the-cross-product">Step 2: Compute the normal vector \( \mathbf{n} \) using the cross product</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-write-the-equation-of-the-plane">Step 3: Write the equation of the plane</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2-find-the-equation-of-the-plane-passing-through-a1-2-3-and-parallel-to-the-plane-2x-3y-4z-5">Problem 2: Find the equation of the plane passing through \( A(1, 2, 3) \) and parallel to the plane \( 2x + 3y + 4z = 5 \).</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#solution_18">Solution:</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../3%20Calculus/">Calculus</a>
@@ -980,6 +1002,83 @@ x^2 = 1 + 1 = 2 \quad \Rightarrow \quad x = \pm\sqrt{2}
 a^2 = 1 \quad \Rightarrow \quad a = 1
 \]</div>
 <p><strong>Answer:</strong> The distance between the branches is <span class="arithmatex">\( 2 \)</span>.</p>
+<hr/>
+<h2 id="equations-of-planes-in-space">Equations of planes in space</h2>
+<h3 id="problem-1-find-the-equation-of-the-plane-passing-through-points-a1-2-3-b3-4-5-and-c2-1-4"><strong>Problem 1</strong>: Find the equation of the plane passing through points <span class="arithmatex">\( A(1, 2, 3) \)</span>, <span class="arithmatex">\( B(3, 4, 5) \)</span>, and <span class="arithmatex">\( C(2, 1, 4) \)</span>.</h3>
+<h4 id="solution_17">Solution:</h4>
+<p>To find the equation of a plane passing through three points, we use the vector equation:  </p>
+<div class="arithmatex">\[
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0
+\]</div>
+<p>Where:<br/>
+- <span class="arithmatex">\( \mathbf{n} \)</span> is the normal vector to the plane,
+- <span class="arithmatex">\( \mathbf{r}_0 \)</span> is a point on the plane (e.g., <span class="arithmatex">\( A(1, 2, 3) \)</span>),
+- <span class="arithmatex">\( \mathbf{r} \)</span> is a general point <span class="arithmatex">\( (x, y, z) \)</span>.</p>
+<h4 id="step-1-compute-two-vectors-in-the-plane">Step 1: Compute two vectors in the plane</h4>
+<p>Use points <span class="arithmatex">\( A, B, \)</span> and <span class="arithmatex">\( C \)</span> to form vectors:  </p>
+<div class="arithmatex">\[
+\mathbf{AB} = \mathbf{B} - \mathbf{A} = (3 - 1, 4 - 2, 5 - 3) = (2, 2, 2)
+\]</div>
+<div class="arithmatex">\[
+\mathbf{AC} = \mathbf{C} - \mathbf{A} = (2 - 1, 1 - 2, 4 - 3) = (1, -1, 1)
+\]</div>
+<h4 id="step-2-compute-the-normal-vector-mathbfn-using-the-cross-product">Step 2: Compute the normal vector <span class="arithmatex">\( \mathbf{n} \)</span> using the cross product</h4>
+<div class="arithmatex">\[
+\mathbf{n} = \mathbf{AB} \times \mathbf{AC} = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+2 &amp; 2 &amp; 2 \\
+1 &amp; -1 &amp; 1
+\end{vmatrix}
+\]</div>
+<div class="arithmatex">\[
+\mathbf{n} = \mathbf{i}((2)(1) - (2)(-1)) - \mathbf{j}((2)(1) - (2)(1)) + \mathbf{k}((2)(-1) - (2)(1))
+\]</div>
+<div class="arithmatex">\[
+\mathbf{n} = \mathbf{i}(2 + 2) - \mathbf{j}(2 - 2) + \mathbf{k}(-2 - 2)
+\]</div>
+<div class="arithmatex">\[
+\mathbf{n} = 4\mathbf{i} + 0\mathbf{j} - 4\mathbf{k}
+\]</div>
+<div class="arithmatex">\[
+\mathbf{n} = (4, 0, -4)
+\]</div>
+<h4 id="step-3-write-the-equation-of-the-plane">Step 3: Write the equation of the plane</h4>
+<div class="arithmatex">\[
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0
+\]</div>
+<p>Substitute <span class="arithmatex">\( \mathbf{n} = (4, 0, -4) \)</span> and <span class="arithmatex">\( \mathbf{r}_0 = (1, 2, 3) \)</span>:  </p>
+<div class="arithmatex">\[
+4(x - 1) + 0(y - 2) - 4(z - 3) = 0
+\]</div>
+<div class="arithmatex">\[
+4x - 4 - 4z + 12 = 0
+\]</div>
+<div class="arithmatex">\[
+4x - 4z + 8 = 0
+\]</div>
+<p><strong>Answer:</strong> The equation of the plane is:  </p>
+<div class="arithmatex">\[
+4x - 4z + 8 = 0
+\]</div>
+<hr/>
+<h3 id="problem-2-find-the-equation-of-the-plane-passing-through-a1-2-3-and-parallel-to-the-plane-2x-3y-4z-5"><strong>Problem 2</strong>: Find the equation of the plane passing through <span class="arithmatex">\( A(1, 2, 3) \)</span> and parallel to the plane <span class="arithmatex">\( 2x + 3y + 4z = 5 \)</span>.</h3>
+<h4 id="solution_18">Solution:</h4>
+<p>For a plane parallel to another plane, the normal vector remains the same. So, the normal vector of the plane is <span class="arithmatex">\( \mathbf{n} = [2, 3, 4] \)</span>.</p>
+<p>Substitute <span class="arithmatex">\( \mathbf{r}_0 = (1, 2, 3) \)</span> into the general equation:  </p>
+<div class="arithmatex">\[
+2(x - 1) + 3(y - 2) + 4(z - 3) = 0
+\]</div>
+<p>Simplify:  </p>
+<div class="arithmatex">\[
+2x - 2 + 3y - 6 + 4z - 12 = 0
+\]</div>
+<div class="arithmatex">\[
+2x + 3y + 4z - 20 = 0
+\]</div>
+<p><strong>Answer:</strong> The equation of the plane is:  </p>
+<div class="arithmatex">\[
+2x + 3y + 4z - 20 = 0
+\]</div>
 <hr/>
 </div>
 </div><footer>
