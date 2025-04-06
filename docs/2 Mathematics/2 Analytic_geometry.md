@@ -440,6 +440,7 @@ plt.ylabel('Y-axis')
 
 plt.show()
 ```
+![alt text](image-3.png)
 
 ---
 
