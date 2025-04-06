@@ -848,6 +848,7 @@ m^2 = 24 \quad \Rightarrow \quad m = \sqrt{24} = 2\sqrt{6}
 
 2. Solve for \( x \) using \( x^2 = 1 + y^2 \):  
    - For \( y = 1 \):  
+   
 \[
 x^2 = 1 + 1 = 2 \quad \Rightarrow \quad x = \pm\sqrt{2}
 \]  
