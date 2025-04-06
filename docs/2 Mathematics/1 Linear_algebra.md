@@ -1160,12 +1160,16 @@ Simplify:
 
 \[
 \frac{10 + 4y}{3} + 3y = 7
-\]
-Multiply through by 3 to eliminate the fraction:
+\]  
+
+Multiply through by 3 to eliminate the fraction:  
+
 \[
 10 + 4y + 9y = 21
-\]
-Combine terms:
+\]  
+
+Combine terms:  
+
 \[
 13y = 11 \quad \Rightarrow \quad y = \frac{11}{13}
 \]
