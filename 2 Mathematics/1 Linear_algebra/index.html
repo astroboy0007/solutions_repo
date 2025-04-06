@@ -755,7 +755,6 @@ $$</p>
 2. <span class="arithmatex">\(\text{det}(B) = 0\)</span></p>
 <hr/>
 <h1 id="5-inverse-of-a-matrix-from-the-formula">5. Inverse of a Matrix from the formula</h1>
-<p>Here’s the solution to the two problems, formatted in markdown:</p>
 <hr/>
 <p><strong>1. Find the inverse matrix for <span class="arithmatex">\( A \)</span>:</strong></p>
 <p>The given matrix is:</p>
@@ -927,6 +926,166 @@ A^{-1} =
    \text{Rank}(B) = 3
    $$</li>
 </ul>
+<hr/>
+<h1 id="6-inverse-of-a-matrix-using-the-gauss-method">6. Inverse of a Matrix using the Gauss Method</h1>
+<h3 id="matrix-a">Matrix A</h3>
+<p>Given:  </p>
+<div class="arithmatex">\[
+A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+\]</div>
+<h4 id="step-1-augment-matrix-a-with-the-identity-matrix">Step 1: Augment Matrix A with the Identity Matrix</h4>
+<div class="arithmatex">\[
+\text{Augmented Matrix} =
+\begin{pmatrix}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+3 &amp; 4 &amp; 0 &amp; 1
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations">Step 2: Perform Row Operations</h4>
+<ol>
+<li>Divide the first row by 1 (make the pivot of the first column equal to 1):  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+3 &amp; 4 &amp; 0 &amp; 1
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; -2 &amp; -3 &amp; 1
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Divide the second row by -2 (make the pivot of the second column equal to 1):  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 2 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1.5 &amp; -0.5
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Perform elimination to make all entries except the pivots in the second column equal to 0:  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0 &amp; -2 &amp; 1 \\
+0 &amp; 1 &amp; 1.5 &amp; -0.5
+\end{pmatrix}
+\]</div>
+<h4 id="step-3-extract-the-inverse">Step 3: Extract the Inverse</h4>
+<p>The inverse of A is on the right-hand side:  </p>
+<div class="arithmatex">\[
+A^{-1} =
+\begin{pmatrix}
+-2 &amp; 1 \\
+1.5 &amp; -0.5
+\end{pmatrix}
+\]</div>
+<hr/>
+<h3 id="matrix-b">Matrix B</h3>
+<p>Given:  </p>
+<div class="arithmatex">\[
+B = \begin{pmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{pmatrix}
+\]</div>
+<h4 id="step-1-augment-matrix-b-with-the-identity-matrix">Step 1: Augment Matrix B with the Identity Matrix</h4>
+<div class="arithmatex">\[
+\text{Augmented Matrix} =
+\begin{pmatrix}
+2 &amp; 1 &amp; 1 &amp; 0 \\
+5 &amp; 3 &amp; 0 &amp; 1
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations_1">Step 2: Perform Row Operations</h4>
+<ol>
+<li>Divide the first row by 2 (make the pivot of the first column equal to 1):  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; 0 \\
+5 &amp; 3 &amp; 0 &amp; 1
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Subtract 5 times the first row from the second row to make the second column’s first entry zero:  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; 0 \\
+0 &amp; 0.5 &amp; -2.5 &amp; 1
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Divide the second row by 0.5 (make the pivot of the second column equal to 1):  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0.5 &amp; 0.5 &amp; 0 \\
+0 &amp; 1 &amp; -5 &amp; 2
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Subtract 0.5 times the second row from the first row to make the second column’s first entry zero:  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0 &amp; 3 &amp; -1 \\
+0 &amp; 1 &amp; -5 &amp; 2
+\end{pmatrix}
+\]</div>
+<h4 id="step-3-extract-the-inverse_1">Step 3: Extract the Inverse</h4>
+<p>The inverse of B is on the right-hand side:  </p>
+<div class="arithmatex">\[
+B^{-1} =
+\begin{pmatrix}
+3 &amp; -1 \\
+-5 &amp; 2
+\end{pmatrix}
+\]</div>
+<hr/>
+<h3 id="matrix-c">Matrix C</h3>
+<p>Given:  </p>
+<div class="arithmatex">\[
+C = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}
+\]</div>
+<h4 id="step-1-augment-matrix-c-with-the-identity-matrix">Step 1: Augment Matrix C with the Identity Matrix</h4>
+<div class="arithmatex">\[
+\text{Augmented Matrix} =
+\begin{pmatrix}
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 2 &amp; 0 &amp; 1
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations_2">Step 2: Perform Row Operations</h4>
+<ol>
+<li>Swap the rows to make the pivot of the first column non-zero:  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 2 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 1 &amp; 0
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Subtract 2 times the second row from the first row to make the second column’s first entry zero:  </li>
+</ol>
+<div class="arithmatex">\[
+\begin{pmatrix}
+1 &amp; 0 &amp; -2 &amp; 1 \\
+0 &amp; 1 &amp; 1 &amp; 0
+\end{pmatrix}
+\]</div>
+<h4 id="step-3-extract-the-inverse_2">Step 3: Extract the Inverse</h4>
+<p>The inverse of C is on the right-hand side:  </p>
+<div class="arithmatex">\[
+C^{-1} =
+\begin{pmatrix}
+-2 &amp; 1 \\
+1 &amp; 0
+\end{pmatrix}
+\]</div>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
