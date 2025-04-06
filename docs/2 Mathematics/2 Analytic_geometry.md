@@ -1001,3 +1001,132 @@ Simplify:
 
 ---
 
+## Equations of second-order surfaces
+
+### **Problem 1**: Write the equation of a sphere with center at point \( P = (1, 2, 3) \) and radius \( r = 3 \).
+
+#### Solution:  
+The general equation of a sphere is given by:  
+
+\[
+(x - h)^2 + (y - k)^2 + (z - l)^2 = r^2
+\]  
+
+Substitute the center coordinates \( h = 1, k = 2, l = 3 \) and the radius \( r = 3 \):  
+
+\[
+(x - 1)^2 + (y - 2)^2 + (z - 3)^2 = 9
+\]  
+
+
+**Answer:** The equation of the sphere is:  
+
+\[
+(x - 1)^2 + (y - 2)^2 + (z - 3)^2 = 9
+\]  
+
+
+---
+
+### **Problem 2**: Do the spheres with equations \( x^2 + y^2 + z^2 = 1 \) and \( x^2 + y^2 + z^2 = 2 \) have any common points?
+
+#### Solution:  
+The spheres \( x^2 + y^2 + z^2 = 1 \) and \( x^2 + y^2 + z^2 = 2 \) are concentric, as they both have the same center at \( (0, 0, 0) \) but different radii:
+- The first sphere has radius \( r_1 = 1 \),
+- The second sphere has radius \( r_2 = \sqrt{2} \).
+
+Since the radii are different, the spheres do not intersect and have **no common points**.
+
+**Answer:** No, the spheres do not have any common points.
+
+---
+
+### **Problem 3**: What curve in space is formed by the intersection of the sphere \( x^2 + y^2 + z^2 = 1 \) with the sphere \( (x - 1)^2 + y^2 + z^2 = 1 \)? Find the equation of this curve.
+
+#### Solution:  
+To find the intersection curve:  
+1. Write both sphere equations:  
+   - Sphere 1: \( x^2 + y^2 + z^2 = 1 \),
+   - Sphere 2: \( (x - 1)^2 + y^2 + z^2 = 1 \).
+
+2. Expand Sphere 2:  
+
+\[
+(x - 1)^2 + y^2 + z^2 = x^2 - 2x + 1 + y^2 + z^2 = 1
+\]  
+
+Simplify:  
+
+\[
+x^2 - 2x + 1 + y^2 + z^2 = 1 \quad \Rightarrow \quad x^2 + y^2 + z^2 - 2x = 0
+\]  
+
+
+3. Substitute \( x^2 + y^2 + z^2 = 1 \) (from Sphere 1) into Sphere 2:  
+
+\[
+1 - 2x = 0 \quad \Rightarrow \quad x = \frac{1}{2}
+\]  
+
+
+4. The intersection curve is a circle in the plane \( x = \frac{1}{2} \) with radius:
+   - Substitute \( x = \frac{1}{2} \) into Sphere 1:  
+
+\[
+\left(\frac{1}{2}\right)^2 + y^2 + z^2 = 1 \quad \Rightarrow \quad \frac{1}{4} + y^2 + z^2 = 1
+\]  
+
+Simplify:  
+
+\[
+y^2 + z^2 = \frac{3}{4}
+\]  
+
+
+**Answer:** The intersection curve is a circle in the plane \( x = \frac{1}{2} \) with the equation:  
+
+\[
+y^2 + z^2 = \frac{3}{4}
+\]  
+
+
+---
+
+### **Problem 4**: Write the equation of the tangent plane to the paraboloid \( z = (x - 1)^2 + y^2 + 1 \) at point \( P(1, 0, 1) \).
+
+#### Solution:  
+The equation of the tangent plane to a surface \( z = f(x, y) \) at point \( P(x_0, y_0, z_0) \) is:  
+
+\[
+z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+\]  
+
+Where \( f_x \) and \( f_y \) are partial derivatives of \( f(x, y) \).
+
+1. Given \( f(x, y) = (x - 1)^2 + y^2 + 1 \), calculate partial derivatives:  
+   - \( f_x = 2(x - 1) \),
+   - \( f_y = 2y \).
+
+2. Evaluate at \( P(1, 0, 1) \):  
+   - \( f_x(1, 0) = 2(1 - 1) = 0 \),
+   - \( f_y(1, 0) = 2(0) = 0 \).
+
+3. Write the tangent plane equation:  
+
+\[
+z - z_0 = 0(x - 1) + 0(y - 0)
+\]  
+
+\[
+z - 1 = 0 \quad \Rightarrow \quad z = 1
+\]
+
+**Answer:** The equation of the tangent plane is:  
+
+\[
+z = 1
+\]  
+
+
+---
+
