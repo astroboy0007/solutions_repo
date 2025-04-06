@@ -194,6 +194,7 @@ $$
 $$  
 
 **3. Matrix \(C\):**  
+
 $$
 C =
 \begin{pmatrix}
@@ -384,6 +385,19 @@ A =
 3 & 2 & 1
 \end{pmatrix}
 $$
+
+
+Matrix \( A \):
+
+$$
+A =
+\begin{pmatrix}
+2 & 3 & 1 \\
+1 & 4 & 0 \\
+3 & 2 & 1
+\end{pmatrix}
+$$
+
 
 To calculate the determinant:
 
