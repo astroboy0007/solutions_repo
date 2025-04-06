@@ -652,3 +652,235 @@ y = 2(1) + 3 = 5
 
 ---
 
+## 15. Equations of second-order curves (conic sections)
+
+
+### **Problem 1**: Find the equation of a circle with center \( A(1, 2) \) and radius \( r = 3 \).
+
+#### Solution:  
+The equation of a circle is:  
+
+\[
+(x - h)^2 + (y - k)^2 = r^2
+\]  
+
+Substitute \( h = 1 \), \( k = 2 \), and \( r = 3 \):  
+
+\[
+(x - 1)^2 + (y - 2)^2 = 3^2
+\]  
+
+\[
+(x - 1)^2 + (y - 2)^2 = 9
+\]  
+
+
+**Answer:** The equation of the circle is:  
+
+\[
+(x - 1)^2 + (y - 2)^2 = 9
+\]  
+
+
+---
+
+### **Problem 2**: Find the equation of a parabola intersecting the \( Ox \)-axis at points \( x = 2, x = 4 \), and passing through \( y(3) = 1 \).
+
+#### Solution:  
+
+The general form of a parabola intersecting the \( Ox \)-axis is:  
+
+\[
+y = a(x - x_1)(x - x_2)
+\]  
+
+Here, the roots are \( x_1 = 2 \) and \( x_2 = 4 \). So:  
+
+\[
+y = a(x - 2)(x - 4)
+\]  
+
+Substitute \( x = 3 \), \( y = 1 \) to find \( a \):  
+
+\[
+1 = a(3 - 2)(3 - 4)
+\]  
+
+\[
+1 = a(1)(-1) \quad \Rightarrow \quad a = -1
+\]  
+
+
+The equation is:  
+
+\[
+y = -1(x - 2)(x - 4)
+\]  
+
+\[
+y = -(x^2 - 6x + 8)
+\]  
+
+\[
+y = -x^2 + 6x - 8
+\]  
+
+
+**Answer:** The equation of the parabola is:  
+
+\[
+y = -x^2 + 6x - 8
+\]  
+
+
+---
+
+### **Problem 3**: Find the center of the ellipse with the equation \( x^2 + 4y^2 - 4x - 16y + 16 = 0 \).
+
+#### Solution:  
+Rewrite the equation in standard form by completing the square:  
+1. Group \( x \)-terms and \( y \)-terms:  
+
+\[
+(x^2 - 4x) + (4y^2 - 16y) = -16
+\]  
+
+
+2. Complete the square for \( x \)-terms:  
+
+\[
+x^2 - 4x = (x - 2)^2 - 4
+\]  
+
+
+3. Complete the square for \( y \)-terms:  
+
+\[
+4y^2 - 16y = 4[(y^2 - 4y)] = 4[(y - 2)^2 - 4] = 4(y - 2)^2 - 16
+\]  
+
+
+4. Substitute back:  
+
+\[
+(x - 2)^2 - 4 + 4(y - 2)^2 - 16 = -16
+\]  
+
+\[
+(x - 2)^2 + 4(y - 2)^2 = 4
+\]  
+
+
+The standard form is:  
+
+\[
+\frac{(x - 2)^2}{4} + \frac{(y - 2)^2}{1} = 1
+\]  
+
+
+The center is \( (2, 2) \).
+
+**Answer:** The center of the ellipse is \( (2, 2) \).
+
+---
+
+### **Problem 4**: Find the slope (\( m > 0 \)) of the line \( y = mx - 5 \) that is tangent to the circle \( x^2 + y^2 = 1 \).
+
+#### Solution:  
+
+The slope \( m \) satisfies the tangency condition:  
+
+\[
+\text{Distance from the center } (0, 0) \text{ to the line } y = mx - 5 \text{ equals the radius } r = 1.
+\]  
+
+
+The distance from \( (0, 0) \) to \( y = mx - 5 \) is:  
+
+\[
+\text{Distance} = \frac{|c|}{\sqrt{1 + m^2}} = \frac{|-5|}{\sqrt{1 + m^2}}
+\]  
+
+
+Set the distance equal to the radius:  
+
+\[
+\frac{5}{\sqrt{1 + m^2}} = 1
+\]  
+
+
+Solve for \( m \):  
+
+\[
+5 = \sqrt{1 + m^2}
+\]  
+
+\[
+25 = 1 + m^2
+\]  
+
+\[
+m^2 = 24 \quad \Rightarrow \quad m = \sqrt{24} = 2\sqrt{6}
+\]  
+
+
+**Answer:** The slope of the tangent line is \( m = 2\sqrt{6} \).
+
+---
+
+### **Problem 5**: Find the intersection points of the hyperbola \( x^2 - y^2 = 1 \) with the ellipse \( x^2 + 4y^2 = 6 \).
+
+#### Solution:  
+1. Substitute \( x^2 = 1 + y^2 \) from \( x^2 - y^2 = 1 \) into \( x^2 + 4y^2 = 6 \):  
+
+\[
+(1 + y^2) + 4y^2 = 6
+\]  
+
+\[
+1 + 5y^2 = 6
+\]  
+
+\[
+5y^2 = 5 \quad \Rightarrow \quad y^2 = 1 \quad \Rightarrow \quad y = \pm 1
+\]  
+
+
+2. Solve for \( x \) using \( x^2 = 1 + y^2 \):  
+   - For \( y = 1 \):  
+\[
+x^2 = 1 + 1 = 2 \quad \Rightarrow \quad x = \pm\sqrt{2}
+\]  
+
+   - For \( y = -1 \):  
+
+\[
+x^2 = 1 + 1 = 2 \quad \Rightarrow \quad x = \pm\sqrt{2}
+\]  
+
+
+**Answer:** The intersection points are:  
+
+\[
+(\sqrt{2}, 1), \, (-\sqrt{2}, 1), \, (\sqrt{2}, -1), \, (-\sqrt{2}, -1)
+\]  
+
+
+---
+
+### **Problem 6**: Find the distance between the branches of the hyperbola \( x^2 - y^2 = 1 \).
+
+#### Solution:  
+For a hyperbola \( x^2 - y^2 = a^2 \), the distance between the branches is given by \( 2a \).
+
+Here:  
+
+\[
+a^2 = 1 \quad \Rightarrow \quad a = 1
+\]  
+
+
+**Answer:** The distance between the branches is \( 2 \).
+
+---
+
