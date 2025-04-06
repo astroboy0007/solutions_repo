@@ -652,7 +652,7 @@ y = 2(1) + 3 = 5
 
 ---
 
-## 15. Equations of second-order curves (conic sections)
+## Equations of second-order curves (conic sections)
 
 
 ### **Problem 1**: Find the equation of a circle with center \( A(1, 2) \) and radius \( r = 3 \).
@@ -848,7 +848,7 @@ m^2 = 24 \quad \Rightarrow \quad m = \sqrt{24} = 2\sqrt{6}
 
 2. Solve for \( x \) using \( x^2 = 1 + y^2 \):  
    - For \( y = 1 \):  
-   
+
 \[
 x^2 = 1 + 1 = 2 \quad \Rightarrow \quad x = \pm\sqrt{2}
 \]  
