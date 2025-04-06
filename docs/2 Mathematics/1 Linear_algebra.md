@@ -624,7 +624,8 @@ $$
 
 ---
 
-**Matrix \( B \):**
+**Matrix \( B \):**  
+
 $$
 B =
 \begin{pmatrix}
@@ -641,7 +642,8 @@ First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) a
    R_2 \to R_2 - 4 \cdot R_1
    $$
 
-   Performing the operation:
+   Performing the operation:  
+
    $$
    R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} - 4 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
    $$
@@ -657,7 +659,8 @@ First, eliminate the elements below the diagonal in column 1 (\( R_2(1) = 4 \) a
    R_3 \to R_3 - 7 \cdot R_1
    $$
 
-   Performing the operation:
+   Performing the operation:  
+
    $$
    R_3 = \begin{pmatrix} 7 & 8 & 9 \end{pmatrix} - 7 \cdot \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}
    $$
@@ -716,8 +719,8 @@ $$
 
 ---
 
-Final Results:
-1. \(\text{det}(A) = -102\)
+Final Results:  
+1. \(\text{det}(A) = -102\)  
 2. \(\text{det}(B) = 0\)
 
 ---
