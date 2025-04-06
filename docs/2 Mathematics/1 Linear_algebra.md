@@ -1724,3 +1724,99 @@ x = 1, \, y = -1, \, z = 0, \, t = 2
 \]
 
 ---
+
+# 10. Linear equations by Matrix Inversion
+
+
+### **System 1**
+
+The system is:  
+
+\[
+\begin{cases} 
+x + 2y + 3z = 5, \\
+2y + 3z = 4, \\
+3z = 3.
+\end{cases}
+\]  
+
+#### Step 1: Write the Augmented Matrix
+Rewrite the system to fit a matrix format. The second and third equations can be modified as follows:  
+
+- Add \( 0x \) to the second and third equations:  
+
+  \[
+  0x + 2y + 3z = 4 \quad \text{and} \quad 0x + 0y + 3z = 3.
+  \]  
+
+Thus, the coefficient matrix \( A \), variable matrix \( \mathbf{X} \), and constant matrix \( \mathbf{B} \) are:  
+
+\[
+A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 2 & 3 \\ 0 & 0 & 3 \end{pmatrix}, \quad 
+\mathbf{X} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} 5 \\ 4 \\ 3 \end{pmatrix}.
+\]  
+
+#### Step 2: Find the Inverse of \( A \)
+Compute the inverse of matrix \( A \). First, find the determinant:  
+
+\[
+\text{det}(A) = 1(2 \cdot 3 - 3 \cdot 0) - 2(0 \cdot 3 - 3 \cdot 0) + 3(0 \cdot 3 - 2 \cdot 0) = 6.
+\]  
+
+Since \( \text{det}(A) \neq 0 \), the matrix is invertible.
+
+Find \( A^{-1} \) (inverse of \( A \)) using the adjoint method or row reduction.
+
+#### Step 3: Solve for \( \mathbf{X} \)  
+
+Using the formula:  
+
+\[
+\mathbf{X} = A^{-1} \cdot \mathbf{B},
+\]  
+
+calculate \( \mathbf{X} \) to find \( x, y, z \).
+
+---
+
+### **System 2**
+
+The system is:  
+
+\[
+\begin{cases} 
+x_1 + 2x_2 + 3x_3 = 41, \\
+4x_1 + 5x_2 + 6x_3 = 93, \\
+7x_1 + 8x_2 + 9x_3 = 145.
+\end{cases}
+\]  
+
+#### Step 1: Write the Matrix Form  
+
+\[
+A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}, \quad 
+\mathbf{X} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} 41 \\ 93 \\ 145 \end{pmatrix}.
+\]  
+
+#### Step 2: Check the Determinant of \( A \)  
+
+\[
+\text{det}(A) = 1 \cdot (5 \cdot 9 - 6 \cdot 8) - 2 \cdot (4 \cdot 9 - 6 \cdot 7) + 3 \cdot (4 \cdot 8 - 5 \cdot 7).
+\]  
+
+Simplify:  
+
+\[
+\text{det}(A) = 1(45 - 48) - 2(36 - 42) + 3(32 - 35),
+\]  
+
+\[
+\text{det}(A) = -3 + 12 - 9 = 0.
+\]  
+
+Since \( \text{det}(A) = 0 \), the matrix is singular, and its inverse does not exist. Therefore, this system cannot be solved using the inverse matrix method.
+
+---
+
