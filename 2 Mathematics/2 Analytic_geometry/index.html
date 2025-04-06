@@ -101,7 +101,7 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current" href="#">Analytic geometry</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a>
+<li class="toctree-l2"><a class="reference internal" href="#vectors-i">Vectors I</a>
 <ul>
 <li class="toctree-l3"><a class="reference internal" href="#problem-1">Problem 1</a>
 </li>
@@ -112,6 +112,40 @@
 <li class="toctree-l3"><a class="reference internal" href="#problem-4">Problem 4</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#problem-5">Problem 5</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vectors-ii">Vectors II</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-perform-vector-addition-and-plot-both-vectors-along-with-their-sum">Problem 1: Perform vector addition and plot both vectors along with their sum</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#given">Given:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#solution">Solution:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#python-code-for-plotting">Python Code for Plotting:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2-calculate-the-area-of-the-triangle-spanned-by-vectors">Problem 2: Calculate the area of the triangle spanned by vectors</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#given_1">Given:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#solution_1">Solution:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#answer">Answer:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-3-calculate-the-volume-of-the-parallelepiped-spanned-by-vectors">Problem 3: Calculate the volume of the parallelepiped spanned by vectors</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#given_2">Given:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#solution_2">Solution:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#answer_1">Answer:</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -185,7 +219,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="analytic-geometry">Analytic geometry</h1>
-<h2 id="vectors">Vectors</h2>
+<h2 id="vectors-i">Vectors I</h2>
 <h3 id="problem-1">Problem 1</h3>
 <p><strong>Question:</strong> By what number should vector <strong>a</strong> = [3, 4] be multiplied so that its length is equal to 1?</p>
 <p><strong>Solution:</strong><br/>
@@ -310,6 +344,139 @@ c_1(1) + c_2(0) - c_3(1) = 4.
 3 + c_3 = 2 \quad \Rightarrow \quad c_3 = -1.
 \]</div>
 <p><strong>Answer:</strong> Cartesian coordinates in the given basis: <span class="arithmatex">\( c_1 = 3, c_2 = 3, c_3 = -1 \)</span>.</p>
+<hr/>
+<h2 id="vectors-ii">Vectors II</h2>
+<h3 id="problem-1-perform-vector-addition-and-plot-both-vectors-along-with-their-sum">Problem 1: <strong>Perform vector addition and plot both vectors along with their sum</strong></h3>
+<h4 id="given">Given:</h4>
+<ul>
+<li><strong>Vector 1</strong>: [2, 1]</li>
+<li><strong>Vector 2</strong>: [-1, 1]</li>
+</ul>
+<h4 id="solution">Solution:</h4>
+<ol>
+<li>Add the vectors component-wise:  </li>
+</ol>
+<div class="arithmatex">\[
+[2, 1] + [-1, 1] = [2 + (-1), 1 + 1] = [1, 2]
+\]</div>
+<ol>
+<li><strong>Answer</strong>:<br/>
+   The sum of the vectors is <span class="arithmatex">\([1, 2]\)</span>.</li>
+</ol>
+<h4 id="python-code-for-plotting">Python Code for Plotting:</h4>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the vectors
+vector_1 = np.array([2, 1])
+vector_2 = np.array([-1, 1])
+vector_sum = vector_1 + vector_2
+
+# Create a figure and axis
+plt.figure(figsize=(8, 8))
+
+# Plot vectors
+plt.quiver(0, 0, vector_1[0], vector_1[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector 1: [2, 1]')
+plt.quiver(0, 0, vector_2[0], vector_2[1], angles='xy', scale_units='xy', scale=1, color='green', label='Vector 2: [-1, 1]')
+plt.quiver(0, 0, vector_sum[0], vector_sum[1], angles='xy', scale_units='xy', scale=1, color='red', label='Sum: [1, 2]')
+
+# Add labels, grid, legend, and title
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.grid()
+plt.legend()
+plt.xlim(-2, 3)
+plt.ylim(-2, 3)
+plt.title("Vector Addition")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+# Show the plot
+plt.show()
+</code></pre>
+<hr/>
+<h3 id="problem-2-calculate-the-area-of-the-triangle-spanned-by-vectors">Problem 2: <strong>Calculate the area of the triangle spanned by vectors</strong></h3>
+<h4 id="given_1">Given:</h4>
+<ul>
+<li>Vectors: <strong>u</strong> = [2, 1, 2], <strong>v</strong> = [-1, 1, 1]</li>
+</ul>
+<h4 id="solution_1">Solution:</h4>
+<ol>
+<li>Compute the cross product <span class="arithmatex">\( \mathbf{u} \times \mathbf{v} \)</span>:  </li>
+</ol>
+<div class="arithmatex">\[
+\mathbf{u} \times \mathbf{v} = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+2 &amp; 1 &amp; 2 \\
+-1 &amp; 1 &amp; 1
+\end{vmatrix}
+= \mathbf{i}(1 \cdot 1 - 2 \cdot 1) - \mathbf{j}(2 \cdot 1 - (-1) \cdot 2) + \mathbf{k}(2 \cdot 1 - (-1) \cdot 1)
+\]</div>
+<div class="arithmatex">\[
+= \mathbf{i}(1 - 2) - \mathbf{j}(2 + 2) + \mathbf{k}(2 + 1)
+\]</div>
+<div class="arithmatex">\[
+= -\mathbf{i} - 4\mathbf{j} + 3\mathbf{k}
+\]</div>
+<p>Cross product result: <span class="arithmatex">\([-1, -4, 3]\)</span>.</p>
+<ol>
+<li>Compute the magnitude of the cross product:  </li>
+</ol>
+<div class="arithmatex">\[
+\|\mathbf{u} \times \mathbf{v}\| = \sqrt{(-1)^2 + (-4)^2 + 3^2} = \sqrt{1 + 16 + 9} = \sqrt{26}
+\]</div>
+<ol>
+<li>The area of the triangle is half the magnitude:  </li>
+</ol>
+<div class="arithmatex">\[
+\text{Area} = \frac{1}{2} \|\mathbf{u} \times \mathbf{v}\| = \frac{1}{2} \sqrt{26}
+\]</div>
+<h4 id="answer"><strong>Answer</strong>:</h4>
+<p>The area of the triangle is <span class="arithmatex">\( \frac{\sqrt{26}}{2} \)</span>.</p>
+<hr/>
+<h3 id="problem-3-calculate-the-volume-of-the-parallelepiped-spanned-by-vectors">Problem 3: <strong>Calculate the volume of the parallelepiped spanned by vectors</strong></h3>
+<h4 id="given_2">Given:</h4>
+<ul>
+<li>Vectors: <strong>a</strong> = [2, 1, -1], <strong>b</strong> = [-1, 1, 0], <strong>c</strong> = [1, 2, 1]</li>
+</ul>
+<h4 id="solution_2">Solution:</h4>
+<ol>
+<li>
+<p>Compute the scalar triple product <span class="arithmatex">\( \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) \)</span>.</p>
+</li>
+<li>
+<p>Compute <span class="arithmatex">\( \mathbf{b} \times \mathbf{c} \)</span>:  </p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\mathbf{b} \times \mathbf{c} = \begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+-1 &amp; 1 &amp; 0 \\
+1 &amp; 2 &amp; 1
+\end{vmatrix}
+= \mathbf{i}(1 \cdot 1 - 0 \cdot 2) - \mathbf{j}((-1) \cdot 1 - 0 \cdot 1) + \mathbf{k}((-1) \cdot 2 - 1 \cdot 1)
+\]</div>
+<div class="arithmatex">\[
+= \mathbf{i}(1) - \mathbf{j}(-1) + \mathbf{k}(-2 - 1)
+\]</div>
+<div class="arithmatex">\[
+= \mathbf{i}(1) + \mathbf{j}(1) + \mathbf{k}(-3)
+\]</div>
+<p>Result: <span class="arithmatex">\( [1, 1, -3] \)</span>.</p>
+<ol>
+<li>Compute <span class="arithmatex">\( \mathbf{a} \cdot (\mathbf{b} \times \mathbf{c}) \)</span>:  </li>
+</ol>
+<div class="arithmatex">\[
+\mathbf{a} \cdot [1, 1, -3] = (2)(1) + (1)(1) + (-1)(-3) = 2 + 1 + 3 = 6
+\]</div>
+<ol>
+<li>The volume of the parallelepiped is the absolute value of the scalar triple product:  </li>
+</ol>
+<div class="arithmatex">\[
+\text{Volume} = |6| = 6
+\]</div>
+<h4 id="answer_1"><strong>Answer</strong>:</h4>
+<p>The volume of the parallelepiped is <span class="arithmatex">\( 6 \)</span>.</p>
 <hr/>
 </div>
 </div><footer>
