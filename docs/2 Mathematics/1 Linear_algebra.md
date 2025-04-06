@@ -1304,3 +1304,99 @@ Simplify:
 x = -\frac{1}{4}, \, y = 4 - 3(-\frac{1}{4}), \, z = \frac{15 - 6(-\frac{1}{4})}{2}
 \]
 
+
+---
+
+### **System 4**  
+Equations:  
+
+1. \( 5x + 2y - z = 7 \)
+2. \( 3x - 4y + 2z = -5 \)
+3. \( 2x + y - 3z = 4 \)
+
+#### Step 1: Solve Equation 1 for \( z \)  
+From \( 5x + 2y - z = 7 \), solve for \( z \):  
+
+\[
+z = 5x + 2y - 7
+\]
+
+#### Step 2: Substitute \( z \) into Equations 2 and 3  
+Substitute \( z = 5x + 2y - 7 \) into Equation 2:  
+
+\[
+3x - 4y + 2(5x + 2y - 7) = -5
+\]  
+
+Simplify:  
+
+\[
+3x - 4y + 10x + 4y - 14 = -5
+\]  
+
+\[
+13x - 14 = -5 \quad \Rightarrow \quad 13x = 9 \quad \Rightarrow \quad x = \frac{9}{13}
+\]  
+
+
+Substitute \( z = 5x + 2y - 7 \) into Equation 3:  
+
+\[
+2x + y - 3(5x + 2y - 7) = 4
+\]  
+
+Simplify:  
+
+\[
+2x + y - 15x - 6y + 21 = 4
+\]  
+
+\[
+-13x - 5y + 21 = 4
+\]  
+
+Substitute \( x = \frac{9}{13} \):  
+
+\[
+-13\left(\frac{9}{13}\right) - 5y + 21 = 4
+\]  
+
+\[
+-9 - 5y + 21 = 4 \quad \Rightarrow \quad 12 - 5y = 4
+\]  
+
+\[
+-5y = -8 \quad \Rightarrow \quad y = \frac{8}{5}
+\]  
+
+
+#### Step 3: Solve for \( z \)  
+Substitute \( x = \frac{9}{13} \) and \( y = \frac{8}{5} \) into \( z = 5x + 2y - 7 \):  
+
+\[
+z = 5\left(\frac{9}{13}\right) + 2\left(\frac{8}{5}\right) - 7
+\]  
+
+\[
+z = \frac{45}{13} + \frac{16}{5} - 7
+\]  
+
+Find the common denominator (65):  
+
+\[
+z = \frac{225}{65} + \frac{208}{65} - \frac{455}{65}
+\]  
+
+\[
+z = \frac{225 + 208 - 455}{65} = \frac{-22}{65}
+\]  
+
+
+---
+
+**Solution for System 4**:  
+
+\[
+x = \frac{9}{13}, \, y = \frac{8}{5}, \, z = \frac{-22}{65}
+\]
+
