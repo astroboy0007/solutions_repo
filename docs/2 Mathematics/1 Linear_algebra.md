@@ -727,7 +727,6 @@ Final Results:
 
 # 5. Inverse of a Matrix from the formula
 
-Here’s the solution to the two problems, formatted in markdown:
 
 ---
 
@@ -948,3 +947,193 @@ $$
    $$
    \text{Rank}(B) = 3
    $$
+
+
+---
+
+# 6. Inverse of a Matrix using the Gauss Method
+
+### Matrix A
+Given:  
+
+$$
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+$$
+
+#### Step 1: Augment Matrix A with the Identity Matrix  
+
+$$
+\text{Augmented Matrix} =
+\begin{pmatrix}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{pmatrix}
+$$
+
+#### Step 2: Perform Row Operations  
+1. Divide the first row by 1 (make the pivot of the first column equal to 1):  
+
+$$
+\begin{pmatrix}
+1 & 2 & 1 & 0 \\
+3 & 4 & 0 & 1
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 2 & 1 & 0 \\
+0 & -2 & -3 & 1
+\end{pmatrix}
+$$
+
+2. Divide the second row by -2 (make the pivot of the second column equal to 1):  
+
+$$
+\begin{pmatrix}
+1 & 2 & 1 & 0 \\
+0 & 1 & 1.5 & -0.5
+\end{pmatrix}
+$$
+
+3. Perform elimination to make all entries except the pivots in the second column equal to 0:  
+
+$$
+\begin{pmatrix}
+1 & 0 & -2 & 1 \\
+0 & 1 & 1.5 & -0.5
+\end{pmatrix}
+$$
+
+#### Step 3: Extract the Inverse
+The inverse of A is on the right-hand side:  
+
+$$
+A^{-1} =
+\begin{pmatrix}
+-2 & 1 \\
+1.5 & -0.5
+\end{pmatrix}
+$$
+
+---
+
+### Matrix B
+Given:  
+
+$$
+B = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}
+$$
+
+#### Step 1: Augment Matrix B with the Identity Matrix  
+
+$$
+\text{Augmented Matrix} =
+\begin{pmatrix}
+2 & 1 & 1 & 0 \\
+5 & 3 & 0 & 1
+\end{pmatrix}
+$$
+
+#### Step 2: Perform Row Operations  
+
+1. Divide the first row by 2 (make the pivot of the first column equal to 1):  
+
+$$
+\begin{pmatrix}
+1 & 0.5 & 0.5 & 0 \\
+5 & 3 & 0 & 1
+\end{pmatrix}
+$$
+
+2. Subtract 5 times the first row from the second row to make the second column’s first entry zero:  
+
+$$
+\begin{pmatrix}
+1 & 0.5 & 0.5 & 0 \\
+0 & 0.5 & -2.5 & 1
+\end{pmatrix}
+$$
+
+3. Divide the second row by 0.5 (make the pivot of the second column equal to 1):  
+
+$$
+\begin{pmatrix}
+1 & 0.5 & 0.5 & 0 \\
+0 & 1 & -5 & 2
+\end{pmatrix}
+$$
+
+4. Subtract 0.5 times the second row from the first row to make the second column’s first entry zero:  
+
+$$
+\begin{pmatrix}
+1 & 0 & 3 & -1 \\
+0 & 1 & -5 & 2
+\end{pmatrix}
+$$
+
+#### Step 3: Extract the Inverse
+The inverse of B is on the right-hand side:  
+
+$$
+B^{-1} =
+\begin{pmatrix}
+3 & -1 \\
+-5 & 2
+\end{pmatrix}
+$$
+
+---
+
+### Matrix C
+Given:  
+
+$$
+C = \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix}
+$$
+
+#### Step 1: Augment Matrix C with the Identity Matrix  
+
+$$
+\text{Augmented Matrix} =
+\begin{pmatrix}
+0 & 1 & 1 & 0 \\
+1 & 2 & 0 & 1
+\end{pmatrix}
+$$
+
+#### Step 2: Perform Row Operations
+1. Swap the rows to make the pivot of the first column non-zero:  
+
+$$
+\begin{pmatrix}
+1 & 2 & 0 & 1 \\
+0 & 1 & 1 & 0
+\end{pmatrix}
+$$
+
+2. Subtract 2 times the second row from the first row to make the second column’s first entry zero:  
+
+$$
+\begin{pmatrix}
+1 & 0 & -2 & 1 \\
+0 & 1 & 1 & 0
+\end{pmatrix}
+$$
+
+#### Step 3: Extract the Inverse
+The inverse of C is on the right-hand side:  
+
+$$
+C^{-1} =
+\begin{pmatrix}
+-2 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
+
+---
+
+
+
+
+
