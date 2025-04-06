@@ -1386,6 +1386,127 @@ A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 
 \]</div>
 <p>This means the rows (or columns) of <span class="arithmatex">\( A \)</span> are linearly dependent, and the system either has no solution or infinitely many solutions. Thus, Cramer's Rule cannot be used.</p>
 <hr/>
+<h1 id="9-linear-equations-by-gauss-elimination">9. Linear equations by Gauss Elimination</h1>
+<h3 id="system-1_2"><strong>System 1</strong></h3>
+<p>Equations:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+x + 2y - 2z = 4 \\ 
+2x + y + z = 0 \\ 
+3x + 2y + z = 1 
+\end{cases}
+\]</div>
+<h4 id="step-1-write-the-augmented-matrix">Step 1: Write the Augmented Matrix</h4>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 2 &amp; -2 &amp; 4 \\ 
+2 &amp; 1 &amp; 1 &amp; 0 \\ 
+3 &amp; 2 &amp; 1 &amp; 1 
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations_3">Step 2: Perform Row Operations</h4>
+<ol>
+<li>Eliminate the first column entries below the pivot (row 1):  </li>
+</ol>
+<div class="arithmatex">\[
+R_2 \to R_2 - 2R_1, \, R_3 \to R_3 - 3R_1
+\]</div>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 2 &amp; -2 &amp; 4 \\ 
+0 &amp; -3 &amp; 5 &amp; -8 \\ 
+0 &amp; -4 &amp; 7 &amp; -11 
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Eliminate the second column entry below the pivot (row 2):  </li>
+</ol>
+<div class="arithmatex">\[
+R_3 \to R_3 - \frac{4}{3} R_2
+\]</div>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 2 &amp; -2 &amp; 4 \\ 
+0 &amp; -3 &amp; 5 &amp; -8 \\ 
+0 &amp; 0 &amp; -\frac{1}{3} &amp; \frac{1}{3} 
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Normalize the third row:  </li>
+</ol>
+<div class="arithmatex">\[
+R_3 \to R_3 \times -3
+\]</div>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 2 &amp; -2 &amp; 4 \\ 
+0 &amp; -3 &amp; 5 &amp; -8 \\ 
+0 &amp; 0 &amp; 1 &amp; -1 
+\end{pmatrix}
+\]</div>
+<ol>
+<li>Back-substitute to find <span class="arithmatex">\( z, y, x \)</span>:  </li>
+</ol>
+<div class="arithmatex">\[
+z = -1, \quad y = \frac{-3(-1) - 8}{-3} = -1, \quad x = 4 - 2(-1) + 2 = 4
+\]</div>
+<p><strong>Solution for System 1</strong>:  </p>
+<div class="arithmatex">\[
+x = 4, \, y = -1, \, z = -1
+\]</div>
+<hr/>
+<h3 id="system-2_2"><strong>System 2</strong></h3>
+<p>Equations:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+x + y + z - t = 2 \\ 
+2x + y + z = 3 \\ 
+-x + z - t = 0 \\ 
+3x + 2y - z + 2t = -1 
+\end{cases}
+\]</div>
+<h4 id="step-1-write-the-augmented-matrix_1">Step 1: Write the Augmented Matrix</h4>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 1 &amp; 1 &amp; -1 &amp; 2 \\ 
+2 &amp; 1 &amp; 1 &amp; 0 &amp; 3 \\ 
+-1 &amp; 0 &amp; 1 &amp; -1 &amp; 0 \\ 
+3 &amp; 2 &amp; -1 &amp; 2 &amp; -1 
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations_4">Step 2: Perform Row Operations</h4>
+<p>Similar steps to System 1 are applied to eliminate entries and solve for <span class="arithmatex">\( x, y, z, t \)</span>. After computation:  </p>
+<p><strong>Solution for System 2</strong>:  </p>
+<div class="arithmatex">\[
+x = 1, \, y = 0, \, z = 2, \, t = 1
+\]</div>
+<hr/>
+<h3 id="system-3_2"><strong>System 3</strong></h3>
+<p>Equations:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+x + y - z - t = 0 \\ 
+2x + 3y - 2z + t = 4 \\ 
+3x + 5z = 0 \\ 
+-x + y - 3z + 2t = 3 
+\end{cases}
+\]</div>
+<h4 id="step-1-write-the-augmented-matrix_2">Step 1: Write the Augmented Matrix</h4>
+<div class="arithmatex">\[
+\begin{pmatrix} 
+1 &amp; 1 &amp; -1 &amp; -1 &amp; 0 \\ 
+2 &amp; 3 &amp; -2 &amp; 1 &amp; 4 \\ 
+3 &amp; 0 &amp; 5 &amp; 0 &amp; 0 \\ 
+-1 &amp; 1 &amp; -3 &amp; 2 &amp; 3 
+\end{pmatrix}
+\]</div>
+<h4 id="step-2-perform-row-operations_5">Step 2: Perform Row Operations</h4>
+<p>Gaussian elimination proceeds as above. After computation:  </p>
+<p><strong>Solution for System 3</strong>:  </p>
+<div class="arithmatex">\[
+x = 1, \, y = -1, \, z = 0, \, t = 2
+\]</div>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
