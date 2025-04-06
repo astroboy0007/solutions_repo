@@ -321,3 +321,158 @@ The volume of the parallelepiped is \( 6 \).
 
 ---
 
+## Vectors III
+
+### **Problem 1**: Divide the line segment connecting \( A(-1, 2) \) and \( B(3, -2) \) in the ratio \( 1 : 3 \).
+
+#### Solution:  
+The formula to divide a line segment in the ratio \( m : n \) is:  
+
+\[
+P(x, y) = \left( \frac{mx_2 + nx_1}{m+n}, \frac{my_2 + ny_1}{m+n} \right)
+\]
+
+Here:  
+- \( A(x_1, y_1) = (-1, 2) \)
+- \( B(x_2, y_2) = (3, -2) \)
+- Ratio \( m : n = 1 : 3 \)
+
+Substitute into the formula:  
+
+\[
+P(x, y) = \left( \frac{1(3) + 3(-1)}{1+3}, \frac{1(-2) + 3(2)}{1+3} \right)
+\]  
+
+\[
+P(x, y) = \left( \frac{3 - 3}{4}, \frac{-2 + 6}{4} \right)
+\]  
+
+\[
+P(x, y) = (0, 1)
+\]  
+
+
+**Answer:** The point dividing the line in the ratio \( 1:3 \) is \( (0, 1) \).
+
+---
+
+### **Problem 2**: Project vector \( \mathbf{a} = (3, 4) \) onto the \( OX \)-axis and \( OY \)-axis.
+
+#### Solution:  
+To project a vector onto an axis:
+- Onto the \( OX \)-axis: Set the \( y \)-component to 0.
+- Onto the \( OY \)-axis: Set the \( x \)-component to 0.
+
+For \( \mathbf{a} = (3, 4) \):
+- Projection onto \( OX \): \( (3, 0) \)
+- Projection onto \( OY \): \( (0, 4) \)
+
+**Answer:**  
+- Projection onto \( OX \): \( (3, 0) \)
+- Projection onto \( OY \): \( (0, 4) \)
+
+---
+
+### **Problem 3**: Project vector \( \mathbf{a} = (2, 3) \) onto vector \( \mathbf{b} = (1, 1) \).
+
+#### Solution:  
+The formula for projecting \( \mathbf{a} \) onto \( \mathbf{b} \) is:  
+
+\[
+\text{Projection}_{\mathbf{b}}(\mathbf{a}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|^2} \mathbf{b}
+\]  
+
+
+1. Calculate \( \mathbf{a} \cdot \mathbf{b} \):  
+
+\[
+\mathbf{a} \cdot \mathbf{b} = (2)(1) + (3)(1) = 2 + 3 = 5
+\]  
+
+
+2. Calculate \( \|\mathbf{b}\|^2 \):  
+
+\[
+\|\mathbf{b}\|^2 = (1)^2 + (1)^2 = 1 + 1 = 2
+\]  
+
+
+3. Compute the projection:  
+
+\[
+\text{Projection}_{\mathbf{b}}(\mathbf{a}) = \frac{5}{2} \mathbf{b} = \frac{5}{2}(1, 1) = \left( \frac{5}{2}, \frac{5}{2} \right)
+\]  
+
+
+**Answer:** The projection of \( \mathbf{a} \) onto \( \mathbf{b} \) is \( \left( \frac{5}{2}, \frac{5}{2} \right) \).  
+
+#### Python Code:
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define vectors
+a = np.array([2, 3])
+b = np.array([1, 1])
+
+# Calculate the projection
+b_norm_squared = np.dot(b, b)
+projection = (np.dot(a, b) / b_norm_squared) * b
+
+# Create a plot
+plt.figure(figsize=(6, 6))
+plt.axhline(0, color='gray', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='gray', linewidth=0.5, linestyle='--')
+
+# Plot the vectors
+plt.quiver(0, 0, a[0], a[1], angles='xy', scale_units='xy', scale=1, color='blue', label='Vector a')
+plt.quiver(0, 0, b[0], b[1], angles='xy', scale_units='xy', scale=1, color='green', label='Vector b')
+plt.quiver(0, 0, projection[0], projection[1], angles='xy', scale_units='xy', scale=1, color='red', label='Projection of a onto b')
+
+# Add labels and legend
+plt.legend()
+plt.grid()
+plt.xlim(-1, 4)
+plt.ylim(-1, 4)
+plt.title('Vector Projection')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+plt.show()
+```
+
+---
+
+### **Problem 4**: Project vector \( \mathbf{b} = (1, 1) \) onto vector \( \mathbf{a} = (2, 3) \).
+
+#### Solution:  
+Use the same projection formula as Problem 3.
+
+1. Calculate \( \mathbf{b} \cdot \mathbf{a} \):  
+
+\[
+\mathbf{b} \cdot \mathbf{a} = (1)(2) + (1)(3) = 2 + 3 = 5
+\]  
+
+
+2. Calculate \( \|\mathbf{a}\|^2 \):  
+
+\[
+\|\mathbf{a}\|^2 = (2)^2 + (3)^2 = 4 + 9 = 13
+\]  
+
+
+3. Compute the projection:  
+
+\[
+\text{Projection}_{\mathbf{a}}(\mathbf{b}) = \frac{5}{13} \mathbf{a} = \frac{5}{13}(2, 3) = \left( \frac{10}{13}, \frac{15}{13} \right)
+\]  
+
+
+**Answer:** The projection of \( \mathbf{b} \) onto \( \mathbf{a} \) is \( \left( \frac{10}{13}, \frac{15}{13} \right) \).  
+
+#### Python Code:
+Similar to Problem 3, modify the vectors to reflect \( a \) and \( b \).
+
+---
+
