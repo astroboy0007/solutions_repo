@@ -1507,6 +1507,72 @@ x + y - z - t = 0 \\
 x = 1, \, y = -1, \, z = 0, \, t = 2
 \]</div>
 <hr/>
+<h1 id="10-linear-equations-by-matrix-inversion">10. Linear equations by Matrix Inversion</h1>
+<h3 id="system-1_3"><strong>System 1</strong></h3>
+<p>The system is:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+x + 2y + 3z = 5, \\
+2y + 3z = 4, \\
+3z = 3.
+\end{cases}
+\]</div>
+<h4 id="step-1-write-the-augmented-matrix_3">Step 1: Write the Augmented Matrix</h4>
+<p>Rewrite the system to fit a matrix format. The second and third equations can be modified as follows:  </p>
+<ul>
+<li>Add <span class="arithmatex">\( 0x \)</span> to the second and third equations:  </li>
+</ul>
+<p>[
+  0x + 2y + 3z = 4 \quad \text{and} \quad 0x + 0y + 3z = 3.
+  ]  </p>
+<p>Thus, the coefficient matrix <span class="arithmatex">\( A \)</span>, variable matrix <span class="arithmatex">\( \mathbf{X} \)</span>, and constant matrix <span class="arithmatex">\( \mathbf{B} \)</span> are:  </p>
+<div class="arithmatex">\[
+A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 0 &amp; 2 &amp; 3 \\ 0 &amp; 0 &amp; 3 \end{pmatrix}, \quad 
+\mathbf{X} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} 5 \\ 4 \\ 3 \end{pmatrix}.
+\]</div>
+<h4 id="step-2-find-the-inverse-of-a">Step 2: Find the Inverse of <span class="arithmatex">\( A \)</span></h4>
+<p>Compute the inverse of matrix <span class="arithmatex">\( A \)</span>. First, find the determinant:  </p>
+<div class="arithmatex">\[
+\text{det}(A) = 1(2 \cdot 3 - 3 \cdot 0) - 2(0 \cdot 3 - 3 \cdot 0) + 3(0 \cdot 3 - 2 \cdot 0) = 6.
+\]</div>
+<p>Since <span class="arithmatex">\( \text{det}(A) \neq 0 \)</span>, the matrix is invertible.</p>
+<p>Find <span class="arithmatex">\( A^{-1} \)</span> (inverse of <span class="arithmatex">\( A \)</span>) using the adjoint method or row reduction.</p>
+<h4 id="step-3-solve-for-mathbfx">Step 3: Solve for <span class="arithmatex">\( \mathbf{X} \)</span></h4>
+<p>Using the formula:  </p>
+<div class="arithmatex">\[
+\mathbf{X} = A^{-1} \cdot \mathbf{B},
+\]</div>
+<p>calculate <span class="arithmatex">\( \mathbf{X} \)</span> to find <span class="arithmatex">\( x, y, z \)</span>.</p>
+<hr/>
+<h3 id="system-2_3"><strong>System 2</strong></h3>
+<p>The system is:  </p>
+<div class="arithmatex">\[
+\begin{cases} 
+x_1 + 2x_2 + 3x_3 = 41, \\
+4x_1 + 5x_2 + 6x_3 = 93, \\
+7x_1 + 8x_2 + 9x_3 = 145.
+\end{cases}
+\]</div>
+<h4 id="step-1-write-the-matrix-form">Step 1: Write the Matrix Form</h4>
+<div class="arithmatex">\[
+A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}, \quad 
+\mathbf{X} = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}, \quad 
+\mathbf{B} = \begin{pmatrix} 41 \\ 93 \\ 145 \end{pmatrix}.
+\]</div>
+<h4 id="step-2-check-the-determinant-of-a">Step 2: Check the Determinant of <span class="arithmatex">\( A \)</span></h4>
+<div class="arithmatex">\[
+\text{det}(A) = 1 \cdot (5 \cdot 9 - 6 \cdot 8) - 2 \cdot (4 \cdot 9 - 6 \cdot 7) + 3 \cdot (4 \cdot 8 - 5 \cdot 7).
+\]</div>
+<p>Simplify:  </p>
+<div class="arithmatex">\[
+\text{det}(A) = 1(45 - 48) - 2(36 - 42) + 3(32 - 35),
+\]</div>
+<div class="arithmatex">\[
+\text{det}(A) = -3 + 12 - 9 = 0.
+\]</div>
+<p>Since <span class="arithmatex">\( \text{det}(A) = 0 \)</span>, the matrix is singular, and its inverse does not exist. Therefore, this system cannot be solved using the inverse matrix method.</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
