@@ -565,10 +565,10 @@ print(f"Determinant of D: {det_D}")
 ---
 
 Summary:
-- \(\text{det}(A) = -5\)
-- \(\text{det}(B) = -10\)
-- \(\text{det}(C) = -75\)
-- \(\text{det}(D) = 231\)
+- \(\text{det}(A) = -5\)  
+- \(\text{det}(B) = -10\)  
+- \(\text{det}(C) = -75\)  
+- \(\text{det}(D) = 231\)  
 
 # 4. Determinants from the Gauss Method and Triangular Matrices
 
