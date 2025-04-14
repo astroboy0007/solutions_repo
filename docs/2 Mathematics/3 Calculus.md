@@ -174,3 +174,71 @@ For both compositions \( f(g(x)) \) and \( g(f(x)) \), the result is \( x \). Th
 
 ---
 
+### Task 4
+
+**Problem 1: Inverse Function**
+Given the function \( f = \{(1, 7), (2, 9), (3, 11)\} \), we are tasked to find its inverse \( f^{-1} \).
+
+To find the inverse function \( f^{-1} \), we simply swap the elements in each ordered pair.
+
+Solution:  
+
+\[
+f = \{(1, 7), (2, 9), (3, 11)\}
+\]  
+
+Inverse:  
+
+\[
+f^{-1} = \{(7, 1), (9, 2), (11, 3)\}
+\]  
+
+
+---
+
+**Problem 2: Composition of Functions**
+The functions \( f(x) = e^x \) and \( g(x) = \ln(x) \) are given. We need to evaluate \( f(g(x)) \) and \( g(f(x)) \), and determine the relationship.
+
+**Evaluate \( f(g(x)) \):**  
+
+\[
+f(g(x)) = f(\ln(x)) = e^{\ln(x)}
+\]  
+
+From the properties of logarithms and exponentials:  
+
+\[
+e^{\ln(x)} = x \quad \text{(for \( x > 0 \))}.
+\]  
+
+
+##### **Evaluate \( g(f(x)) \):**  
+
+\[
+g(f(x)) = g(e^x) = \ln(e^x)
+\]  
+
+From the properties of logarithms:  
+
+\[
+\ln(e^x) = x.
+\]  
+
+
+**Conclusion:**
+Both compositions yield:  
+
+\[
+f(g(x)) = x \quad \text{and} \quad g(f(x)) = x.
+\]  
+
+This shows that \( f(x) = e^x \) and \( g(x) = \ln(x) \) are **inverse functions** of each other.
+
+**Domain Constraints**:  
+
+- \( g(x) = \ln(x) \) requires \( x > 0 \),
+- \( f(x) = e^x \) is valid for all real \( x \).
+
+---
+
+
