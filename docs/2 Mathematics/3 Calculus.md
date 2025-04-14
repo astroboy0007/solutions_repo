@@ -11,7 +11,8 @@ Functions:
 3. \( h(x) = \frac{1}{x} \)  
 4. \( j(x) = \sin(x) \)
 
-Calculation:
+Calculation:  
+
 1. For \( f(x) = x^2 \):  
 
 \[
