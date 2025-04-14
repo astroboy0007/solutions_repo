@@ -63,7 +63,7 @@ Given:
 ---
 
 ### Step 2: Compositions of Functions  
-1. \( f(g(x)) \):  
+\( f(g(x)) \):  
 
    Substitute \( g(x) = \sqrt{x} \) into \( f(x) \):  
 
@@ -71,7 +71,7 @@ Given:
 f(g(x)) = f(\sqrt{x}) = 3\sqrt{x} - 1
 \]  
 
-2. \( g(f(x)) \):  
+\( g(f(x)) \):  
 
    Substitute \( f(x) = 3x - 1 \) into \( g(x) \):  
 
@@ -79,7 +79,7 @@ f(g(x)) = f(\sqrt{x}) = 3\sqrt{x} - 1
 g(f(x)) = g(3x - 1) = \sqrt{3x - 1}
 \]  
 
-3. \( f(f(x)) \):  
+\( f(f(x)) \):  
 
    Substitute \( f(x) = 3x - 1 \) into \( f(x) \) again:  
 
@@ -87,7 +87,7 @@ g(f(x)) = g(3x - 1) = \sqrt{3x - 1}
 f(f(x)) = f(3x - 1) = 3(3x - 1) - 1 = 9x - 3 - 1 = 9x - 4
 \]  
 
-4. \( g(g(x)) \):  
+\( g(g(x)) \):  
 
    Substitute \( g(x) = \sqrt{x} \) into \( g(x) \) again:  
 
