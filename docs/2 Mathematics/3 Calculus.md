@@ -62,7 +62,7 @@ Given:
 
 ---
 
-### Step 2: Compositions of Functions  
+Step 2: Compositions of Functions  
 \( f(g(x)) \):  
 
    Substitute \( g(x) = \sqrt{x} \) into \( f(x) \):  
@@ -117,5 +117,7 @@ To plot the functions \( f(g(x)) \), \( g(f(x)) \), \( f(f(x)) \), and \( g(g(x)
 5.  Use GeoGebra’s point tool to evaluate the compositions at specific \( x \)-values. Observe intersections or relationships between the curves.  
 
 ---
+
+### Task 3
 
 
