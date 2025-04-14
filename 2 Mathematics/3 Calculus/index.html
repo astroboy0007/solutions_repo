@@ -111,6 +111,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#task-3">Task 3</a>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#task-4">Task 4</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#evaluate-gfx">Evaluate \( g(f(x)) \):</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -308,6 +314,49 @@ g(f(x)) = g(e^x) = \ln(e^x)
 <hr/>
 <p><strong>Conclusion</strong></p>
 <p>For both compositions <span class="arithmatex">\( f(g(x)) \)</span> and <span class="arithmatex">\( g(f(x)) \)</span>, the result is <span class="arithmatex">\( x \)</span>. This demonstrates that the exponential function <span class="arithmatex">\( e^x \)</span> and the natural logarithm function <span class="arithmatex">\( \ln(x) \)</span> are <strong>inverse functions</strong> of each other.</p>
+<p><strong>Domain Constraints</strong>:  </p>
+<ul>
+<li><span class="arithmatex">\( g(x) = \ln(x) \)</span> requires <span class="arithmatex">\( x &gt; 0 \)</span>,</li>
+<li><span class="arithmatex">\( f(x) = e^x \)</span> is valid for all real <span class="arithmatex">\( x \)</span>.</li>
+</ul>
+<hr/>
+<h3 id="task-4">Task 4</h3>
+<p><strong>Problem 1: Inverse Function</strong>
+Given the function <span class="arithmatex">\( f = \{(1, 7), (2, 9), (3, 11)\} \)</span>, we are tasked to find its inverse <span class="arithmatex">\( f^{-1} \)</span>.</p>
+<p>To find the inverse function <span class="arithmatex">\( f^{-1} \)</span>, we simply swap the elements in each ordered pair.</p>
+<p>Solution:  </p>
+<div class="arithmatex">\[
+f = \{(1, 7), (2, 9), (3, 11)\}
+\]</div>
+<p>Inverse:  </p>
+<div class="arithmatex">\[
+f^{-1} = \{(7, 1), (9, 2), (11, 3)\}
+\]</div>
+<hr/>
+<p><strong>Problem 2: Composition of Functions</strong>
+The functions <span class="arithmatex">\( f(x) = e^x \)</span> and <span class="arithmatex">\( g(x) = \ln(x) \)</span> are given. We need to evaluate <span class="arithmatex">\( f(g(x)) \)</span> and <span class="arithmatex">\( g(f(x)) \)</span>, and determine the relationship.</p>
+<p><strong>Evaluate <span class="arithmatex">\( f(g(x)) \)</span>:</strong> </p>
+<div class="arithmatex">\[
+f(g(x)) = f(\ln(x)) = e^{\ln(x)}
+\]</div>
+<p>From the properties of logarithms and exponentials:  </p>
+<div class="arithmatex">\[
+e^{\ln(x)} = x \quad \text{(for \( x &gt; 0 \))}.
+\]</div>
+<h5 id="evaluate-gfx"><strong>Evaluate <span class="arithmatex">\( g(f(x)) \)</span>:</strong></h5>
+<div class="arithmatex">\[
+g(f(x)) = g(e^x) = \ln(e^x)
+\]</div>
+<p>From the properties of logarithms:  </p>
+<div class="arithmatex">\[
+\ln(e^x) = x.
+\]</div>
+<p><strong>Conclusion:</strong>
+Both compositions yield:  </p>
+<div class="arithmatex">\[
+f(g(x)) = x \quad \text{and} \quad g(f(x)) = x.
+\]</div>
+<p>This shows that <span class="arithmatex">\( f(x) = e^x \)</span> and <span class="arithmatex">\( g(x) = \ln(x) \)</span> are <strong>inverse functions</strong> of each other.</p>
 <p><strong>Domain Constraints</strong>:  </p>
 <ul>
 <li><span class="arithmatex">\( g(x) = \ln(x) \)</span> requires <span class="arithmatex">\( x &gt; 0 \)</span>,</li>
