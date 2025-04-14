@@ -268,4 +268,59 @@ f^{-1} = \{(7, 1), (7, 2), (11, 3)\}
 
 ---
 
+### Task 6
 
+To address the given task, we need to derive the inverse function of \( f(x) = x - 1 \) and visualize both functions in GeoGebra.
+
+**Step 1: Find the Inverse Function**
+The given function is \( f(x) = x - 1 \). To find the inverse function \( f^{-1}(x) \), perform the following steps:  
+
+1. Replace \( f(x) \) with \( y \):  
+
+\[
+y = x - 1
+\]
+
+2. Swap \( x \) and \( y \) to find the inverse:  
+
+\[
+x = y - 1
+\]
+
+3. Solve for \( y \):  
+
+\[
+y = x + 1
+\]  
+
+
+Thus, the inverse function is:  
+
+\[
+f^{-1}(x) = x + 1
+\]  
+
+
+---
+
+**Step 2: Graph Both Functions**
+In GeoGebra, you can graph \( f(x) = x - 1 \) and \( f^{-1}(x) = x + 1 \) as follows:
+
+1. **Open GeoGebra**:
+   Access the GeoGebra application or the online tool at [GeoGebra.org](https://www.geogebra.org).
+
+2. **Input the Functions**:
+   - In the Input box, type:  
+     - `f(x) = x - 1`  
+     - `f_inverse(x) = x + 1`
+
+3. **Add the Identity Line**:
+   - To show the relationship between \( f \) and \( f^{-1} \), graph the identity line \( y = x \). This helps illustrate that the functions are reflections of each other across this line.
+
+4. **Adjust Appearance**:
+   - Use different colors for the graphs of \( f(x) \), \( f^{-1}(x) \), and \( y = x \) to make them visually distinct.
+
+### **Final Notes**
+Both functions \( f(x) = x - 1 \) and \( f^{-1}(x) = x + 1 \) are linear. Their graphs will intersect the identity line \( y = x \), demonstrating their inverse relationship.
+
+---
