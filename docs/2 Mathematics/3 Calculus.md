@@ -275,19 +275,19 @@ To address the given task, we need to derive the inverse function of \( f(x) = x
 **Step 1: Find the Inverse Function**
 The given function is \( f(x) = x - 1 \). To find the inverse function \( f^{-1}(x) \), perform the following steps:  
 
-1. Replace \( f(x) \) with \( y \):  
+Replace \( f(x) \) with \( y \):  
 
 \[
 y = x - 1
 \]
 
-2. Swap \( x \) and \( y \) to find the inverse:  
+Swap \( x \) and \( y \) to find the inverse:  
 
 \[
 x = y - 1
 \]
 
-3. Solve for \( y \):  
+Solve for \( y \):  
 
 \[
 y = x + 1
@@ -306,19 +306,15 @@ f^{-1}(x) = x + 1
 **Step 2: Graph Both Functions**
 In GeoGebra, you can graph \( f(x) = x - 1 \) and \( f^{-1}(x) = x + 1 \) as follows:
 
-1. **Open GeoGebra**:
-   Access the GeoGebra application or the online tool at [GeoGebra.org](https://www.geogebra.org).
+1. Access the GeoGebra application or the online tool at [GeoGebra.org](https://www.geogebra.org).
 
-2. **Input the Functions**:
-   - In the Input box, type:  
+2. In the Input box, type:  
      - `f(x) = x - 1`  
      - `f_inverse(x) = x + 1`
 
-3. **Add the Identity Line**:
-   - To show the relationship between \( f \) and \( f^{-1} \), graph the identity line \( y = x \). This helps illustrate that the functions are reflections of each other across this line.
+3. To show the relationship between \( f \) and \( f^{-1} \), graph the identity line \( y = x \). This helps illustrate that the functions are reflections of each other across this line.
 
-4. **Adjust Appearance**:
-   - Use different colors for the graphs of \( f(x) \), \( f^{-1}(x) \), and \( y = x \) to make them visually distinct.
+4. Use different colors for the graphs of \( f(x) \), \( f^{-1}(x) \), and \( y = x \) to make them visually distinct.
 
 ### **Final Notes**
 Both functions \( f(x) = x - 1 \) and \( f^{-1}(x) = x + 1 \) are linear. Their graphs will intersect the identity line \( y = x \), demonstrating their inverse relationship.
