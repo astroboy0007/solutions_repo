@@ -100,32 +100,21 @@ g(g(x)) = g(\sqrt{x}) = \sqrt{\sqrt{x}} = x^{1/4}
 Step 3: Instructions for Visualizing in GeoGebra
 To plot the functions \( f(g(x)) \), \( g(f(x)) \), \( f(f(x)) \), and \( g(g(x)) \) in GeoGebra:  
 
-1. **Open GeoGebra**:  
+1. Access the GeoGebra application or the online version at [GeoGebra.org](https://www.geogebra.org).     
 
-   - Access the GeoGebra application or the online version at [GeoGebra.org](https://www.geogebra.org).     
-
-2. **Enter the Functions**:  
-
-   - In the Input field, type the functions as follows:
+2. In the Input field, type the functions as follows:
      - \( f(g(x)) = 3\sqrt{x} - 1 \)
      - \( g(f(x)) = \sqrt{3x - 1} \)
      - \( f(f(x)) = 9x - 4 \)
      - \( g(g(x)) = x^{1/4} \)  
 
-3. **Set the Domain**:  
-
-   - For \( f(g(x)) \), \( g(f(x)) \), and \( g(g(x)) \), restrict the domain to ensure the square root is defined (e.g., \( x \geq 0 \) for \( g(x) \)).
+3.For \( f(g(x)) \), \( g(f(x)) \), and \( g(g(x)) \), restrict the domain to ensure the square root is defined (e.g., \( x \geq 0 \) for \( g(x) \)).
    - Use the syntax in GeoGebra, such as:
      - For \( g(f(x)) \): `If[3x - 1 >= 0, sqrt(3x - 1)]`  
 
-4. **Customize the Graph**:  
+4. Assign different colors to each function for better visualization. Right-click on a function and select "Settings" to change its color and style.  
 
-   - Assign different colors to each function for better visualization. Right-click on a function and select "Settings" to change its color and style.  
-
-5. **Analyze the Graphs**:  
-
-   - Use GeoGebra’s point tool to evaluate the compositions at specific \( x \)-values.
-   - Observe intersections or relationships between the curves.  
+5.  Use GeoGebra’s point tool to evaluate the compositions at specific \( x \)-values. Observe intersections or relationships between the curves.  
 
 ---
 
