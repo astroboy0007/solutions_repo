@@ -108,7 +108,7 @@ To plot the functions \( f(g(x)) \), \( g(f(x)) \), \( f(f(x)) \), and \( g(g(x)
      - \( f(f(x)) = 9x - 4 \)
      - \( g(g(x)) = x^{1/4} \)  
 
-3.For \( f(g(x)) \), \( g(f(x)) \), and \( g(g(x)) \), restrict the domain to ensure the square root is defined (e.g., \( x \geq 0 \) for \( g(x) \)).
+3. For \( f(g(x)) \), \( g(f(x)) \), and \( g(g(x)) \), restrict the domain to ensure the square root is defined (e.g., \( x \geq 0 \) for \( g(x) \)).
    - Use the syntax in GeoGebra, such as:
      - For \( g(f(x)) \): `If[3x - 1 >= 0, sqrt(3x - 1)]`  
 
