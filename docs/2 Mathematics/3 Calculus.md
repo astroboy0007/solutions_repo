@@ -120,7 +120,7 @@ To plot the functions \( f(g(x)) \), \( g(f(x)) \), \( f(f(x)) \), and \( g(g(x)
 
 ### Task 3
 
-# **Compositions of Functions**
+**Compositions of Functions**
 
 Given:  
 
@@ -131,27 +131,35 @@ Given:
 
 **Composition 1: \( f(g(x)) \)**
 
-Substitute \( g(x) = \ln(x) \) into \( f(x) \):
+Substitute \( g(x) = \ln(x) \) into \( f(x) \):  
+
 \[
 f(g(x)) = f(\ln(x)) = e^{\ln(x)}
-\]
-From the properties of logarithms and exponentials:
+\]  
+
+From the properties of logarithms and exponentials:  
+
 \[
 e^{\ln(x)} = x \quad \text{(for \( x > 0 \))}.
-\]
+\]  
+
 
 ---
 
 **Composition 2: \( g(f(x)) \)**
 
-Substitute \( f(x) = e^x \) into \( g(x) \):
+Substitute \( f(x) = e^x \) into \( g(x) \):  
+
 \[
 g(f(x)) = g(e^x) = \ln(e^x)
-\]
-From the properties of logarithms:
+\]  
+
+From the properties of logarithms:  
+
 \[
 \ln(e^x) = x.
-\]
+\]  
+
 
 ---
 
