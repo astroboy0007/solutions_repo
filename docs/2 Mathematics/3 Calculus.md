@@ -16,19 +16,16 @@ Calculation:
 \[
 f(2) = 2^2 = 4
 \]  
-
 2. For \( g(x) = \sqrt{x} \):  
 
 \[
 g(2) = \sqrt{2} \approx 1.414
 \]  
-
 3. For \( h(x) = \frac{1}{x} \):  
 
 \[
 h(2) = \frac{1}{2} = 0.5
 \]  
-
 4. For \( j(x) = \sin(x) \):  
 
    Assuming \( x = 2 \) is in radians,  
