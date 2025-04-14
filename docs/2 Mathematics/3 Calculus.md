@@ -4,10 +4,11 @@
 
 ### Task 1
 
-Functions:
-1. \( f(x) = x^2 \)
-2. \( g(x) = \sqrt{x} \)
-3. \( h(x) = \frac{1}{x} \)
+Functions:  
+
+1. \( f(x) = x^2 \)  
+2. \( g(x) = \sqrt{x} \)  
+3. \( h(x) = \frac{1}{x} \)  
 4. \( j(x) = \sin(x) \)
 
 Calculation:
