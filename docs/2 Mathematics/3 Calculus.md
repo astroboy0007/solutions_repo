@@ -241,4 +241,31 @@ This shows that \( f(x) = e^x \) and \( g(x) = \ln(x) \) are **inverse functions
 
 ---
 
+### Task 5
+
+**Solution to the Inverse Function**
+
+**Given Function**:  
+
+\[
+f = \{(1, 7), (2, 7), (3, 11)\}
+\]  
+
+
+**Finding the Inverse Function**:  
+
+To compute the inverse \( f^{-1} \), we swap the elements in each ordered pair from the given function \( f \). This means:  
+
+- The \( x \)-coordinate becomes the \( y \)-coordinate, and vice versa.
+
+**Inverse Function**:  
+
+\[
+f^{-1} = \{(7, 1), (7, 2), (11, 3)\}
+\]  
+
+**Note**: In the inverse function \( f^{-1} \), \( 7 \) maps to both \( 1 \) and \( 2 \), which means \( f^{-1} \) is not a function in the strict mathematical sense because a function requires each input to correspond to exactly one output.
+
+---
+
 
