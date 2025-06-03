@@ -28,9 +28,12 @@ The equations governing projectile motion involve both linear and quadratic rela
    H = \frac{v_0^2 \sin^2 \theta}{2g}
    $$
 
-Where:
-- \( v_0 \) = Initial velocity
-- \( \theta \) = Angle of projection
+Where:  
+
+- \( v_0 \) = Initial velocity  
+
+- \( \theta \) = Angle of projection  
+
 - \( g \) = Gravitational acceleration
 
 ## The Role of Free Parameters
