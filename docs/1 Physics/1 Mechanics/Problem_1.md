@@ -90,9 +90,9 @@ The range \(R\) (horizontal distance) is obtained by solving for \(t\) when \(y 
 - Gravity (\( g \)) affects descent—on planets like Mars:  
 
 $$
-\[
+
 g = 3.7 \, \text{m/s}^2
-\]
+
 $$  
 
 Due to the lower gravitational acceleration compared to Earth (\( g \approx 9.81 \) m/s²), a projectile on Mars would travel a longer range and stay in the air for a greater duration.
