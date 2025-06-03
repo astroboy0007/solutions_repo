@@ -1,9 +1,17 @@
 # Problem 1
 # Simulating the effects of the Lorentz Force
-## Motivation
 
-The Lorentz force, expressed as **$\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}$**, governs the motion of charged particles in electric and magnetic fields. It is foundational in fields like plasma physics, particle accelerators, and astrophysics. By focusing on simulations, we can explore the practical applications and visualize the complex trajectories that arise due to this force.
+The **Lorentz Force** governs the motion of charged particles in electric and magnetic fields. It is defined as:
 
+\[
+\mathbf{F} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B})
+\]
+
+Where:
+- \( q \) is the charge of the particle.
+- \( \mathbf{E} \) is the electric field vector.
+- \( \mathbf{v} \) is the velocity vector of the particle.
+- \( \mathbf{B} \) is the magnetic field vector.
 
 ## Exploration of Applications  
 
@@ -82,6 +90,11 @@ v_{z0}
 3. Charge \(q\) and Mass \(m\):
     - Vary particle properties, such as charge-to-mass ratio \(\frac{q}{m}\), which directly influences the radius of circular motion and the overall dynamics
 
+
+
+
+This script numerically solves the equations of motion and visualizes the trajectory of a charged particle.
+
 ---
 
 ## **Sample Python Code**
@@ -89,90 +102,56 @@ Below is a simple example for a particle in a uniform magnetic field:
 
 ```python
 import numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
+from scipy.integrate import solve_ivp
 
-def simulate_particle(q, m, E, B, v0, r0, dt, steps):
-    """
-    Simulates the trajectory of a charged particle.
-    Args:
-        q: Charge of the particle (Coulombs).
-        m: Mass of the particle (kg).
-        E: Electric field vector (V/m).
-        B: Magnetic field vector (Tesla).
-        v0: Initial velocity vector (m/s).
-        r0: Initial position vector (m).
-        dt: Time step (seconds).
-        steps: Number of simulation steps.
-    Returns:
-        positions: Array of particle positions.
-    """
-    r = r0.copy()
-    v = v0.copy()
-    positions = [r.copy()]
+# Define Lorentz Force function
+def lorentz_force(t, y, q, m, E, B):
+    position = y[:3]  # x, y, z coordinates
+    velocity = y[3:]  # vx, vy, vz
 
-    for _ in range(steps):
-        F = q * (E + np.cross(v, B))  # Lorentz force
-        a = F / m  # Acceleration
-        v += a * dt  # Update velocity
-        r += v * dt  # Update position
-        positions.append(r.copy())
-
-    return np.array(positions)
+    # Compute force
+    force = q * (E + np.cross(velocity, B))
+    
+    # Newton's second law
+    acceleration = force / m
+    
+    return np.concatenate([velocity, acceleration])  # Return velocity and acceleration
 
 # Parameters
-q = 1.6e-19  # Charge (Coulombs)
-m = 9.11e-31  # Mass (kg)
-dt = 1e-11  # Time step (seconds)
-steps = 5000  # Number of steps
-
-# Field configurations
-B_uniform = np.array([0, 0, 1])  # Uniform magnetic field (Tesla)
-E_uniform = np.array([0, 0, 0])  # No electric field (V/m)
-E_crossed = np.array([1e5, 0, 0])  # Electric field for crossed fields (V/m)
+q = 1.0      # Charge (Coulombs)
+m = 1.0      # Mass (kg)
+E = np.array([0, 0, 0])  # Electric field (V/m)
+B = np.array([0, 0, 1])  # Magnetic field (T)
 
 # Initial conditions
-v0 = np.array([1e6, 1e6, 0])  # Initial velocity (m/s)
-r0 = np.array([0.0, 0.0, 0.0])  # Initial position (m)
+initial_position = np.array([0, 0, 0])
+initial_velocity = np.array([1, 0, 0])
+initial_state = np.concatenate([initial_position, initial_velocity])
 
-# Simulations
-trajectory_uniform_B = simulate_particle(q, m, E_uniform, B_uniform, v0, r0, dt, steps)
-trajectory_combined = simulate_particle(q, m, E_crossed, B_uniform, v0, r0, dt, steps)
-trajectory_crossed = simulate_particle(q, m, E_crossed, B_uniform, v0, r0, dt, steps)
+# Time span
+t_span = (0, 10)
+t_eval = np.linspace(*t_span, 1000)
 
-# Visualization Function
-def plot_trajectory(positions, title):
-    fig = plt.figure()
-    ax = fig.add_subplot(projection='3d')
-    ax.plot(positions[:, 0], positions[:, 1], positions[:, 2], label='Trajectory')
-    ax.set_xlabel('X Position (m)')
-    ax.set_ylabel('Y Position (m)')
-    ax.set_zlabel('Z Position (m)')
-    ax.set_title(title)
-    ax.legend()
-    plt.show()
+# Solve ODE
+solution = solve_ivp(lorentz_force, t_span, initial_state, args=(q, m, E, B), t_eval=t_eval)
 
-# Plotting results
-plot_trajectory(trajectory_uniform_B, "Particle Trajectory in Uniform Magnetic Field")
-plot_trajectory(trajectory_combined, "Trajectory in Combined Electric and Magnetic Fields")
-plot_trajectory(trajectory_crossed, "Trajectory in Crossed Electric and Magnetic Fields")
+# Extract results
+x, y, z = solution.y[:3]
+
+# Plot trajectory
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(x, y, z, label="Particle trajectory")
+ax.set_xlabel("X Position")
+ax.set_ylabel("Y Position")
+ax.set_zlabel("Z Position")
+ax.legend()
+plt.title("Lorentz Force Simulation")
+plt.show()
 ```
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-
-
-```python
-def plot_trajectory_2d(positions, title, axis1, axis2, labels):
-    plt.plot(positions[:, axis1], positions[:, axis2], label='Trajectory')
-    plt.xlabel(labels[0])
-    plt.ylabel(labels[1])
-    plt.title(title)
-    plt.legend()
-    plt.show()
-
-plot_trajectory_2d(trajectory_uniform_B, "2D Trajectory (X-Y Plane)", 0, 1, ['X Position', 'Y Position'])
-```
-![alt text](image-5.png)
+![alt text](image-6.png)
 
 ---
 
