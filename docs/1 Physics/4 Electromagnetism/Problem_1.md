@@ -28,7 +28,6 @@ Where:
 - **Magnetic Fields ($\mathbf{B}$):** Deflect charged particles perpendicular to their velocity, leading to circular or helical motion.  
 - **Combined Effects:** Used in electromagnetic traps, spectrometers, and fusion devices to precisely manipulate particle motion for research and industrial applications.  
 
-To simulate the motion of a charged particle under these conditions, you can use a programming language like Python, which is well-suited for numerical computations and visualization. Below is a breakdown of how to approach this:
 
 ---
 
