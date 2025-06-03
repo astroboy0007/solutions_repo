@@ -87,7 +87,17 @@ The range \(R\) (horizontal distance) is obtained by solving for \(t\) when \(y 
 
 - Different initial velocities \( v_0 \) yield higher or lower trajectories.
 - Varying launch angles \( \theta \) create different parabolic paths—steeper angles mean greater height but shorter horizontal reach.
-- Gravity \( g \) affects descent—on planets like Mars (( g = 3.7 ) m/s²), the projectile would have a longer range than on Earth.
+- Gravity (\( g \)) affects descent—on planets like Mars:  
+
+$$
+\[
+g = 3.7 \, \text{m/s}^2
+\]
+$$  
+
+Due to the lower gravitational acceleration compared to Earth (\( g \approx 9.81 \) m/s²), a projectile on Mars would travel a longer range and stay in the air for a greater duration.
+
+
 
 
 Graphical Representations of Range vs. Angle
