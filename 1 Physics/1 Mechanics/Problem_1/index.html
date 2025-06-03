@@ -195,48 +195,57 @@ y(t) = v_0 \sin(\theta) t - \frac{1}{2} g t^2
 <p>The range <span class="arithmatex">\(R\)</span> (horizontal distance) is obtained by solving for <span class="arithmatex">\(t\)</span> when <span class="arithmatex">\(y = 0\)</span>:</p>
 <p><span class="arithmatex">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</span></p>
 <h2 id="family-of-solutions">Family of Solutions</h2>
-<p>Variations in initial conditions (e.g., different values of <span class="arithmatex">\(v_0\)</span> or <span class="arithmatex">\(g\)</span>) lead to a family of solutions where the trajectory and range shift accordingly. For example:</p>
 <ul>
-<li>Higher initial velocity increases the range.</li>
-<li>Greater gravitational acceleration reduces the range.</li>
-<li>An optimal launch angle of 45° maximizes the range in the absence of other forces.</li>
+<li>Different initial velocities (( v_0 )) yield higher or lower trajectories.</li>
+<li>Varying launch angles (( \theta )) create different parabolic paths—steeper angles mean greater height but shorter horizontal reach.</li>
+<li>Gravity ( g ) affects descent—on planets like Mars (( g = 3.7 ) m/s²), the projectile would have a longer range than on Earth.</li>
 </ul>
-<h2 id="analysis-of-the-range">Analysis of the Range</h2>
-<p>To visualize how the range varies with launch angle, we compute <span class="arithmatex">\(R\)</span> for different angles while keeping other parameters constant.</p>
-<p>Using Python, we simulate the dependency:</p>
+<p>Graphical Representations of Range vs. Angle
+The range equation (neglecting air resistance) is:
+[ R = \frac{v_0^2 \sin 2\theta}{g} ]</p>
+<p>Python Code to Plot Range vs. Angle</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
-g = 9.81  # Acceleration due to gravity (m/s^2)
-v0 = 20  # Initial velocity (m/s)
-angles = np.linspace(0, 90, 100)  # Angles from 0 to 90 degrees
-ranges = (v0**2 * np.sin(2 * np.radians(angles))) / g
+# Parameters
+v0 = 30  # Initial velocity in m/s
+g = 9.81  # Gravitational acceleration in m/s²
+theta = np.linspace(0, 90, 100)  # Angle from 0° to 90°
 
-plt.plot(angles, ranges)
-plt.xlabel('Launch Angle (degrees)')
-plt.ylabel('Range (meters)')
-plt.title('Projectile Range vs. Launch Angle')
+# Compute range for each angle
+R = (v0**2 * np.sin(np.radians(2 * theta))) / g
+
+# Plot
+plt.figure(figsize=(8,6))
+plt.plot(theta, R, label="Projectile Range vs. Angle")
+plt.axvline(x=45, color='r', linestyle='--', label="Max Range at 45°")
+plt.xlabel("Launch Angle (degrees)")
+plt.ylabel("Range (meters)")
+plt.title("Projectile Range vs. Launch Angle")
+plt.legend()
 plt.grid()
 plt.show()
 </code></pre>
-<p><img alt="alt text" src="../image.png"/></p>
-<h2 id="influence-of-parameters">Influence of Parameters</h2>
-<ul>
-<li><strong>Initial Velocity</strong>: Increasing <span class="arithmatex">\(v_0\)</span> scales the range quadratically.</li>
-<li><strong>Gravitational Acceleration</strong>: A higher <span class="arithmatex">\(g\)</span> reduces range.</li>
-<li><strong>Launch Height</strong>: If the projectile starts above ground level, the range can increase.</li>
-</ul>
-<h2 id="practical-applications">Practical Applications</h2>
-<p>This model is applicable to various real-world scenarios:</p>
-<ul>
-<li><strong>Sports</strong>: Determining the optimal kicking or throwing angle.</li>
-<li><strong>Engineering</strong>: Designing trajectories for artillery or spacecraft.</li>
-<li><strong>Astrophysics</strong>: Estimating motion under varying gravitational fields.</li>
-</ul>
-<h2 id="extending-the-model">Extending the Model</h2>
-<p>To increase realism, factors such as air resistance and wind should be incorporated. A numerical approach (e.g., Euler’s method) can be used to handle these complexities.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Projectile motion provides a fundamental yet versatile model for understanding motion dynamics. By analyzing the relationship between range and launch angle, we gain insights applicable to numerous fields, from everyday sports to advanced aerospace technologies. Further refinements incorporating real-world factors make the study even richer and more applicable.</p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p>📌 This graph will:
+- Show range peaking at 45° (ideal case).
+- Demonstrate how increasing ( v_0 ) scales up range.
+- Shift if gravity ( g ) is altered (e.g., Moon vs. Earth).</p>
+<p>imitations &amp; Realistic Adjustments
+✅ Key Assumptions in the Ideal Model:
+- No air resistance—real projectiles experience drag, which shortens range.
+- Launch and landing at same height—uneven terrains require modifications.
+- Neglecting wind effects—real-world projectiles are influenced by crosswinds.
+🚀 More Realistic Factors:
+- Air Resistance (Drag Force ( F_d ))
+- Introduce ( F_d = C_d v^2 ), where ( C_d ) is the drag coefficient.
+- Would shift peak angle below 45° due to extra deceleration.
+- Wind Influence
+- Headwinds shorten range; tailwinds extend it.
+- Requires vector velocity adjustments.
+- Variable Launch Heights
+- If launching from an elevated position, the range equation must include height terms.
+- Results in longer descent phases.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
