@@ -134,27 +134,13 @@ plt.show()
 ![alt text](image-2.png)
 
 
-📌 This graph will:
-- Show range peaking at 45° (ideal case).
-- Demonstrate how increasing ( v_0 ) scales up range.
+📌 This graph will:  
+
+- Show range peaking at 45° (ideal case).  
+
+- Demonstrate how increasing \( v_0 \) scales up range.  
+
 - Shift if gravity ( g ) is altered (e.g., Moon vs. Earth).
-
-
-imitations & Realistic Adjustments
-✅ Key Assumptions in the Ideal Model:
-- No air resistance—real projectiles experience drag, which shortens range.
-- Launch and landing at same height—uneven terrains require modifications.
-- Neglecting wind effects—real-world projectiles are influenced by crosswinds.
-🚀 More Realistic Factors:
-- Air Resistance (Drag Force ( F_d ))
-- Introduce ( F_d = C_d v^2 ), where ( C_d ) is the drag coefficient.
-- Would shift peak angle below 45° due to extra deceleration.
-- Wind Influence
-- Headwinds shorten range; tailwinds extend it.
-- Requires vector velocity adjustments.
-- Variable Launch Heights
-- If launching from an elevated position, the range equation must include height terms.
-- Results in longer descent phases.
 
 
 
