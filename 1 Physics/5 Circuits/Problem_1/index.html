@@ -368,7 +368,32 @@ if __name__ == "__main__":
 - Use Union-Find or Disjoint Set data structures to optimize detection and merging of connected components.<br/>
 - Implement efficient cycle detection algorithms (e.g., DFS-based) for parallel reductions.<br/>
 - Use libraries like NetworkX in Python for better graph manipulation and visualization.</p>
-<p>Here’s a Python implementation of the Equivalent Resistance Computation algorithm using graph theory with NetworkX. This script can handle arbitrary resistor configurations, including nested series and parallel connections, and outputs the final equivalent resistance</p>
+<p>Python Implementation for Equivalent Resistance Using Graph Theory
+import networkx as nx</p>
+<p>def parallel_resistance(resistors):
+    """Calculate equivalent resistance for resistors in parallel."""
+    if not resistors:
+        return float('inf'</p>
+<p>Implementation Details
+✅ Accepts Circuit Graph as Input
+✅ Handles Arbitrary Resistor Configurations
+✅ Supports Nested Series &amp; Parallel Components
+✅ Processes Complex Graphs with Cycles
+✅ Outputs Equivalent Resistance</p>
+<p>How It Works
+- Graph Representation:
+- Nodes = Junctions
+- Edges = Resistors (with weight as resistance value)
+- Identification of Series &amp; Parallel:
+- Series: Merge resistors along a direct path.
+- Parallel: Calculate resistance using reciprocal sum formula.
+- Iterative Reduction:
+- Continue merging resistors until a single resistance remains.
+- Handles nested combinations &amp; cycles.</p>
+<p>Testing Scenarios
+- ✅ Series &amp; Parallel networks: Basic components.
+- ✅ Nested resistors: Multi-layer configurations.
+- ✅ Complex circuits with cycles: Advanced graph structures.</p>
 <pre><code class="language-python">import networkx as nx
 import numpy as np
 
