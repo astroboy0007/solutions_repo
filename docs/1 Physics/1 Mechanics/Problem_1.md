@@ -181,7 +181,8 @@ To improve accuracy, we can **modify the model** by including:
 
 ## Applications of Improved Models
 
-These refined equations have significant impact in:
+These refined equations have significant impact in:  
+
 - **Ballistics and Military Applications** – Accounting for air resistance in projectile weapons.
 - **Sports Science** – Improving predictions for ball trajectories in soccer, baseball, and golf.
 - **Aerospace Engineering** – Modeling atmospheric descent for spacecraft and satellites.
