@@ -340,3 +340,11 @@ else:
 
 Output:
 Could not simplify the circuit to a single equivalent resistance between Node 0 and Node 2 using series and parallel reductions.
+
+This usually happens due to one of the following reasons:
+Possible Issues:
+- Complex Network Structure
+- If the circuit contains loops or bridges (like Wheatstone bridges), it cannot be reduced using basic series and parallel rules alone.
+- Some resistor networks require Kirchhoff’s Current & Voltage Laws or matrix methods (e.g., nodal or mesh analysis).
+- Graph Disconnection
+- If nodes 0 and 2 are not directly connected in the final graph, the algorithm may fail.
