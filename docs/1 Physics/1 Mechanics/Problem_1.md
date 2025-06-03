@@ -8,8 +8,10 @@ Projectile motion, while seemingly simple, offers a rich playground for explorin
 
 ## The Mathematics Behind Projectile Motion
 
-The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful. The motion can be broken down into two independent components:
-- **Horizontal Motion:** Governed by uniform velocity, assuming no air resistance.
+The equations governing projectile motion involve both linear and quadratic relationships, making them accessible yet deeply insightful. The motion can be broken down into two independent components:  
+
+- **Horizontal Motion:** Governed by uniform velocity, assuming no air resistance.  
+
 - **Vertical Motion:** Influenced by gravitational acceleration, leading to a parabolic trajectory.
 
 ## Key Equations
@@ -33,9 +35,12 @@ Where:
 
 ## The Role of Free Parameters
 
-What makes this topic particularly compelling is the number of free parameters involved in these equations, such as:
-- **Initial Velocity:** Determines the overall reach of the projectile.
-- **Gravitational Acceleration:** Affects the downward pull, varying across planetary conditions.
+What makes this topic particularly compelling is the number of free parameters involved in these equations, such as:  
+
+- **Initial Velocity:** Determines the overall reach of the projectile.  
+
+- **Gravitational Acceleration:** Affects the downward pull, varying across planetary conditions.  
+
 - **Launch Height:** Alters the time of flight and final impact position.
 
 ## Real-World Applications
