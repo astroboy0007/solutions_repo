@@ -370,124 +370,120 @@ if __name__ == "__main__":
 - Use libraries like NetworkX in Python for better graph manipulation and visualization.</p>
 <p>Here’s a Python implementation of the Equivalent Resistance Computation algorithm using graph theory with NetworkX. This script can handle arbitrary resistor configurations, including nested series and parallel connections, and outputs the final equivalent resistance</p>
 <pre><code class="language-python">import networkx as nx
+import numpy as np
 
 def parallel_resistance(resistors):
     """Calculate equivalent resistance for resistors in parallel."""
-    if not resistors:
-        return 0
-    return 1 / sum(1 / R for R in resistors)
+    return 1 / sum(1 / R for R in resistors) if resistors else float('inf')
 
 def series_resistance(resistors):
     """Calculate equivalent resistance for resistors in series."""
     return sum(resistors)
 
-def identify_series_parallel(graph):
-    """Detect and reduce series and parallel resistor connections iteratively."""
-    simplified_graph = graph.copy() # Create a copy to avoid modifying the original graph
-
-    while len(simplified_graph.nodes) &gt; 2:
-        simplified_this_iteration = False
-        nodes_to_remove = []
-
-        for node in list(simplified_graph.nodes):
-            if node in nodes_to_remove:
+def simplify_series_parallel(graph, source, target):
+    """Detect and reduce series and parallel resistor connections iteratively, keeping source and target intact."""
+    while len(graph.nodes) &gt; 2:
+        for node in list(graph.nodes):
+            if node in [source, target]:  # Ensure source and target remain
                 continue
 
-            neighbors = list(simplified_graph.neighbors(node))
+            neighbors = list(graph.neighbors(node))
 
             if len(neighbors) == 1:  # Series case
                 parent = neighbors[0]
-                # Ensure the parent is not already marked for removal and has more than one neighbor
-                if parent not in nodes_to_remove and simplified_graph.has_node(parent) and simplified_graph.degree(parent) &gt; 1:
-                    resistance = simplified_graph[node][parent]["weight"]
-                    # Find the other neighbor of the parent
-                    other_neighbor = [n for n in simplified_graph.neighbors(parent) if n != node][0]
-                    simplified_graph.add_edge(parent, other_neighbor, weight=simplified_graph[parent][other_neighbor].get("weight", 0) + resistance)
-                    nodes_to_remove.append(node)
-                    simplified_this_iteration = True
+                resistance = graph[node][parent]["weight"]
+                graph.remove_node(node)  
 
+                if parent in graph and len(graph.neighbors(parent)) &gt; 0:
+                    for neighbor in graph.neighbors(parent):
+                        graph[parent][neighbor]["weight"] += resistance
 
             elif len(neighbors) == 2:  # Parallel case
-                n1, n2 = neighbors
-                # Check if n1 and n2 are connected through the current node and potentially directly
-                if simplified_graph.has_edge(n1, node) and simplified_graph.has_edge(node, n2):
-                    R1 = simplified_graph[n1][node]["weight"]
-                    R2 = simplified_graph[node][n2]["weight"]
+                R1 = graph[node][neighbors[0]]["weight"]
+                R2 = graph[node][neighbors[1]]["weight"]
+                R_eq = parallel_resistance([R1, R2])
 
-                    # Check if there's an existing parallel edge between n1 and n2
-                    if simplified_graph.has_edge(n1, n2):
-                        R_existing = simplified_graph[n1][n2]["weight"]
-                        parallel_eq = parallel_resistance([R1, R2, R_existing])
-                        simplified_graph[n1][n2]["weight"] = parallel_eq
-                    else:
-                        parallel_eq = parallel_resistance([R1, R2])
-                        simplified_graph.add_edge(n1, n2, weight=parallel_eq)
+                graph.add_edge(neighbors[0], neighbors[1], weight=R_eq)
+                graph.remove_node(node)
 
-                    nodes_to_remove.append(node)
-                    simplified_this_iteration = True
+    return graph
 
+def kirchhoff_resistance_matrix(graph, source, target):
+    """Solve equivalent resistance using Kirchhoff's laws and matrix methods."""
+    nodes = list(graph.nodes())
+    node_index = {node: i for i, node in enumerate(nodes)}
 
-        # Remove nodes marked for removal
-        for node in nodes_to_remove:
-            if simplified_graph.has_node(node):
-                simplified_graph.remove_node(node)
+    # Build Kirchhoff Matrix
+    size = len(nodes)
+    matrix = np.zeros((size, size))
+    currents = np.zeros(size)
 
-        # If no simplification occurred in this iteration, break the loop
-        if not simplified_this_iteration:
-            break
+    for u, v, data in graph.edges(data=True):
+        resistance = data["weight"]
+        matrix[node_index[u], node_index[u]] += 1 / resistance
+        matrix[node_index[v], node_index[v]] += 1 / resistance
+        matrix[node_index[u], node_index[v]] -= 1 / resistance
+        matrix[node_index[v], node_index[u]] -= 1 / resistance
 
-    return simplified_graph
+    # Set source-target voltage difference to 1V
+    currents[node_index[source]] = 1
+    currents[node_index[target]] = -1
 
+    # Solve circuit equations using linear algebra
+    voltages = np.linalg.pinv(matrix).dot(currents)
+    equivalent_resistance = voltages[node_index[source]] - voltages[node_index[target]]
+
+    return abs(equivalent_resistance)
 
 def compute_equivalent_resistance(graph, source, target):
-    """Compute final equivalent resistance between two nodes."""
-    simplified_graph = identify_series_parallel(graph)
+    """Compute the final equivalent resistance between two nodes."""
+    simplified_graph = simplify_series_parallel(graph, source, target)
 
-    # After simplification, if only two nodes remain, the resistance is the edge weight between them
-    if len(simplified_graph.nodes) == 2:
-        node1, node2 = list(simplified_graph.nodes)
-        # Ensure the remaining nodes are the original source and target (or their equivalents after reduction)
-        if (node1 == source and node2 == target) or (node1 == target and node2 == source):
-             return simplified_graph[node1][node2]["weight"]
-        else:
-            # If the remaining nodes are not the original source/target, the simplification
-            # might not have resulted in a simple equivalent resistance between the specified nodes.
-            # This could happen in more complex circuits.
-            return None # Or raise an error, depending on desired behavior
-    elif len(simplified_graph.nodes) == 1:
-        # This case might indicate a short circuit or open circuit depending on the original graph.
-        # For a simple equivalent resistance calculation between two points, this is not the expected outcome.
-        return None # Or handle as appropriate for the specific circuit analysis
+    if nx.has_path(simplified_graph, source, target):
+        return kirchhoff_resistance_matrix(simplified_graph, source, target)
     else:
-        # If more than two nodes remain, the circuit could not be fully reduced to a single equivalent resistance
-        # between the specified source and target using only series and parallel reductions.
-        return None # Or indicate that the circuit is not a simple series-parallel combination between source and target
+        return "Could not simplify the circuit using only series and parallel reductions."
 
+# **Test Cases**
 
-# Example Circuit Graph (Series &amp; Parallel Combination)
-G = nx.Graph()
-G.add_edge(0, 1, weight=5)   # 5Ω resistor
-G.add_edge(1, 2, weight=10)  # 10Ω resistor (Series)
-G.add_edge(0, 2, weight=15)  # 15Ω resistor (Parallel)
+# **Example 1: Simple Series &amp; Parallel Combination**
+G1 = nx.Graph()
+G1.add_edge(0, 1, weight=5)   # 5Ω resistor
+G1.add_edge(1, 2, weight=10)  # 10Ω resistor (Series)
+G1.add_edge(0, 2, weight=15)  # 15Ω resistor (Parallel)
 
-# Compute Equivalent Resistance
 source, target = 0, 2
-equivalent_resistance = compute_equivalent_resistance(G, source, target)
+equivalent_resistance = compute_equivalent_resistance(G1, source, target)
+print(f"Test 1 - Equivalent Resistance: {equivalent_resistance:.2f} Ω")
 
-if equivalent_resistance is not None:
-    print(f"Equivalent Resistance between Node {source} and Node {target}: {equivalent_resistance:.2f} Ω")
-else:
-    print(f"Could not simplify the circuit to a single equivalent resistance between Node {source} and Node {target} using series and parallel reductions.")
+# **Example 2: Nested Configurations**
+G2 = nx.Graph()
+G2.add_edge(0, 1, weight=4)
+G2.add_edge(1, 2, weight=6)
+G2.add_edge(2, 3, weight=8)
+G2.add_edge(1, 3, weight=3)  # Parallel
+G2.add_edge(0, 3, weight=2)  # Parallel
+
+source, target = 0, 3
+equivalent_resistance = compute_equivalent_resistance(G2, source, target)
+print(f"Test 2 - Equivalent Resistance: {equivalent_resistance:.2f} Ω")
+
+# **Example 3: Complex Graph with Cycles**
+G3 = nx.Graph()
+G3.add_edge(0, 1, weight=1)
+G3.add_edge(1, 2, weight=2)
+G3.add_edge(2, 3, weight=3)
+G3.add_edge(3, 0, weight=4)  # Cycle
+G3.add_edge(1, 3, weight=5)  # Additional path
+
+source, target = 0, 3
+equivalent_resistance = compute_equivalent_resistance(G3, source, target)
+print(f"Test 3 - Equivalent Resistance: {equivalent_resistance:.2f} Ω")
 </code></pre>
 <p>Output:
-Could not simplify the circuit to a single equivalent resistance between Node 0 and Node 2 using series and parallel reductions.</p>
-<p>This usually happens due to one of the following reasons:
-Possible Issues:
-- Complex Network Structure
-- If the circuit contains loops or bridges (like Wheatstone bridges), it cannot be reduced using basic series and parallel rules alone.
-- Some resistor networks require Kirchhoff’s Current &amp; Voltage Laws or matrix methods (e.g., nodal or mesh analysis).
-- Graph Disconnection
-- If nodes 0 and 2 are not directly connected in the final graph, the algorithm may fail.</p>
+Test 1 - Equivalent Resistance: 3.33 Ω
+Test 2 - Equivalent Resistance: 1.85 Ω
+Test 3 - Equivalent Resistance: 0.55 Ω</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
