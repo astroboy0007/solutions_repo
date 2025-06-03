@@ -51,9 +51,9 @@ function ComputeEquivalentResistance(graph):
 
 - If two resistors share a common node and no other connections exist at that node:  
 
-  \[
-  R_{eq} = R_1 + R_2
-  \]  
+\[
+R_{eq} = R_1 + R_2
+\]  
 
 - Remove the intermediate node and merge resistances.
 
@@ -61,9 +61,9 @@ function ComputeEquivalentResistance(graph):
 
 - If multiple resistors connect across the same two nodes:  
 
-  \[
-  R_{eq} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1}
-  \]  
+\[
+R_{eq} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1}
+\]  
 
 - Collapse edges into a single equivalent resistor.
 
