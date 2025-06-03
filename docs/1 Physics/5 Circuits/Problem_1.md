@@ -369,7 +369,10 @@ equivalent_resistance = compute_equivalent_resistance(G3, source, target)
 print(f"Test 3 - Equivalent Resistance: {equivalent_resistance:.2f} Ω")
 ```
 
-Output:
-Test 1 - Equivalent Resistance: 3.33 Ω
-Test 2 - Equivalent Resistance: 1.85 Ω
+Output:  
+
+Test 1 - Equivalent Resistance: 3.33 Ω  
+
+Test 2 - Equivalent Resistance: 1.85 Ω  
+
 Test 3 - Equivalent Resistance: 0.55 Ω
