@@ -1,6 +1,5 @@
 # Problem 1
 # Equivalent Resistance Using Graph Theory
-## Motivation
 
 Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. While traditional methods involve iteratively applying series and parallel resistor rules, these approaches can become cumbersome for complex circuits with many components. Graph theory offers a powerful alternative, providing a structured and algorithmic way to analyze circuits.
 
@@ -70,9 +69,9 @@ Step 3: Return the equivalent resistance
 - If two resistors share a common node and no other connections exist at that node:  
 
 $$
-\[
+
 R_{eq} = R_1 + R_2
-\]  
+  
 $$  
 
 - Remove the intermediate node and merge resistances.
