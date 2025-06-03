@@ -224,7 +224,37 @@ Potential Improvements:
 - Use libraries like NetworkX in Python for better graph manipulation and visualization.
 
 
-Here’s a Python implementation of the Equivalent Resistance Computation algorithm using graph theory with NetworkX. This script can handle arbitrary resistor configurations, including nested series and parallel connections, and outputs the final equivalent resistance
+Python Implementation for Equivalent Resistance Using Graph Theory
+import networkx as nx
+
+def parallel_resistance(resistors):
+    """Calculate equivalent resistance for resistors in parallel."""
+    if not resistors:
+        return float('inf'
+
+Implementation Details
+✅ Accepts Circuit Graph as Input
+✅ Handles Arbitrary Resistor Configurations
+✅ Supports Nested Series & Parallel Components
+✅ Processes Complex Graphs with Cycles
+✅ Outputs Equivalent Resistance
+
+How It Works
+- Graph Representation:
+- Nodes = Junctions
+- Edges = Resistors (with weight as resistance value)
+- Identification of Series & Parallel:
+- Series: Merge resistors along a direct path.
+- Parallel: Calculate resistance using reciprocal sum formula.
+- Iterative Reduction:
+- Continue merging resistors until a single resistance remains.
+- Handles nested combinations & cycles.
+
+Testing Scenarios
+- ✅ Series & Parallel networks: Basic components.
+- ✅ Nested resistors: Multi-layer configurations.
+- ✅ Complex circuits with cycles: Advanced graph structures.
+
 
 ```python
 import networkx as nx
