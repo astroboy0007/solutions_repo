@@ -48,9 +48,12 @@ What makes this topic particularly compelling is the number of free parameters i
 
 ## Real-World Applications
 
-These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, including:
-- The arc of a **soccer ball** during a free kick.
-- The flight path of a **basketball** shot.
+These parameters give rise to a diverse set of solutions that can describe a wide array of real-world phenomena, including:  
+
+- The arc of a **soccer ball** during a free kick.  
+
+- The flight path of a **basketball** shot.  
+
 - The trajectory of a **rocket** launched into space.
 
 Understanding projectile motion is not just an academic exercise but a crucial principle in engineering, sports science, and aerospace technology.
