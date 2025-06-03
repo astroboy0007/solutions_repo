@@ -216,7 +216,8 @@ Efficiency:
 
 
 
-Testing Scenarios
+Testing Scenarios:  
+
 - ✅ Series & Parallel networks: Basic components.  
 - ✅ Nested resistors: Multi-layer configurations.  
 - ✅ Complex circuits with cycles: Advanced graph structures.
