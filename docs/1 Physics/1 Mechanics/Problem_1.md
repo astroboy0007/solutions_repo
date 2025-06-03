@@ -85,14 +85,17 @@ The range \(R\) (horizontal distance) is obtained by solving for \(t\) when \(y 
 
 ## Family of Solutions
 
-- Different initial velocities (( v_0 )) yield higher or lower trajectories.
-- Varying launch angles (( \theta )) create different parabolic paths—steeper angles mean greater height but shorter horizontal reach.
-- Gravity ( g ) affects descent—on planets like Mars (( g = 3.7 ) m/s²), the projectile would have a longer range than on Earth.
+- Different initial velocities \( v_0 \) yield higher or lower trajectories.
+- Varying launch angles \( \theta \) create different parabolic paths—steeper angles mean greater height but shorter horizontal reach.
+- Gravity \( g \) affects descent—on planets like Mars (( g = 3.7 ) m/s²), the projectile would have a longer range than on Earth.
 
 
 Graphical Representations of Range vs. Angle
-The range equation (neglecting air resistance) is:
+The range equation (neglecting air resistance) is:  
+
+$$
 [ R = \frac{v_0^2 \sin 2\theta}{g} ]
+$$
 
 
 Python Code to Plot Range vs. Angle
