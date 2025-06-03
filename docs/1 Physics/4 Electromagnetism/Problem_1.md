@@ -7,7 +7,8 @@ The **Lorentz Force** governs the motion of charged particles in electric and ma
 \mathbf{F} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B})
 \]
 
-Where:
+Where:  
+
 - \( q \) is the charge of the particle.
 - \( \mathbf{E} \) is the electric field vector.
 - \( \mathbf{v} \) is the velocity vector of the particle.
