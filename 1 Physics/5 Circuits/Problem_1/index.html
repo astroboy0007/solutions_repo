@@ -173,7 +173,6 @@
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
 <h1 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h1>
-<h2 id="motivation">Motivation</h2>
 <p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. While traditional methods involve iteratively applying series and parallel resistor rules, these approaches can become cumbersome for complex circuits with many components. Graph theory offers a powerful alternative, providing a structured and algorithmic way to analyze circuits.</p>
 <p>By representing a circuit as a graph—where nodes correspond to junctions and edges represent resistors with weights equal to their resistance values—we can systematically simplify even the most intricate networks. This method not only streamlines calculations but also opens the door to automated analysis, making it particularly useful in modern applications like circuit simulation software, optimization problems, and network design.</p>
 <p>Studying equivalent resistance through graph theory is valuable not only for its practical applications but also for the deeper insights it provides into the interplay between electrical and mathematical concepts. This approach highlights the versatility of graph theory, demonstrating its relevance across physics, engineering, and computer science.</p>
@@ -229,11 +228,9 @@ Step 3: Return the equivalent resistance
 <ul>
 <li>If two resistors share a common node and no other connections exist at that node:  </li>
 </ul>
-<div class="arithmatex">\[
-\[
-R_{eq} = R_1 + R_2
-\]  
-\]</div>
+<p>$$</p>
+<p>R_{eq} = R_1 + R_2</p>
+<p>$$  </p>
 <ul>
 <li>Remove the intermediate node and merge resistances.</li>
 </ul>
