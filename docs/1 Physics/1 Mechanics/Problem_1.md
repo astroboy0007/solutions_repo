@@ -162,7 +162,7 @@ The basic equations assume:
 ## Incorporating Realistic Factors
 
 To improve accuracy, we can **modify the model** by including:  
-
+  
 - **Drag Force (\( F_d \))**  
 
   - Modeled using \( F_d = \frac{1}{2} C_d \rho A v^2 \), where:  
@@ -183,8 +183,10 @@ To improve accuracy, we can **modify the model** by including:
 
 These refined equations have significant impact in:  
 
-- **Ballistics and Military Applications** – Accounting for air resistance in projectile weapons.
-- **Sports Science** – Improving predictions for ball trajectories in soccer, baseball, and golf.
+- **Ballistics and Military Applications** – Accounting for air resistance in projectile weapons.  
+
+- **Sports Science** – Improving predictions for ball trajectories in soccer, baseball, and golf.  
+
 - **Aerospace Engineering** – Modeling atmospheric descent for spacecraft and satellites.
 
 
