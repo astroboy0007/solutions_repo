@@ -10,27 +10,77 @@ Studying equivalent resistance through graph theory is valuable not only for its
 
 ---
 
-## Algorithm Description
-The algorithm uses graph theory to model a circuit as a graph:
+### 1. Algorithm for Calculating Equivalent Resistance Using Graph Theory
 
-Steps:  
-1. Graph Construction:  
-    - Build a graph where edges have weights corresponding to resistor values.  
-2. Detect Series Connections:  
-    - Identify linear chains of resistors (nodes with only two connections) and replace them with a single equivalent resistor: 
-$$
-R_{\text{eq (series)}} = R_1 + R_2 + \dots + R_n
-$$
-  
-3. Detect Parallel Connections:  
-    - Find cycles or parallel branches and replace them with a single equivalent resistor:  
-$$
-\frac{1}{R_{\text{eq (parallel)}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
-$$
-4. Iterative Reduction:  
-    - Repeat steps 2 and 3 until the entire graph is reduced to a single edge representing the equivalent resistance.  
-5. Handle Nested Combinations:  
-    - Nested series and parallel combinations are automatically handled by recursive application of steps 2 and 3.  
+The algorithm treats the circuit as a **weighted graph**, where:  
+
+- **Nodes** represent electrical junctions.
+- **Edges** represent resistors with weights equal to their resistance values.
+
+The process involves:  
+
+1. **Graph Representation:** Construct the graph where resistors are edges with resistance values.
+2. **Identifying Series and Parallel Configurations:** Detect resistors in direct series or parallel using graph traversal.
+3. **Iterative Reduction:** Simplify the circuit by merging series and parallel components iteratively until a single equivalent resistance remains.
+4. **Handling Nested Combinations:** Apply recursion or iterative depth-first search (DFS) to process deep network structures.
+
+---
+
+### 2. Pseudocode for Equivalent Resistance Computation  
+
+
+```plaintext
+function ComputeEquivalentResistance(graph):
+    while graph has more than two nodes:
+        for each node in graph:
+            if node has exactly one neighbor:  # Series Reduction
+                merge series resistors
+            elif node connects to two resistors in parallel:  # Parallel Reduction
+                merge parallel resistors
+        update graph structure
+
+    return final equivalent resistance
+```
+
+---
+
+### 3. Identifying Series and Parallel Connections  
+
+
+#### **Series Connection:**  
+
+- If two resistors share a common node and no other connections exist at that node:  
+
+  \[
+  R_{eq} = R_1 + R_2
+  \]  
+
+- Remove the intermediate node and merge resistances.
+
+#### **Parallel Connection:**  
+
+- If multiple resistors connect across the same two nodes:  
+
+  \[
+  R_{eq} = \left( \frac{1}{R_1} + \frac{1}{R_2} \right)^{-1}
+  \]  
+
+- Collapse edges into a single equivalent resistor.
+
+---
+
+### 4. Handling Nested Combinations
+
+Nested structures are resolved **recursively**:  
+
+- Detect deepest series/parallel sets using **depth-first traversal**.
+- Reduce inner structures **first**, then propagate outward.
+- Continue merging until only a single effective resistance remains.
+
+---
+
+This graph-based method **automates complex circuit analysis**, making it efficient for circuit simulations.
+
 
 ---
 ## Pseudocode
