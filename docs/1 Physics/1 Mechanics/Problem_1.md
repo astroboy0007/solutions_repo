@@ -171,12 +171,12 @@ To improve accuracy, we can **modify the model** by including:
     - \( A \) = Cross-sectional area  
     - \( v \) = Velocity  
   
-- **Wind Influence**  <br>
-  - Wind velocity **adds or subtracts** from projectile velocity, affecting trajectory.
-  - Crosswinds introduce lateral displacement.
-  
-- **Variable Gravity**  <br>
-  - For long-range trajectories, gravity variation can be modeled using altitude-based corrections.
+- **Wind Influence**  
+  - Wind velocity **adds or subtracts** from projectile velocity, affecting trajectory.  
+  - Crosswinds introduce lateral displacement.  
+
+- **Variable Gravity**  
+  - For long-range trajectories, gravity variation can be modeled using altitude-based corrections.  
 
 ## Applications of Improved Models
 
