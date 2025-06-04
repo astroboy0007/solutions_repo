@@ -142,7 +142,7 @@ plt.show()
 
 - Shift if gravity ( g ) is altered (e.g., Moon vs. Earth).
 
-![Projectile Motion](projectile_motion.gif)
+![Projectile Motion](projectile.gif)
 
 
 ## Limitations of the Idealized Projectile Motion Model
