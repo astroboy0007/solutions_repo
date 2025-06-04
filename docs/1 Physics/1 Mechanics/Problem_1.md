@@ -163,19 +163,19 @@ The basic equations assume:
 
 To improve accuracy, we can **modify the model** by including:  
   
-- **Drag Force (\( F_d \))**  
+1. **Drag Force (\( F_d \))**  
   - Modeled using \( F_d = \frac{1}{2} C_d \rho A v^2 \), where:  
 
     - \( C_d \) = Drag coefficient  
     - \( \rho \) = Air density  
     - \( A \) = Cross-sectional area  
     - \( v \) = Velocity  
-  
-- **Wind Influence**  
+
+2. **Wind Influence**  
   - Wind velocity **adds or subtracts** from projectile velocity, affecting trajectory.  
   - Crosswinds introduce lateral displacement.  
 
-- **Variable Gravity**  
+3. **Variable Gravity**  
   - For long-range trajectories, gravity variation can be modeled using altitude-based corrections.  
 
 ## Applications of Improved Models
