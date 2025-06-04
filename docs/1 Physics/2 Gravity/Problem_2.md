@@ -185,3 +185,153 @@ This GIF is **specifically designed for Earth**! The escape velocities and cosmi
 
 
 
+
+##Python Script for Earth##
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import imageio
+
+# Constants
+G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+M = 5.972e24  # Mass of Earth (kg)
+R = 6.371e6  # Radius of Earth (m)
+
+# Velocities (m/s)
+v_orbit = np.sqrt(G * M / R)  # First Cosmic Velocity (Orbital)
+v_escape = np.sqrt(2 * G * M / R)  # Second Cosmic Velocity (Escape)
+v_solar_escape = 42000  # Third Cosmic Velocity (Escape from Solar System)
+
+# Time steps for motion simulation
+t = np.linspace(0, 10, num=30)  # Reduce frames to prevent overload
+filenames = []
+
+# Generate frames efficiently
+for v in [v_orbit, v_escape, v_solar_escape]:
+    x = v * t
+    y = -0.5 * G * M / R**2 * t**2  # Simulated motion affected by gravity
+
+    for i in range(0, len(t), 5):  # Save only every 5th frame for efficiency
+        plt.figure(figsize=(6, 4))
+        plt.xlim(0, max(x) * 1.1)
+        plt.ylim(min(y) * 1.1, 10)
+        plt.plot(x[:i], y[:i], 'bo-', label=f"Velocity = {v:.0f} m/s")
+        plt.legend()
+        plt.xlabel("Horizontal Position")
+        plt.ylabel("Vertical Position")
+        plt.title("Escape & Cosmic Velocities")
+
+        filename = f"frame_{i}.png"
+        plt.savefig(filename)
+        plt.close()
+        filenames.append(filename)
+
+# Create GIF only if frames exist
+if filenames:
+    gif_filename = "escape_velocities.gif"
+    imageio.mimsave(gif_filename, [imageio.v2.imread(f) for f in filenames], duration=0.15)
+    print(f"GIF saved as {gif_filename}")
+else:
+    print("No frames generated. Check your loop structure.")
+```
+
+##Python Script for Mars##
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import imageio.v2 as imageio
+
+# Constants for Mars
+G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+M_Mars = 6.417e23  # Mass of Mars (kg)
+R_Mars = 3.3895e6  # Radius of Mars (m)
+
+# Velocities (m/s)
+v_orbit_mars = np.sqrt(G * M_Mars / R_Mars)  # First Cosmic Velocity (Orbital)
+v_escape_mars = np.sqrt(2 * G * M_Mars / R_Mars)  # Second Cosmic Velocity (Escape)
+v_solar_escape_mars = 5000  # Estimated Third Cosmic Velocity for Mars (Leaving Solar System)
+
+# Time steps for motion simulation
+t = np.linspace(0, 10, num=30)
+filenames = []
+
+# Generate frames efficiently
+for v in [v_orbit_mars, v_escape_mars, v_solar_escape_mars]:
+    x = v * t
+    y = -0.5 * G * M_Mars / R_Mars**2 * t**2  # Simulated motion affected by gravity
+
+    for i in range(0, len(t), 5):  # Save only every 5th frame for efficiency
+        plt.figure(figsize=(6, 4))
+        plt.xlim(0, max(x) * 1.1)
+        plt.ylim(min(y) * 1.1, 10)
+        plt.plot(x[:i], y[:i], 'bo-', label=f"Velocity = {v:.0f} m/s")
+        plt.legend()
+        plt.xlabel("Horizontal Position")
+        plt.ylabel("Vertical Position")
+        plt.title("Escape & Cosmic Velocities on Mars")
+
+        filename = f"frame_{i}.png"
+        plt.savefig(filename)
+        plt.close()
+        filenames.append(filename)
+
+# Create GIF only if frames exist
+if filenames:
+    gif_filename = "mars_escape_velocities.gif"
+    imageio.mimsave(gif_filename, [imageio.imread(f) for f in filenames], duration=0.15)
+    print(f"GIF saved as {gif_filename}")
+else:
+    print("No frames generated. Check your loop structure.")
+```
+
+##Python Script for Jupiter##
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import imageio.v2 as imageio
+
+# Constants for Jupiter
+G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+M_Jupiter = 1.898e27  # Mass of Jupiter (kg)
+R_Jupiter = 6.9911e7  # Radius of Jupiter (m)
+
+# Velocities (m/s)
+v_orbit_jupiter = np.sqrt(G * M_Jupiter / R_Jupiter)  # First Cosmic Velocity (Orbital)
+v_escape_jupiter = np.sqrt(2 * G * M_Jupiter / R_Jupiter)  # Second Cosmic Velocity (Escape)
+v_solar_escape_jupiter = 18_000  # Estimated Third Cosmic Velocity for Jupiter (Leaving Solar System)
+
+# Time steps for motion simulation
+t = np.linspace(0, 10, num=30)
+filenames = []
+
+# Generate frames efficiently
+for v in [v_orbit_jupiter, v_escape_jupiter, v_solar_escape_jupiter]:
+    x = v * t
+    y = -0.5 * G * M_Jupiter / R_Jupiter**2 * t**2  # Simulated motion affected by gravity
+
+    for i in range(0, len(t), 5):  # Save only every 5th frame for efficiency
+        plt.figure(figsize=(6, 4))
+        plt.xlim(0, max(x) * 1.1)
+        plt.ylim(min(y) * 1.1, 10)
+        plt.plot(x[:i], y[:i], 'bo-', label=f"Velocity = {v:.0f} m/s")
+        plt.legend()
+        plt.xlabel("Horizontal Position")
+        plt.ylabel("Vertical Position")
+        plt.title("Escape & Cosmic Velocities on Jupiter")
+
+        filename = f"frame_{i}.png"
+        plt.savefig(filename)
+        plt.close()
+        filenames.append(filename)
+
+# Create GIF only if frames exist
+if filenames:
+    gif_filename = "jupiter_escape_velocities.gif"
+    imageio.mimsave(gif_filename, [imageio.imread(f) for f in filenames], duration=0.15)
+    print(f"GIF saved as {gif_filename}")
+else:
+    print("No frames generated. Check your loop structure.")
+```
