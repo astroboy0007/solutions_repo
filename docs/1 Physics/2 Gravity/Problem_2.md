@@ -177,7 +177,7 @@ This GIF is **specifically designed for Earth**! The escape velocities and cosmi
 - **Second Cosmic Velocity (Escape Speed):** ~11.2 km/s (to leave Earth's gravity)
 - **Third Cosmic Velocity:** ~42 km/s (to leave the Solar System)
 
-![Earth](escape_velocities.gif)
+![Escape Velocities](escape_velocities.gif)
 
 
 ---
