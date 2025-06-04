@@ -170,5 +170,15 @@ plt.show()
 ```
 ![alt text](image-4.png)
 
+
+This GIF is **specifically designed for Earth**! The escape velocities and cosmic velocities used in the simulation are **based on Earth's mass and radius**:
+
+- **First Cosmic Velocity (Orbital Speed):** ~7.9 km/s (to stay in orbit around Earth)
+- **Second Cosmic Velocity (Escape Speed):** ~11.2 km/s (to leave Earth's gravity)
+- **Third Cosmic Velocity:** ~42 km/s (to leave the Solar System)
+
+![Earth](escape_velocities.gif)
+
+
 ---
 
