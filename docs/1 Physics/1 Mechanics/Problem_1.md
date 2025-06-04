@@ -74,7 +74,7 @@ $$
 
 where:
 
-- v<sub>0</sub> is the initial velocity,
+- \( v_0 \) is the initial velocity,
 - \(\theta\) is the launch angle,
 - \(g\) is the acceleration due to gravity,
 - \(t\) is the time.
