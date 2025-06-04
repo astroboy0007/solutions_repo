@@ -179,7 +179,9 @@ This GIF is **specifically designed for Earth**! The escape velocities and cosmi
 
 ![Escape Velocities](escape_velocities.gif)
 
-**For Mars:**
 ![Mars Escape Velocities](mars_escape_velocities.gif)
----
+
+![Jupiter Escape Velocities](jupiter_escape_velocities.gif)
+
+
 
