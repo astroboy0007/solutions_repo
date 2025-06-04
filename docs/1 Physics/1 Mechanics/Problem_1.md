@@ -164,7 +164,7 @@ The basic equations assume:
 To improve accuracy, we can **modify the model** by including:  
   
 - **Drag Force (\( F_d \))**  
-
+  
   - Modeled using \( F_d = \frac{1}{2} C_d \rho A v^2 \), where:  
 
     - \( C_d \) = Drag coefficient  
