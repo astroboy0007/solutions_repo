@@ -174,11 +174,11 @@ To improve accuracy, we can **modify the model** by including:
     - \( v \) = Velocity  
 
 2. **Wind Influence**
-  - Wind velocity **adds or subtracts** from projectile velocity, affecting trajectory.  
-  - Crosswinds introduce lateral displacement.  
+ Wind velocity **adds or subtracts** from projectile velocity, affecting trajectory.  
+ Crosswinds introduce lateral displacement.  
 
 3. **Variable Gravity**
-  - For long-range trajectories, gravity variation can be modeled using altitude-based corrections.  
+ For long-range trajectories, gravity variation can be modeled using altitude-based corrections.  
 
 ## Applications of Improved Models
 
